@@ -40,6 +40,546 @@
       "verified": true
     }
   ],
+  "offline": {
+    "commandWords": [
+      {
+        "word": "Describe",
+        "means": "State what is observed or what happens, in sequence, without giving reasons.",
+        "doThis": "Give the pattern or sequence of events using correct biological terms, no explanation of cause needed."
+      },
+      {
+        "word": "Explain",
+        "means": "Give reasons for a pattern or process using biological mechanisms.",
+        "doThis": "State the effect, then say why using a named process, structure or mechanism, e.g. 'because enzyme activity decreases as the active site changes shape'."
+      },
+      {
+        "word": "Evaluate",
+        "means": "Weigh up evidence, data or a method to reach a justified conclusion.",
+        "doThis": "Give points for and against with reference to the data given, then state a supported overall judgement."
+      },
+      {
+        "word": "Suggest",
+        "means": "Apply biological knowledge to an unfamiliar situation; more than one answer may be accepted.",
+        "doThis": "Use a biological principle you know and apply it logically to the new context given in the question."
+      },
+      {
+        "word": "Compare",
+        "means": "State similarities and differences between two things.",
+        "doThis": "Write direct comparative sentences using 'whereas' or 'both', not two separate unlinked descriptions."
+      },
+      {
+        "word": "Calculate",
+        "means": "Work out a numerical answer using given data and a formula.",
+        "doThis": "Write the formula, substitute values with units, show working, and give the final answer with correct units."
+      },
+      {
+        "word": "Justify",
+        "means": "Support a conclusion or choice using evidence or a biological principle.",
+        "doThis": "State the claim, then give the specific data point or biological reason that supports it."
+      },
+      {
+        "word": "Deduce",
+        "means": "Work out an answer by combining given information logically.",
+        "doThis": "Identify the pieces of data used and the biological rule linking them to reach your conclusion."
+      },
+      {
+        "word": "Plan",
+        "means": "Describe a method to test a hypothesis, including variables and controls.",
+        "doThis": "State independent, dependent and control variables, equipment, method steps in order, and how to make it a fair test."
+      },
+      {
+        "word": "Evaluate a method",
+        "means": "Identify strengths, weaknesses and possible improvements in an experimental method.",
+        "doThis": "Refer to specific steps of the method given, name any source of error or bias, and suggest a specific improvement."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Required practicals (Biology 8461)",
+        "kind": "method",
+        "items": [
+          {
+            "term": "RP1: Microscopy",
+            "detail": "Use a light microscope to observe, draw and label plant and animal cells; calculate magnification of the image drawn. Measured: size of image and real size, to calculate magnification. Examiners want correct use of the eyepiece graticule/stage micrometer method and a scale bar or magnification stated on the drawing."
+          },
+          {
+            "term": "RP2: Osmosis in potato/plant tissue",
+            "detail": "Place potato chips in different concentrations of sugar/salt solution, measure mass before and after. Measured: percentage change in mass. Independent: solution concentration; controlled: chip size, time, temperature."
+          },
+          {
+            "term": "RP3: Food tests",
+            "detail": "Test food samples for starch (iodine, turns blue-black), sugars (Benedict's, heated, turns brick-red if reducing sugar present), protein (Biuret, turns purple/lilac), lipids (ethanol emulsion test, turns cloudy white). Measured: colour change observed for each test."
+          },
+          {
+            "term": "RP4: Enzyme rate of reaction",
+            "detail": "Investigate effect of pH or temperature on amylase breaking down starch, using iodine to test at intervals until it stays orange-brown. Measured: time taken for starch to disappear. Independent: pH or temperature; controlled: enzyme/substrate concentration and volume."
+          },
+          {
+            "term": "RP5: Photosynthesis rate (pondweed)",
+            "detail": "Count bubbles or measure gas volume produced by pondweed (e.g. Elodea) at different distances from a lamp. Measured: bubbles per minute or gas volume; independent: light intensity (distance from lamp, using inverse square law 1/d^2); controlled: temperature, CO2 availability."
+          },
+          {
+            "term": "RP6: Reaction time (human nervous system)",
+            "detail": "Use the ruler-drop test to measure human reaction time, with and without a distraction. Measured: distance ruler falls, converted to reaction time. Controlled: same person catching, same starting position, repeated for reliability."
+          },
+          {
+            "term": "RP7: Effect of exercise on heart rate/breathing rate",
+            "detail": "Measure pulse or breathing rate at rest and after a fixed period of exercise, then during recovery. Measured: rate per minute at each stage. Controlled: same exercise intensity/duration, same recovery timing."
+          },
+          {
+            "term": "RP8: Sampling techniques (quadrats and transects)",
+            "detail": "Use quadrats placed randomly, or along a transect line, to sample the distribution and abundance of organisms in a habitat. Measured: number/percentage cover of organisms per quadrat. Controlled: quadrat size, sampling method consistent across the area."
+          }
+        ]
+      },
+      {
+        "title": "Key definitions across the spec",
+        "kind": "def",
+        "items": [
+          {
+            "term": "Cell",
+            "detail": "The basic structural and functional unit of all living organisms."
+          },
+          {
+            "term": "Diffusion",
+            "detail": "The net movement of particles from an area of higher concentration to an area of lower concentration, down a concentration gradient, requiring no energy input."
+          },
+          {
+            "term": "Osmosis",
+            "detail": "The net movement of water molecules from a dilute solution to a concentrated solution through a partially permeable membrane."
+          },
+          {
+            "term": "Active transport",
+            "detail": "The movement of particles from a lower to a higher concentration (against the concentration gradient), requiring energy from respiration."
+          },
+          {
+            "term": "Enzyme",
+            "detail": "A biological catalyst, made of protein, that speeds up a specific reaction without being used up, by lowering activation energy."
+          },
+          {
+            "term": "Catalyst",
+            "detail": "A substance that speeds up a chemical reaction without being changed or used up itself."
+          },
+          {
+            "term": "Homeostasis",
+            "detail": "The regulation of the internal conditions of a cell or organism to maintain optimum conditions for function, in response to internal and external changes."
+          },
+          {
+            "term": "Hormone",
+            "detail": "A chemical messenger secreted directly into the blood by a gland and carried to a target organ, causing an effect."
+          },
+          {
+            "term": "Gene",
+            "detail": "A short section of DNA on a chromosome that codes for a particular protein/characteristic."
+          },
+          {
+            "term": "Allele",
+            "detail": "A different version of the same gene."
+          },
+          {
+            "term": "Genotype",
+            "detail": "The genetic makeup of an organism in terms of the alleles present."
+          },
+          {
+            "term": "Phenotype",
+            "detail": "The physical or observable characteristics of an organism, resulting from genotype and environment."
+          },
+          {
+            "term": "Natural selection",
+            "detail": "The process by which organisms with characteristics best suited to their environment are more likely to survive, reproduce and pass on their alleles."
+          },
+          {
+            "term": "Species",
+            "detail": "A group of organisms that can reproduce to give fertile offspring."
+          },
+          {
+            "term": "Community",
+            "detail": "All the populations of different species living and interacting in the same habitat."
+          },
+          {
+            "term": "Ecosystem",
+            "detail": "The interaction of a community of living organisms with the non-living parts of their environment."
+          },
+          {
+            "term": "Biodiversity",
+            "detail": "The variety of all the different species of organisms in an ecosystem or on Earth."
+          },
+          {
+            "term": "Pathogen",
+            "detail": "A microorganism that causes infectious disease."
+          },
+          {
+            "term": "Vaccine",
+            "detail": "A small, safe dose of dead or inactive pathogen (or its antigens) that stimulates the immune system to produce antibodies, giving immunity without causing disease."
+          },
+          {
+            "term": "Antibiotic",
+            "detail": "A medicine that kills or inhibits the growth of bacteria without harming human cells; ineffective against viruses."
+          }
+        ]
+      },
+      {
+        "title": "Named biological processes: word and symbol equations",
+        "kind": "formula",
+        "items": [
+          {
+            "term": "Aerobic respiration (word)",
+            "detail": "Glucose + oxygen -> carbon dioxide + water (+ energy released)."
+          },
+          {
+            "term": "Aerobic respiration (symbol)",
+            "detail": "C6H12O6 + 6O2 -> 6CO2 + 6H2O."
+          },
+          {
+            "term": "Anaerobic respiration in muscles (word)",
+            "detail": "Glucose -> lactic acid (+ small amount of energy released). Incomplete breakdown of glucose."
+          },
+          {
+            "term": "Anaerobic respiration in yeast/plants (word)",
+            "detail": "Glucose -> ethanol + carbon dioxide (+ small amount of energy released). This is fermentation."
+          },
+          {
+            "term": "Photosynthesis (word)",
+            "detail": "Carbon dioxide + water -(light energy)-> glucose + oxygen. An endothermic reaction that transfers energy from the environment (light) to the chloroplasts."
+          },
+          {
+            "term": "Photosynthesis (symbol)",
+            "detail": "6CO2 + 6H2O -> C6H12O6 + 6O2."
+          },
+          {
+            "term": "Digestion of starch",
+            "detail": "Starch --(amylase)--> maltose --(maltase)--> glucose."
+          },
+          {
+            "term": "Digestion of protein",
+            "detail": "Protein --(protease)--> amino acids."
+          },
+          {
+            "term": "Digestion of lipids",
+            "detail": "Lipids --(lipase)--> fatty acids + glycerol."
+          },
+          {
+            "term": "Bile function",
+            "detail": "Produced by the liver, stored in the gall bladder; neutralises stomach acid and emulsifies fats, increasing their surface area for lipase to act on."
+          }
+        ]
+      },
+      {
+        "title": "Enzymes and factors affecting activity",
+        "kind": "def",
+        "items": [
+          {
+            "term": "Lock and key model",
+            "detail": "An enzyme's active site has a specific shape that only fits a complementary substrate; this explains why enzymes are specific to one reaction/substrate."
+          },
+          {
+            "term": "Effect of temperature on enzyme activity",
+            "detail": "Rate increases as temperature rises (more kinetic energy, more frequent successful collisions) up to the optimum; above the optimum, the enzyme denatures - the active site changes shape and the substrate no longer fits, so activity falls sharply."
+          },
+          {
+            "term": "Effect of pH on enzyme activity",
+            "detail": "Each enzyme has an optimum pH; above or below this, the enzyme denatures as the active site's shape is disrupted by changes in bonding, reducing or stopping activity."
+          },
+          {
+            "term": "Effect of substrate concentration",
+            "detail": "Rate increases as substrate concentration increases, because more successful collisions occur between enzyme and substrate, until the enzyme active sites become saturated and rate levels off."
+          },
+          {
+            "term": "Denaturation",
+            "detail": "A permanent change to the shape of an enzyme's active site (caused by excess heat or wrong pH) so the substrate can no longer bind and the enzyme stops working."
+          },
+          {
+            "term": "Amylase",
+            "detail": "Digestive enzyme that breaks down starch into sugars (maltose); produced in the salivary glands, pancreas and small intestine."
+          },
+          {
+            "term": "Protease",
+            "detail": "Digestive enzyme that breaks down proteins into amino acids; produced in the stomach, pancreas and small intestine."
+          },
+          {
+            "term": "Lipase",
+            "detail": "Digestive enzyme that breaks down lipids into fatty acids and glycerol; produced in the pancreas and small intestine."
+          }
+        ]
+      },
+      {
+        "title": "Homeostasis: reference values and hormones",
+        "kind": "data",
+        "items": [
+          {
+            "term": "Normal human body temperature",
+            "detail": "Approximately 37 degC, the optimum temperature for enzyme activity in the body."
+          },
+          {
+            "term": "Normal blood glucose regulation - high glucose",
+            "detail": "Pancreas detects high blood glucose and secretes insulin; insulin causes liver and muscle cells to take up glucose and store it as glycogen, lowering blood glucose."
+          },
+          {
+            "term": "Normal blood glucose regulation - low glucose",
+            "detail": "Pancreas secretes glucagon, which causes liver cells to convert stored glycogen back into glucose and release it into the blood, raising blood glucose."
+          },
+          {
+            "term": "Type 1 diabetes",
+            "detail": "The pancreas produces little or no insulin (usually an autoimmune cause); treated with insulin injections."
+          },
+          {
+            "term": "Type 2 diabetes",
+            "detail": "Body cells no longer respond properly to insulin (insulin resistance), often linked to obesity; managed by a carbohydrate-controlled diet, exercise, and sometimes medication."
+          },
+          {
+            "term": "Insulin: source and effect",
+            "detail": "Source: pancreas. Effect: lowers blood glucose by stimulating uptake and storage of glucose as glycogen in liver/muscle cells."
+          },
+          {
+            "term": "Glucagon: source and effect",
+            "detail": "Source: pancreas. Effect: raises blood glucose by stimulating breakdown of glycogen to glucose in the liver."
+          },
+          {
+            "term": "Adrenaline: source and effect",
+            "detail": "Source: adrenal glands. Effect: prepares the body for 'fight or flight' - increases heart rate, boosts blood glucose release, increases blood flow to muscles."
+          },
+          {
+            "term": "Thyroxine: source and effect",
+            "detail": "Source: thyroid gland. Effect: regulates basal metabolic rate, controlled by negative feedback."
+          },
+          {
+            "term": "FSH (follicle stimulating hormone): source and effect",
+            "detail": "Source: pituitary gland. Effect: causes maturation of an egg in the ovary and stimulates oestrogen production."
+          },
+          {
+            "term": "LH (luteinising hormone): source and effect",
+            "detail": "Source: pituitary gland. Effect: stimulates the release of the egg (ovulation) at around day 14 of the menstrual cycle."
+          },
+          {
+            "term": "Oestrogen: source and effect",
+            "detail": "Source: ovaries. Effect: causes the uterus lining to thicken/repair, and inhibits FSH while stimulating LH release at high levels."
+          },
+          {
+            "term": "Progesterone: source and effect",
+            "detail": "Source: ovaries (corpus luteum). Effect: maintains the uterus lining during the cycle/pregnancy, and inhibits FSH and LH."
+          },
+          {
+            "term": "Negative feedback principle",
+            "detail": "A control system detects a change from the normal level and triggers a response that reverses the change, returning the level towards normal (used for glucose, thyroxine, water balance)."
+          },
+          {
+            "term": "Osmoregulation - low water level",
+            "detail": "More ADH (antidiuretic hormone) is released from the pituitary gland, making the kidney tubules more permeable, so more water is reabsorbed and urine becomes more concentrated."
+          }
+        ]
+      },
+      {
+        "title": "Genetics and inheritance: terms and Punnett squares",
+        "kind": "method",
+        "items": [
+          {
+            "term": "Homozygous",
+            "detail": "An organism with two identical alleles for a particular gene (e.g. BB or bb)."
+          },
+          {
+            "term": "Heterozygous",
+            "detail": "An organism with two different alleles for a particular gene (e.g. Bb)."
+          },
+          {
+            "term": "Dominant allele",
+            "detail": "An allele that is expressed in the phenotype whenever it is present, even with only one copy - shown with a capital letter."
+          },
+          {
+            "term": "Recessive allele",
+            "detail": "An allele only expressed in the phenotype when two copies are present (homozygous recessive) - shown with a lowercase letter."
+          },
+          {
+            "term": "How to set out a Punnett square: step 1",
+            "detail": "Write the genotype of each parent and identify the alleles each can pass on in their gametes (e.g. parent Bb produces gametes B and b)."
+          },
+          {
+            "term": "How to set out a Punnett square: step 2",
+            "detail": "Draw a 2x2 grid; write one parent's gametes across the top and the other parent's gametes down the side."
+          },
+          {
+            "term": "How to set out a Punnett square: step 3",
+            "detail": "Fill each inner box with the combination of the row and column allele it corresponds to, giving the possible offspring genotypes."
+          },
+          {
+            "term": "How to set out a Punnett square: step 4",
+            "detail": "Count the genotypes: state the genotype ratio (e.g. 1 BB : 2 Bb : 1 bb) and the phenotype ratio (e.g. 3 dominant : 1 recessive) as required by the question."
+          },
+          {
+            "term": "How to set out a Punnett square: step 5",
+            "detail": "Answer in terms of probability if asked, e.g. 'there is a 1 in 4 (25 percent) chance of the offspring being bb', referencing the ratio from the grid."
+          },
+          {
+            "term": "Family tree analysis",
+            "detail": "To determine if an allele is dominant or recessive from a family tree: if two unaffected parents have an affected child, the allele must be recessive (both parents are carriers)."
+          },
+          {
+            "term": "Sex determination",
+            "detail": "Human females are XX, males are XY. A Punnett square crossing XX and XY gives a 1:1 ratio of female to male offspring."
+          },
+          {
+            "term": "Polygenic/environmental variation",
+            "detail": "Continuous variation (e.g. height, skin colour) usually results from the combined effect of many genes plus environmental factors, giving a range of phenotypes rather than distinct categories."
+          }
+        ]
+      },
+      {
+        "title": "Ecology sampling and calculations",
+        "kind": "formula",
+        "items": [
+          {
+            "term": "Quadrat population estimate formula",
+            "detail": "Estimated total population = (mean number of organisms per quadrat / area of one quadrat) x total area of habitat."
+          },
+          {
+            "term": "Why use random sampling",
+            "detail": "Random placement of quadrats (e.g. using random coordinates from a grid) avoids bias, so the sample fairly represents the whole habitat."
+          },
+          {
+            "term": "Percentage cover",
+            "detail": "Used for plants that are hard to count individually; estimated using a quadrat divided into a grid, counting the percentage of squares covered by the species."
+          },
+          {
+            "term": "Transect method",
+            "detail": "A line placed across a habitat along an environmental gradient; quadrats are sampled at set intervals along it to show how distribution/abundance changes across the gradient."
+          },
+          {
+            "term": "Capture-recapture formula (Lincoln index)",
+            "detail": "Estimated population size = (number caught in first sample x number caught in second sample) / number in second sample that are marked (recaptured)."
+          },
+          {
+            "term": "Capture-recapture method requirements",
+            "detail": "Marking must not harm or increase predation risk for the animal, marks must not fade before recapture, and enough time must pass for the marked animals to mix randomly back into the population."
+          },
+          {
+            "term": "Rate of decay/decomposition calculation",
+            "detail": "Rate = amount of change (e.g. mass lost, pH change) / time taken. Used in required practical investigations of decay, e.g. milk with lipase or buried plant material."
+          },
+          {
+            "term": "Factors increasing rate of decay",
+            "detail": "Warmer temperature (up to a point, then enzymes in decomposers denature), presence of water/moisture, and available oxygen (for aerobic decomposers)."
+          },
+          {
+            "term": "Pyramid of biomass efficiency",
+            "detail": "Percentage efficiency of biomass transfer = (biomass transferred to next level / biomass available at the level below) x 100; typically only about 10 percent is transferred, the rest lost via respiration, movement, egestion and excretion."
+          }
+        ]
+      },
+      {
+        "title": "Microscopy and magnification calculations",
+        "kind": "formula",
+        "items": [
+          {
+            "term": "Magnification formula",
+            "detail": "Magnification = size of image / size of real object. Rearrange as needed: image size = magnification x real size, or real size = image size / magnification."
+          },
+          {
+            "term": "Unit conversion for microscopy: mm to micrometres",
+            "detail": "1 mm = 1000 micrometres (um). Convert all measurements to the same unit before calculating magnification."
+          },
+          {
+            "term": "Unit conversion for microscopy: micrometres to nanometres",
+            "detail": "1 micrometre (um) = 1000 nanometres (nm)."
+          },
+          {
+            "term": "Total magnification of a light microscope",
+            "detail": "Total magnification = eyepiece lens magnification x objective lens magnification."
+          },
+          {
+            "term": "Resolution definition",
+            "detail": "The ability to distinguish between two separate points that are very close together; electron microscopes have much higher resolution than light microscopes, allowing much greater useful magnification."
+          },
+          {
+            "term": "Why electron microscopes reveal more detail",
+            "detail": "They have a much higher resolution than light microscopes, so they can be used to observe much smaller structures such as ribosomes and internal organelle detail that light microscopes cannot resolve."
+          },
+          {
+            "term": "Scale bar interpretation",
+            "detail": "A scale bar on a micrograph shows the real-life length represented by a given length on the image; measure the bar and the structure in the same units, then use the ratio to calculate real size."
+          },
+          {
+            "term": "Rearranging the magnification formula for real size",
+            "detail": "Real size = image size / magnification. Always convert image size to the same unit you want the real size in before dividing, e.g. mm to um."
+          }
+        ]
+      },
+      {
+        "title": "Answering 6-mark and required-practical questions",
+        "kind": "method",
+        "items": [
+          {
+            "term": "6-mark extended response: structure",
+            "detail": "Plan before writing: identify the command word, list 4-6 key scientific points in a logical order, then write in full sentences using correct biological terminology, linking cause to effect throughout."
+          },
+          {
+            "term": "6-mark extended response: what examiners reward",
+            "detail": "A logical sequence of linked scientific points (not just a list), correct use of specific terms (e.g. name the enzyme, name the hormone, name the structure), and a conclusion or judgement if the question asks for evaluation."
+          },
+          {
+            "term": "6-mark extended response: common failure",
+            "detail": "Losing marks by writing vague statements without any named substance, structure or mechanism, e.g. 'it changes shape' instead of 'the active site changes shape so the substrate can no longer bind'."
+          },
+          {
+            "term": "6-mark extended response: using given data",
+            "detail": "If a graph or table is provided, quote specific figures from it in your answer to support each point rather than describing the data only in general terms."
+          },
+          {
+            "term": "Required practical questions: variables",
+            "detail": "Always be ready to state the independent variable, dependent variable and at least two control variables, and explain why each control variable is fixed (to ensure a fair test)."
+          },
+          {
+            "term": "Required practical questions: improving accuracy",
+            "detail": "Common accepted improvements: repeat readings and calculate a mean, use more precise equipment (e.g. a burette instead of a measuring cylinder), and control an extra named variable."
+          },
+          {
+            "term": "Required practical questions: identifying anomalies",
+            "detail": "An anomaly is a result that does not fit the pattern of the other repeats; state that it should be repeated and, if confirmed as anomalous, excluded from the mean calculation."
+          },
+          {
+            "term": "Required practical questions: risk and hazard",
+            "detail": "Name the specific hazard (e.g. hot water causing scalds, acid causing irritation) and the specific precaution taken (e.g. wear goggles, use tongs), not a generic 'be careful' answer."
+          }
+        ]
+      },
+      {
+        "title": "Exam-day plan",
+        "kind": "list",
+        "items": [
+          {
+            "term": "Paper 1: 8461/1H",
+            "detail": "1 hour 45 minutes, 100 marks. Covers cell biology, organisation, infection and response, bioenergetics. Aim for roughly 1 minute per mark; attempt the 6-mark question early while concentration is highest."
+          },
+          {
+            "term": "Paper 2: 8461/2H",
+            "detail": "1 hour 45 minutes, 100 marks. Covers homeostasis and response, inheritance/variation/evolution, ecology. Aim for roughly 1 minute per mark; leave time for any Punnett square or ecology calculation questions as they take longer to lay out."
+          },
+          {
+            "term": "First 5 minutes of any paper",
+            "detail": "Skim the whole paper, note where the 6-mark question and any required-practical-based questions are, and plan your time so calculation and extended-response questions are not rushed."
+          },
+          {
+            "term": "Before submitting",
+            "detail": "Check every calculation has correct units, every genetics answer states genotype AND phenotype ratios where asked, and no multiple-choice question is left blank."
+          },
+          {
+            "term": "Answering multiple choice questions",
+            "detail": "Read all options before choosing, cross out options you know are wrong, and never leave a multiple choice question blank - a guess has a chance of being right."
+          },
+          {
+            "term": "Command word check before answering",
+            "detail": "Underline the command word (describe, explain, evaluate, calculate) in each question before writing, to avoid describing when an explanation is required or vice versa."
+          },
+          {
+            "term": "Using the mark allocation as a guide",
+            "detail": "A question worth 3 marks needs roughly 3 distinct linked points; a 1-mark question needs a single short, precise answer - do not overwrite short-answer questions."
+          },
+          {
+            "term": "Practical apparatus questions",
+            "detail": "When asked to name equipment or describe a required practical step, use the exact apparatus names (e.g. gas syringe, quadrat, colorimeter) rather than vague descriptions."
+          }
+        ]
+      }
+    ]
+  },
   "topics": [
     {
       "id": "bi-ecology-adaptations",

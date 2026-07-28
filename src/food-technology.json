@@ -1,0 +1,1208 @@
+{
+  "id": "food-technology",
+  "name": "Food Preparation and Nutrition",
+  "board": "AQA",
+  "boardVerified": true,
+  "specCode": "8585",
+  "tier": "Single tier",
+  "accent": "lime",
+  "boardNote": "VERIFIED from the King Edward VI Five Ways published examination boards list, which names AQA for Food Technology. The KEFW Curriculum Intent documents name AQA GCSE Food Preparation and Nutrition.",
+  "papers": "Paper 1 Food preparation and nutrition, written exam 1h 45m, 100 marks, 50 percent: 20 multiple-choice marks plus 80 marks of structured and extended response. NEA 1 Food investigation, 30 marks, 15 percent, released September. NEA 2 Food preparation assessment, 70 marks, 35 percent, released November, final practical of no more than 3 hours.",
+  "pastPapers": {
+    "label": "AQA GCSE Food Preparation and Nutrition 8585 assessment resources and past papers",
+    "url": "https://www.aqa.org.uk/subjects/food/gcse/food-preparation-and-nutrition-8585/assessment-resources",
+    "verified": true
+  },
+  "resources": [
+    {
+      "label": "AQA GCSE Food Preparation and Nutrition 8585 specification",
+      "url": "https://www.aqa.org.uk/subjects/food/gcse/food-preparation-and-nutrition-8585/specification",
+      "verified": true
+    },
+    {
+      "label": "Food a Fact of Life, free 14 to 16 resources",
+      "url": "https://www.foodafactoflife.org.uk/14-16-years/",
+      "verified": true
+    },
+    {
+      "label": "AQA Food Preparation and Nutrition subject page",
+      "url": "https://www.aqa.org.uk/subjects/food/gcse/food-preparation-and-nutrition-8585",
+      "verified": true
+    },
+    {
+      "label": "NHS Eatwell Guide",
+      "url": "https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/",
+      "verified": true
+    }
+  ],
+  "topics": [
+    {
+      "id": "ft-macronutrients",
+      "name": "Food, Nutrition and Health: Macronutrients",
+      "subtopics": [
+        "Protein: sources, function of growth and repair, amino acids and essential amino acids",
+        "High biological value proteins versus low biological value proteins and protein complementation",
+        "Effects of protein deficiency including kwashiorkor and effects of excess protein intake",
+        "Fats and oils: sources, function of energy, insulation and protection of organs, and essential fatty acids",
+        "Saturated fatty acids versus unsaturated fatty acids, and visible versus invisible fats",
+        "Effects of excess saturated fat intake on heart health and effects of fat deficiency",
+        "Carbohydrates: sugars, starches and dietary fibre, and their main sources",
+        "Monosaccharides and disaccharides versus polysaccharides, and simple versus complex carbohydrates",
+        "Function of carbohydrates as an energy source and the role of fibre in digestive health",
+        "Effects of excess sugar intake including tooth decay, obesity and type 2 diabetes",
+        "Energy needs of the body and how energy requirements vary with age, gender and activity level",
+        "Balancing macronutrient intake across a healthy varied diet using the Eatwell Guide",
+        "How cooking methods affect the nutritional value of macronutrients",
+        "Diet-related health conditions linked to macronutrient imbalance: obesity, coronary heart disease, type 2 diabetes"
+      ],
+      "cards": [
+        {
+          "front": "What is the main function of protein in the body?",
+          "back": "Growth and repair of body cells and tissues; it can also provide energy in extreme circumstances."
+        },
+        {
+          "front": "What is an essential amino acid?",
+          "back": "An amino acid the body cannot make itself, so it must be obtained from food."
+        },
+        {
+          "front": "What is a high biological value (HBV) protein?",
+          "back": "A protein containing all the essential amino acids in the right proportions the body needs, usually from animal sources."
+        },
+        {
+          "front": "What is protein complementation?",
+          "back": "Combining two or more low biological value protein sources, such as beans and rice, so that together they provide all the essential amino acids."
+        },
+        {
+          "front": "Name the two categories of fatty acids and give one health effect of each.",
+          "back": "Saturated fatty acids (mainly animal fats) can raise blood cholesterol and heart disease risk; unsaturated fatty acids (mainly plant and fish oils) can help lower blood cholesterol."
+        },
+        {
+          "front": "What is the difference between visible and invisible fat?",
+          "back": "Visible fat can be seen and cut off, such as the fat on meat or butter; invisible fat is hidden within a food, such as in cheese, cakes or nuts."
+        },
+        {
+          "front": "What are the three types of carbohydrate?",
+          "back": "Sugars, starches and dietary fibre (non-starch polysaccharide)."
+        },
+        {
+          "front": "Give one function of dietary fibre.",
+          "back": "It aids digestion and helps prevent bowel disorders by adding bulk to waste and helping it move through the gut."
+        },
+        {
+          "front": "What health problems are linked to excess sugar intake?",
+          "back": "Tooth decay, obesity and increased risk of type 2 diabetes."
+        },
+        {
+          "front": "What is kwashiorkor?",
+          "back": "A severe protein deficiency disease causing swollen abdomen, muscle wasting and stunted growth, mainly seen in children with inadequate diets."
+        },
+        {
+          "front": "Name two sources of essential fatty acids.",
+          "back": "Oily fish (e.g. salmon, mackerel) and vegetable oils (e.g. sunflower, olive oil)."
+        },
+        {
+          "front": "Why do energy needs vary between individuals?",
+          "back": "Energy needs depend on age, gender, body size and physical activity level (PAL); more active people and growing teenagers need more energy."
+        }
+      ],
+      "cloze": [
+        "{{c1::HBV}} proteins contain all the {{c2::essential amino acids}} in the correct proportions.",
+        "{{c1::Protein complementation}} combines LBV protein sources to provide all essential amino acids.",
+        "Excess {{c1::saturated fat}} intake is linked to raised blood {{c2::cholesterol}} and heart disease.",
+        "The three types of carbohydrate are sugars, starches and {{c1::dietary fibre}}.",
+        "Excess sugar intake is linked to tooth decay, obesity and {{c1::type 2 diabetes}}."
+      ]
+    },
+    {
+      "id": "ft-micronutrients",
+      "name": "Food, Nutrition and Health: Micronutrients, Water and Dietary Needs",
+      "subtopics": [
+        "Fat soluble vitamins A, D, E and K: sources, functions, deficiency and excess",
+        "Water soluble vitamins B group and C: sources, functions, deficiency and excess",
+        "Major minerals calcium, iron, sodium and fluoride: sources, functions, deficiency and excess",
+        "The role of water in the body and recommended fluid intake",
+        "Dehydration and its effects on the body",
+        "Nutritional needs across life stages: infants, toddlers, children, teenagers, adults, older adults",
+        "Nutritional needs during pregnancy and while breastfeeding",
+        "Nutritional needs for specific dietary groups: vegetarians, vegans, lactose intolerant, coeliac, food allergies",
+        "How to carry out a nutritional analysis of a recipe or meal using computer software or reference tables",
+        "The Eatwell Guide and the eight government healthy eating guidelines",
+        "Diet-related health conditions: obesity, coronary heart disease, type 2 diabetes, iron deficiency anaemia, bone density and osteoporosis, dental health",
+        "Making informed food choices to prevent diet-related ill health",
+        "Portion sizes and interpreting nutritional information on food labels"
+      ],
+      "cards": [
+        {
+          "front": "Name the four fat soluble vitamins.",
+          "back": "Vitamins A, D, E and K."
+        },
+        {
+          "front": "What condition results from vitamin D deficiency in children?",
+          "back": "Rickets, causing soft, weak bones that can bow or bend."
+        },
+        {
+          "front": "What is the main function of vitamin C?",
+          "back": "Antioxidant, helps the immune system, aids iron absorption, and is needed for healthy skin and connective tissue (collagen)."
+        },
+        {
+          "front": "What deficiency disease is caused by lack of vitamin C?",
+          "back": "Scurvy, causing bleeding gums and poor wound healing."
+        },
+        {
+          "front": "What is the main function of calcium?",
+          "back": "Builds and maintains strong bones and teeth, and helps blood clot and muscles function."
+        },
+        {
+          "front": "What is the main function of iron?",
+          "back": "Makes haemoglobin in red blood cells, which carries oxygen around the body."
+        },
+        {
+          "front": "What condition results from iron deficiency?",
+          "back": "Iron deficiency anaemia, causing tiredness, pale skin and breathlessness."
+        },
+        {
+          "front": "Why should sodium intake be limited?",
+          "back": "Excess sodium (salt) is linked to high blood pressure and increased risk of stroke and heart disease."
+        },
+        {
+          "front": "What are the nutritional priorities for a toddler compared to an adult?",
+          "back": "Toddlers need energy-dense, nutrient-dense foods in small frequent meals because they have small stomachs but high energy and growth needs relative to size."
+        },
+        {
+          "front": "Why do pregnant women need extra folic acid?",
+          "back": "Folic acid reduces the risk of neural tube defects such as spina bifida in the developing baby."
+        },
+        {
+          "front": "What must a coeliac avoid and why?",
+          "back": "Gluten, a protein found in wheat, barley and rye, because it damages the lining of their small intestine."
+        },
+        {
+          "front": "Give two effects of dehydration on the body.",
+          "back": "Headaches and reduced concentration; in severe cases dizziness, confusion and, if untreated, organ damage."
+        }
+      ],
+      "cloze": [
+        "Vitamin D deficiency in children causes {{c1::rickets}}, which softens and weakens bones.",
+        "Vitamin C deficiency causes {{c1::scurvy}}.",
+        "{{c1::Iron}} is needed to make haemoglobin, which carries {{c2::oxygen}} in red blood cells.",
+        "Pregnant women are advised to take extra {{c1::folic acid}} to reduce the risk of neural tube defects.",
+        "Coeliac disease requires avoiding {{c1::gluten}}, found in wheat, barley and rye.",
+        "Excess {{c1::sodium}} intake is linked to high blood pressure."
+      ]
+    },
+    {
+      "id": "ft-heat-transfer",
+      "name": "Food Science: Cooking and Heat Transfer",
+      "subtopics": [
+        "Reasons why food is cooked: to make it safe, palatable, digestible, and to develop flavour, colour and texture",
+        "Conduction as heat transfer through direct contact in solids and liquids, e.g. frying pan to food",
+        "Convection as heat transfer through the movement of heated liquid or air, e.g. oven baking or boiling",
+        "Radiation as heat transfer through electromagnetic waves, e.g. grilling and toasting",
+        "How the density, viscosity, moisture content and surface area of a food affect the rate of heat transfer",
+        "Selecting an appropriate cooking method for a given ingredient, occasion or nutritional aim",
+        "How cooking equipment design affects the efficiency of heat transfer, e.g. materials and shape of pans",
+        "Dry heat methods: baking, roasting, grilling, barbecuing",
+        "Moist heat methods: boiling, poaching, steaming, stewing, braising",
+        "Fat-based methods: shallow frying, deep frying, stir frying",
+        "Microwave cooking and how microwaves cause water molecules to vibrate and generate heat",
+        "How different cooking methods affect the sensory qualities of food: colour, texture, flavour, aroma"
+      ],
+      "cards": [
+        {
+          "front": "Give three reasons why food is cooked.",
+          "back": "To make it safe to eat by killing bacteria, to improve palatability and digestibility, and to develop flavour, colour and texture."
+        },
+        {
+          "front": "Define conduction as a method of heat transfer.",
+          "back": "Heat travels through direct contact between particles, for example heat passing from a hob through the base of a saucepan into food."
+        },
+        {
+          "front": "Define convection as a method of heat transfer.",
+          "back": "Heat travels through the movement of currents in a liquid or air, for example hot air circulating in an oven or boiling water circulating heat in a pan."
+        },
+        {
+          "front": "Define radiation as a method of heat transfer.",
+          "back": "Heat travels as electromagnetic waves directly onto the food without a medium, for example under a grill or in a toaster."
+        },
+        {
+          "front": "How does surface area affect the rate of heat transfer?",
+          "back": "A larger surface area increases the rate of heat transfer, so smaller or thinner pieces of food cook faster."
+        },
+        {
+          "front": "Give two dry heat cooking methods.",
+          "back": "Baking and roasting (also grilling and barbecuing)."
+        },
+        {
+          "front": "Give two moist heat cooking methods.",
+          "back": "Boiling and steaming (also poaching, stewing and braising)."
+        },
+        {
+          "front": "How does a microwave oven heat food?",
+          "back": "Microwaves cause water molecules in the food to vibrate rapidly, generating heat through friction from within the food."
+        },
+        {
+          "front": "Why might density and viscosity affect cooking time?",
+          "back": "Denser or more viscous foods transfer heat more slowly, so they take longer to cook through than thin, less dense foods."
+        },
+        {
+          "front": "What is the difference between shallow frying and deep frying?",
+          "back": "Shallow frying uses a small amount of fat and cooks the food mainly by conduction from the pan; deep frying submerges food fully in hot fat, cooking it faster on all sides."
+        }
+      ],
+      "cloze": [
+        "{{c1::Conduction}} is heat transfer through direct contact between particles.",
+        "{{c1::Convection}} is heat transfer through the movement of currents in a liquid or air.",
+        "{{c1::Radiation}} is heat transfer by electromagnetic waves, as used in grilling.",
+        "Microwaves heat food by making {{c1::water molecules}} vibrate rapidly.",
+        "A {{c1::larger}} surface area increases the rate of heat transfer into food."
+      ]
+    },
+    {
+      "id": "ft-functional-properties",
+      "name": "Food Science: Functional and Chemical Properties",
+      "subtopics": [
+        "Denaturation of protein caused by heat, acid or mechanical action, changing protein structure permanently",
+        "Coagulation of protein on heating, e.g. egg white turning from liquid to solid",
+        "Foam formation from whisked egg white trapping air, and its use in meringue and mousse",
+        "Gelatinisation of starch when heated with liquid, thickening sauces such as a roux",
+        "Dextrinisation of starch by dry heat, browning the surface of bread and toast",
+        "Caramelisation of sugar by heat, changing colour, flavour and texture",
+        "Emulsification of fat and water using an emulsifier, e.g. egg yolk lecithin in mayonnaise",
+        "Plasticity of fats, allowing them to be creamed or spread, e.g. butter in creaming method",
+        "Shortening: fat coating flour proteins to stop gluten forming long strands, giving a crumbly texture",
+        "Aeration by whisking, creaming, folding, rubbing in and using raising agents",
+        "Raising agents: biological (yeast), chemical (baking powder, bicarbonate of soda), and mechanical/physical (whisking, steam, sieving)",
+        "How pH affects the activation of raising agents and protein structure",
+        "The role of gluten formation in bread making and the effect of kneading"
+      ],
+      "cards": [
+        {
+          "front": "Define denaturation.",
+          "back": "A permanent change to the structure of a protein caused by heat, acid or mechanical action, which changes its shape and properties."
+        },
+        {
+          "front": "Give a food example of coagulation.",
+          "back": "Egg white turning from a runny liquid into a solid white when heated, as in a fried or boiled egg."
+        },
+        {
+          "front": "What is gelatinisation and give an example?",
+          "back": "Starch granules absorbing liquid and swelling when heated, thickening the mixture, as in a roux-based sauce."
+        },
+        {
+          "front": "What is dextrinisation and give an example?",
+          "back": "Dry heat breaking down starch on the surface of food into dextrins, causing browning, as in toasted bread."
+        },
+        {
+          "front": "What is caramelisation and give an example?",
+          "back": "Sugar breaking down under heat to form a brown colour and nutty flavour, as in caramel sauce or roasted onions."
+        },
+        {
+          "front": "What is emulsification and give an example?",
+          "back": "Combining two liquids that would normally separate, such as oil and water, using an emulsifier like egg yolk lecithin, as in mayonnaise."
+        },
+        {
+          "front": "What is plasticity in fats and give an example?",
+          "back": "The ability of a fat to be spread or moulded at room temperature, allowing it to be creamed with sugar, as in butter for a cake mixture."
+        },
+        {
+          "front": "What is shortening and give an example?",
+          "back": "Fat coating flour particles to prevent long gluten strands forming, giving a short, crumbly texture, as in shortcrust pastry."
+        },
+        {
+          "front": "Name the three types of raising agent.",
+          "back": "Biological (yeast), chemical (baking powder or bicarbonate of soda), and mechanical/physical (whisking, steam or sieving air into flour)."
+        },
+        {
+          "front": "Give a food example of aeration by whisking.",
+          "back": "Whisked egg white trapping air to form a foam, as used in meringue."
+        },
+        {
+          "front": "How does kneading affect bread dough?",
+          "back": "Kneading develops the gluten network, making the dough elastic and able to trap gas produced by yeast, giving bread its structure."
+        }
+      ],
+      "cloze": [
+        "{{c1::Denaturation}} is a permanent change to protein structure caused by heat, acid or mechanical action.",
+        "{{c1::Gelatinisation}} occurs when starch granules absorb liquid and swell on heating.",
+        "{{c1::Dextrinisation}} is caused by dry heat browning starch on the surface of bread.",
+        "{{c1::Caramelisation}} is the browning of sugar under heat.",
+        "{{c1::Emulsification}} combines oil and water using an emulsifier such as egg yolk lecithin.",
+        "{{c1::Shortening}} is fat coating flour to stop long {{c2::gluten}} strands forming."
+      ]
+    },
+    {
+      "id": "ft-food-safety",
+      "name": "Food Safety: Spoilage, Contamination and Preparation",
+      "subtopics": [
+        "Micro-organisms in food: bacteria, yeasts and moulds, and the conditions they need to grow",
+        "Beneficial uses of micro-organisms in food production, e.g. yeast in bread, bacteria in yoghurt and cheese",
+        "Food spoilage and signs that food has gone off: smell, appearance, texture, taste",
+        "Bacterial contamination: cross-contamination, high-risk foods and the temperature danger zone",
+        "The main food poisoning bacteria: Salmonella, E. coli, Campylobacter, Listeria, Staphylococcus aureus, and their common sources and symptoms",
+        "Physical, chemical and biological contamination of food and how to prevent each",
+        "Food safety principles when buying food: checking dates, packaging integrity and storage instructions",
+        "Food safety principles when storing food: correct fridge and freezer temperatures, use-by and best-before dates, storage order to avoid cross-contamination",
+        "Food safety principles when preparing, cooking and serving food: personal hygiene, separate equipment for raw and cooked food, thorough cooking and reheating",
+        "Correct core cooking and reheating temperatures and probe use",
+        "Date marking on food: use-by dates for safety and best-before dates for quality"
+      ],
+      "cards": [
+        {
+          "front": "Name three conditions bacteria need to grow.",
+          "back": "Warmth, moisture and food (nutrients); time is also needed for them to multiply."
+        },
+        {
+          "front": "What is the temperature danger zone?",
+          "back": "5 degrees Celsius to 63 degrees Celsius, the range in which food poisoning bacteria multiply fastest."
+        },
+        {
+          "front": "Give three examples of high-risk foods.",
+          "back": "Cooked meat and poultry, dairy products, and cooked rice (also eggs, fish and shellfish)."
+        },
+        {
+          "front": "What is cross-contamination?",
+          "back": "The transfer of harmful bacteria from one food, surface or piece of equipment to another, e.g. raw meat juices touching ready-to-eat food."
+        },
+        {
+          "front": "What are common sources of Salmonella?",
+          "back": "Raw eggs and poultry; symptoms include diarrhoea, vomiting and stomach pain."
+        },
+        {
+          "front": "What are common sources of E. coli?",
+          "back": "Raw or undercooked meat and unwashed vegetables; it can cause severe diarrhoea and can survive fridge and freezer temperatures."
+        },
+        {
+          "front": "Give an example of physical, chemical and biological contamination.",
+          "back": "Physical: a hair or piece of glass in food. Chemical: cleaning fluid residue on equipment. Biological: bacteria, viruses or moulds."
+        },
+        {
+          "front": "What is the difference between a use-by date and a best-before date?",
+          "back": "A use-by date is a safety date - food should not be eaten after this date; a best-before date is a quality date - food may be safely eaten after but quality may decline."
+        },
+        {
+          "front": "What core temperature should high-risk food reach when cooked or reheated?",
+          "back": "75 degrees Celsius (held for at least 30 seconds), checked with a temperature probe."
+        },
+        {
+          "front": "Give one beneficial use of micro-organisms in food production.",
+          "back": "Yeast ferments sugars to produce carbon dioxide, which raises bread dough."
+        },
+        {
+          "front": "How should raw and cooked meat be stored to prevent cross-contamination?",
+          "back": "Raw meat should be stored below and separately from cooked or ready-to-eat foods, ideally on a designated colour-coded board and in a sealed container."
+        }
+      ],
+      "cloze": [
+        "The temperature danger zone for bacterial growth is {{c1::5}} to {{c2::63}} degrees Celsius.",
+        "High-risk foods should be cooked or reheated to a core temperature of {{c1::75}} degrees Celsius.",
+        "{{c1::Cross-contamination}} is the transfer of harmful bacteria from one food or surface to another.",
+        "{{c1::Salmonella}} is commonly found in raw eggs and poultry.",
+        "A {{c1::use-by}} date is a safety date, while a {{c2::best-before}} date relates to quality."
+      ]
+    },
+    {
+      "id": "ft-food-choice",
+      "name": "Food Choice: Factors, Labelling, Sensory Testing and Cuisines",
+      "subtopics": [
+        "Factors influencing food choice: cost, availability, seasonality, time, skill and equipment",
+        "Food choice related to religion, culture, ethical and moral beliefs, e.g. halal, kosher, vegetarianism, veganism",
+        "Food choice related to medical conditions and allergies, e.g. coeliac disease, nut allergy, lactose intolerance",
+        "British traditional food products, dishes and regional variations",
+        "Studying two international cuisines and their characteristic ingredients, preparation methods and presentation",
+        "Definition of cuisine as a style characteristic of a country or region using distinctive ingredients and methods",
+        "Sensory evaluation: the senses used in tasting food - sight, smell, taste, touch and sound",
+        "Sensory testing methods: preference tests, rating tests, ranking tests and triangle tests",
+        "Setting up a fair sensory test: controlling variables, using trained or untrained tasters, coding samples",
+        "Food labelling: mandatory information required by law, e.g. name, ingredients list, allergens, weight, best-before/use-by",
+        "Front-of-pack traffic light labelling and its use in comparing nutritional content",
+        "Marketing and advertising influences on food choice, including packaging design and health claims",
+        "Costing recipes and making modifications to recipes for cost, dietary need or availability"
+      ],
+      "cards": [
+        {
+          "front": "Give three factors that can influence food choice.",
+          "back": "Cost, availability of ingredients, and time available to prepare food (also culture, religion, health and personal preference)."
+        },
+        {
+          "front": "Give an example of a religious food choice rule.",
+          "back": "Halal meat for Muslims must be slaughtered according to Islamic law; kosher food for Jewish people follows dietary laws such as not mixing meat and dairy."
+        },
+        {
+          "front": "Define cuisine.",
+          "back": "A style of cooking characteristic of a particular country or region, using distinctive ingredients, preparation methods and presentation techniques."
+        },
+        {
+          "front": "Name the senses used in sensory evaluation of food.",
+          "back": "Sight, smell, taste, touch and sound."
+        },
+        {
+          "front": "What is a triangle test in sensory evaluation?",
+          "back": "Tasters are given three samples, two identical and one different, and must identify the odd one out to test if a difference can be detected."
+        },
+        {
+          "front": "What is a preference test?",
+          "back": "Tasters state which of two or more samples they prefer, used to find out which product people like best."
+        },
+        {
+          "front": "Why must samples be coded in a sensory test?",
+          "back": "To remove bias, so tasters judge the food itself rather than being influenced by knowing the brand or source."
+        },
+        {
+          "front": "Name three pieces of mandatory information required on a food label.",
+          "back": "Name of the food, list of ingredients in descending order of weight, and allergen information (also weight, use-by/best-before date and storage instructions)."
+        },
+        {
+          "front": "What is the purpose of traffic light labelling?",
+          "back": "To let consumers quickly compare the fat, saturated fat, sugar and salt content of foods using red, amber and green colour coding."
+        },
+        {
+          "front": "Why must allergens be highlighted on food labels?",
+          "back": "To protect consumers with allergies or intolerances from accidentally eating an ingredient that could cause a serious or life-threatening reaction."
+        },
+        {
+          "front": "Give one way marketing can influence food choice.",
+          "back": "Attractive packaging design or health claims on the front of pack can persuade a consumer to choose one product over another."
+        }
+      ],
+      "cloze": [
+        "A {{c1::cuisine}} is a style of cooking characteristic of a particular country or region.",
+        "The senses used in sensory evaluation are sight, smell, taste, {{c1::touch}} and sound.",
+        "A {{c1::triangle test}} asks tasters to identify the odd sample out of three.",
+        "Food labels must legally show the {{c1::ingredients list}} in descending order of weight.",
+        "{{c1::Traffic light}} labelling uses colour coding to show fat, sugar and salt content at a glance."
+      ]
+    },
+    {
+      "id": "ft-food-provenance",
+      "name": "Food Provenance: Growing, Rearing, Processing, Sustainability and Security",
+      "subtopics": [
+        "Where food comes from: grown ingredients (fruit, vegetables, cereals), reared ingredients (meat, poultry), caught ingredients (fish)",
+        "Primary processing: converting raw ingredients into edible food or ingredients for further use, e.g. wheat milled into flour",
+        "Secondary processing: converting primary processed foods into new products, e.g. flour made into bread, milk made into cheese",
+        "How processing can affect the nutritional and sensory properties of ingredients, e.g. vitamin loss on heating",
+        "Technological developments in food production: fortification and modification of foods for health benefits",
+        "Examples of fortified foods, e.g. white flour fortified with calcium and iron, breakfast cereals fortified with vitamins",
+        "Genetic modification of crops and arguments for and against GM food",
+        "Environmental issues associated with food: food miles, packaging waste, carbon footprint",
+        "Sustainability of food production and methods to reduce environmental impact, e.g. organic farming, local sourcing, reducing food waste",
+        "Food security: the challenge of providing a growing global population with a safe, nutritious, affordable and sustainable food supply",
+        "Factors threatening food security: climate change, drought, flooding, population growth, conflict",
+        "Reducing food waste at home and in the food industry"
+      ],
+      "cards": [
+        {
+          "front": "Give an example each of a grown, reared and caught food.",
+          "back": "Grown: wheat or potatoes. Reared: beef cattle or chickens. Caught: cod or other wild fish."
+        },
+        {
+          "front": "Define primary processing and give an example.",
+          "back": "Converting a raw ingredient into an edible food or an ingredient for further use, e.g. milling wheat into flour or pasteurising raw milk."
+        },
+        {
+          "front": "Define secondary processing and give an example.",
+          "back": "Converting a primary processed food into a new product, e.g. turning flour into bread, or milk into cheese or yoghurt."
+        },
+        {
+          "front": "What is food fortification and give an example?",
+          "back": "Adding nutrients to food that were lost in processing or were never present, e.g. UK white flour is fortified by law with calcium, iron and B vitamins."
+        },
+        {
+          "front": "Give one argument for and one argument against genetically modified (GM) crops.",
+          "back": "For: GM crops can be bred to resist disease and increase yield, helping food security. Against: there are concerns about long-term health effects and impact on biodiversity."
+        },
+        {
+          "front": "What are food miles?",
+          "back": "The distance food travels from where it is produced to where it is consumed; higher food miles generally mean a larger carbon footprint."
+        },
+        {
+          "front": "Define food security.",
+          "back": "Ensuring all people have reliable access to enough safe, nutritious and affordable food to meet their needs."
+        },
+        {
+          "front": "Give two factors that threaten global food security.",
+          "back": "Climate change causing droughts and floods, and a growing global population increasing demand for food."
+        },
+        {
+          "front": "Give two ways to make food production more sustainable.",
+          "back": "Buying local and seasonal produce to reduce food miles, and reducing food waste throughout the supply chain."
+        },
+        {
+          "front": "How can heat processing affect the nutritional value of a food?",
+          "back": "It can destroy heat-sensitive vitamins such as vitamin C and some B vitamins, reducing the nutritional value of the food."
+        }
+      ],
+      "cloze": [
+        "{{c1::Primary processing}} converts a raw ingredient into an edible food, such as milling wheat into flour.",
+        "{{c1::Secondary processing}} converts a primary processed food into a new product, such as flour into bread.",
+        "{{c1::Fortification}} adds nutrients to food, such as calcium and iron added to UK white flour.",
+        "{{c1::Food miles}} measure the distance food travels from production to consumption.",
+        "{{c1::Food security}} means ensuring reliable access to enough safe, nutritious and affordable food."
+      ]
+    },
+    {
+      "id": "ft-nea",
+      "name": "NEA 1 and NEA 2 Preparation",
+      "subtopics": [
+        "NEA 1 Food investigation is released in September of Year 11 and is worth 30 marks, 15 percent of the GCSE",
+        "NEA 1 assesses AO2 (apply knowledge), AO3 (plan, prepare, cook and present) and AO4 (analyse and evaluate)",
+        "NEA 1 requires research into the working characteristics and functional and chemical properties of a chosen ingredient or process",
+        "NEA 1 requires a hypothesis, practical investigations, and analysis and evaluation of results with scientific explanation",
+        "NEA 2 Food preparation assessment is released in November of Year 11 and is worth 70 marks, 35 percent of the GCSE",
+        "NEA 2 requires planning, preparing, cooking and presenting a final menu of three dishes for a specific context",
+        "NEA 2 final practical must be completed in a single session of no more than 3 hours",
+        "NEA 2 requires demonstration of a range of technical skills across the three dishes chosen",
+        "Students must work independently, making their own judgements about cooking methods and adapting recipes to improve results",
+        "Students must apply food safety principles throughout planning and the final 3-hour practical",
+        "Time planning for the NEA 2 practical, including a sequenced production plan referencing dovetailing of tasks",
+        "Costing, nutritional analysis and sensory evaluation of the final dishes as part of NEA 2 analysis and evaluation"
+      ],
+      "cards": [
+        {
+          "front": "When is NEA 1 released and what is it worth?",
+          "back": "Released in September of Year 11; worth 30 marks, 15 percent of the GCSE."
+        },
+        {
+          "front": "When is NEA 2 released and what is it worth?",
+          "back": "Released in November of Year 11; worth 70 marks, 35 percent of the GCSE."
+        },
+        {
+          "front": "What does NEA 1 require students to investigate?",
+          "back": "The working characteristics and functional and chemical properties of a particular ingredient or process, through research and practical investigation."
+        },
+        {
+          "front": "What assessment objectives does NEA 1 cover?",
+          "back": "AO2 (apply knowledge and understanding), AO3 (plan, prepare, cook and present dishes) and AO4 (analyse and evaluate)."
+        },
+        {
+          "front": "What must the final NEA 2 practical achieve?",
+          "back": "A final menu of three dishes, cooked, presented and completed within a single session of no more than 3 hours."
+        },
+        {
+          "front": "How many dishes are typically developed and trialled before the final NEA 2 menu is chosen?",
+          "back": "Students research and trial a wider range, typically 3 to 4 dishes, before selecting a final menu of three to showcase their skills."
+        },
+        {
+          "front": "What must students demonstrate independence in during NEA 2?",
+          "back": "Making their own judgements about cooking methods and adapting or improving recipes to increase palatability and quality."
+        },
+        {
+          "front": "When must food safety principles be applied in NEA 2?",
+          "back": "Throughout the planning stage and continuously during the final 3-hour practical session."
+        },
+        {
+          "front": "What is dovetailing in the context of NEA 2 time planning?",
+          "back": "Sequencing tasks so that waiting times, such as something baking or chilling, are used productively to prepare or cook another part of the menu."
+        },
+        {
+          "front": "Give three things NEA 2 analysis and evaluation should include.",
+          "back": "Costing of the dishes, nutritional analysis against the chosen context, and sensory evaluation of the finished dishes."
+        }
+      ],
+      "cloze": [
+        "NEA 1 is released in {{c1::September}} of Year 11 and is worth {{c2::30}} marks.",
+        "NEA 2 is released in {{c1::November}} of Year 11 and is worth {{c2::70}} marks.",
+        "The final NEA 2 practical must be completed within a single session of no more than {{c1::3 hours}}.",
+        "NEA 2 requires a final menu of {{c1::three}} dishes.",
+        "{{c1::Dovetailing}} means sequencing tasks so waiting time is used productively during the practical."
+      ]
+    }
+  ],
+  "exams": [
+    {
+      "code": "8585/W",
+      "name": "Paper 1: Food preparation and nutrition",
+      "date": "2027-05-24",
+      "session": "pm",
+      "duration": "1h 45m"
+    }
+  ],
+  "examNote": "The written paper is Monday 24 May 2027 pm per the AQA provisional summer 2027 timetable, version 1.0, January 2026. NEA 1 is released in September 2026 and NEA 2 in November 2026; the school sets the internal deadlines, so confirm them.",
+  "offline": {
+    "commandWords": [
+      {
+        "word": "State",
+        "means": "Give a short, factual answer with no explanation needed.",
+        "doThis": "Write a brief, precise fact or name - one point per mark, no extra detail required."
+      },
+      {
+        "word": "Identify",
+        "means": "Pick out and name the correct fact, item or feature.",
+        "doThis": "Name the specific thing asked for, using correct subject terminology."
+      },
+      {
+        "word": "Describe",
+        "means": "Give a detailed account of what something is or how it happens, with no reasons needed.",
+        "doThis": "Write a step-by-step or feature-by-feature account in full sentences, adding relevant detail for each mark."
+      },
+      {
+        "word": "Explain",
+        "means": "Give reasons or causes, showing understanding of why or how something happens.",
+        "doThis": "Make a point, then use 'because' or 'this means that' to link it to a reason or consequence."
+      },
+      {
+        "word": "Analyse",
+        "means": "Break something down into its parts and examine how they relate to each other.",
+        "doThis": "Separate the topic into components, and comment on how each part affects the outcome."
+      },
+      {
+        "word": "Evaluate",
+        "means": "Weigh up strengths and weaknesses or different viewpoints and reach a justified conclusion.",
+        "doThis": "Give a point for, a point against, then a final judgement stating which is stronger and why."
+      },
+      {
+        "word": "Compare",
+        "means": "Identify similarities and differences between two or more things.",
+        "doThis": "Use linking words such as 'whereas' or 'similarly' to directly contrast the two items, not just describe them separately."
+      },
+      {
+        "word": "Discuss",
+        "means": "Present a balanced argument covering different aspects or viewpoints of an issue.",
+        "doThis": "Cover multiple angles of the issue with supporting evidence, then draw the ideas together in a conclusion."
+      },
+      {
+        "word": "Justify",
+        "means": "Give reasons to support a choice, opinion or decision.",
+        "doThis": "State the decision, then give specific evidence or reasoning for why it is the best option."
+      },
+      {
+        "word": "Plan",
+        "means": "Set out a sequence of actions or steps needed to complete a task.",
+        "doThis": "List the steps in a logical time order, including timings and any preparation needed in advance."
+      },
+      {
+        "word": "Investigate",
+        "means": "Carry out research or practical work to find out information about a topic.",
+        "doThis": "Set up a fair test or research method, record findings, and draw conclusions from the results."
+      },
+      {
+        "word": "Research",
+        "means": "Gather relevant information from a range of sources on a topic.",
+        "doThis": "Collect facts and data from more than one source and record it clearly, ready to apply to the task."
+      },
+      {
+        "word": "Hypothesise",
+        "means": "State a testable prediction about what you expect to happen and why.",
+        "doThis": "Write a clear prediction linked to scientific reasoning, e.g. 'I predict that... because...'."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Nutrient reference table: function, sources, deficiency, excess",
+        "kind": "data",
+        "note": "Learn all 18 rows - this is the core knowledge tested across Section A and long-answer questions.",
+        "items": [
+          {
+            "term": "Protein",
+            "detail": "Function: growth and repair of cells and tissues. Sources: meat, fish, eggs, dairy, beans, pulses, nuts. Deficiency: kwashiorkor, muscle wasting, poor growth. Excess: strain on kidneys and liver, can contribute to weight gain."
+          },
+          {
+            "term": "Fats and oils",
+            "detail": "Function: concentrated energy source, insulation, protects organs, carries fat-soluble vitamins. Sources: butter, oils, oily fish, nuts, meat fat. Deficiency: poor growth, dry skin, lack of essential fatty acids. Excess: obesity, raised cholesterol, heart disease."
+          },
+          {
+            "term": "Saturated fatty acids",
+            "detail": "Function: energy source. Sources: butter, lard, fatty meat, cheese, coconut oil. Deficiency: rare. Excess: raises blood cholesterol, increases coronary heart disease risk."
+          },
+          {
+            "term": "Unsaturated fatty acids",
+            "detail": "Function: energy source, includes essential fatty acids needed for cell membranes and brain function. Sources: olive oil, sunflower oil, oily fish, avocado, nuts. Deficiency: poor skin and cell health. Excess: still energy dense, can cause weight gain if over-consumed."
+          },
+          {
+            "term": "Carbohydrates - sugars",
+            "detail": "Function: quick release energy source. Sources: table sugar, fruit, honey, sweets, cakes. Deficiency: low energy, fatigue. Excess: tooth decay, obesity, type 2 diabetes."
+          },
+          {
+            "term": "Carbohydrates - starches",
+            "detail": "Function: slow release energy source. Sources: bread, pasta, rice, potatoes, cereals. Deficiency: low energy, reliance on fat and protein for energy. Excess: weight gain if not balanced with activity."
+          },
+          {
+            "term": "Dietary fibre (NSP)",
+            "detail": "Function: aids digestion, adds bulk to waste, helps prevent constipation and bowel disease. Sources: wholegrain bread, brown rice, fruit, vegetables, pulses. Deficiency: constipation, higher risk of bowel disorders. Excess: bloating, reduced absorption of some minerals."
+          },
+          {
+            "term": "Vitamin A (retinol)",
+            "detail": "Function: healthy vision (especially night vision), immune function, healthy skin. Sources: liver, oily fish, dairy, orange and dark green vegetables (as beta-carotene). Deficiency: night blindness, poor immunity. Excess: can be toxic to the liver, especially in pregnancy."
+          },
+          {
+            "term": "Vitamin D",
+            "detail": "Function: helps the body absorb calcium and phosphorus for strong bones and teeth. Sources: sunlight on skin, oily fish, eggs, fortified margarine. Deficiency: rickets in children, osteomalacia in adults. Excess: can raise blood calcium to harmful levels."
+          },
+          {
+            "term": "Vitamin E",
+            "detail": "Function: antioxidant, protects cell membranes from damage. Sources: vegetable oils, nuts, seeds, wheatgerm. Deficiency: rare, may affect nerve and muscle function. Excess: rare, very high doses may affect blood clotting."
+          },
+          {
+            "term": "Vitamin K",
+            "detail": "Function: needed for normal blood clotting. Sources: green leafy vegetables, vegetable oils. Deficiency: excessive bleeding and poor blood clotting. Excess: rare from food."
+          },
+          {
+            "term": "Vitamin B group (e.g. B1, B2, B3)",
+            "detail": "Function: releases energy from food, supports nervous system and healthy skin. Sources: wholegrains, meat, eggs, dairy, fortified cereals. Deficiency: beriberi, fatigue, poor nerve function. Excess: usually excreted in urine as it is water soluble."
+          },
+          {
+            "term": "Vitamin C",
+            "detail": "Function: antioxidant, supports immune system, helps absorb iron, needed to make collagen. Sources: citrus fruit, peppers, berries, broccoli. Deficiency: scurvy, causing bleeding gums and poor wound healing. Excess: usually excreted, high doses may cause stomach upset."
+          },
+          {
+            "term": "Calcium",
+            "detail": "Function: builds and maintains strong bones and teeth, helps blood clot and muscles contract. Sources: milk, cheese, yoghurt, fortified plant milks, green leafy vegetables. Deficiency: osteoporosis, weak bones, rickets. Excess: kidney stones in extreme cases."
+          },
+          {
+            "term": "Iron",
+            "detail": "Function: makes haemoglobin, which carries oxygen in red blood cells. Sources: red meat, liver, pulses, fortified cereals, dark green vegetables. Deficiency: iron deficiency anaemia, tiredness, pale skin. Excess: constipation, in extreme cases organ damage."
+          },
+          {
+            "term": "Sodium",
+            "detail": "Function: maintains fluid balance and normal nerve and muscle function. Sources: table salt, processed and cured foods, cheese, bread. Deficiency: rare, muscle cramps. Excess: high blood pressure, increased risk of stroke and heart disease."
+          },
+          {
+            "term": "Fluoride",
+            "detail": "Function: strengthens tooth enamel and helps prevent tooth decay. Sources: fluoridated water, toothpaste, tea. Deficiency: increased risk of tooth decay. Excess: fluorosis, causing mottled or discoloured teeth."
+          },
+          {
+            "term": "Water",
+            "detail": "Function: essential for hydration, temperature regulation, transporting nutrients and removing waste. Sources: drinking water, fluids, fruit and vegetables. Deficiency: dehydration, headaches, poor concentration, in severe cases organ damage. Excess: rare, but can cause a dangerous drop in blood sodium (hyponatraemia)."
+          }
+        ]
+      },
+      {
+        "title": "Eatwell Guide proportions and the 8 healthy eating guidelines",
+        "kind": "list",
+        "items": [
+          {
+            "term": "Eatwell Guide segment: Fruit and vegetables",
+            "detail": "Should make up just over a third (about 39 percent) of the plate. Aim for at least 5 portions a day of a variety of fruit and vegetables."
+          },
+          {
+            "term": "Eatwell Guide segment: Potatoes, bread, rice, pasta and other starchy carbohydrates",
+            "detail": "Should make up just over a third (about 37 percent) of the plate. Choose wholegrain or higher fibre versions where possible."
+          },
+          {
+            "term": "Eatwell Guide segment: Beans, pulses, fish, eggs, meat and other proteins",
+            "detail": "A smaller segment of the plate (about 12 percent). Eat more beans and pulses, less red and processed meat, and 2 portions of sustainably sourced fish a week including one oily."
+          },
+          {
+            "term": "Eatwell Guide segment: Dairy and alternatives",
+            "detail": "About 8 percent of the plate. Choose lower fat and lower sugar options where possible."
+          },
+          {
+            "term": "Eatwell Guide segment: Oils and spreads",
+            "detail": "A small segment (about 1 percent). Choose unsaturated oils and use in small amounts."
+          },
+          {
+            "term": "Eatwell Guide: foods high in fat, salt and sugar",
+            "detail": "Shown outside the main plate. Eat less often and in small amounts, as they are not needed for a healthy diet."
+          },
+          {
+            "term": "Eatwell Guide: fluids",
+            "detail": "Drink 6 to 8 cups or glasses of fluid a day; water, lower fat milk and sugar-free drinks including tea and coffee all count."
+          },
+          {
+            "term": "Guideline 1: Base meals on starchy carbohydrates",
+            "detail": "Choose higher fibre wholegrain varieties such as wholewheat pasta, brown rice or potatoes with skins on."
+          },
+          {
+            "term": "Guideline 2: Eat lots of fruit and vegetables",
+            "detail": "Aim for at least 5 portions of a variety of fruit and vegetables a day, fresh, frozen, dried or tinned."
+          },
+          {
+            "term": "Guideline 3: Eat more fish",
+            "detail": "Eat 2 portions of fish a week, including one portion of oily fish such as salmon or mackerel for essential fatty acids."
+          },
+          {
+            "term": "Guideline 4: Cut down on saturated fat and sugar",
+            "detail": "Choose foods with less saturated fat and swap sugary foods and drinks for healthier alternatives to reduce heart disease and tooth decay risk."
+          },
+          {
+            "term": "Guideline 5: Eat less salt",
+            "detail": "No more than 6g of salt a day for adults, as too much salt raises blood pressure."
+          },
+          {
+            "term": "Guideline 6: Get active and maintain a healthy weight",
+            "detail": "Balance the energy eaten with energy used through physical activity to maintain a healthy body weight."
+          },
+          {
+            "term": "Guideline 7: Drink plenty of water",
+            "detail": "Aim for 6 to 8 glasses of fluid a day and choose water or sugar-free drinks over sugary alternatives."
+          },
+          {
+            "term": "Guideline 8: Do not skip breakfast",
+            "detail": "Breakfast can form part of a balanced diet and helps provide energy and nutrients to start the day."
+          }
+        ]
+      },
+      {
+        "title": "Energy values per gram and BMR, PAL and energy balance",
+        "kind": "data",
+        "items": [
+          {
+            "term": "Energy value of carbohydrate",
+            "detail": "Provides 3.75 kcal per gram (approximately 17 kJ per gram)."
+          },
+          {
+            "term": "Energy value of protein",
+            "detail": "Provides 4 kcal per gram (approximately 17 kJ per gram)."
+          },
+          {
+            "term": "Energy value of fat",
+            "detail": "Provides 9 kcal per gram (approximately 37 kJ per gram) - more than double carbohydrate or protein, making fat the most energy dense nutrient."
+          },
+          {
+            "term": "Energy value of alcohol",
+            "detail": "Provides 7 kcal per gram - not a nutrient, but relevant to overall energy intake."
+          },
+          {
+            "term": "BMR (Basal Metabolic Rate)",
+            "detail": "The minimum amount of energy the body needs at rest to maintain vital functions such as breathing, circulation and cell repair."
+          },
+          {
+            "term": "PAL (Physical Activity Level)",
+            "detail": "A measure of how active a person is; a higher PAL means more energy used through activity and therefore higher total energy needs on top of BMR."
+          },
+          {
+            "term": "Energy balance",
+            "detail": "The relationship between energy consumed from food and drink and energy expended through BMR and physical activity; a balanced state maintains stable body weight."
+          },
+          {
+            "term": "Positive energy balance",
+            "detail": "When energy intake is greater than energy output, leading to weight gain over time as excess energy is stored as fat."
+          },
+          {
+            "term": "Negative energy balance",
+            "detail": "When energy intake is less than energy output, leading to weight loss over time as the body uses stored energy reserves."
+          },
+          {
+            "term": "Energy dense foods",
+            "detail": "Foods that provide a large amount of energy (calories) in a small portion, typically high in fat and/or sugar, such as crisps, chocolate and fried food."
+          },
+          {
+            "term": "Factors affecting energy needs",
+            "detail": "Age, gender, body size, growth stage (e.g. higher needs in teenagers) and PAL all affect an individual's total energy requirement."
+          }
+        ]
+      },
+      {
+        "title": "Functional and chemical properties glossary",
+        "kind": "def",
+        "items": [
+          {
+            "term": "Coagulation",
+            "detail": "The change of a protein from a liquid to a solid or semi-solid state on heating, which cannot be reversed. Food example: egg white turning solid when fried or boiled."
+          },
+          {
+            "term": "Denaturation",
+            "detail": "A permanent change to the structure of a protein caused by heat, acid or mechanical action (such as whisking), altering its shape and properties. Food example: whisking egg white to make meringue."
+          },
+          {
+            "term": "Gelatinisation",
+            "detail": "Starch granules absorbing liquid and swelling when heated, causing a mixture to thicken. Food example: a roux-based white sauce thickening as it is heated."
+          },
+          {
+            "term": "Dextrinisation",
+            "detail": "Dry heat breaking down starch on the surface of a food into dextrins, causing it to brown and change flavour. Food example: the browning of toasted bread."
+          },
+          {
+            "term": "Caramelisation",
+            "detail": "Sugar breaking down under heat, changing colour to brown and developing a nutty, sweet flavour. Food example: sugar melted and heated to make caramel sauce."
+          },
+          {
+            "term": "Emulsification",
+            "detail": "Combining two liquids that would normally separate, such as oil and water, using an emulsifier to stabilise the mixture. Food example: egg yolk lecithin binding oil and vinegar in mayonnaise."
+          },
+          {
+            "term": "Plasticity",
+            "detail": "The ability of a fat to be spread, moulded or creamed at room temperature without melting completely. Food example: butter being creamed with sugar for a cake mixture."
+          },
+          {
+            "term": "Shortening",
+            "detail": "Fat coating flour particles during preparation, preventing long strands of gluten forming and giving a short, crumbly texture. Food example: butter rubbed into flour for shortcrust pastry."
+          },
+          {
+            "term": "Aeration",
+            "detail": "Incorporating air into a mixture, by whisking, creaming, folding, sieving or rubbing in, to create a lighter texture. Food example: whisking egg and sugar together to aerate a sponge cake mixture."
+          },
+          {
+            "term": "Foams",
+            "detail": "A structure formed when air is trapped within a liquid or semi-solid, often stabilised by protein. Food example: whisked egg white forming a foam for meringue or mousse."
+          }
+        ]
+      },
+      {
+        "title": "Raising agents and how each works",
+        "kind": "method",
+        "items": [
+          {
+            "term": "Yeast (biological raising agent)",
+            "detail": "A living fungus that ferments sugars, producing carbon dioxide gas and alcohol; the gas is trapped by the gluten network in dough, causing it to rise. Needs warmth, moisture, food (sugar) and time. Used in bread."
+          },
+          {
+            "term": "Baking powder (chemical raising agent)",
+            "detail": "A mixture of bicarbonate of soda and an acid (such as cream of tartar). When mixed with liquid and heated, it releases carbon dioxide gas, which expands and makes the mixture rise. Used in cakes and scones."
+          },
+          {
+            "term": "Bicarbonate of soda (chemical raising agent)",
+            "detail": "An alkali that reacts with an acidic ingredient (such as lemon juice, buttermilk or treacle) or with heat to release carbon dioxide gas. Can leave a soapy or bitter aftertaste if overused."
+          },
+          {
+            "term": "Self-raising flour",
+            "detail": "Plain flour with baking powder already added by the manufacturer in a measured ratio, used to save the need to add a separate raising agent."
+          },
+          {
+            "term": "Air as a mechanical/physical raising agent - whisking",
+            "detail": "Whisking eggs, or eggs and sugar, traps air bubbles in the mixture; on heating the air expands and the surrounding protein sets, giving a light structure, as in whisked sponges and meringue."
+          },
+          {
+            "term": "Air as a mechanical/physical raising agent - creaming",
+            "detail": "Beating fat and sugar together traps small air bubbles; the sugar crystals cut into the fat, creating pockets of air that expand on heating, as in creamed cake mixtures."
+          },
+          {
+            "term": "Air as a mechanical/physical raising agent - folding and sieving",
+            "detail": "Folding in flour gently retains previously incorporated air; sieving flour adds air before mixing, helping to lighten the final baked texture."
+          },
+          {
+            "term": "Steam as a physical raising agent",
+            "detail": "Water in a mixture turns to steam when heated in a hot oven; the steam expands rapidly, pushing up the mixture, as in choux pastry and Yorkshire pudding."
+          }
+        ]
+      },
+      {
+        "title": "The four heat transfer methods with examples",
+        "kind": "def",
+        "items": [
+          {
+            "term": "Conduction",
+            "detail": "Heat travels through direct contact between particles, from a heat source through equipment into the food. Example: heat passing from a hob through a metal saucepan base into boiling potatoes."
+          },
+          {
+            "term": "Convection",
+            "detail": "Heat travels through the movement of currents in a liquid or gas (air); hot currents rise and cooler currents sink, circulating heat. Example: hot air circulating in a fan oven to bake a cake, or currents circulating heat through boiling water."
+          },
+          {
+            "term": "Radiation",
+            "detail": "Heat travels directly as electromagnetic waves from the heat source to the food, without needing a solid or liquid medium. Example: heat from a grill element browning the top of a cheese-topped dish, or a toaster."
+          },
+          {
+            "term": "Microwave (electromagnetic radiation)",
+            "detail": "Microwaves penetrate food and cause water molecules within it to vibrate rapidly, generating heat from within through friction. Example: reheating a ready meal in a microwave oven."
+          },
+          {
+            "term": "Conduction in liquids",
+            "detail": "Heat also conducts between adjacent liquid particles in direct contact, though in most cooking liquids convection currents dominate once the liquid begins to move."
+          },
+          {
+            "term": "Conduction and pan material",
+            "detail": "Metals such as copper and aluminium conduct heat quickly and evenly, giving faster, more controllable cooking; poor conductors like glass heat more slowly and unevenly."
+          },
+          {
+            "term": "Convection in an oven",
+            "detail": "In a conventional oven, heat rises from the element, warming air which circulates by convection; a fan oven forces this circulation, cooking food faster and more evenly."
+          },
+          {
+            "term": "Radiation and browning",
+            "detail": "Radiant heat from a grill or barbecue cooks the surface of food directly and quickly, producing browning and charring, but does not penetrate deep into thick food as effectively as conduction or convection."
+          },
+          {
+            "term": "Density and heat transfer rate",
+            "detail": "Denser foods (e.g. a whole potato) transfer heat more slowly through their structure than less dense foods (e.g. a sliced vegetable), so they take longer to cook through."
+          },
+          {
+            "term": "Moisture content and heat transfer rate",
+            "detail": "Foods with higher moisture content generally heat more slowly than dry foods, since energy is used to heat the water and, at boiling point, to convert it to steam."
+          }
+        ]
+      },
+      {
+        "title": "Food safety temperatures and the four Cs",
+        "kind": "data",
+        "items": [
+          {
+            "term": "Fridge temperature",
+            "detail": "Should be kept between 0 and 5 degrees Celsius to slow bacterial growth."
+          },
+          {
+            "term": "Freezer temperature",
+            "detail": "Should be kept at -18 degrees Celsius or below; bacteria become dormant but are not killed."
+          },
+          {
+            "term": "Temperature danger zone",
+            "detail": "5 to 63 degrees Celsius; the range in which food poisoning bacteria multiply fastest, with 37 degrees Celsius (body temperature) being optimum for growth."
+          },
+          {
+            "term": "Core cooking/reheating temperature",
+            "detail": "High-risk food should reach a core temperature of at least 75 degrees Celsius, checked with a temperature probe, and food should only be reheated once."
+          },
+          {
+            "term": "Hot holding temperature",
+            "detail": "Cooked food that is not served immediately should be kept above 63 degrees Celsius to prevent bacterial growth."
+          },
+          {
+            "term": "Chilling time after cooking",
+            "detail": "Cooked food that is to be stored should be cooled and refrigerated within 90 minutes to limit time in the danger zone."
+          },
+          {
+            "term": "The four Cs: Cleaning",
+            "detail": "Washing hands, equipment and surfaces regularly and thoroughly to prevent the spread of bacteria."
+          },
+          {
+            "term": "The four Cs: Cooking",
+            "detail": "Cooking food thoroughly to the correct core temperature (at least 75 degrees Celsius for high-risk food) to kill harmful bacteria."
+          },
+          {
+            "term": "The four Cs: Chilling",
+            "detail": "Keeping food that needs to be refrigerated at the correct cold temperature (0 to 5 degrees Celsius) to slow bacterial growth."
+          },
+          {
+            "term": "The four Cs: Cross-contamination (avoiding)",
+            "detail": "Keeping raw and ready-to-eat food, and the equipment used for each, separate to stop harmful bacteria spreading."
+          },
+          {
+            "term": "High-risk foods",
+            "detail": "Foods that are moist and high in protein, supporting rapid bacterial growth, such as cooked meat and poultry, dairy, eggs, fish, shellfish and cooked rice."
+          },
+          {
+            "term": "Use-by date",
+            "detail": "A legal safety date; food must not be eaten after this date even if it looks and smells fine, as harmful bacteria may be present."
+          },
+          {
+            "term": "Best-before date",
+            "detail": "A quality date, not a safety date; food may still be safe to eat after this date but may not be at its best flavour or texture."
+          }
+        ]
+      },
+      {
+        "title": "NEA 1 and NEA 2 section-by-section structure",
+        "kind": "method",
+        "items": [
+          {
+            "term": "NEA 1: overview",
+            "detail": "Food investigation, released September of Year 11, worth 30 marks (15 percent of the GCSE). Assesses AO2, AO3 and AO4 through research and practical investigation into a chosen ingredient or process."
+          },
+          {
+            "term": "NEA 1 Section A: Research",
+            "detail": "Must research the scientific working characteristics and functional and chemical properties of the chosen ingredient or process, using theory from food science to inform a hypothesis."
+          },
+          {
+            "term": "NEA 1 Section B: Investigation",
+            "detail": "Must plan and carry out a practical investigation testing the hypothesis, controlling variables, recording methods and results accurately, e.g. testing how different ratios of an ingredient affect a product."
+          },
+          {
+            "term": "NEA 1 Section C: Analysis and evaluation",
+            "detail": "Must analyse and evaluate the investigation results with scientific explanation, linking findings back to the research and hypothesis, and drawing a justified conclusion."
+          },
+          {
+            "term": "NEA 2: overview",
+            "detail": "Food preparation assessment, released November of Year 11, worth 70 marks (35 percent of the GCSE). Requires planning, preparing, cooking and presenting a final menu of three dishes for a specific context within a single session of no more than 3 hours."
+          },
+          {
+            "term": "NEA 2 Section A: Research",
+            "detail": "Must research the chosen task and context, including nutritional needs, dietary requirements, and appropriate dishes, techniques and ingredients."
+          },
+          {
+            "term": "NEA 2 Section B: Demonstrate technical skills",
+            "detail": "Must trial and demonstrate a range of relevant technical skills through practice dishes, developing and refining recipes before selecting the final menu."
+          },
+          {
+            "term": "NEA 2 Section C: Plan for the final menu",
+            "detail": "Must produce a detailed time plan for the final 3-hour practical, showing dovetailing of tasks, and must plan how food safety principles will be applied throughout."
+          },
+          {
+            "term": "NEA 2 Section D: Final practical",
+            "detail": "Must prepare, cook and present the final menu of three dishes within a single session of no more than 3 hours, applying food safety principles and demonstrating high-level technical skill."
+          },
+          {
+            "term": "NEA 2 Section E: Analysis and evaluation",
+            "detail": "Must analyse and evaluate the final dishes, including sensory evaluation, nutritional analysis, costing, and how well the dishes met the needs of the chosen context."
+          }
+        ]
+      },
+      {
+        "title": "Exam-day plan",
+        "kind": "list",
+        "items": [
+          {
+            "term": "Paper 1: Food preparation and nutrition (8585/W)",
+            "detail": "1h 45m, 100 marks, 50 percent of the GCSE. Section A: 20 multiple-choice marks (spend about 15 minutes). Section B: 80 marks of structured and extended response questions including 6, 9 and 12 mark questions (spend about 1h 30m). Aim for roughly 1 minute per mark, leaving 5 minutes to check answers."
+          },
+          {
+            "term": "Paper 1 - Section A strategy",
+            "detail": "Answer every multiple-choice question, even as a guess, since there is no penalty for wrong answers. Do not spend more than 30 seconds deciding on any one question - flag and move on if unsure."
+          },
+          {
+            "term": "Paper 1 - short-answer questions (1 to 4 marks)",
+            "detail": "Give one clear, precise point per mark. Do not write a long paragraph for a 2-mark state or identify question - it wastes time needed for the extended answers."
+          },
+          {
+            "term": "Paper 1 - 6-mark questions",
+            "detail": "Spend about 6 to 8 minutes. Write two to three developed points using the explain sentence stems, each with a reason and a food-science or nutrition link."
+          },
+          {
+            "term": "Paper 1 - 9-mark questions",
+            "detail": "Spend about 10 to 12 minutes. Plan three developed points in the margin before writing, applying each point to the specific context given in the question."
+          },
+          {
+            "term": "Paper 1 - 12-mark questions",
+            "detail": "Spend about 14 to 16 minutes. Use a for/against or compare structure with a clear justified conclusion; these are usually the final question on the paper, so pace earlier sections to leave enough time."
+          },
+          {
+            "term": "NEA 1: Food investigation (30 marks, 15 percent)",
+            "detail": "Not a timed exam but a coursework deadline set by the school after release in September. Complete research first, then the practical investigation, then analysis and evaluation - do not leave the write-up until the last week."
+          },
+          {
+            "term": "NEA 2: Food preparation assessment (70 marks, 35 percent)",
+            "detail": "Released in November; the final practical must be completed in a single session of no more than 3 hours. Rehearse the timed practical in full at least once beforehand and check the time plan accounts for oven and hob availability."
+          },
+          {
+            "term": "Night before the exam",
+            "detail": "Review the nutrient reference table, the functional and chemical properties glossary and the food safety temperatures - these underpin most extended answer questions on Paper 1."
+          },
+          {
+            "term": "Equipment to bring to Paper 1",
+            "detail": "Black pen, spare pen, pencil for any diagrams, ruler and an eraser; no calculator is normally required but check the exact instructions issued by the school."
+          }
+        ]
+      },
+      {
+        "title": "Exam-standard sentence stems for 6, 9 and 12 mark answers",
+        "kind": "phrase",
+        "items": [
+          {
+            "term": "6-mark explain question opener",
+            "detail": "'One reason [X] is important is... This is because... This means that...' Give two developed points, each with a reason and a consequence, for full marks."
+          },
+          {
+            "term": "6-mark explain question second point",
+            "detail": "'Another reason is... This is because... As a result...' Use a clear connective to separate the second point from the first so the examiner can credit it distinctly."
+          },
+          {
+            "term": "9-mark discuss/analyse question opener",
+            "detail": "'There are several factors to consider when [X]. Firstly... This is significant because...' Plan three developed points before writing, each linked to the specific scenario in the question."
+          },
+          {
+            "term": "9-mark question - linking to context",
+            "detail": "'In this specific situation, [named group/ingredient/dish] would be affected because...' Always apply the point back to the exact life stage, ingredient or scenario named in the question, not generically."
+          },
+          {
+            "term": "12-mark evaluate question opener",
+            "detail": "'There are arguments both for and against [X]. On one hand... On the other hand...' Structure the answer with a clear for/against or compare structure before any judgement."
+          },
+          {
+            "term": "12-mark evaluate question - middle development",
+            "detail": "'A further point to consider is... This is supported by... However, a counter-argument is...' Keep alternating point and counterpoint to show balanced, developed reasoning worth higher marks."
+          },
+          {
+            "term": "12-mark evaluate question conclusion",
+            "detail": "'Overall, [X] is the stronger option because... Therefore, on balance...' Always finish with a clear, justified judgement that directly answers the question - do not just summarise both sides."
+          },
+          {
+            "term": "Scientific explanation stem (food science questions)",
+            "detail": "'When [ingredient] is [heated/whisked/mixed with acid], the [protein/starch/sugar] undergoes [named process, e.g. denaturation], which causes...' Name the correct scientific process before describing its effect."
+          },
+          {
+            "term": "Comparing two cuisines or dishes stem",
+            "detail": "'[Dish/cuisine A] uses..., whereas [Dish/cuisine B] uses... This is because...' Always state the similarity or difference explicitly rather than describing each item separately."
+          }
+        ]
+      }
+    ]
+  }
+}

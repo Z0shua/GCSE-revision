@@ -328,6 +328,10 @@
       'SUB-TOPICS IN THIS TOPIC: ' + t.subtopics.join('; ')
     ];
     if (st) lines.push('FOCUS SUB-TOPIC: ' + st);
+    if (s.offline && s.offline.commandWords && s.offline.commandWords.length) {
+      lines.push('COMMAND WORDS THIS BOARD USES (use them exactly this way): ' +
+        s.offline.commandWords.map(function (c) { return c.word + ' = ' + c.means; }).join(' | '));
+    }
     return lines.join('\n');
   }
 

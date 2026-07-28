@@ -40,6 +40,540 @@
       "verified": true
     }
   ],
+  "offline": {
+    "commandWords": [
+      {
+        "word": "Describe",
+        "means": "State what happens or what is observed, in sequence, without giving reasons.",
+        "doThis": "Give observations in the order they occur, e.g. colour changes, gas produced, using correct chemical names."
+      },
+      {
+        "word": "Explain",
+        "means": "Give reasons using chemical ideas such as bonding, particles or energy.",
+        "doThis": "State the effect, then say why using a chemistry principle, e.g. 'because ions are free to move and carry charge'."
+      },
+      {
+        "word": "Predict",
+        "means": "Use a pattern, trend or data to suggest what would happen in a new but related situation.",
+        "doThis": "Refer to the trend or rule (e.g. reactivity series, periodic table trend) and apply it directly to the new example."
+      },
+      {
+        "word": "Balance",
+        "means": "Adjust numbers in front of formulae so atoms of each element are equal on both sides.",
+        "doThis": "Count atoms of each element on both sides, add whole-number multipliers until they match; never change a formula's subscripts."
+      },
+      {
+        "word": "Evaluate",
+        "means": "Weigh up advantages and disadvantages of a method, process or data set to reach a judgement.",
+        "doThis": "Give points for and against with reference to the given data, then state and justify an overall conclusion."
+      },
+      {
+        "word": "Suggest",
+        "means": "Apply chemical knowledge to an unfamiliar context; more than one answer may be accepted.",
+        "doThis": "Use a chemistry principle you know (bonding, reactivity, rates) and apply it logically to the new example given."
+      },
+      {
+        "word": "Calculate",
+        "means": "Work out a numerical answer using given data and a formula.",
+        "doThis": "Write the formula used, substitute values with units, show each working step, and state the final answer with units."
+      },
+      {
+        "word": "Compare",
+        "means": "State similarities and differences between two substances, methods or sets of data.",
+        "doThis": "Write sentences that directly contrast both items, e.g. using 'whereas' or 'both', not two separate descriptions."
+      },
+      {
+        "word": "Justify",
+        "means": "Support a choice or statement using evidence or a chemical principle.",
+        "doThis": "State the choice, then give the specific data point or rule that supports it."
+      },
+      {
+        "word": "Deduce",
+        "means": "Work out an answer by combining given information logically rather than by direct recall.",
+        "doThis": "State the pieces of given information used and the chemical rule that links them to reach the conclusion."
+      },
+      {
+        "word": "Identify",
+        "means": "Name a specific substance, ion, or feature from given data or a test result.",
+        "doThis": "Give the specific chemical name or formula, not a general description."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Required practicals (Chemistry 8462)",
+        "kind": "method",
+        "items": [
+          {
+            "term": "RP1: Making soluble salts",
+            "detail": "React an acid with an insoluble base/metal until excess remains, filter, then evaporate and crystallise. Measured: mass of crystals formed. Controlled: same acid concentration and volume. Examiners want the reason for using excess solid (to ensure all acid reacts) and slow evaporation (larger, purer crystals)."
+          },
+          {
+            "term": "RP2: Titration (acid-alkali)",
+            "detail": "Use a burette to add acid to a known volume of alkali with indicator until the end point (colour change) is reached. Measured: titre volume (cm3). Controlled: concentration and volume of the alkali, same indicator. Examiners want a rough titration first, then concordant results (within 0.10 cm3) for the mean."
+          },
+          {
+            "term": "RP3: Electrolysis of aqueous solutions",
+            "detail": "Pass current through an aqueous solution using inert (graphite/platinum) electrodes and identify products at each electrode. Measured: gas/product formed and any colour or mass change. Controlled: same current, same concentration and volume of solution."
+          },
+          {
+            "term": "RP4: Temperature changes (exothermic/endothermic)",
+            "detail": "Mix reactants (e.g. acid and alkali, or acid and metal) in an insulated cup, record temperature at intervals. Measured: temperature change. Controlled: volume/concentration of reactants, use of a lid and insulation to reduce heat loss."
+          },
+          {
+            "term": "RP5: Rates of reaction (gas volume/turbidity)",
+            "detail": "React reactants (e.g. sodium thiosulfate and acid, or marble chips and acid) and measure gas volume with a gas syringe over time, or time until a cross disappears (turbidity). Measured: volume of gas vs time, or time to reach a fixed cloudiness. Independent variable: usually concentration, temperature or surface area, kept the others constant."
+          },
+          {
+            "term": "RP6: Chromatography of dyes/food colourings",
+            "detail": "Spot samples on chromatography paper above a solvent, allow solvent to rise, measure distances to calculate Rf values. Measured: distance moved by spot and by solvent front. Controlled: same solvent, same paper, baseline drawn in pencil."
+          },
+          {
+            "term": "RP7: Identifying ions (flame tests and chemical tests)",
+            "detail": "Use flame tests for metal ions, and add reagents (NaOH, dilute acid, silver nitrate, barium chloride) to identify cations and anions from colour changes/precipitates. Measured: flame colour or precipitate colour observed. Controlled: clean nichrome wire between tests to avoid contamination."
+          },
+          {
+            "term": "RP8: Water purification/analysis and distillation",
+            "detail": "Test water samples for pH and dissolved solids, then distil a sample and compare boiling point/purity of the distillate to the original. Measured: volume of distillate, temperature during distillation, mass of residue. Controlled: same volume of sample, same heating rate."
+          }
+        ]
+      },
+      {
+        "title": "Reactivity series and displacement rules",
+        "kind": "list",
+        "note": "Order from most to least reactive.",
+        "items": [
+          {
+            "term": "Reactivity series order",
+            "detail": "Potassium, sodium, lithium, calcium, magnesium, aluminium, (carbon), zinc, iron, (hydrogen), copper, silver, gold. Carbon and hydrogen are included as reference points though not metals."
+          },
+          {
+            "term": "Metal + acid rule",
+            "detail": "A metal above hydrogen in the series reacts with dilute acid to produce a salt plus hydrogen gas; metals below hydrogen (copper, silver, gold) do not react with dilute acids."
+          },
+          {
+            "term": "Metal + water rule",
+            "detail": "Potassium, sodium, lithium and calcium react with cold water to form a metal hydroxide plus hydrogen gas; magnesium reacts very slowly with cold water but reacts with steam."
+          },
+          {
+            "term": "Displacement reaction rule",
+            "detail": "A more reactive metal will displace a less reactive metal from a solution of its salt or from its oxide, e.g. Zn + CuSO4 -> ZnSO4 + Cu."
+          },
+          {
+            "term": "Extraction by carbon",
+            "detail": "Metals below carbon in the reactivity series (e.g. iron, zinc, copper) can be extracted from their oxide by reduction with carbon, because carbon displaces them."
+          },
+          {
+            "term": "Extraction by electrolysis",
+            "detail": "Metals above carbon in the reactivity series (e.g. aluminium, potassium, sodium) must be extracted by electrolysis because carbon cannot displace them."
+          },
+          {
+            "term": "Displacement and electron transfer",
+            "detail": "In displacement, the more reactive metal is oxidised (loses electrons) and the less reactive metal ion is reduced (gains electrons)."
+          },
+          {
+            "term": "Reactivity trend down a group (Group 1)",
+            "detail": "Reactivity increases going down Group 1 because the outer electron is further from the nucleus and more easily lost."
+          },
+          {
+            "term": "Reactivity trend down Group 7",
+            "detail": "Reactivity decreases going down Group 7 (halogens) because it becomes harder to gain an extra electron as atomic radius increases."
+          },
+          {
+            "term": "Displacement in halogens",
+            "detail": "A more reactive halogen will displace a less reactive halide from solution, e.g. chlorine displaces bromide: Cl2 + 2KBr -> 2KCl + Br2."
+          }
+        ]
+      },
+      {
+        "title": "Ion charges, formulae and state symbols",
+        "kind": "data",
+        "items": [
+          {
+            "term": "Common +1 ions",
+            "detail": "Sodium Na+, potassium K+, lithium Li+, silver Ag+, ammonium NH4+, hydrogen H+."
+          },
+          {
+            "term": "Common +2 ions",
+            "detail": "Magnesium Mg2+, calcium Ca2+, copper(II) Cu2+, zinc Zn2+, iron(II) Fe2+, barium Ba2+."
+          },
+          {
+            "term": "Common +3 ions",
+            "detail": "Aluminium Al3+, iron(III) Fe3+."
+          },
+          {
+            "term": "Common -1 ions",
+            "detail": "Chloride Cl-, bromide Br-, iodide I-, hydroxide OH-, nitrate NO3-."
+          },
+          {
+            "term": "Common -2 ions",
+            "detail": "Oxide O2-, sulfate SO4^2-, carbonate CO3^2-."
+          },
+          {
+            "term": "Formula: sodium chloride",
+            "detail": "NaCl (Na+ and Cl-, charges balance 1:1)."
+          },
+          {
+            "term": "Formula: calcium chloride",
+            "detail": "CaCl2 (Ca2+ needs two Cl- to balance charge)."
+          },
+          {
+            "term": "Formula: sodium sulfate",
+            "detail": "Na2SO4 (two Na+ needed to balance one SO4^2-)."
+          },
+          {
+            "term": "Formula: aluminium oxide",
+            "detail": "Al2O3 (two Al3+ = +6, three O2- = -6, balances)."
+          },
+          {
+            "term": "Formula: calcium carbonate",
+            "detail": "CaCO3 (Ca2+ and CO3^2- balance 1:1)."
+          },
+          {
+            "term": "Formula: ammonium nitrate",
+            "detail": "NH4NO3 (NH4+ and NO3- balance 1:1)."
+          },
+          {
+            "term": "Formula: magnesium hydroxide",
+            "detail": "Mg(OH)2 (Mg2+ needs two OH- to balance charge)."
+          },
+          {
+            "term": "State symbol (s)",
+            "detail": "Solid."
+          },
+          {
+            "term": "State symbol (l)",
+            "detail": "Liquid."
+          },
+          {
+            "term": "State symbol (g)",
+            "detail": "Gas."
+          },
+          {
+            "term": "State symbol (aq)",
+            "detail": "Aqueous - dissolved in water."
+          },
+          {
+            "term": "Half-equation rule: balancing charge",
+            "detail": "The total charge on both sides of a half-equation must be equal; add electrons (e-) to whichever side has the more positive/less negative charge."
+          },
+          {
+            "term": "Half-equation rule: cathode (reduction)",
+            "detail": "Positive ions gain electrons at the cathode, e.g. 2H+ + 2e- -> H2, or Cu2+ + 2e- -> Cu."
+          },
+          {
+            "term": "Half-equation rule: anode (oxidation)",
+            "detail": "Negative ions lose electrons at the anode, e.g. 4OH- -> O2 + 2H2O + 4e-, or 2Cl- -> Cl2 + 2e-."
+          },
+          {
+            "term": "Balancing full ionic/molecular equations",
+            "detail": "Ensure the same number of each type of atom and the same overall charge appear on both sides; use whole-number coefficients only, never change a formula's subscripts."
+          }
+        ]
+      },
+      {
+        "title": "Qualitative analysis: tests and results",
+        "kind": "data",
+        "items": [
+          {
+            "term": "Flame test: lithium",
+            "detail": "Crimson red flame."
+          },
+          {
+            "term": "Flame test: sodium",
+            "detail": "Yellow flame."
+          },
+          {
+            "term": "Flame test: potassium",
+            "detail": "Lilac flame."
+          },
+          {
+            "term": "Flame test: calcium",
+            "detail": "Orange-red flame."
+          },
+          {
+            "term": "Flame test: copper",
+            "detail": "Green flame."
+          },
+          {
+            "term": "NaOH test: aluminium ion",
+            "detail": "White precipitate that dissolves in excess NaOH to give a colourless solution."
+          },
+          {
+            "term": "NaOH test: calcium ion",
+            "detail": "White precipitate that does NOT dissolve in excess NaOH."
+          },
+          {
+            "term": "NaOH test: magnesium ion",
+            "detail": "White precipitate that does NOT dissolve in excess NaOH."
+          },
+          {
+            "term": "NaOH test: copper(II) ion",
+            "detail": "Blue precipitate forms."
+          },
+          {
+            "term": "NaOH test: iron(II) ion",
+            "detail": "Green precipitate forms."
+          },
+          {
+            "term": "NaOH test: iron(III) ion",
+            "detail": "Brown precipitate forms."
+          },
+          {
+            "term": "Test for carbonate ion",
+            "detail": "Add dilute acid: effervescence of carbon dioxide, which turns limewater milky/cloudy."
+          },
+          {
+            "term": "Test for halide ions",
+            "detail": "Add dilute nitric acid then silver nitrate solution: chloride gives white precipitate, bromide gives cream precipitate, iodide gives yellow precipitate."
+          },
+          {
+            "term": "Test for sulfate ion",
+            "detail": "Add dilute hydrochloric acid then barium chloride solution: white precipitate (barium sulfate) forms."
+          },
+          {
+            "term": "Test for hydrogen gas",
+            "detail": "Hold a lit splint at the mouth of the test tube: a squeaky pop is heard."
+          },
+          {
+            "term": "Test for oxygen gas",
+            "detail": "Insert a glowing splint into the test tube: it relights."
+          },
+          {
+            "term": "Test for carbon dioxide gas",
+            "detail": "Bubble the gas through limewater: it turns milky/cloudy."
+          },
+          {
+            "term": "Test for chlorine gas",
+            "detail": "Hold damp litmus/indicator paper at the mouth of the test tube: it is bleached white."
+          },
+          {
+            "term": "Flame emission spectroscopy",
+            "detail": "An instrumental method that identifies metal ions from the exact wavelengths of light emitted and their intensity, giving faster, more accurate and more sensitive results than a manual flame test, and working on very small or mixed samples."
+          }
+        ]
+      },
+      {
+        "title": "Quantitative chemistry formulae",
+        "kind": "formula",
+        "items": [
+          {
+            "term": "Moles from mass",
+            "detail": "moles = mass (g) / relative formula mass (Mr). Use to convert a measured mass into an amount for reacting-mass calculations."
+          },
+          {
+            "term": "Mass from moles",
+            "detail": "mass (g) = moles x Mr. Use to predict the mass of product or reactant needed."
+          },
+          {
+            "term": "Concentration (mass basis)",
+            "detail": "concentration (g/dm3) = mass of solute (g) / volume of solution (dm3). Use for making up solutions of known strength."
+          },
+          {
+            "term": "Concentration (moles basis)",
+            "detail": "concentration (mol/dm3) = moles of solute / volume of solution (dm3). Use for titration and reacting-volume calculations."
+          },
+          {
+            "term": "Converting cm3 to dm3",
+            "detail": "divide cm3 by 1000 to get dm3. Always convert before using concentration in mol/dm3."
+          },
+          {
+            "term": "Titration moles calculation",
+            "detail": "moles = concentration (mol/dm3) x volume (dm3). Find moles of the known solution first, use the balanced equation mole ratio to find moles of the unknown, then convert to concentration or mass as needed."
+          },
+          {
+            "term": "Percentage yield",
+            "detail": "percentage yield = (actual mass of product / theoretical maximum mass of product) x 100. Always less than 100 percent due to incomplete reactions, losses during transfer/filtration, or side reactions."
+          },
+          {
+            "term": "Atom economy",
+            "detail": "atom economy = (Mr of desired product / sum of Mr of all reactants) x 100. High atom economy means less waste and is important for sustainable industrial processes."
+          },
+          {
+            "term": "Molar gas volume (RTP)",
+            "detail": "1 mole of any gas occupies 24 dm3 (24,000 cm3) at room temperature and pressure (20 degC, 1 atm)."
+          },
+          {
+            "term": "Moles of gas from volume",
+            "detail": "moles = volume of gas (dm3) / 24. Use for gas volume calculations at RTP, e.g. finding gas produced in a reaction."
+          },
+          {
+            "term": "Limiting reactant identification",
+            "detail": "Convert all reactant masses to moles, divide each by its balancing number in the equation; the smallest result identifies the limiting reactant."
+          },
+          {
+            "term": "Relative formula mass (Mr)",
+            "detail": "Sum of the relative atomic masses of all atoms shown in the formula, e.g. Mr of CaCO3 = 40 + 12 + (16x3) = 100."
+          },
+          {
+            "term": "Conservation of mass check",
+            "detail": "In a closed system, total mass of reactants = total mass of products; an apparent mass change in an open system usually means a gas has entered or escaped."
+          }
+        ]
+      },
+      {
+        "title": "Organic chemistry: homologous series",
+        "kind": "data",
+        "items": [
+          {
+            "term": "Alkanes: general formula",
+            "detail": "CnH2n+2. Saturated hydrocarbons (single C-C bonds only). First four: methane CH4, ethane C2H6, propane C3H8, butane C4H10."
+          },
+          {
+            "term": "Alkanes: key reaction",
+            "detail": "Complete combustion: alkane + oxygen -> carbon dioxide + water. Incomplete combustion (limited oxygen) produces carbon monoxide and/or soot (carbon) instead."
+          },
+          {
+            "term": "Alkenes: general formula",
+            "detail": "CnH2n. Unsaturated hydrocarbons containing at least one C=C double bond. First three: ethene C2H4, propene C3H6, butene C4H8."
+          },
+          {
+            "term": "Alkenes: test",
+            "detail": "Shaken with orange bromine water: alkenes decolourise it to colourless via addition across the double bond; alkanes do not change its colour."
+          },
+          {
+            "term": "Alkenes: key reaction",
+            "detail": "Addition reactions add atoms across the C=C bond, e.g. with hydrogen (forms an alkane), water (forms an alcohol), or a halogen (forms a dihalogenoalkane)."
+          },
+          {
+            "term": "Alcohols: general formula",
+            "detail": "CnH2n+1OH, functional group -OH. First four: methanol, ethanol, propanol, butanol."
+          },
+          {
+            "term": "Alcohols: key reactions",
+            "detail": "React with sodium to release hydrogen gas; burn in air (combustion) to give CO2 and water; can be oxidised (e.g. by microbial action or oxidising agents) to carboxylic acids."
+          },
+          {
+            "term": "Alcohols: production",
+            "detail": "Ethanol is made by fermentation of sugar with yeast at 25-35 degC in anaerobic conditions, or industrially by hydration of ethene with a catalyst."
+          },
+          {
+            "term": "Carboxylic acids: general formula",
+            "detail": "CnH2n+1COOH, functional group -COOH. First four: methanoic, ethanoic, propanoic, butanoic acid."
+          },
+          {
+            "term": "Carboxylic acids: properties",
+            "detail": "Weak acids - only partially ionise in water, so react less vigorously than strong acids of the same concentration; react with carbonates to give a salt, water and carbon dioxide."
+          },
+          {
+            "term": "Esters: formation",
+            "detail": "Carboxylic acid + alcohol -> ester + water, using an acid catalyst (e.g. concentrated sulfuric acid). Esters have distinctive sweet smells and the functional group -COO-."
+          },
+          {
+            "term": "Addition polymers",
+            "detail": "Formed when many unsaturated alkene monomers join together, opening their double bonds, with no other product formed, e.g. many ethene -> poly(ethene)."
+          },
+          {
+            "term": "Condensation polymers",
+            "detail": "Formed when monomers with two functional groups join, releasing a small molecule (usually water) at each new bond, e.g. formation of polyesters."
+          }
+        ]
+      },
+      {
+        "title": "Atmosphere and using resources fact bank",
+        "kind": "data",
+        "items": [
+          {
+            "term": "Early atmosphere composition",
+            "detail": "Formed from intense volcanic activity releasing mostly carbon dioxide and water vapour, with little or no oxygen, similar to the atmospheres of Mars and Venus today."
+          },
+          {
+            "term": "How oceans formed",
+            "detail": "As the Earth cooled, water vapour condensed to form the oceans."
+          },
+          {
+            "term": "How CO2 decreased",
+            "detail": "Carbon dioxide was locked up in sedimentary rocks and fossil fuels, and was dissolved into the oceans, then absorbed by algae and plants for photosynthesis."
+          },
+          {
+            "term": "How oxygen increased",
+            "detail": "Algae and plants evolved and produced oxygen by photosynthesis over billions of years, gradually building up the roughly 21 percent level in today's atmosphere."
+          },
+          {
+            "term": "Current atmosphere composition",
+            "detail": "About 80 percent nitrogen, about 20 percent oxygen, with small amounts of carbon dioxide, water vapour and noble gases."
+          },
+          {
+            "term": "Greenhouse gases",
+            "detail": "Carbon dioxide, methane and water vapour absorb infrared radiation reflected from Earth's surface and re-radiate it, keeping the planet warmer than it would otherwise be."
+          },
+          {
+            "term": "Human activities increasing greenhouse gases",
+            "detail": "Burning fossil fuels increases carbon dioxide; agriculture (livestock, rice paddies, landfill) increases methane."
+          },
+          {
+            "term": "Global climate change consequences",
+            "detail": "Rising sea levels, more extreme weather, changing rainfall patterns, and changes in the distribution of species."
+          },
+          {
+            "term": "Carbon footprint",
+            "detail": "The total amount of carbon dioxide and other greenhouse gases released over the full life cycle of a product, service or event."
+          },
+          {
+            "term": "Ways to reduce carbon footprint",
+            "detail": "Using more renewable/low-carbon energy, carbon capture and storage, using less energy, and international agreements to cut emissions."
+          },
+          {
+            "term": "Common atmospheric pollutants from combustion",
+            "detail": "Carbon monoxide (toxic, from incomplete combustion), sulfur dioxide and nitrogen oxides (cause acid rain and respiratory problems), particulates (soot, cause global dimming and health problems)."
+          },
+          {
+            "term": "Finite vs renewable resources",
+            "detail": "Finite resources (e.g. crude oil, metal ores) are used faster than they form and will run out; renewable resources (e.g. timber, biofuel crops) are replenished at a comparable rate to their use."
+          },
+          {
+            "term": "Life cycle assessment stages",
+            "detail": "Extracting and processing raw materials; manufacturing and packaging; use and operation; disposal at end of life - transport is included at every stage."
+          },
+          {
+            "term": "Potable water treatment steps",
+            "detail": "Choose an appropriate source, filter through wire mesh then sand beds to remove solids, then sterilise with chlorine, ozone or ultraviolet light."
+          },
+          {
+            "term": "Desalination methods",
+            "detail": "Distillation (evaporate then condense) or reverse osmosis (force water through a membrane); both require large amounts of energy, making them expensive."
+          }
+        ]
+      },
+      {
+        "title": "Exam-day plan",
+        "kind": "list",
+        "items": [
+          {
+            "term": "Paper 1: 8462/1H",
+            "detail": "1 hour 45 minutes, 100 marks. Covers atomic structure, bonding, quantitative chemistry, chemical changes, energy changes. Aim for roughly 1 minute per mark; do titration/mole calculations last if short on time since they take longer per mark."
+          },
+          {
+            "term": "Paper 2: 8462/2H",
+            "detail": "1 hour 45 minutes, 100 marks. Covers rate and extent of change, organic chemistry, chemical analysis, the atmosphere, using resources. Aim for roughly 1 minute per mark; attempt all required-practical based questions even if unsure, as method marks are available."
+          },
+          {
+            "term": "First 5 minutes of any paper",
+            "detail": "Skim all questions, identify calculation-heavy questions (titration, moles, percentage yield) and plan to allocate them enough time rather than rushing at the end."
+          },
+          {
+            "term": "Before submitting",
+            "detail": "Check every calculation answer has the correct unit, every formula has balanced charges/atoms, and no multiple-choice question is left blank."
+          },
+          {
+            "term": "Answering multiple choice questions",
+            "detail": "Read all options before choosing, cross out options you know are wrong, and never leave a multiple choice question blank - a guess has a chance of being right."
+          },
+          {
+            "term": "Command word check before answering",
+            "detail": "Underline the command word (describe, explain, evaluate, calculate) in each question before writing, to avoid describing when an explanation is required or vice versa."
+          },
+          {
+            "term": "Using the mark allocation as a guide",
+            "detail": "A question worth 3 marks needs roughly 3 distinct linked points; a 1-mark question needs a single short, precise answer - do not overwrite short-answer questions."
+          },
+          {
+            "term": "Calculation questions",
+            "detail": "Always show the formula used and every substitution step, even if unsure of the final answer, since method marks are awarded for correct working."
+          }
+        ]
+      }
+    ]
+  },
   "topics": [
     {
       "id": "ch-electrolysis",

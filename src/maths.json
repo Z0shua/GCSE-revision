@@ -2,10 +2,10 @@
   "id": "maths",
   "name": "Mathematics",
   "board": "Pearson Edexcel",
-  "boardVerified": false,
-  "boardNote": "FLAGGED: the KEFW Mathematics Curriculum Intent PDFs for Year 10 and Year 11 name no exam board, and the KEFW website publishes no board list. The KEFW maths page states only that all students are entered for GCSE Higher Tier. Pearson Edexcel 1MA1 is used provisionally because it is the most widely used Higher-tier specification in England. CONFIRM WITH THE SCHOOL. If the board is AQA the spec is 8300; the Year 11 topic list below (circle theorems, algebra and functions, vectors and geometric proof) is identical content on either board, so only the past-paper links need swapping.",
-  "specCode": "1MA1 (provisional)",
-  "tier": "Higher tier - confirmed by KEFW",
+  "boardVerified": true,
+  "boardNote": "VERIFIED from the King Edward VI Five Ways published examination boards list, which names Edexcel for Maths. The KEFW Mathematics Curriculum Intent documents confirm Higher tier content, so all three papers are the Higher tier papers 1MA1/1H, 1MA1/2H and 1MA1/3H.",
+  "specCode": "1MA1",
+  "tier": "Higher tier",
   "accent": "blue",
   "papers": "Three papers, each 1h30 and 80 marks: Paper 1 non-calculator, Papers 2 and 3 calculator. Higher tier grades 4-9.",
   "pastPapers": {
@@ -40,6 +40,775 @@
       "verified": true
     }
   ],
+  "offline": {
+    "commandWords": [
+      {
+        "word": "Work out",
+        "means": "Carry out a calculation and give a numerical answer.",
+        "doThis": "Show every line of working since method marks are available even if the final answer is wrong."
+      },
+      {
+        "word": "Solve",
+        "means": "Find the value(s) of the unknown that satisfy the equation or inequality.",
+        "doThis": "Show the algebraic steps in order; for inequalities keep the inequality sign unless multiplying or dividing by a negative, then reverse it."
+      },
+      {
+        "word": "Simplify",
+        "means": "Write an expression in its shortest fully-reduced equivalent form.",
+        "doThis": "Collect like terms, cancel common factors, or combine surds/indices; do not leave brackets unexpanded if a simpler single expression exists."
+      },
+      {
+        "word": "Show that",
+        "means": "Prove a given statement or value is true using algebra or exact working, not a calculator check.",
+        "doThis": "Start from the given information, show every algebraic step, and end by writing the target statement, e.g. 'as required' or 'QED'."
+      },
+      {
+        "word": "Prove",
+        "means": "Give a complete logical argument valid for all cases, not just an example.",
+        "doThis": "Use general algebraic expressions (e.g. 2n, 2n+1) rather than specific numbers, and state the conclusion explicitly at the end."
+      },
+      {
+        "word": "Calculate",
+        "means": "Obtain a numerical answer, usually with a calculator allowed.",
+        "doThis": "Write down the calculation you are performing before giving the rounded or exact final answer."
+      },
+      {
+        "word": "Write down",
+        "means": "State a result directly with no working required.",
+        "doThis": "Give the answer immediately; do not waste time deriving something that can be read off or recalled."
+      },
+      {
+        "word": "Estimate",
+        "means": "Find an approximate answer using rounded values.",
+        "doThis": "Round every number in the calculation to 1 significant figure first, then calculate."
+      },
+      {
+        "word": "Give your answer to an appropriate degree of accuracy",
+        "means": "Round sensibly for the context, usually matching the least precise data given.",
+        "doThis": "Do not round intermediate steps; only round the final answer, and state the units."
+      },
+      {
+        "word": "Give a reason",
+        "means": "State the mathematical rule or circle theorem that justifies a step.",
+        "doThis": "Name the exact rule, e.g. 'angles in the same segment are equal', not just 'because it looks equal'."
+      },
+      {
+        "word": "Deduce",
+        "means": "Use a previous answer or given result to reach a new conclusion without starting again.",
+        "doThis": "Refer explicitly to the earlier result and explain how it leads to the new one."
+      },
+      {
+        "word": "Hence",
+        "means": "You must use the result of the previous part; an alternative method may not gain marks.",
+        "doThis": "Carry the previous answer directly into this part; do not solve it from scratch by a different method."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Formulae you must memorise (NOT on the Edexcel formulae sheet)",
+        "kind": "formula",
+        "note": "These never appear on the 1MA1 Higher formulae sheet, so they must be recalled from memory.",
+        "items": [
+          {
+            "term": "Quadratic formula",
+            "detail": "x = (-b +/- sqrt(b^2 - 4ac)) / (2a), used to solve ax^2 + bx + c = 0."
+          },
+          {
+            "term": "Compound interest / repeated percentage change",
+            "detail": "Amount = P x (1 + r/100)^n for growth, or P x (1 - r/100)^n for decay, where P is the original amount, r is the percentage rate, n is the number of time periods."
+          },
+          {
+            "term": "Percentage change",
+            "detail": "Percentage change = (change / original) x 100. Use original, not new, value as the denominator."
+          },
+          {
+            "term": "Straight line equation",
+            "detail": "y = mx + c, where m is the gradient and c is the y-intercept."
+          },
+          {
+            "term": "Gradient between two points",
+            "detail": "m = (y2 - y1) / (x2 - x1)."
+          },
+          {
+            "term": "Gradient of perpendicular lines",
+            "detail": "If a line has gradient m, a line perpendicular to it has gradient -1/m (negative reciprocal). Product of gradients = -1."
+          },
+          {
+            "term": "nth term of a linear sequence",
+            "detail": "nth term = dn + (a - d), where d is the common difference and a is the first term. Equivalently dn + (first term - d)."
+          },
+          {
+            "term": "nth term of a quadratic sequence",
+            "detail": "nth term = an^2 + bn + c, where a = (second difference)/2; find b and c by comparing to an^2 at small n."
+          },
+          {
+            "term": "nth term of a geometric sequence",
+            "detail": "nth term = a r^(n-1), where a is the first term and r is the common ratio."
+          },
+          {
+            "term": "Sum of interior angles of a polygon",
+            "detail": "Sum = (n - 2) x 180 degrees, where n is the number of sides."
+          },
+          {
+            "term": "Exterior angle of a regular polygon",
+            "detail": "Exterior angle = 360 / n, where n is the number of sides. Interior + exterior = 180 degrees."
+          },
+          {
+            "term": "Probability of an event not happening",
+            "detail": "P(not A) = 1 - P(A)."
+          },
+          {
+            "term": "Independent events (AND)",
+            "detail": "P(A and B) = P(A) x P(B), only valid if A and B are independent."
+          },
+          {
+            "term": "Mutually exclusive events (OR)",
+            "detail": "P(A or B) = P(A) + P(B), only valid if A and B cannot both happen."
+          },
+          {
+            "term": "Speed, distance, time",
+            "detail": "speed = distance / time. Rearrange as distance = speed x time, time = distance / speed."
+          },
+          {
+            "term": "Density",
+            "detail": "density = mass / volume. Rearrange as mass = density x volume, volume = mass / density."
+          },
+          {
+            "term": "Simple interest",
+            "detail": "Interest = P x r x n / 100, where P is principal, r is the annual rate percent, n is the number of years (no compounding)."
+          },
+          {
+            "term": "Estimated mean from a grouped frequency table",
+            "detail": "Mean = (sum of midpoint x frequency) / (sum of frequency). Use the midpoint of each class."
+          },
+          {
+            "term": "Rationalising a denominator of the form 1/sqrt(a)",
+            "detail": "Multiply top and bottom by sqrt(a): 1/sqrt(a) = sqrt(a)/a."
+          }
+        ]
+      },
+      {
+        "title": "Formulae GIVEN on the Edexcel 1MA1 formulae sheet",
+        "kind": "formula",
+        "note": "Printed on the front of every Higher paper - do not waste time memorising these, but know what each symbol means and when to use it.",
+        "items": [
+          {
+            "term": "Compound interest formula (given)",
+            "detail": "Total accrued = P (1 + r/100)^n is printed on the sheet for compound interest problems."
+          },
+          {
+            "term": "Quadratic formula (given)",
+            "detail": "x = (-b +/- sqrt(b^2 - 4ac)) / (2a) is printed on the sheet, but memorise it anyway as it is needed instantly."
+          },
+          {
+            "term": "Sine rule (given)",
+            "detail": "a / sin A = b / sin B = c / sin C, for any triangle, used when you know an angle and its opposite side."
+          },
+          {
+            "term": "Cosine rule (given)",
+            "detail": "a^2 = b^2 + c^2 - 2bc cos A, used when you know two sides and the included angle, or all three sides."
+          },
+          {
+            "term": "Area of a triangle using sine (given)",
+            "detail": "Area = 1/2 ab sin C, where C is the angle between sides a and b."
+          },
+          {
+            "term": "Volume of a sphere (given)",
+            "detail": "V = 4/3 pi r^3."
+          },
+          {
+            "term": "Surface area of a sphere (given)",
+            "detail": "A = 4 pi r^2."
+          },
+          {
+            "term": "Volume of a cone (given)",
+            "detail": "V = 1/3 pi r^2 h."
+          },
+          {
+            "term": "Curved surface area of a cone (given)",
+            "detail": "A = pi r l, where l is the slant height."
+          },
+          {
+            "term": "Volume of a pyramid (given)",
+            "detail": "V = 1/3 x base area x perpendicular height."
+          },
+          {
+            "term": "Trapezium area (given)",
+            "detail": "Area = 1/2 (a + b) h, where a and b are the parallel sides."
+          }
+        ]
+      },
+      {
+        "title": "Number facts, surds and exact trig values",
+        "kind": "data",
+        "items": [
+          {
+            "term": "Squares 1 to 15",
+            "detail": "1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225."
+          },
+          {
+            "term": "Cubes 1 to 10",
+            "detail": "1, 8, 27, 64, 125, 216, 343, 512, 729, 1000."
+          },
+          {
+            "term": "Primes under 100",
+            "detail": "2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97."
+          },
+          {
+            "term": "Simplifying a surd, e.g. sqrt(48)",
+            "detail": "Find the largest square factor: 48 = 16 x 3, so sqrt(48) = sqrt(16) x sqrt(3) = 4 sqrt(3)."
+          },
+          {
+            "term": "Multiplying surds",
+            "detail": "sqrt(a) x sqrt(b) = sqrt(ab). E.g. sqrt(2) x sqrt(8) = sqrt(16) = 4."
+          },
+          {
+            "term": "Adding/subtracting surds",
+            "detail": "Only like surds combine: a sqrt(n) +/- b sqrt(n) = (a +/- b) sqrt(n). Simplify each surd first."
+          },
+          {
+            "term": "Rationalise 1/sqrt(a)",
+            "detail": "1/sqrt(a) = sqrt(a)/a (multiply top and bottom by sqrt(a))."
+          },
+          {
+            "term": "Rationalise a/(b + sqrt(c))",
+            "detail": "Multiply top and bottom by the conjugate (b - sqrt(c)) so the denominator becomes b^2 - c."
+          },
+          {
+            "term": "sin, cos, tan of 0 degrees",
+            "detail": "sin 0 = 0, cos 0 = 1, tan 0 = 0."
+          },
+          {
+            "term": "sin, cos, tan of 30 degrees",
+            "detail": "sin 30 = 1/2, cos 30 = sqrt(3)/2, tan 30 = 1/sqrt(3) = sqrt(3)/3."
+          },
+          {
+            "term": "sin, cos, tan of 45 degrees",
+            "detail": "sin 45 = sqrt(2)/2, cos 45 = sqrt(2)/2, tan 45 = 1."
+          },
+          {
+            "term": "sin, cos, tan of 60 degrees",
+            "detail": "sin 60 = sqrt(3)/2, cos 60 = 1/2, tan 60 = sqrt(3)."
+          },
+          {
+            "term": "sin, cos, tan of 90 degrees",
+            "detail": "sin 90 = 1, cos 90 = 0, tan 90 = undefined."
+          },
+          {
+            "term": "Key trig identity",
+            "detail": "sin^2 x + cos^2 x = 1, true for all x. Rearranges to sin^2 x = 1 - cos^2 x."
+          },
+          {
+            "term": "tan identity",
+            "detail": "tan x = sin x / cos x."
+          },
+          {
+            "term": "HCF and LCM from prime factors",
+            "detail": "HCF = product of lowest powers of common primes. LCM = product of highest powers of all primes present."
+          }
+        ]
+      },
+      {
+        "title": "Circle theorems: exact examiner-accepted reason wording",
+        "kind": "def",
+        "note": "In a 'give a reason' question you must write the theorem name/wording, not just the angle.",
+        "items": [
+          {
+            "term": "Angle in a semicircle",
+            "detail": "'Angle in a semicircle is 90 degrees.' Applies when the diameter is a chord and the angle is at the circumference."
+          },
+          {
+            "term": "Angle at the centre",
+            "detail": "'The angle at the centre is twice the angle at the circumference' (subtended by the same arc)."
+          },
+          {
+            "term": "Angles in the same segment",
+            "detail": "'Angles in the same segment are equal' - angles subtended by the same arc from the same side of the chord."
+          },
+          {
+            "term": "Cyclic quadrilateral",
+            "detail": "'Opposite angles in a cyclic quadrilateral sum to 180 degrees.'"
+          },
+          {
+            "term": "Tangent and radius",
+            "detail": "'Tangent and radius meet at 90 degrees' (tangent perpendicular to radius at the point of contact)."
+          },
+          {
+            "term": "Two tangents from a point",
+            "detail": "'Tangents from an external point are equal in length.'"
+          },
+          {
+            "term": "Alternate segment theorem",
+            "detail": "'The angle between a tangent and a chord equals the angle in the alternate segment.'"
+          },
+          {
+            "term": "Perpendicular from centre to chord",
+            "detail": "'A perpendicular line from the centre of a circle bisects the chord.'"
+          },
+          {
+            "term": "Isosceles triangle from two radii",
+            "detail": "Two radii to the ends of a chord form an isosceles triangle, so base angles are equal - write 'base angles of an isosceles triangle are equal, radii of a circle are equal'."
+          },
+          {
+            "term": "Angles on a straight line / at a point",
+            "detail": "Use alongside circle theorems: 'angles on a straight line sum to 180 degrees' or 'angles at a point sum to 360 degrees'."
+          },
+          {
+            "term": "Angles in a triangle",
+            "detail": "'Angles in a triangle sum to 180 degrees' - often the final step after applying a circle theorem."
+          },
+          {
+            "term": "Chaining theorems in a proof",
+            "detail": "Write each step as: state the angle, name the reason in the exact wording above, then move to the next step - marks are for reasons, not just correct numbers."
+          }
+        ]
+      },
+      {
+        "title": "Algebra methods, step by step",
+        "kind": "method",
+        "items": [
+          {
+            "term": "Completing the square for x^2 + bx + c",
+            "detail": "Write as (x + b/2)^2 - (b/2)^2 + c. The turning point of y = (x+p)^2 + q is (-p, q)."
+          },
+          {
+            "term": "Completing the square for ax^2 + bx + c (a not 1)",
+            "detail": "Factor out a first: a[x^2 + (b/a)x] + c, complete the square inside the bracket, then multiply back through by a."
+          },
+          {
+            "term": "Solving using the quadratic formula",
+            "detail": "Identify a, b, c from ax^2+bx+c=0, substitute into x = (-b +/- sqrt(b^2-4ac))/(2a), compute the discriminant first, then both roots."
+          },
+          {
+            "term": "Discriminant meaning",
+            "detail": "b^2 - 4ac > 0 gives two real roots; = 0 gives one repeated root; < 0 gives no real roots."
+          },
+          {
+            "term": "Simultaneous equations, one linear one quadratic",
+            "detail": "Rearrange the linear equation to make one variable the subject, substitute into the quadratic equation, solve the resulting quadratic, then find both pairs of values."
+          },
+          {
+            "term": "Simultaneous equations, both linear (elimination)",
+            "detail": "Multiply one or both equations so a variable has matching coefficients, add or subtract the equations to eliminate it, solve for the remaining variable, then substitute back."
+          },
+          {
+            "term": "Solving by iteration",
+            "detail": "Rearrange f(x)=0 into x = g(x), substitute a starting value x0 into g to get x1, then feed each output back in (x_(n+1) = g(x_n)) until answers agree to the required decimal places."
+          },
+          {
+            "term": "Simplifying algebraic fractions",
+            "detail": "Factorise numerator and denominator fully, then cancel common brackets, e.g. (x^2-9)/(x^2+4x+3) = (x-3)(x+3)/((x+3)(x+1)) = (x-3)/(x+1)."
+          },
+          {
+            "term": "Adding algebraic fractions",
+            "detail": "Find a common denominator (usually the product of the two denominators), write each fraction over it, then add/subtract the numerators."
+          },
+          {
+            "term": "Solving equations with algebraic fractions",
+            "detail": "Multiply every term by the common denominator to clear fractions first, then solve the resulting equation (often quadratic)."
+          },
+          {
+            "term": "Proof: showing an expression is even",
+            "detail": "Write the expression using 2n for any integer n; if it simplifies to 2 x (integer expression), it is even. State 'therefore it is a multiple of 2' at the end."
+          },
+          {
+            "term": "Proof: showing an expression is odd",
+            "detail": "Use 2n+1 (or 2n-1) to represent an odd number; simplify and show the result also has the form 2 x (integer) + 1, then state 'therefore it is odd'."
+          },
+          {
+            "term": "Proof: consecutive integers",
+            "detail": "Represent them as n, n+1, n+2, ... Expand and simplify the given expression, then state the conclusion clearly, e.g. 'which is a multiple of 3'."
+          },
+          {
+            "term": "Proof: showing a multiple of k",
+            "detail": "Simplify fully into the form k x (an integer expression). Explicitly state 'since (bracket) is an integer, the expression is a multiple of k'."
+          },
+          {
+            "term": "Rearranging when the subject appears twice",
+            "detail": "Collect all terms containing the subject on one side, factorise the subject out as a common factor, then divide by the remaining bracket."
+          }
+        ]
+      },
+      {
+        "title": "Sequences, graph shapes and transformations of y = f(x)",
+        "kind": "def",
+        "items": [
+          {
+            "term": "Linear graph y = mx + c",
+            "detail": "Straight line, gradient m, y-intercept c."
+          },
+          {
+            "term": "Quadratic graph y = ax^2 + bx + c",
+            "detail": "Parabola (U-shape if a>0, n-shape if a<0), one turning point, symmetrical."
+          },
+          {
+            "term": "Cubic graph y = ax^3 + ...",
+            "detail": "S-shaped curve with up to two turning points; as x gets large positive/negative, y follows the sign of a."
+          },
+          {
+            "term": "Reciprocal graph y = k/x",
+            "detail": "Two branches in opposite quadrants (depending on sign of k), approaching but never touching both axes (asymptotes at x=0 and y=0)."
+          },
+          {
+            "term": "Exponential graph y = k^x (k>1)",
+            "detail": "Always positive, passes through (0,1), increases faster as x increases, approaches y=0 as x decreases (asymptote)."
+          },
+          {
+            "term": "sin x graph",
+            "detail": "Wave through (0,0), period 360 degrees, max 1 at x=90, min -1 at x=270."
+          },
+          {
+            "term": "cos x graph",
+            "detail": "Wave through (0,1), period 360 degrees, max 1 at x=0, min -1 at x=180."
+          },
+          {
+            "term": "tan x graph",
+            "detail": "Repeating curve with period 180 degrees, vertical asymptotes at x=90, 270, etc., passes through (0,0)."
+          },
+          {
+            "term": "Circle graph x^2+y^2=r^2",
+            "detail": "Circle centred at the origin with radius r. Tangent to the circle at a point is perpendicular to the radius at that point."
+          },
+          {
+            "term": "Transformation f(x) + a",
+            "detail": "Translation by vector (0, a) - moves the graph up (a positive) or down (a negative)."
+          },
+          {
+            "term": "Transformation f(x + a)",
+            "detail": "Translation by vector (-a, 0) - moves the graph left if a is positive, right if a is negative."
+          },
+          {
+            "term": "Transformation -f(x)",
+            "detail": "Reflection in the x-axis."
+          },
+          {
+            "term": "Transformation f(-x)",
+            "detail": "Reflection in the y-axis."
+          },
+          {
+            "term": "Transformation a f(x)",
+            "detail": "Vertical stretch, scale factor a, from the x-axis."
+          },
+          {
+            "term": "Transformation f(ax)",
+            "detail": "Horizontal stretch, scale factor 1/a, from the y-axis."
+          },
+          {
+            "term": "Identify a linear sequence",
+            "detail": "The difference between consecutive terms is constant (the common difference d)."
+          },
+          {
+            "term": "Linear nth term",
+            "detail": "nth term = dn + (a - d), where d is the common difference and a is the first term. E.g. 5, 8, 11, 14: d=3, nth term = 3n+2."
+          },
+          {
+            "term": "Identify a quadratic sequence",
+            "detail": "The first differences are not constant, but the second differences (differences of the differences) are constant."
+          },
+          {
+            "term": "Finding a quadratic nth term fully",
+            "detail": "Work out a = (2nd difference)/2, write an^2, compare an^2 to actual terms at n=1,2,3 to find the linear part bn+c by subtraction."
+          },
+          {
+            "term": "Identify a geometric sequence",
+            "detail": "Each term is found by multiplying the previous term by a constant ratio r (term-to-term rule x r)."
+          },
+          {
+            "term": "Geometric nth term",
+            "detail": "nth term = a r^(n-1), where a is the first term and r is the common ratio (r = term2/term1)."
+          },
+          {
+            "term": "Using nth term to test if a value is in the sequence",
+            "detail": "Set the nth term formula equal to the value, solve for n; if n is a positive integer the value is in the sequence."
+          }
+        ]
+      },
+      {
+        "title": "Ratio, proportion, compound measures and vectors",
+        "kind": "method",
+        "items": [
+          {
+            "term": "Sharing in a ratio",
+            "detail": "Add the parts of the ratio to find the total number of parts, divide the amount by this total to find one part, then multiply by each ratio number."
+          },
+          {
+            "term": "Ratio with a changing total",
+            "detail": "Set up equations using the ratio before and after the change; use algebra (let one part = x) if amounts added/removed are known."
+          },
+          {
+            "term": "Direct proportion",
+            "detail": "y = kx. Substitute a known pair of values to find k, then use y=kx for other values. Doubling x doubles y."
+          },
+          {
+            "term": "Inverse proportion",
+            "detail": "y = k/x. Substitute a known pair to find k. Doubling x halves y."
+          },
+          {
+            "term": "Best buy comparisons",
+            "detail": "Find the unit price (price per gram/ml) for each option; the smaller unit price is the better value."
+          },
+          {
+            "term": "Compound interest (growth)",
+            "detail": "Amount = P(1 + r/100)^n. Each year the multiplier is applied to the new total, not the original."
+          },
+          {
+            "term": "Depreciation (decay)",
+            "detail": "Amount = P(1 - r/100)^n, e.g. a car losing 10% of value each year for 3 years: multiply by 0.9 three times."
+          },
+          {
+            "term": "Reverse percentage",
+            "detail": "If a value is X% of the original, divide the given amount by (X/100) to find the original, e.g. after 15% increase, divide by 1.15."
+          },
+          {
+            "term": "Density, speed, pressure as compound measures",
+            "detail": "Density = mass/volume (kg/m^3), speed = distance/time (m/s), pressure = force/area (N/m^2 or Pa)."
+          },
+          {
+            "term": "Converting compound units",
+            "detail": "Convert each base unit separately before combining, e.g. km/h to m/s: multiply by 1000, divide by 3600 (or multiply by 5/18)."
+          },
+          {
+            "term": "Recurring decimal to fraction",
+            "detail": "Let x = the recurring decimal, multiply by 10^n (n = length of repeating block) to shift the decimal, subtract the original equation, solve for x as a fraction."
+          },
+          {
+            "term": "Direct proportion with squares/cubes",
+            "detail": "y is proportional to x^2 means y = kx^2; y proportional to x^3 means y = kx^3 - find k from given data then substitute."
+          },
+          {
+            "term": "Vector from A to B",
+            "detail": "Vector AB = b - a, where a and b are position vectors of A and B (destination minus start)."
+          },
+          {
+            "term": "Adding vectors (triangle law)",
+            "detail": "Vector AC = vector AB + vector BC - travel along one path then the other gives the same result as the direct path."
+          },
+          {
+            "term": "Scalar multiple meaning",
+            "detail": "k times a vector has the same direction (or opposite if k is negative) and k times the magnitude."
+          },
+          {
+            "term": "Proving two vectors are parallel",
+            "detail": "Show one is a scalar multiple of the other, e.g. vector b = k x vector a for some number k; state 'therefore AB is parallel to CD'."
+          },
+          {
+            "term": "Proving three points are collinear",
+            "detail": "Show vector AB and vector BC are scalar multiples of each other AND share point B; state 'AB is parallel to BC and they share point B, so A, B and C are collinear'."
+          },
+          {
+            "term": "Magnitude of a vector",
+            "detail": "For column vector (x, y), magnitude = sqrt(x^2 + y^2) (Pythagoras)."
+          },
+          {
+            "term": "Point dividing a line in a ratio",
+            "detail": "If P divides AB such that AP:PB = m:n, then vector AP = (m/(m+n)) x vector AB."
+          },
+          {
+            "term": "Midpoint using vectors",
+            "detail": "Midpoint M of AB has position vector (a + b)/2."
+          },
+          {
+            "term": "Writing a full vector geometric proof",
+            "detail": "Express all required vectors in terms of the given base vectors (e.g. a and b), simplify, identify the relationship (parallel/equal/ratio), then state the geometric conclusion in words."
+          },
+          {
+            "term": "Common exam trap: direction of a vector expression",
+            "detail": "Vector BA = a - b, the reverse of vector AB = b - a; always subtract start from finish in the direction stated."
+          }
+        ]
+      },
+      {
+        "title": "Probability, statistics and sampling",
+        "kind": "method",
+        "items": [
+          {
+            "term": "Tree diagram with replacement",
+            "detail": "Probabilities on each set of branches stay the same for every draw; multiply along branches, add between different successful paths."
+          },
+          {
+            "term": "Tree diagram without replacement",
+            "detail": "The denominator (and sometimes numerator) on the second set of branches changes because the total number of outcomes has reduced by one."
+          },
+          {
+            "term": "Multiplying along tree branches",
+            "detail": "P(A then B) = P(A) x P(B given the branch taken) - multiply the probabilities you pass through to reach one outcome."
+          },
+          {
+            "term": "Adding between tree branches",
+            "detail": "If there are multiple paths giving the desired outcome (e.g. 'exactly one'), calculate each path then add the results."
+          },
+          {
+            "term": "Venn diagram notation: union",
+            "detail": "A union B, written A u B, means everything in A or B or both."
+          },
+          {
+            "term": "Venn diagram notation: intersection",
+            "detail": "A intersect B, written A n B, means everything in both A and B."
+          },
+          {
+            "term": "Venn diagram notation: complement",
+            "detail": "A' (A dash) means everything NOT in A, i.e. the rest of the sample space (universal set)."
+          },
+          {
+            "term": "Reading probability from a Venn diagram",
+            "detail": "P(event) = (number of items in that region) / (total number in the universal set, symbol xi)."
+          },
+          {
+            "term": "Conditional probability, without replacement",
+            "detail": "P(second event given first event happened) uses a reduced sample: subtract 1 from both the count of that item and the total."
+          },
+          {
+            "term": "Conditional probability notation",
+            "detail": "P(A|B) means the probability of A given that B has already happened; the sample space is restricted to B."
+          },
+          {
+            "term": "P(A or B) general rule",
+            "detail": "P(A or B) = P(A) + P(B) - P(A and B), to avoid double-counting the overlap; simplifies to P(A)+P(B) only if mutually exclusive."
+          },
+          {
+            "term": "Expected frequency",
+            "detail": "Expected frequency = probability x number of trials."
+          },
+          {
+            "term": "Frequency density",
+            "detail": "Frequency density = frequency / class width. Used on histogram y-axis when class widths are unequal."
+          },
+          {
+            "term": "Reading a histogram",
+            "detail": "Frequency for a bar = frequency density x class width (area of the bar), NOT the height alone."
+          },
+          {
+            "term": "Estimating frequency for part of a bar",
+            "detail": "Assume the data is evenly spread within the bar; find the proportion of the bar's width needed, multiply by that bar's frequency."
+          },
+          {
+            "term": "Box plot construction",
+            "detail": "Shows minimum, lower quartile (Q1), median (Q2), upper quartile (Q3), maximum as a five-figure summary with a box from Q1 to Q3."
+          },
+          {
+            "term": "Interquartile range (IQR)",
+            "detail": "IQR = upper quartile - lower quartile; measures the spread of the middle 50% of the data, less affected by outliers than range."
+          },
+          {
+            "term": "Comparing distributions with box plots",
+            "detail": "Compare the median (average) AND the IQR or range (spread/consistency); always comment on both in context."
+          },
+          {
+            "term": "Cumulative frequency graph: median",
+            "detail": "Read across from n/2 on the cumulative frequency axis to the curve, then down to find the median."
+          },
+          {
+            "term": "Cumulative frequency graph: quartiles",
+            "detail": "Lower quartile at n/4 (or 0.25n), upper quartile at 3n/4 (or 0.75n), read the same way as the median."
+          },
+          {
+            "term": "Estimating the mean from a grouped table",
+            "detail": "Multiply each class midpoint by its frequency, sum these, divide by the total frequency."
+          },
+          {
+            "term": "Simple random sampling",
+            "detail": "Every member of the population has an equal chance of being selected, e.g. using random number generation."
+          },
+          {
+            "term": "Stratified sampling",
+            "detail": "Population split into groups (strata); sample size from each group = (group size / population size) x total sample size."
+          },
+          {
+            "term": "Bias in sampling",
+            "detail": "Occurs when the sample does not represent the population fairly, e.g. sampling only one location or time, giving skewed results."
+          },
+          {
+            "term": "Capture-recapture",
+            "detail": "Estimated population = (number caught first time x number caught second time) / number marked in both catches."
+          }
+        ]
+      },
+      {
+        "title": "Picking up method marks: show that / prove wording",
+        "kind": "phrase",
+        "items": [
+          {
+            "term": "Starting a 'show that' answer",
+            "detail": "Write the given/known information first, then work step by step toward the target expression given in the question."
+          },
+          {
+            "term": "Ending a 'show that' answer",
+            "detail": "Finish by writing the exact target statement, e.g. '= 2n + 1 as required' or 'so x = 5 as shown'."
+          },
+          {
+            "term": "Never just verify with one number",
+            "detail": "For 'prove' questions, plugging in a single number is NOT a proof; you must use general algebraic terms valid for all cases."
+          },
+          {
+            "term": "Show working even with a correct calculator answer",
+            "detail": "If working is not shown for a 'show that' question, full marks can be withheld even if the final answer matches, since the process is what's assessed."
+          },
+          {
+            "term": "Method marks without a final answer",
+            "detail": "Marks are given for correct method even if arithmetic later goes wrong; always write the formula and substitution stage clearly, e.g. 'x = (-3 +/- sqrt(9-4x1x-4))/(2x1)'."
+          },
+          {
+            "term": "Do not round until the final step",
+            "detail": "Carry exact or long-decimal values through multi-step calculations; only round the final answer to avoid losing accuracy marks."
+          },
+          {
+            "term": "Label your final answer",
+            "detail": "Circle or clearly state the final answer with correct units so the examiner can find it quickly."
+          },
+          {
+            "term": "If stuck, write down what you know",
+            "detail": "Write any relevant formula, substitute what values you do know, and attempt one step - partial method marks are often available."
+          },
+          {
+            "term": "Two-mark 'write down' answers",
+            "detail": "If a question only says 'write down', do not show excessive working - state the answer directly for full marks."
+          },
+          {
+            "term": "Checking an answer makes sense",
+            "detail": "Sense-check units, sign, and size (e.g. a probability must be between 0 and 1, a length cannot be negative)."
+          }
+        ]
+      },
+      {
+        "title": "Exam-day plan",
+        "kind": "list",
+        "items": [
+          {
+            "term": "Paper 1 (1MA1/1H) - non-calculator",
+            "detail": "1h 30m, 80 marks. Covers the full Higher spec without a calculator, so mental methods, fractions, surds and standard form by hand are tested. Aim for just over 1 minute per mark; spend the first 2 minutes scanning all questions and start with ones you find easiest."
+          },
+          {
+            "term": "Paper 2 (1MA1/2H) - calculator",
+            "detail": "1h 30m, 80 marks. Calculator allowed; still covers the full spec including statistics, geometry, and multi-step problem solving. Keep to roughly 1 minute per mark, and write down the calculation before using the calculator so method marks are visible."
+          },
+          {
+            "term": "Paper 3 (1MA1/3H) - calculator",
+            "detail": "1h 30m, 80 marks. Final paper, again calculator allowed, often includes longer multi-topic problem-solving questions. Leave the hardest multi-mark question until last if short on time, but attempt to start every question for method marks."
+          },
+          {
+            "term": "General timing rule across all three papers",
+            "detail": "Roughly 1 minute per mark on 80 marks in 90 minutes; budget extra time for 4-6 mark problem-solving questions and less for 1-2 mark recall questions."
+          },
+          {
+            "term": "What to check in the last 5 minutes of each paper",
+            "detail": "Check units are given, answers make sense in context, no page or question has been skipped, and rounding instructions have been followed."
+          },
+          {
+            "term": "Equipment to bring for all three papers",
+            "detail": "Scientific calculator (Papers 2 and 3 only, not Paper 1), pen, pencil, ruler, protractor, pair of compasses and an eraser; calculator must not have a QWERTY keyboard or internet access."
+          },
+          {
+            "term": "Order of attack within any paper",
+            "detail": "Answer questions in order but do not get stuck; if a method is not obvious within about a minute of extra thought, write down any relevant formula for a method mark and move on, returning at the end if time allows."
+          },
+          {
+            "term": "Where marks are concentrated across the three papers",
+            "detail": "All three papers sample the full Higher spec, but Paper 1 leans on non-calculator number and algebra fluency, while Papers 2 and 3 more often include longer statistics, geometry and multi-step problem-solving questions."
+          }
+        ]
+      }
+    ]
+  },
   "topics": [
     {
       "id": "ma-circle-theorems",

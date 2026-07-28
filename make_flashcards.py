@@ -306,6 +306,59 @@ def build_basic_rows(data: dict, only: str = None) -> list:
     return rows
 
 
+CARD_KINDS = ("formula", "def", "quote", "data")
+
+
+def reference_tags(subject: dict, section: dict) -> str:
+    parts = [
+        "GCSE",
+        "Year11",
+        tag_token(subject["name"]),
+        tag_token(subject["name"]) + "::Reference::" + tag_token(section["title"]),
+        tag_token(subject["board"].split()[0]) + "::" + tag_token(subject["specCode"]),
+        "Reference",
+    ]
+    if not subject.get("boardVerified", False):
+        parts.append("BOARD_UNVERIFIED")
+    seen, out = set(), []
+    for part in parts:
+        if part not in seen:
+            seen.add(part)
+            out.append(part)
+    return " ".join(out)
+
+
+def build_reference_rows(data: dict, only: str = None) -> list:
+    """Turn the offline reference sheets into recall cards.
+
+    Only lookup-shaped sections become cards: formulae, definitions, quotations and
+    figures. Checklists, methods and sentence stems are read, not recalled, so they
+    stay in the notes page only.
+    """
+    rows = []
+    for subject in data["subjects"]:
+        if only and subject["id"] != only:
+            continue
+        offline = subject.get("offline") or {}
+        for section in offline.get("sections", []):
+            if section["kind"] not in CARD_KINDS:
+                continue
+            if section["title"] == "Exam-day plan":
+                continue
+            for item in section["items"]:
+                front = (
+                    "%s<br><span style=\"font-size:12px;color:#78716c\">%s &middot; %s</span>"
+                    % (clean(item["term"]), clean(subject["name"]), clean(section["title"]))
+                )
+                back = (
+                    "%s<br><br><span style=\"font-size:12px;color:#78716c\">%s &middot; %s %s</span>"
+                    % (clean(item["detail"]), clean(subject["name"]),
+                       clean(subject["board"]), clean(subject["specCode"]))
+                )
+                rows.append([front, back, reference_tags(subject, section)])
+    return rows
+
+
 def build_cloze_rows(data: dict, only: str = None) -> list:
     rows = []
     for subject in data["subjects"]:
@@ -425,7 +478,7 @@ def main(argv=None) -> int:
     outdir = os.path.abspath(args.outdir)
     os.makedirs(outdir, exist_ok=True)
 
-    basic = build_basic_rows(data, args.subject)
+    basic = build_basic_rows(data, args.subject) + build_reference_rows(data, args.subject)
     cloze = build_cloze_rows(data, args.subject)
     matrix = build_matrix_rows(data, args.subject)
 

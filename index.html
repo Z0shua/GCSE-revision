@@ -29,6 +29,10 @@
     .no-print, header, #tabbar { display: none !important; }
     body { background: #fff !important; color: #000 !important; }
     .printable { break-inside: avoid; }
+    #refBody details { border: 0 !important; break-inside: auto; }
+    #refBody summary { font-weight: 700; page-break-after: avoid; }
+    #refBody .chev { display: none; }
+    #refBody span[style] { color: #000 !important; background: none !important; }
   }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { transition-duration: .001ms !important; animation-duration: .001ms !important; }
@@ -68,6 +72,7 @@
       <button data-tab="subjects" class="tab rounded-lg px-3 py-1.5 text-sm font-medium">Subjects</button>
       <button data-tab="papers"   class="tab rounded-lg px-3 py-1.5 text-sm font-medium">Past papers</button>
       <button data-tab="progress" class="tab rounded-lg px-3 py-1.5 text-sm font-medium">Progress</button>
+      <button data-tab="reference" class="tab rounded-lg px-3 py-1.5 text-sm font-medium">Notes</button>
       <a href="study.html" class="ml-auto rounded-lg px-3 py-1.5 text-sm font-medium text-emerald-700 hover:bg-emerald-50 dark:text-emerald-400 dark:hover:bg-emerald-950">AI study room →</a>
     </nav>
   </div>
@@ -308,15 +313,32 @@
   </div>
 </section>
 
+<!-- ============================== REFERENCE (OFFLINE NOTES) ============================== -->
+<section id="view-reference" class="hidden space-y-4">
+  <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900 no-print">
+    <h2 class="text-sm font-semibold">The notes</h2>
+    <p class="mt-0.5 text-[11px] text-stone-500 dark:text-stone-400">Every formula, definition, required practical, quotation and command word, written out in full. This page works with the wi-fi off once it has loaded, and prints onto paper cleanly.</p>
+    <div class="mt-3 flex flex-wrap items-center gap-2">
+      <select id="refSubject" class="w-full min-w-0 rounded-lg border border-stone-300 bg-white px-2 py-2 text-sm sm:w-auto sm:flex-1 dark:border-stone-700 dark:bg-stone-950"></select>
+      <button id="refPrint" class="flex-1 rounded-lg border sm:flex-none border-stone-300 px-3 py-2 text-sm font-medium hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">Print / save as PDF</button>
+      <button id="refOpenAll" class="flex-1 rounded-lg border sm:flex-none border-stone-300 px-3 py-2 text-sm font-medium hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">Open all</button>
+    </div>
+    <input id="refSearch" type="search" placeholder="Search every subject's notes…" class="mt-2 w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm placeholder:text-stone-400 focus:border-emerald-500 focus:outline-none dark:border-stone-700 dark:bg-stone-950">
+    <p id="refSearchInfo" class="mt-2 text-[11px] text-stone-500 dark:text-stone-400"></p>
+  </div>
+  <div id="refBody" class="space-y-3"></div>
+</section>
+
 </main>
 
 <!-- ============================== MOBILE TABS ============================== -->
 <nav id="tabbar" class="fixed bottom-0 left-0 right-0 z-30 border-t border-stone-200 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur dark:border-stone-800 dark:bg-stone-900/95 sm:hidden no-print" aria-label="Sections">
-  <div class="grid grid-cols-5">
+  <div class="grid grid-cols-6">
     <button data-tab="today"    class="mtab flex flex-col items-center gap-0.5 py-2 text-[10px] font-medium"><span class="text-lg leading-none">🗓️</span>Today</button>
     <button data-tab="subjects" class="mtab flex flex-col items-center gap-0.5 py-2 text-[10px] font-medium"><span class="text-lg leading-none">📚</span>Subjects</button>
     <button data-tab="papers"   class="mtab flex flex-col items-center gap-0.5 py-2 text-[10px] font-medium"><span class="text-lg leading-none">📝</span>Papers</button>
     <button data-tab="progress" class="mtab flex flex-col items-center gap-0.5 py-2 text-[10px] font-medium"><span class="text-lg leading-none">📈</span>Progress</button>
+    <button data-tab="reference" class="mtab flex flex-col items-center gap-0.5 py-2 text-[10px] font-medium"><span class="text-lg leading-none">📄</span>Notes</button>
     <a href="study.html" class="flex flex-col items-center gap-0.5 py-2 text-[10px] font-medium text-emerald-700 dark:text-emerald-400"><span class="text-lg leading-none">💬</span>AI room</a>
   </div>
 </nav>
@@ -345,8 +367,8 @@
   var LEGACY = 'kefw.gcse.progress.v1';
   var BOX_DAYS = [1, 3, 7, 21, 60];           // expanding spaced-review ladder
   var REASONS = ['Knowledge gap', 'Exam technique', 'Ran out of time', 'Misread the question', 'Careless slip'];
-  var ACCENT_LIGHT = { amber:'#d97706', rose:'#e11d48', blue:'#2563eb', emerald:'#059669', violet:'#7c3aed', sky:'#0284c7', teal:'#0d9488', orange:'#ea580c' };
-  var ACCENT_DARK  = { amber:'#fbbf24', rose:'#fb7185', blue:'#60a5fa', emerald:'#34d399', violet:'#a78bfa', sky:'#38bdf8', teal:'#2dd4bf', orange:'#fb923c' };
+  var ACCENT_LIGHT = { amber:'#d97706', rose:'#e11d48', blue:'#2563eb', emerald:'#059669', violet:'#7c3aed', sky:'#0284c7', teal:'#0d9488', orange:'#ea580c', indigo:'#4f46e5', lime:'#65a30d' };
+  var ACCENT_DARK  = { amber:'#fbbf24', rose:'#fb7185', blue:'#60a5fa', emerald:'#34d399', violet:'#a78bfa', sky:'#38bdf8', teal:'#2dd4bf', orange:'#fb923c', indigo:'#818cf8', lime:'#a3e635' };
   // Subject colours need more lift on a black background to stay readable.
   var ACCENT = new Proxy({}, { get: function (_, k) {
     return (document.documentElement.classList.contains('dark') ? ACCENT_DARK : ACCENT_LIGHT)[k];
@@ -609,7 +631,7 @@
   }
 
   /* ---------------------------- tabs ---------------------------- */
-  var TABS = ['today', 'subjects', 'papers', 'progress'];
+  var TABS = ['today', 'subjects', 'papers', 'progress', 'reference'];
   var activeTab = 'today';
   function showTab(name) {
     if (TABS.indexOf(name) === -1) name = 'today';
@@ -629,6 +651,7 @@
     });
     if (name === 'papers') renderPapers();
     if (name === 'progress') renderProgress();
+    if (name === 'reference') renderReference();
     window.scrollTo(0, 0);
   }
 
@@ -1013,6 +1036,128 @@
     $('lastExportInfo').textContent = state.lastExport
       ? 'Last backup ' + prettyDate(state.lastExport.slice(0, 10)) + '.'
       : 'You have never backed up.';
+  }
+
+  /* ============================ RENDER: REFERENCE ============================ */
+  /* The offline notes. Everything here comes from GCSE_DATA[].offline, so it is the
+     same source of truth as the topic list, the flashcards and the study room. */
+  var KIND_LABEL = {
+    formula: 'Formulae', def: 'Definitions', list: 'Checklists',
+    quote: 'Quotations', method: 'Methods', phrase: 'Phrases', data: 'Facts and figures'
+  };
+
+  function refSubjects() { return D.subjects.filter(function (s) { return s.offline; }); }
+
+  function refItemHTML(kind, it) {
+    var mono = (kind === 'formula' || kind === 'data') ? ' tabular' : '';
+    var termCls = (kind === 'quote')
+      ? 'italic text-stone-900 dark:text-stone-100'
+      : 'font-semibold text-stone-900 dark:text-stone-100';
+    return '<div class="printable border-t border-stone-100 py-2 dark:border-stone-800 sm:grid sm:grid-cols-[minmax(0,11rem)_1fr] sm:gap-3">' +
+      '<div class="' + termCls + ' text-[13px] leading-snug">' + esc(it.term) + '</div>' +
+      '<div class="mt-0.5 text-[13px] leading-relaxed text-stone-600 dark:text-stone-300' + mono + ' sm:mt-0">' + esc(it.detail) + '</div>' +
+      '</div>';
+  }
+
+  function refSectionHTML(sec, colour, open) {
+    var body = sec.items.map(function (it) { return refItemHTML(sec.kind, it); }).join('');
+    return '<details class="rounded-lg border border-stone-200 dark:border-stone-800"' + (open ? ' open' : '') + '>' +
+      '<summary class="flex items-center gap-2 px-3 py-2">' +
+        '<span class="chev text-stone-400">&#9656;</span>' +
+        '<span class="flex-1 text-[13px] font-semibold">' + esc(sec.title) + '</span>' +
+        '<span class="rounded px-1.5 py-0.5 text-[10px] font-medium" style="color:' + colour + ';background:' + colour + '22">' +
+          esc(KIND_LABEL[sec.kind] || sec.kind) + ' &middot; ' + sec.items.length + '</span>' +
+      '</summary>' +
+      '<div class="px-3 pb-3">' +
+        (sec.note ? '<p class="mb-1 text-[11px] text-stone-500 dark:text-stone-400">' + esc(sec.note) + '</p>' : '') +
+        body +
+      '</div></details>';
+  }
+
+  function refCommandHTML(cws, colour) {
+    var rows = cws.map(function (c) {
+      return '<div class="printable border-t border-stone-100 py-2 dark:border-stone-800 sm:grid sm:grid-cols-[minmax(0,7rem)_1fr] sm:gap-3">' +
+        '<div class="text-[13px] font-semibold" style="color:' + colour + '">' + esc(c.word) + '</div>' +
+        '<div class="text-[13px] leading-relaxed text-stone-600 dark:text-stone-300">' +
+          '<span class="text-stone-900 dark:text-stone-100">' + esc(c.means) + '</span> ' + esc(c.doThis) +
+        '</div></div>';
+    }).join('');
+    return '<details class="rounded-lg border border-stone-200 dark:border-stone-800" open>' +
+      '<summary class="flex items-center gap-2 px-3 py-2">' +
+        '<span class="chev text-stone-400">&#9656;</span>' +
+        '<span class="flex-1 text-[13px] font-semibold">What the command words actually ask for</span>' +
+        '<span class="rounded px-1.5 py-0.5 text-[10px] font-medium" style="color:' + colour + ';background:' + colour + '22">' + cws.length + ' words</span>' +
+      '</summary><div class="px-3 pb-3">' + rows + '</div></details>';
+  }
+
+  function renderReference() {
+    var subs = refSubjects();
+    var sel = $('refSubject');
+    if (!sel.options.length) {
+      sel.innerHTML = subs.map(function (s) {
+        return '<option value="' + esc(s.id) + '">' + esc(s.name) + ' &middot; ' + esc(s.board) + ' ' + esc(s.specCode) + '</option>';
+      }).join('');
+    }
+    var q = $('refSearch').value.trim().toLowerCase();
+    if (q.length >= 2) { renderRefSearch(q); return; }
+    $('refSearchInfo').textContent = '';
+    var s = subs.filter(function (x) { return x.id === sel.value; })[0] || subs[0];
+    if (!s) { $('refBody').innerHTML = ''; return; }
+    sel.value = s.id;
+    var c = ACCENT[s.accent] || '#0d9488';
+    var items = s.offline.sections.reduce(function (n, x) { return n + x.items.length; }, 0);
+    var html = '<div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">' +
+      '<div class="flex flex-wrap items-baseline gap-2">' +
+        '<h3 class="text-base font-semibold" style="color:' + c + '">' + esc(s.name) + '</h3>' +
+        '<span class="text-[11px] text-stone-500 dark:text-stone-400">' + esc(s.board) + ' ' + esc(s.specCode) + ' &middot; ' + esc(s.tier) + '</span>' +
+        '<span class="ml-auto text-[11px] text-stone-500 dark:text-stone-400">' + items + ' things to know</span>' +
+      '</div>' +
+      '<p class="mt-1 text-[12px] leading-relaxed text-stone-600 dark:text-stone-300">' + esc(s.papers) + '</p>' +
+      '</div>' +
+      '<div class="mt-3 space-y-2">' +
+        refCommandHTML(s.offline.commandWords, c) +
+        s.offline.sections.map(function (sec, i) { return refSectionHTML(sec, c, i === 0); }).join('') +
+      '</div>';
+    $('refBody').innerHTML = html;
+    $('refOpenAll').textContent = 'Open all';
+  }
+
+  function renderRefSearch(q) {
+    var hits = [];
+    refSubjects().forEach(function (s) {
+      s.offline.sections.forEach(function (sec) {
+        sec.items.forEach(function (it) {
+          if ((it.term + ' ' + it.detail).toLowerCase().indexOf(q) !== -1) {
+            hits.push({ s: s, sec: sec, it: it });
+          }
+        });
+      });
+      s.offline.commandWords.forEach(function (cw) {
+        if ((cw.word + ' ' + cw.means + ' ' + cw.doThis).toLowerCase().indexOf(q) !== -1) {
+          hits.push({ s: s, sec: { title: 'Command words', kind: 'phrase' },
+                      it: { term: cw.word, detail: cw.means + ' ' + cw.doThis } });
+        }
+      });
+    });
+    $('refSearchInfo').textContent = hits.length
+      ? hits.length + (hits.length === 1 ? ' match' : ' matches') + ' across every subject. Clear the box to go back to one subject.'
+      : 'Nothing matches that. Try a shorter word.';
+    var shown = hits.slice(0, 120);
+    $('refBody').innerHTML = shown.length
+      ? '<div class="rounded-xl border border-stone-200 bg-white p-2 dark:border-stone-800 dark:bg-stone-900">' +
+        shown.map(function (h) {
+          var c = ACCENT[h.s.accent] || '#0d9488';
+          return '<div class="printable border-t border-stone-100 px-2 py-2 first:border-0 dark:border-stone-800">' +
+            '<div class="text-[10px] font-medium" style="color:' + c + '">' + esc(h.s.name) + ' &middot; ' + esc(h.sec.title) + '</div>' +
+            '<div class="text-[13px] font-semibold">' + esc(h.it.term) + '</div>' +
+            '<div class="text-[13px] leading-relaxed text-stone-600 dark:text-stone-300">' + esc(h.it.detail) + '</div>' +
+            '</div>';
+        }).join('') +
+        (hits.length > shown.length
+          ? '<p class="px-2 py-2 text-[11px] text-stone-500 dark:text-stone-400">Showing the first ' + shown.length + '. Type a bit more to narrow it down.</p>'
+          : '') +
+        '</div>'
+      : '';
   }
 
   /* ============================ MODALS ============================ */
@@ -1477,6 +1622,24 @@
     $('expandBtn').textContent = anyClosed ? 'Close all' : 'Open all';
   });
 
+  var refTimer = null;
+  $('refSearch').addEventListener('input', function () {
+    clearTimeout(refTimer); refTimer = setTimeout(renderReference, 140);
+  });
+  $('refSubject').addEventListener('change', function () { $('refSearch').value = ''; renderReference(); });
+  $('refPrint').addEventListener('click', function () {
+    // A closed <details> prints as a bare heading, so open everything first.
+    [].forEach.call(document.querySelectorAll('#refBody details'), function (d) { d.open = true; });
+    $('refOpenAll').textContent = 'Close all';
+    window.print();
+  });
+  $('refOpenAll').addEventListener('click', function () {
+    var all = document.querySelectorAll('#refBody details');
+    var anyClosed = [].some.call(all, function (d) { return !d.open; });
+    [].forEach.call(all, function (d) { d.open = anyClosed; });
+    $('refOpenAll').textContent = anyClosed ? 'Close all' : 'Open all';
+  });
+
   /* ============================ boot ============================ */
   function renderAll() {
     renderToday();
@@ -1499,7 +1662,7 @@
     if (now !== TODAY) { TODAY = now; load(); renderAll(); }
   }, 60000);
 
-  window.__gcse = { get state() { return state; }, score:score, rate:rate, save:save, renderAll:renderAll, phase:phase, weekStats:weekStats };
+  window.__gcse = { get state() { return state; }, score:score, rate:rate, save:save, renderAll:renderAll, phase:phase, weekStats:weekStats, renderReference:renderReference };
 })();
 </script>
 </body>

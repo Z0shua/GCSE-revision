@@ -35,6 +35,503 @@
       "verified": true
     }
   ],
+  "offline": {
+    "commandWords": [
+      {
+        "word": "Define",
+        "means": "State the precise meaning of a geographical term.",
+        "doThis": "Give the exact technical definition in one sentence; do not use the word itself in the definition."
+      },
+      {
+        "word": "Describe",
+        "means": "Set out the characteristics of something using evidence, without explaining causes.",
+        "doThis": "State what a map, graph, photo or process shows, using figures, place names or directions; do not say why it happens."
+      },
+      {
+        "word": "Explain",
+        "means": "Give reasons for a pattern, process or feature, showing understanding of cause and effect.",
+        "doThis": "Use connectives such as 'this leads to' or 'because' to link a cause to its effect, ideally in a chain of at least two linked points."
+      },
+      {
+        "word": "Assess",
+        "means": "Consider the relative importance or success of factors and reach a supported judgement.",
+        "doThis": "Weigh up the different factors or impacts, use evidence for each, then conclude which matters most and why."
+      },
+      {
+        "word": "Evaluate",
+        "means": "Weigh up the extent to which a statement is true, considering different viewpoints.",
+        "doThis": "Give a balanced argument for and against, use named evidence for each side, then reach a justified overall conclusion that directly answers the question."
+      },
+      {
+        "word": "To what extent",
+        "means": "Judge how far you agree with a statement, considering alternative views.",
+        "doThis": "Present the case that supports the statement, present the case against it, then give a final judgement stating a degree of agreement."
+      },
+      {
+        "word": "Justify",
+        "means": "Give reasons to support a choice or decision already made.",
+        "doThis": "State the decision, then give clear evidence-based reasons why it is the best option compared to alternatives."
+      },
+      {
+        "word": "Analyse",
+        "means": "Break down information to show relationships between parts.",
+        "doThis": "Identify patterns, links or trends in the data and explain how different parts of the evidence relate to each other."
+      },
+      {
+        "word": "Compare",
+        "means": "Identify similarities and differences between two or more things.",
+        "doThis": "Use comparative language (e.g. 'whereas', 'similarly', 'in contrast') to directly link the two things, not two separate descriptions."
+      },
+      {
+        "word": "Suggest",
+        "means": "Apply existing geographical knowledge to a new or unfamiliar situation.",
+        "doThis": "Use logical reasoning from concepts you know, even if the exact case has not been studied."
+      },
+      {
+        "word": "Using Figure X",
+        "means": "You must refer specifically to the named resource, not just general knowledge.",
+        "doThis": "Quote data, labels or features directly from the figure, citing it by name, e.g. 'Figure 3 shows...'."
+      },
+      {
+        "word": "Study Figure X and use your own knowledge",
+        "means": "Combine evidence from the given resource with case study knowledge you have learned.",
+        "doThis": "Start with a point from the figure, then add a supporting fact or figure from your own case study knowledge."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Named case studies and located examples (one item each, with figures and dates)",
+        "kind": "data",
+        "note": "Each entry is a real, locatable example with at least one figure or date, as required for Edexcel B extended answers.",
+        "items": [
+          {
+            "term": "Tropical cyclone, developed country example",
+            "detail": "Hurricane Harvey hit Texas, USA in August 2017, causing over 100 fatalities and roughly $125 billion in damage from catastrophic flooding after over 1000mm of rainfall in parts of Houston."
+          },
+          {
+            "term": "Tropical cyclone, developing/emerging country example",
+            "detail": "Cyclone Idai struck Mozambique, Zimbabwe and Malawi in March 2019, killing over 1000 people and displacing around 400,000, destroying the port city of Beira."
+          },
+          {
+            "term": "Tectonic hazard, developed country example",
+            "detail": "The Kaikoura earthquake, New Zealand, magnitude 7.8, struck on 14 November 2016, killing 2 people and causing about NZ$2 billion of damage, with strong building codes limiting casualties."
+          },
+          {
+            "term": "Tectonic hazard, developing/emerging country example",
+            "detail": "The Haiti earthquake, magnitude 7.0, struck on 12 January 2010 near Port-au-Prince, killing an estimated 160,000-230,000 people due to poor building standards and weak emergency response."
+          },
+          {
+            "term": "Development case study: India",
+            "detail": "India's GNI per capita was around US$2,390 (World Bank, Atlas method, recent data) with an HDI around 0.64 (medium-high), showing rapid IT and service-sector growth (e.g. Bangalore) alongside continued rural poverty."
+          },
+          {
+            "term": "Urbanisation case study: Mumbai",
+            "detail": "Mumbai's population is around 20 million in its metropolitan area; Dharavi, one of its largest informal settlements, houses an estimated 700,000-1 million people in about 2.1 square kilometres."
+          },
+          {
+            "term": "UK city case study: Birmingham",
+            "detail": "Birmingham, UK's second largest city (population approximately 1.15 million), lost tens of thousands of manufacturing jobs from deindustrialisation from the 1970s-1990s, followed by regeneration schemes such as the Bullring (opened 2003) and HS2-linked investment."
+          },
+          {
+            "term": "Coastal management case study: Holderness coast",
+            "detail": "The Holderness coast, East Yorkshire, erodes at an average rate of about 1.5-2 metres per year, among the fastest eroding coastlines in Europe; Mappleton has been protected since 1991 with rock groynes and a rock revetment."
+          },
+          {
+            "term": "River management case study: UK",
+            "detail": "The River Cherwell/Banbury flood scheme, or similarly the River Skerne, Darlington (naturalisation scheme, 1990s), used soft engineering to restore a meandering channel and floodplain storage to reduce downstream flood risk."
+          },
+          {
+            "term": "Rainforest case study: deforestation",
+            "detail": "The Amazon rainforest lost roughly 11,000 square kilometres of forest cover in Brazil in a recent reported year (INPE data), driven mainly by cattle ranching and soy farming."
+          },
+          {
+            "term": "Taiga/energy resource case study",
+            "detail": "Alberta's Athabasca tar sands, Canada, produce over 3 million barrels of oil per day using energy-intensive extraction, generating higher carbon emissions per barrel than conventional oil."
+          },
+          {
+            "term": "Global biome distribution located example",
+            "detail": "The Sahara Desert biome (around 30 degrees N, area approximately 9.2 million square kilometres) sits under the descending, high-pressure limb of the Hadley cell, giving very low rainfall."
+          }
+        ]
+      },
+      {
+        "title": "Command words and mark tariffs",
+        "kind": "def",
+        "items": [
+          {
+            "term": "1-2 mark questions",
+            "detail": "Usually 'define', 'identify' or 'give one reason' - state the fact directly with no development needed."
+          },
+          {
+            "term": "4 mark questions",
+            "detail": "Usually 'describe' or 'explain'; give two developed points, each with a piece of evidence or a linked consequence (point-evidence or point-because)."
+          },
+          {
+            "term": "6 mark questions",
+            "detail": "Usually 'explain the impacts of...' - give three developed points, or two points each fully explained in a chain of cause and effect."
+          },
+          {
+            "term": "8 mark questions",
+            "detail": "Extended writing, often 'assess' or 'explain', sometimes with a resource; needs a logical structure, developed points, and a brief conclusion."
+          },
+          {
+            "term": "8 mark + SPaG question",
+            "detail": "One 8-mark question per paper also assesses spelling, punctuation and grammar (up to 4 extra marks) - use full sentences, paragraphs and geographical terminology accurately."
+          },
+          {
+            "term": "12 mark question (evaluate/to what extent)",
+            "detail": "Requires a balanced discussion for and against, named located evidence on both sides, and a justified final judgement that directly answers the question."
+          },
+          {
+            "term": "Paper 3 decision-making 12/8 mark questions",
+            "detail": "Use the pre-released resource booklet; weigh named options against given criteria (e.g. cost, environmental impact, social impact) before justifying a final choice."
+          },
+          {
+            "term": "Marks for using case study place names",
+            "detail": "Named, located, and dated detail (e.g. 'Cyclone Idai, Mozambique, March 2019') scores higher than generic, unnamed description."
+          }
+        ]
+      },
+      {
+        "title": "Definitions glossary",
+        "kind": "def",
+        "items": [
+          {
+            "term": "Hazard",
+            "detail": "A natural event that has the potential to threaten life or property."
+          },
+          {
+            "term": "Vulnerability",
+            "detail": "The extent to which a community, area or system is susceptible to harm from a hazard."
+          },
+          {
+            "term": "Resilience",
+            "detail": "The ability of a community or system to withstand, cope with and recover from a hazard event."
+          },
+          {
+            "term": "Urbanisation",
+            "detail": "The increase in the proportion of a country's population living in urban areas."
+          },
+          {
+            "term": "Megacity",
+            "detail": "A city with a population of more than 10 million people."
+          },
+          {
+            "term": "Informal settlement",
+            "detail": "An area of housing built without legal permission, official planning or full access to services such as clean water and sanitation."
+          },
+          {
+            "term": "Development gap",
+            "detail": "The difference in standards of living and wellbeing between the richest and poorest countries or regions in the world."
+          },
+          {
+            "term": "Sustainable development",
+            "detail": "Development that meets the needs of the present without compromising the ability of future generations to meet their own needs."
+          },
+          {
+            "term": "Biodiversity",
+            "detail": "The variety of plant and animal life in a particular habitat or ecosystem."
+          },
+          {
+            "term": "Net primary productivity (NPP)",
+            "detail": "The rate at which plants store energy as biomass, after allowing for their own respiration, usually measured in grams per square metre per year."
+          },
+          {
+            "term": "Energy security",
+            "detail": "Uninterrupted access to sufficient, affordable and reliable energy supplies to meet a country's needs."
+          },
+          {
+            "term": "Energy mix",
+            "detail": "The combination of different energy sources (e.g. coal, gas, renewables) that a country uses to meet its energy demand."
+          },
+          {
+            "term": "Longshore drift",
+            "detail": "The zigzag transport of sediment along a coastline caused by waves approaching at an angle, moving material in the direction of the prevailing wind."
+          },
+          {
+            "term": "Discharge",
+            "detail": "The volume of water flowing through a river cross-section per second, measured in cumecs (cubic metres per second)."
+          },
+          {
+            "term": "Deindustrialisation",
+            "detail": "The decline of manufacturing industry and its associated employment in a country or region."
+          },
+          {
+            "term": "Fieldwork enquiry",
+            "detail": "A structured investigation of a geographical question using primary data collected in the field and secondary data, followed by analysis and evaluation."
+          }
+        ]
+      },
+      {
+        "title": "Fieldwork enquiry process: what each stage must contain",
+        "kind": "method",
+        "items": [
+          {
+            "term": "Stage 1: Title, aim and hypothesis",
+            "detail": "State a clear, testable question or hypothesis linked to theory, e.g. 'quality of life decreases with distance from the CBD', and justify why the topic and location were chosen."
+          },
+          {
+            "term": "Stage 2: Location and context",
+            "detail": "Give the physical/human background of the study area with a located map, explaining why it is suitable for testing the hypothesis."
+          },
+          {
+            "term": "Stage 3: Method and sampling",
+            "detail": "State the sampling strategy used (random, systematic or stratified), justify why it suits the enquiry, and describe exactly how, where and how often data was collected."
+          },
+          {
+            "term": "Stage 4: Risk assessment",
+            "detail": "Identify specific hazards (e.g. traffic, water, weather, lone working) and state the control measure taken to reduce each risk before fieldwork began."
+          },
+          {
+            "term": "Stage 5: Data presentation",
+            "detail": "Choose presentation techniques that suit the data type (e.g. choropleth for area data, scatter graph for correlation) and justify the choice."
+          },
+          {
+            "term": "Stage 6: Data analysis",
+            "detail": "Describe patterns and anomalies in the results using statistics (mean, median, range, Spearman's rank) and refer back to specific figures/graphs produced."
+          },
+          {
+            "term": "Stage 7: Conclusion",
+            "detail": "State clearly whether the original hypothesis is supported or rejected, using specific evidence from the analysis to justify the conclusion."
+          },
+          {
+            "term": "Stage 8: Evaluation",
+            "detail": "Assess the reliability and accuracy of the method, identify limitations (e.g. sample size, weather, human error, time of data collection), and suggest specific improvements."
+          },
+          {
+            "term": "Human enquiry example content",
+            "detail": "For an urban quality of life enquiry: environmental quality surveys, questionnaires, and land use maps across the study transect from CBD to suburb."
+          },
+          {
+            "term": "Physical enquiry example content",
+            "detail": "For a river or coastal enquiry: measurements of channel width, depth, velocity, gradient or beach profile/sediment size at multiple sample sites along a transect."
+          }
+        ]
+      },
+      {
+        "title": "Map, graph and photo skills",
+        "kind": "method",
+        "items": [
+          {
+            "term": "Four-figure grid reference",
+            "detail": "Read the eastings (vertical gridline) value first, then the northings (horizontal gridline) value, giving the bottom-left corner of the grid square, e.g. 4523."
+          },
+          {
+            "term": "Six-figure grid reference",
+            "detail": "Estimate tenths across the square for eastings first, then tenths up the square for northings, giving a precise point, e.g. 452238."
+          },
+          {
+            "term": "OS map scale 1:50,000",
+            "detail": "1 cm on the map represents 50,000 cm (500 m) in real life; 2 cm represents 1 km."
+          },
+          {
+            "term": "OS map scale 1:25,000",
+            "detail": "1 cm on the map represents 25,000 cm (250 m) in real life; 4 cm represents 1 km."
+          },
+          {
+            "term": "Measuring distance on a map",
+            "detail": "Use a piece of string or ruler along the route (following curves for roads/rivers), measure its length, then convert using the map scale."
+          },
+          {
+            "term": "Contour lines and relief",
+            "detail": "Lines join points of equal height; closely spaced contours show steep slopes, widely spaced contours show gentle slopes, and V-shapes pointing uphill often indicate a river valley."
+          },
+          {
+            "term": "Cross-section/transect from a map",
+            "detail": "Lay a strip of paper along the line, mark where each contour crosses it, transfer these marks to graph paper axes (distance vs height), then join with a smooth line."
+          },
+          {
+            "term": "Choropleth map",
+            "detail": "Uses graded shading (usually darker = higher value) to show how a variable (e.g. population density) varies between defined areas such as wards or countries; needs a key with class intervals."
+          },
+          {
+            "term": "Proportional symbols map",
+            "detail": "Uses circles or bars sized in proportion to a data value at a located point, useful for showing quantities like population or trade at specific places."
+          },
+          {
+            "term": "Describing a photograph geographically",
+            "detail": "Comment on foreground, middle ground and background; identify physical and human features and their spatial relationship, avoiding vague terms like 'nice' or 'a lot'."
+          },
+          {
+            "term": "Reading a climate graph",
+            "detail": "Bars usually show monthly precipitation (read against the left axis), the line shows monthly temperature (read against the right axis); state the range and pattern of both."
+          },
+          {
+            "term": "Interpreting a hydrograph",
+            "detail": "Identify peak rainfall, peak discharge, lag time (gap between the two peaks), rising limb and falling limb, and comment on how quickly discharge responds to rainfall."
+          }
+        ]
+      },
+      {
+        "title": "Statistics skills for fieldwork and data",
+        "kind": "formula",
+        "items": [
+          {
+            "term": "Mean",
+            "detail": "Add all the values together and divide by the number of values. Sensitive to extreme values (outliers)."
+          },
+          {
+            "term": "Median",
+            "detail": "Put the values in order; the middle value (or mean of the two middle values if an even number of data points). Not affected by outliers."
+          },
+          {
+            "term": "Mode",
+            "detail": "The value that occurs most often in the data set. Useful for categorical data."
+          },
+          {
+            "term": "Range",
+            "detail": "Highest value minus lowest value; a simple measure of spread, but very sensitive to outliers."
+          },
+          {
+            "term": "Interquartile range (IQR)",
+            "detail": "Upper quartile minus lower quartile; measures the spread of the middle 50% of data and is less affected by outliers than the range."
+          },
+          {
+            "term": "Spearman's rank correlation, in words",
+            "detail": "Rank both data sets separately, find the difference in rank for each pair, square each difference, sum the squared differences, then apply the formula to give a value between -1 and +1 showing the strength and direction of correlation."
+          },
+          {
+            "term": "Interpreting a Spearman's rank result",
+            "detail": "A result close to +1 shows strong positive correlation, close to -1 shows strong negative correlation, and close to 0 shows little or no correlation; always state what this means in the geographical context."
+          },
+          {
+            "term": "Anomalies in data",
+            "detail": "A data point that does not fit the general pattern; identify it, suggest a geographical or methodological reason for it, and consider whether to exclude it from analysis."
+          },
+          {
+            "term": "Why use inter-quartile range over range for fieldwork data",
+            "detail": "IQR removes the influence of one or two extreme results (outliers) caused by measurement error or unusual local conditions, giving a fairer picture of typical spread."
+          }
+        ]
+      },
+      {
+        "title": "8-mark and 12-mark answer structure, and evaluating",
+        "kind": "phrase",
+        "items": [
+          {
+            "term": "Opening an 8-mark 'assess' answer",
+            "detail": "State the factors or impacts you will weigh up in one introductory sentence, e.g. 'There are several reasons why..., including...'."
+          },
+          {
+            "term": "Structuring each point in an extended answer",
+            "detail": "Point - explain why/how - support with named evidence or a figure - link back to the question (PEEL-style: point, evidence, explain, link)."
+          },
+          {
+            "term": "Linking cause to effect in an explain answer",
+            "detail": "Use 'this results in', 'this leads to', 'as a consequence' to build a chain rather than listing disconnected facts."
+          },
+          {
+            "term": "Introducing a 12-mark 'evaluate' answer",
+            "detail": "Briefly state both sides of the argument you will consider before beginning the detailed discussion."
+          },
+          {
+            "term": "Giving the case FOR in an evaluate answer",
+            "detail": "Present the strongest arguments/evidence supporting the statement, each backed by a located example or figure."
+          },
+          {
+            "term": "Giving the case AGAINST in an evaluate answer",
+            "detail": "Present counter-arguments or limitations with their own supporting evidence, showing genuine balance rather than a token sentence."
+          },
+          {
+            "term": "Concluding an evaluate/to what extent answer",
+            "detail": "State a clear judgement (e.g. 'to a large extent', 'to a limited extent') and briefly justify why one side outweighs the other based on the evidence given."
+          },
+          {
+            "term": "Common evaluate mistake to avoid",
+            "detail": "Do not just describe both sides without judging between them; the mark scheme specifically rewards a justified final decision."
+          },
+          {
+            "term": "Using the resource booklet in Paper 3 decision-making",
+            "detail": "Quote figures or named options directly from the booklet as evidence for your justification, rather than relying only on memorised case studies."
+          }
+        ]
+      },
+      {
+        "title": "Physical process sequences (cause and effect chains)",
+        "kind": "list",
+        "items": [
+          {
+            "term": "Formation of a headland and bay",
+            "detail": "Alternating bands of hard and soft rock -> soft rock erodes faster by hydraulic action and abrasion -> bays form in the soft rock -> hard rock remains as headlands jutting into the sea."
+          },
+          {
+            "term": "Formation of a wave-cut platform",
+            "detail": "Waves erode a notch at the base of a cliff by hydraulic action and abrasion -> the notch deepens undermining the rock above -> the unsupported cliff collapses -> repeated retreat leaves a gently sloping rock platform at the base."
+          },
+          {
+            "term": "Cave-arch-stack-stump sequence",
+            "detail": "A crack in a headland is widened by hydraulic action -> erosion enlarges the crack into a cave -> continued erosion breaks through the headland forming an arch -> wave action and weathering undermine the arch roof until it collapses leaving a stack -> further erosion of the stack's base leaves a stump."
+          },
+          {
+            "term": "Formation of a spit",
+            "detail": "Longshore drift transports sediment along the coast in the direction of the prevailing wind -> at a change in coastline direction (e.g. a river mouth) sediment continues to be deposited in open water -> a ridge builds up -> wind changes curve the end into a hook, forming a spit."
+          },
+          {
+            "term": "Formation of a meander",
+            "detail": "Slightly faster flow on the outside of a bend increases erosion (undercutting the bank) -> slower flow on the inside bend causes deposition -> the channel migrates sideways over time -> the bend becomes more pronounced."
+          },
+          {
+            "term": "Formation of an ox-bow lake",
+            "detail": "Erosion narrows the neck of a meander -> during a flood the river cuts through the narrow neck taking the shortest path -> deposition seals off the old meander loop at both ends -> the old loop remains as a curved ox-bow lake."
+          },
+          {
+            "term": "River flooding sequence",
+            "detail": "Heavy or prolonged rainfall (or snowmelt) -> ground becomes saturated or is impermeable/urbanised so infiltration is reduced -> surface runoff increases rapidly -> river discharge rises faster than the channel can carry -> water overtops the banks causing flooding."
+          },
+          {
+            "term": "Subduction at a destructive plate boundary",
+            "detail": "Denser oceanic crust meets less dense continental crust -> the oceanic plate is forced down (subducts) into the mantle -> friction and melting generate magma -> magma rises through the continental crust -> explosive volcanic eruptions and deep-focus earthquakes result."
+          },
+          {
+            "term": "Formation of a tropical cyclone",
+            "detail": "Sea surface temperature exceeds about 27 degrees Celsius over deep warm water -> warm moist air rises rapidly creating an area of low pressure -> surrounding air rushes in and is deflected by the Coriolis effect, starting rotation -> rising air cools, condenses, releasing latent heat, which fuels further uplift -> the system intensifies into an organised tropical cyclone with an eye and eye wall."
+          },
+          {
+            "term": "Rainforest nutrient cycling",
+            "detail": "High temperature and rainfall cause rapid decomposition of leaf litter -> nutrients are released quickly but taken up immediately by shallow tree roots -> most nutrients are stored in the biomass rather than the soil -> heavy rainfall leaches any remaining soil nutrients away -> soils become infertile if the forest is cleared."
+          }
+        ]
+      },
+      {
+        "title": "Exam-day plan",
+        "kind": "list",
+        "items": [
+          {
+            "term": "Paper 1 (1GB0/01) - Global Geographical Issues",
+            "detail": "1h 30m, worth 37.5% of the GCSE. Covers Hazardous Earth, Development Dynamics and Challenges of an Urbanising World. Roughly 1 minute per mark; allow extra time for the 8-mark and 12-mark extended answers, and check whether an 8-mark question carries SPaG marks."
+          },
+          {
+            "term": "Paper 2 (1GB0/02) - UK Geographical Issues",
+            "detail": "1h 45m, worth 37.5% of the GCSE. Covers UK Physical Landscapes (coasts and rivers), the UK's Evolving Human Landscape, and the fieldwork-based Geographical Investigations section; budget extra time for the fieldwork questions referencing your own enquiries."
+          },
+          {
+            "term": "Paper 3 (1GB0/03) - People and Environment Issues",
+            "detail": "1h 30m, worth 25% of the GCSE. Covers People and Biomes, Forests Under Threat and Consuming Energy Resources, plus a pre-released resource booklet used for a decision-making exercise; read the whole booklet before answering the final extended question."
+          },
+          {
+            "term": "General timing rule for all three papers",
+            "detail": "Roughly 1 minute per mark; spend the first few minutes reading the whole paper (and resource booklet for Paper 3) before writing, and leave time to check place names, dates and figures are accurate."
+          },
+          {
+            "term": "Command word check before answering",
+            "detail": "Underline the command word and mark allocation for every question first, so 'describe' answers are not accidentally explained and vice versa."
+          },
+          {
+            "term": "Equipment to bring for all three papers",
+            "detail": "Pen, pencil, ruler, eraser and a sharpener; a calculator is allowed for statistics questions (e.g. Spearman's rank) on any paper."
+          },
+          {
+            "term": "Using case studies effectively under time pressure",
+            "detail": "Keep a mental list of one named figure and one named date for each case study so located detail can be added quickly without lengthy recall."
+          },
+          {
+            "term": "Paper 3 preparation before exam day",
+            "detail": "The resource booklet for Paper 3 is issued shortly before the exam; read it thoroughly in the days before and annotate options against the likely decision-making criteria."
+          }
+        ]
+      }
+    ]
+  },
   "topics": [
     {
       "id": "ge-hazardous-earth-climate",

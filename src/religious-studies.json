@@ -1,0 +1,1275 @@
+{
+  "id": "religious-studies",
+  "name": "Religious Studies",
+  "board": "AQA",
+  "boardVerified": true,
+  "boardNote": "VERIFIED from the King Edward VI Five Ways published examination boards list, which names AQA for RS. The KEFW Curriculum Intent documents confirm AQA Religious Studies A: two religions (Christianity and Buddhism) for Paper 1 and four of the six thematic studies for Paper 2.",
+  "specCode": "8062",
+  "tier": "Single tier",
+  "accent": "indigo",
+  "papers": "Paper 1 The study of religions: beliefs, teachings and practices (Christianity and Buddhism), 1h 45m, 96 marks, 50 percent. Paper 2A Thematic studies excluding textual studies, four themes, 1h 45m, 96 marks, 50 percent. Every question is a five-part question worth 24 marks with parts worth 1, 2, 4, 5 and 12 marks.",
+  "pastPapers": {
+    "label": "AQA GCSE Religious Studies A 8062 assessment resources and past papers",
+    "url": "https://www.aqa.org.uk/subjects/religious-studies/gcse/religious-studies-a-8062/assessment-resources",
+    "verified": true
+  },
+  "resources": [
+    {
+      "label": "AQA GCSE Religious Studies A 8062 specification",
+      "url": "https://www.aqa.org.uk/subjects/religious-studies/gcse/religious-studies-a-8062/specification",
+      "verified": true
+    },
+    {
+      "label": "BBC Bitesize GCSE Religious Studies",
+      "url": "https://www.bbc.co.uk/bitesize/subjects/zb48q6f",
+      "verified": true
+    },
+    {
+      "label": "AQA Religious Studies A subject page",
+      "url": "https://www.aqa.org.uk/subjects/religious-studies/gcse/religious-studies-a-8062",
+      "verified": true
+    },
+    {
+      "label": "Seneca Learning free AQA Religious Studies course",
+      "url": "https://senecalearning.com/",
+      "verified": true
+    }
+  ],
+  "topics": [
+    {
+      "id": "rs-christianity-beliefs",
+      "name": "Christianity Beliefs and Teachings",
+      "subtopics": [
+        "The nature of God: omnipotent, omniscient, omnibenevolent, and God as just and the problem this creates with suffering",
+        "The Trinity: Father, Son and Holy Spirit as three persons in one God",
+        "Christian creation beliefs: Genesis 1 and 2, God as creator out of nothing (ex nihilo), and Christian responses to science",
+        "The incarnation: Jesus as fully God and fully human, and why this matters for salvation",
+        "Sin, the fall of Adam and Eve, and original sin",
+        "The crucifixion: why Jesus died and what atonement means",
+        "The resurrection and ascension, and why they matter for Christian belief in life after death",
+        "Salvation through grace, law and faith, and the role of Jesus as saviour",
+        "Christian beliefs about life after death: heaven, hell and judgement",
+        "Different Christian views on the nature of God, sin and salvation (Catholic vs Protestant, liberal vs literal)",
+        "The problem of evil and suffering as a challenge to belief in an omnipotent, omnibenevolent God",
+        "Key events in the life of Jesus relevant to belief: baptism, temptation, transfiguration, Last Supper"
+      ],
+      "cards": [
+        {
+          "front": "What are the three omni-attributes of God in Christianity?",
+          "back": "Omnipotent (all-powerful), omniscient (all-knowing) and omnibenevolent (all-loving)."
+        },
+        {
+          "front": "What is the Trinity?",
+          "back": "The belief that God exists as three persons - Father, Son and Holy Spirit - who are three distinct persons but one God."
+        },
+        {
+          "front": "What does the incarnation mean?",
+          "back": "The belief that God became human in the person of Jesus Christ, who is fully God and fully human."
+        },
+        {
+          "front": "What is original sin?",
+          "back": "The belief that all humans inherit a sinful nature from the disobedience of Adam and Eve in the Garden of Eden."
+        },
+        {
+          "front": "What does the crucifixion achieve for Christians?",
+          "back": "It is an act of atonement - Jesus dies to pay the price for human sin and restore the relationship between God and humanity."
+        },
+        {
+          "front": "Give a Bible quotation showing God's omnipotence.",
+          "back": "\"For nothing is impossible with God\" (Luke 1:37)."
+        },
+        {
+          "front": "Give a Bible quotation about the Trinity or Jesus' baptism.",
+          "back": "At Jesus' baptism: \"You are my Son, whom I love; with you I am well pleased\" (Mark 1:11), showing Father, Son and Spirit together."
+        },
+        {
+          "front": "What does John 3:16 teach about salvation?",
+          "back": "\"For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.\""
+        },
+        {
+          "front": "How do Christians explain the problem of evil and suffering?",
+          "back": "Some say suffering is a test of faith, some say it results from free will and human sin, and some say God allows it for a greater good or to develop character."
+        },
+        {
+          "front": "What is the difference between a literalist and a liberal Christian view of Genesis?",
+          "back": "Literalists believe Genesis is a factual, historical account of creation; liberal Christians see it as a symbolic or metaphorical account compatible with evolution and the Big Bang."
+        },
+        {
+          "front": "What happens at judgement, according to Christian belief?",
+          "back": "After death, souls are judged by God according to their faith and actions; the righteous go to heaven and the unrighteous to hell."
+        },
+        {
+          "front": "Why is the resurrection important for Christians?",
+          "back": "It shows Jesus conquered death, confirms his divinity, and gives Christians hope of eternal life after death."
+        }
+      ],
+      "cloze": [
+        "The three omni-attributes of God are {{c1::omnipotent}}, {{c2::omniscient}} and omnibenevolent.",
+        "The {{c1::Trinity}} is the belief that God is Father, Son and {{c2::Holy Spirit}} in one God.",
+        "The {{c1::incarnation}} is the belief that Jesus is fully God and fully {{c2::human}}.",
+        "Christians believe the {{c1::crucifixion}} is an act of {{c2::atonement}} for human sin.",
+        "\"For God so loved the world that he gave his one and only {{c1::Son}}\" is from {{c2::John 3:16}}."
+      ]
+    },
+    {
+      "id": "rs-christianity-practices",
+      "name": "Christianity Practices",
+      "subtopics": [
+        "Different forms of worship: liturgical worship, non-liturgical service, informal worship and private worship",
+        "The nature and importance of prayer, including set prayers such as the Lord's Prayer and informal prayer",
+        "The sacraments and their meaning, especially baptism and Holy Communion (Eucharist)",
+        "Infant baptism versus believers' baptism, and which denominations practise each",
+        "Different Christian understandings of Holy Communion, including transubstantiation and memorial views",
+        "Pilgrimage: reasons for pilgrimage and the importance of sites such as Lourdes",
+        "The role and importance of Christian festivals: Christmas and Easter, and how they are celebrated differently",
+        "The role of the church in the local community: food banks, street pastors, and other forms of practical support",
+        "The role of the church in the worldwide community: mission, evangelism and the Great Commission",
+        "Reasons for and importance of church growth: persecution of Christians and how churches respond",
+        "The importance of Agape (selfless love) in Christian charity work and reconciliation",
+        "Christian aid work: examples of Christian charities working on poverty and disaster relief"
+      ],
+      "cards": [
+        {
+          "front": "What is the difference between liturgical and non-liturgical worship?",
+          "back": "Liturgical worship follows a fixed structure or set order of service, such as Holy Communion; non-liturgical worship is more informal, with spontaneous prayer and preaching."
+        },
+        {
+          "front": "What is the Lord's Prayer and why is it important?",
+          "back": "The set prayer taught by Jesus to his disciples (Matthew 6:9-13), used by almost all Christian denominations as a model for how to pray."
+        },
+        {
+          "front": "What is the difference between infant baptism and believers' baptism?",
+          "back": "Infant baptism is performed on babies as a sign of the family's faith and welcome into the church; believers' baptism is a conscious adult choice, usually by full immersion, after a person can understand and declare their own faith."
+        },
+        {
+          "front": "What do Catholics believe happens during Holy Communion?",
+          "back": "Transubstantiation - the bread and wine actually become the body and blood of Christ while keeping their outward appearance."
+        },
+        {
+          "front": "What do most Protestants believe Holy Communion represents?",
+          "back": "A memorial or symbolic act that remembers Jesus' sacrifice at the Last Supper, rather than a literal change in the bread and wine."
+        },
+        {
+          "front": "Give a Bible quotation associated with the Last Supper or Holy Communion.",
+          "back": "\"This is my body given for you; do this in remembrance of me\" (Luke 22:19)."
+        },
+        {
+          "front": "Why do Christians go on pilgrimage to Lourdes?",
+          "back": "Lourdes is associated with reported miracles and apparitions of the Virgin Mary to Saint Bernadette, and pilgrims go seeking healing, to grow in faith, or to support others who are sick."
+        },
+        {
+          "front": "Give two ways churches help their local community.",
+          "back": "Running food banks for those in poverty, and street pastors who support vulnerable people on Friday and Saturday nights in town centres."
+        },
+        {
+          "front": "What is the Great Commission?",
+          "back": "Jesus' final instruction to his disciples to go and make disciples of all nations, baptising them (Matthew 28:19), which underpins Christian mission and evangelism."
+        },
+        {
+          "front": "What is the difference between mission and evangelism?",
+          "back": "Mission is the broader work of spreading the gospel and serving communities, often including practical aid; evangelism specifically means preaching the gospel to convert people to Christianity."
+        },
+        {
+          "front": "How do churches respond to the persecution of Christians worldwide?",
+          "back": "Through prayer, raising awareness, campaigning for religious freedom, and financially supporting persecuted Christians through organisations such as Open Doors."
+        },
+        {
+          "front": "What does Agape mean and why does it matter in Christian practice?",
+          "back": "Agape is selfless, unconditional love; it motivates Christian charity, forgiveness and service to others regardless of whether it is returned."
+        }
+      ],
+      "cloze": [
+        "{{c1::Liturgical}} worship follows a fixed order of service, while {{c2::non-liturgical}} worship is informal.",
+        "{{c1::Believers}} baptism is usually by full immersion and is a conscious adult choice.",
+        "Catholics believe in {{c1::transubstantiation}} - that the bread and wine become the body and blood of Christ.",
+        "The {{c1::Great Commission}} instructs Christians to make disciples of all nations.",
+        "{{c1::Agape}} means selfless, unconditional love."
+      ]
+    },
+    {
+      "id": "rs-buddhism-beliefs",
+      "name": "Buddhism Beliefs and Teachings",
+      "subtopics": [
+        "The birth of the Buddha, Siddhartha Gautama, and his life of luxury as a prince",
+        "The Four Sights: an old man, a sick man, a dead man, and a holy man, and their significance for the Buddha's search",
+        "The Buddha's decision to leave the palace and live as an ascetic",
+        "The Buddha's Enlightenment under the Bodhi tree, including the temptations of Mara and the three watches of the night",
+        "The concept of Dhamma (Dharma): the Buddha's teachings and the universal law of truth",
+        "Dependent arising (paticcasamuppada): everything arises dependent on causes and conditions",
+        "The Three Marks of Existence: anicca (impermanence), anatta (no fixed self), dukkha (suffering)",
+        "The Four Noble Truths: suffering exists, suffering has a cause (tanha, craving), suffering can end, the Eightfold Path leads to the end of suffering",
+        "The Three Poisons: greed, hatred and ignorance, and their role in causing suffering",
+        "Theravada Buddhism: the Five Aggregates (skandhas) and the goal of becoming an Arhat",
+        "Mahayana Buddhism: the concept of sunyata (emptiness), Buddha-nature, and the Bodhisattva ideal",
+        "Pure Land Buddhism: Amitabha Buddha and Sukhavati (the Pure Land)",
+        "The difference between an Arhat and a Bodhisattva",
+        "Karma, samsara (the cycle of rebirth) and Nirvana as the ultimate goal"
+      ],
+      "cards": [
+        {
+          "front": "What were the Four Sights the Buddha encountered?",
+          "back": "An old man, a sick man, a dead man, and a holy man (ascetic) - they showed him that suffering, old age and death are unavoidable, and that a holy life could offer a way beyond suffering."
+        },
+        {
+          "front": "What happened during the Buddha's Enlightenment?",
+          "back": "Sitting under the Bodhi tree, he resisted the temptations of Mara over three watches of the night and gained insight into the Four Noble Truths, becoming enlightened."
+        },
+        {
+          "front": "State the Three Marks of Existence.",
+          "back": "Anicca (impermanence), anatta (no fixed or permanent self), and dukkha (suffering)."
+        },
+        {
+          "front": "State the Four Noble Truths.",
+          "back": "1) Suffering (dukkha) exists. 2) Suffering is caused by craving (tanha). 3) Suffering can end. 4) The Eightfold Path is the way to end suffering."
+        },
+        {
+          "front": "Give two of the Three Poisons.",
+          "back": "Greed (attachment) and hatred (aversion) - the third is ignorance (delusion)."
+        },
+        {
+          "front": "What is dependent arising (paticcasamuppada)?",
+          "back": "The teaching that nothing exists independently - everything arises because of causes and conditions, and ceases when those conditions cease."
+        },
+        {
+          "front": "What are the Five Aggregates in Theravada Buddhism?",
+          "back": "Form, sensation, perception, mental formations and consciousness - the five changing components that make up what is mistakenly seen as a permanent self."
+        },
+        {
+          "front": "What is the difference between an Arhat and a Bodhisattva?",
+          "back": "An Arhat (Theravada ideal) is someone who has followed the Eightfold Path and reached enlightenment for themselves; a Bodhisattva (Mahayana ideal) delays their own final Nirvana to help all other beings reach enlightenment first."
+        },
+        {
+          "front": "What is sunyata in Mahayana Buddhism?",
+          "back": "Emptiness - the teaching that all things lack a fixed, independent existence and are empty of a permanent self, linked to anatta."
+        },
+        {
+          "front": "Who is Amitabha Buddha and what is Sukhavati?",
+          "back": "Amitabha is a Buddha revered in Pure Land Buddhism; Sukhavati is his Pure Land, a place where rebirth allows easier progress toward enlightenment."
+        },
+        {
+          "front": "What is samsara?",
+          "back": "The continuous cycle of birth, death and rebirth, driven by karma, from which Buddhists seek liberation through reaching Nirvana."
+        },
+        {
+          "front": "Give a quotation from the Dhammapada about the mind or suffering.",
+          "back": "\"All that we are is the result of what we have thought\" (Dhammapada 1:1), showing the mind's role in shaping experience and suffering."
+        }
+      ],
+      "cloze": [
+        "The Three Marks of Existence are {{c1::anicca}}, {{c2::anatta}} and dukkha.",
+        "The Four Noble Truths teach that suffering is caused by {{c1::tanha}}, or craving.",
+        "An {{c1::Arhat}} seeks enlightenment for themselves, while a {{c2::Bodhisattva}} delays their own Nirvana to help others.",
+        "{{c1::Sunyata}} means emptiness in Mahayana Buddhism.",
+        "The Buddha faced the temptations of {{c1::Mara}} during his Enlightenment under the Bodhi tree."
+      ]
+    },
+    {
+      "id": "rs-buddhism-practices",
+      "name": "Buddhism Practices",
+      "subtopics": [
+        "Places of worship: the vihara (monastery), the gompa, the stupa and the home shrine",
+        "Puja: devotional worship including chanting, offerings and use of a Buddha rupa",
+        "Meditation: samatha (calming) meditation and mindfulness of breathing",
+        "Vipassana (insight) meditation and its aim of seeing reality clearly",
+        "Other meditative practices: mantra recitation using a mala, visualisation, and Zen practices such as zazen",
+        "The use of mandalas and thangkas as aids to meditation and visualisation",
+        "Festivals: Wesak, celebrating the Buddha's birth, enlightenment and death (parinirvana)",
+        "Parinirvana Day, remembering the Buddha's death and entry into final Nirvana",
+        "Death rituals in Buddhism and the diversity of practice across different Buddhist countries and traditions",
+        "Metta (loving-kindness) and karuna (compassion) as central Buddhist virtues",
+        "The Four Sublime States (Brahmaviharas): loving-kindness, compassion, sympathetic joy, and equanimity",
+        "The Five Moral Precepts and how they guide everyday Buddhist ethical behaviour",
+        "The Six Perfections (paramitas) in Mahayana Buddhism, followed by the Bodhisattva",
+        "Skilful and unskilful actions, and how karma relates to Buddhist ethical practice"
+      ],
+      "cards": [
+        {
+          "front": "What is a vihara?",
+          "back": "A Buddhist monastery, where monks and nuns live, and often a centre of worship and teaching for lay Buddhists."
+        },
+        {
+          "front": "What is puja?",
+          "back": "An act of devotional worship, which may include chanting, making offerings such as flowers, candles or incense, and showing respect before a Buddha rupa (statue)."
+        },
+        {
+          "front": "What is the difference between samatha and vipassana meditation?",
+          "back": "Samatha meditation calms and focuses the mind, often through mindfulness of breathing; vipassana (insight) meditation aims to see the true nature of reality, including impermanence and no-self."
+        },
+        {
+          "front": "Why is meditation not \"emptying the mind\"?",
+          "back": "It is a method of calming and focusing the mind through concentration and awareness, not simply making the mind blank."
+        },
+        {
+          "front": "What is Wesak and why is it important?",
+          "back": "The most important Buddhist festival, celebrating the Buddha's birth, Enlightenment and death (in Theravada tradition) on one day, with acts of devotion, decorating shrines, and charitable giving."
+        },
+        {
+          "front": "State the Five Moral Precepts.",
+          "back": "Avoid harming living things; avoid taking what is not given; avoid sexual misconduct; avoid wrong speech; avoid substances that cloud the mind."
+        },
+        {
+          "front": "Name the Four Sublime States (Brahmaviharas).",
+          "back": "Metta (loving-kindness), karuna (compassion), mudita (sympathetic joy) and upekkha (equanimity)."
+        },
+        {
+          "front": "Give two of the Six Perfections (paramitas).",
+          "back": "Generosity (dana) and patience (khanti) - others are morality, energy, meditation and wisdom."
+        },
+        {
+          "front": "What is the difference between metta and karuna?",
+          "back": "Metta is loving-kindness, a general goodwill towards all beings; karuna is compassion, the wish to actively relieve the suffering of others."
+        },
+        {
+          "front": "Why might Buddhists disagree about whether it is possible to always act with karuna?",
+          "back": "Some argue enlightened beings such as Bodhisattvas show unconditional compassion at all times; others note ordinary Buddhists still experience the Three Poisons and may fail to act compassionately under pressure."
+        },
+        {
+          "front": "What are skilful and unskilful actions in Buddhism?",
+          "back": "Skilful actions arise from generosity, loving-kindness and wisdom and lead to good karma; unskilful actions arise from greed, hatred and ignorance and lead to bad karma."
+        },
+        {
+          "front": "What is a mala and how is it used?",
+          "back": "A string of beads used to count mantra recitations or breaths during meditation, helping focus concentration."
+        }
+      ],
+      "cloze": [
+        "A {{c1::vihara}} is a Buddhist monastery.",
+        "{{c1::Samatha}} meditation calms the mind, while {{c2::vipassana}} meditation gives insight into reality.",
+        "{{c1::Wesak}} celebrates the Buddha's birth, Enlightenment and death.",
+        "The Four Sublime States are metta, karuna, mudita and {{c1::upekkha}}.",
+        "The Five Moral Precepts include avoiding harm to living things and avoiding {{c1::wrong speech}}."
+      ]
+    },
+    {
+      "id": "rs-theme-b-religion-life",
+      "name": "Theme B: Religion and Life",
+      "subtopics": [
+        "Christian and Buddhist beliefs about the origins of the universe: the Big Bang theory and the Genesis creation story",
+        "Literalist and liberal Christian interpretations of Genesis, and their relationship to scientific explanations",
+        "The origins of human life: evolution, and Christian and Buddhist responses to it",
+        "The value of the world: stewardship and dominion in Christianity, and Buddhist teachings about interdependence",
+        "Use and abuse of the environment: pollution, deforestation, and sustainable development",
+        "Non-renewable and renewable resources, and religious teachings about responsible use of resources",
+        "Use and abuse of animals: animal experimentation, vegetarianism and veganism from Christian and Buddhist perspectives",
+        "The sanctity of life versus quality of life, and how these ideas shape religious ethics",
+        "Abortion: religious arguments for and against, and the legal situation in Great Britain",
+        "Euthanasia: religious arguments for and against, and the legal situation in Great Britain",
+        "Christian and Buddhist beliefs about life after death, judgement, heaven, hell, and rebirth",
+        "Contrasting beliefs in contemporary British society about euthanasia and assisted dying"
+      ],
+      "cards": [
+        {
+          "front": "What does Genesis 1 teach about the origin of the universe?",
+          "back": "God created the universe and everything in it over six days, and rested on the seventh, declaring his creation good."
+        },
+        {
+          "front": "How might a liberal Christian reconcile Genesis with the Big Bang theory?",
+          "back": "They may see Genesis as a symbolic or theological account of God's role as ultimate creator, compatible with the Big Bang and evolution as the scientific mechanisms God used."
+        },
+        {
+          "front": "What is the difference between stewardship and dominion?",
+          "back": "Stewardship is the belief that humans must care for and look after the Earth on God's behalf; dominion is the belief that humans have authority or rule over the Earth and its creatures, given by God."
+        },
+        {
+          "front": "Give a Bible quotation relevant to stewardship of the environment.",
+          "back": "\"The Lord God took the man and put him in the Garden of Eden to work it and take care of it\" (Genesis 2:15)."
+        },
+        {
+          "front": "What is the Buddhist view on the use of animals?",
+          "back": "Many Buddhists are vegetarian because of the First Precept (avoid harming living things) and the belief in the interconnectedness and value of all sentient life."
+        },
+        {
+          "front": "What is the sanctity of life?",
+          "back": "The belief that life is sacred, holy and belongs to God (or is precious and irreplaceable), so it should be respected and protected."
+        },
+        {
+          "front": "Give one religious argument against abortion.",
+          "back": "Many Christians argue life begins at conception and is sacred (sanctity of life), citing Jeremiah 1:5, \"Before I formed you in the womb I knew you.\""
+        },
+        {
+          "front": "Give one religious argument that could support abortion in some circumstances.",
+          "back": "Some liberal Christians emphasise quality of life and compassion, arguing abortion may be the lesser of two evils, for example to protect the mother's life or health."
+        },
+        {
+          "front": "What is euthanasia and what are its two main types?",
+          "back": "Ending a person's life to relieve suffering; voluntary euthanasia (with the person's consent) and non-voluntary or involuntary euthanasia (without consent, e.g. person unable to consent)."
+        },
+        {
+          "front": "Give a religious argument against euthanasia.",
+          "back": "Many Christians argue only God has the right to give and take life (sanctity of life), and that euthanasia is a form of killing that goes against the Sixth Commandment."
+        },
+        {
+          "front": "What do Buddhists generally believe happens after death?",
+          "back": "Rebirth (samsara) according to karma, continuing until a person reaches Nirvana and is liberated from the cycle of rebirth."
+        },
+        {
+          "front": "Give two reasons religious believers might oppose animal experimentation.",
+          "back": "It may cause unnecessary suffering to sentient creatures, and some believe humans do not have the right to exploit animals purely for human benefit."
+        }
+      ],
+      "cloze": [
+        "{{c1::Stewardship}} is the belief that humans must care for the Earth on God's behalf.",
+        "The {{c1::sanctity of life}} is the belief that life is sacred and belongs to God.",
+        "{{c1::Voluntary}} euthanasia is carried out with the person's consent.",
+        "Many Buddhists are {{c1::vegetarian}} because of the First Precept against harming living things.",
+        "Buddhists believe in {{c1::rebirth}}, continuing until Nirvana is reached."
+      ]
+    },
+    {
+      "id": "rs-theme-d-peace-conflict",
+      "name": "Theme D: Religion, Peace and Conflict",
+      "subtopics": [
+        "Religious and non-religious meanings of peace, justice, forgiveness and reconciliation",
+        "Reasons for war: greed, self-defence, retaliation, and religious or ethnic conflict",
+        "Just War theory: the criteria used to judge whether a war is morally justified",
+        "Holy war: the concept of a war believed to be commanded or blessed by God",
+        "Pacifism: religious reasons for rejecting all violence and war",
+        "Christian and Buddhist attitudes to violence, terrorism, and religious responses to victims of war",
+        "Weapons of mass destruction: nuclear, chemical and biological weapons, and religious concerns about them",
+        "Religious responses to 21st century conflict, including reasons why religion can be a cause of conflict",
+        "Ways religious believers and organisations help victims of war",
+        "The role of religion in reconciliation after conflict, including Coventry Cathedral as an example",
+        "Christian teachings on peace and turning the other cheek",
+        "Buddhist teachings on non-violence (ahimsa) and the First Precept"
+      ],
+      "cards": [
+        {
+          "front": "State the main criteria of Just War theory.",
+          "back": "The war must have a just cause; be declared by a proper authority; have a reasonable chance of success; be a last resort; the response must be proportionate; and it must aim to bring about peace."
+        },
+        {
+          "front": "What is Holy War?",
+          "back": "A war believed to be commanded, sanctioned or blessed by God, fought for a religious cause."
+        },
+        {
+          "front": "What is pacifism?",
+          "back": "The belief that violence and war can never be justified, and that peaceful means should always be used to resolve conflict."
+        },
+        {
+          "front": "Give a Bible quotation relevant to pacifism.",
+          "back": "\"You have heard that it was said, 'Eye for eye'... But I tell you, turn the other cheek\" (Matthew 5:38-39)."
+        },
+        {
+          "front": "Give a Bible quotation about peace or peacemakers.",
+          "back": "\"Blessed are the peacemakers, for they will be called children of God\" (Matthew 5:9)."
+        },
+        {
+          "front": "What is the Buddhist First Precept and how does it relate to war?",
+          "back": "The First Precept is to avoid harming living things (ahimsa); many Buddhists see this as a strong basis for pacifism and opposition to war and violence."
+        },
+        {
+          "front": "Give two religious concerns about weapons of mass destruction.",
+          "back": "They cause indiscriminate suffering to civilians and combatants alike, and violate the just war principle of proportionality; some argue they threaten the sanctity of all life on a massive scale."
+        },
+        {
+          "front": "Give two ways religious believers help victims of war.",
+          "back": "Providing practical aid such as food, shelter and medical care through religious charities, and offering prayer, counselling and support for trauma and reconciliation."
+        },
+        {
+          "front": "Why is Coventry Cathedral significant for religion and reconciliation?",
+          "back": "Destroyed by bombing in the Second World War, it became a symbol of reconciliation and forgiveness, including the Community of the Cross of Nails, which promotes peace-building worldwide."
+        },
+        {
+          "front": "Give a reason why religion can be a cause of conflict.",
+          "back": "Differences in religious belief or interpretation can lead to intolerance, division between groups, or be used to justify violence, as seen historically in the Northern Ireland Troubles."
+        },
+        {
+          "front": "Why might the Northern Ireland Troubles be seen as more political than religious?",
+          "back": "Although the conflict was between mostly Protestant and Catholic communities, many argue the underlying causes were political and social identity and inequality rather than pure religious doctrine."
+        },
+        {
+          "front": "What does retaliation mean in the context of reasons for war?",
+          "back": "Responding to an attack or perceived wrong with force, often to deter future aggression or to seek revenge."
+        }
+      ],
+      "cloze": [
+        "{{c1::Just War}} theory sets criteria such as proportionality and last resort for a war to be justified.",
+        "{{c1::Pacifism}} is the belief that violence and war can never be justified.",
+        "\"Blessed are the {{c1::peacemakers}}\" is from Matthew 5:9.",
+        "The Buddhist First Precept relates to {{c1::ahimsa}}, or non-violence.",
+        "{{c1::Coventry Cathedral}} is a symbol of reconciliation after being bombed in the Second World War."
+      ]
+    },
+    {
+      "id": "rs-theme-e-crime-punishment",
+      "name": "Theme E: Religion, Crime and Punishment",
+      "subtopics": [
+        "Religious views on the causes of crime: poverty, mental illness, addiction, greed, hate, upbringing",
+        "Religious attitudes towards lawbreakers and different views on how criminals should be treated",
+        "The aims of punishment: retribution, deterrence, reformation, and protection of the public",
+        "Types of punishment: prison sentences, corporal punishment, and community service",
+        "Christian and Buddhist teachings on forgiveness and why forgiveness is considered important",
+        "The death penalty: religious arguments for and against, and its legal status in the UK",
+        "The concept of free will and its relevance to moral responsibility for crime",
+        "The sanctity of life as an argument used both for and against the death penalty",
+        "Case studies of forgiveness, such as Gee Walker and the murder of Anthony Walker",
+        "Buddhist teachings on karma and how they relate to crime, punishment and moral responsibility",
+        "Contrasting religious views on whether punishment should focus on retribution or reformation"
+      ],
+      "cards": [
+        {
+          "front": "State the four main aims of punishment.",
+          "back": "Retribution (making the criminal suffer for their crime), deterrence (discouraging crime through fear of punishment), reformation (helping the criminal change and improve), and protection of the public."
+        },
+        {
+          "front": "Give two reasons people might commit crime, according to religious teaching.",
+          "back": "Poverty and desperation, and mental illness or addiction - other causes include greed, hatred, and upbringing."
+        },
+        {
+          "front": "Give a Bible quotation about forgiveness.",
+          "back": "\"Then Peter came to Jesus and asked, 'Lord, how many times shall I forgive?'... Jesus answered, 'Not seven times, but seventy-seven times'\" (Matthew 18:21-22)."
+        },
+        {
+          "front": "Why do Christians believe forgiveness is important?",
+          "back": "Jesus taught forgiveness repeatedly and forgave those who wronged him (even on the cross), and Christians believe God forgives them, so they should forgive others in turn."
+        },
+        {
+          "front": "Give a religious argument against the death penalty.",
+          "back": "Many Christians argue only God has the right to give and take life (sanctity of life), and that Jesus taught forgiveness and mercy rather than revenge."
+        },
+        {
+          "front": "Give a religious argument that could support the death penalty.",
+          "back": "Some cite Old Testament justice such as \"eye for eye\" (Exodus 21:24) or argue the death penalty protects society and delivers retribution proportionate to the crime."
+        },
+        {
+          "front": "What is the Buddhist view of the death penalty?",
+          "back": "Most Buddhists oppose it because it breaks the First Precept against harming living beings and denies the possibility of the criminal changing their karma through reform."
+        },
+        {
+          "front": "Who is Gee Walker and why is she used as a case study?",
+          "back": "The mother of Anthony Walker, murdered in a racist attack, who publicly forgave his killers, illustrating Christian teaching on forgiveness in practice."
+        },
+        {
+          "front": "How does the Buddhist idea of karma relate to crime?",
+          "back": "Unskilful (unwholesome) actions such as crime create bad karma that will affect future rebirths, so criminals are encouraged to acknowledge wrongdoing and change their behaviour."
+        },
+        {
+          "front": "What does corporal punishment mean?",
+          "back": "Punishing a criminal by inflicting physical pain on them, such as caning or whipping."
+        },
+        {
+          "front": "Why might reformation be considered the most important aim of punishment by some religious believers?",
+          "back": "Many believe people can change and that a just society should aim to help offenders become law-abiding citizens rather than simply punishing them, reflecting compassion and forgiveness."
+        }
+      ],
+      "cloze": [
+        "The four aims of punishment are retribution, {{c1::deterrence}}, {{c2::reformation}} and protection of the public.",
+        "Jesus taught Peter to forgive \"{{c1::seventy-seven}} times\" (Matthew 18:22).",
+        "The Buddhist First Precept against harming beings is a key reason many Buddhists oppose the {{c1::death penalty}}.",
+        "{{c1::Corporal punishment}} means inflicting physical pain as a punishment.",
+        "{{c1::Gee Walker}} publicly forgave the killers of her son Anthony Walker."
+      ]
+    },
+    {
+      "id": "rs-theme-f-human-rights",
+      "name": "Theme F: Religion, Human Rights and Social Justice",
+      "subtopics": [
+        "The concept of human rights, equality and religious freedom",
+        "Prejudice, discrimination, and the difference between the two",
+        "Positive discrimination and arguments for and against its use",
+        "Racial prejudice and religious teachings against racism",
+        "Religious attitudes towards the status and treatment of women",
+        "Religious attitudes towards homosexuality, including divergent views within Christianity",
+        "Freedom of religious expression and religious persecution around the world",
+        "Christian and Buddhist teachings about wealth: its dangers and its responsible use",
+        "Tithing and other religious teachings about giving money to those in need",
+        "Poverty: causes of poverty in the UK compared with less economically developed countries",
+        "Exploitation of the poor, including human trafficking",
+        "The difference between emergency aid and long-term development aid, and examples of each"
+      ],
+      "cards": [
+        {
+          "front": "What is the difference between prejudice and discrimination?",
+          "back": "Prejudice is a negative attitude or pre-judgement of a person or group without good reason; discrimination is acting unfairly against someone because of that prejudice."
+        },
+        {
+          "front": "What is positive discrimination?",
+          "back": "Favouring a group that has previously suffered discrimination, for example to increase representation of women or minorities, in order to correct historical unfairness."
+        },
+        {
+          "front": "Give a Bible quotation used against racism.",
+          "back": "\"There is neither Jew nor Gentile... for you are all one in Christ Jesus\" (Galatians 3:28)."
+        },
+        {
+          "front": "What are two contrasting Christian views on women in church leadership?",
+          "back": "Some denominations (e.g. many Anglican and Protestant churches) ordain women as priests or ministers; others (e.g. the Roman Catholic Church) restrict the priesthood to men, citing tradition and scripture."
+        },
+        {
+          "front": "What are two contrasting Christian views on homosexuality?",
+          "back": "Some liberal Christians believe same-sex relationships can be loving and are acceptable to God; others, citing passages such as Leviticus 18:22, believe homosexual acts go against biblical teaching."
+        },
+        {
+          "front": "What is a tithe?",
+          "back": "Giving a proportion (traditionally a tenth) of one's income to God or the church, reflecting religious teaching on generosity and stewardship of wealth."
+        },
+        {
+          "front": "Give a Bible quotation about wealth and its dangers.",
+          "back": "\"It is easier for a camel to go through the eye of a needle than for a rich man to enter the kingdom of God\" (Matthew 19:24)."
+        },
+        {
+          "front": "What is the Buddhist attitude to wealth?",
+          "back": "Wealth itself is not wrong, but attachment (tanha) to wealth and greed are seen as causes of suffering; Buddhists are encouraged to be generous (dana) and not become attached to possessions."
+        },
+        {
+          "front": "Give two ways the poor can be exploited.",
+          "back": "Being paid unfairly low wages for their labour, and being trafficked or trapped in forced labour or modern slavery."
+        },
+        {
+          "front": "What is the difference between emergency aid and long-term aid?",
+          "back": "Emergency aid provides immediate short-term relief after a crisis, such as food, water and shelter after a disaster; long-term aid works on sustainable development, such as building infrastructure, education or clean water systems, to prevent future poverty."
+        },
+        {
+          "front": "Give a religious reason for helping the poor.",
+          "back": "Many Christians cite the parable of the Good Samaritan and Jesus' teaching \"whatever you did for one of the least of these... you did for me\" (Matthew 25:40) as a duty to help those in need."
+        },
+        {
+          "front": "What is human trafficking?",
+          "back": "The illegal transport and exploitation of people, often through force or deception, for labour, sexual exploitation or other forms of modern slavery - widely condemned by religious teaching on human dignity."
+        }
+      ],
+      "cloze": [
+        "{{c1::Prejudice}} is a negative attitude, while {{c2::discrimination}} is acting unfairly because of it.",
+        "\"There is neither Jew nor {{c1::Gentile}}... for you are all one in Christ Jesus\" is from Galatians 3:28.",
+        "A {{c1::tithe}} is giving a proportion of income to God or the church.",
+        "{{c1::Emergency}} aid gives immediate relief, while {{c2::long-term}} aid supports sustainable development.",
+        "Attachment to wealth, or {{c1::tanha}}, is seen by Buddhists as a cause of suffering."
+      ]
+    }
+  ],
+  "exams": [
+    {
+      "code": "8062/11 + 8062/13",
+      "name": "Paper 1: Buddhism and Christianity",
+      "date": "2027-05-13",
+      "session": "am",
+      "duration": "1h 45m",
+      "note": "Two options taken in one 1h 45m sitting: option 1 Buddhism and option 3 Christianity."
+    },
+    {
+      "code": "8062/2A",
+      "name": "Paper 2A: Thematic studies",
+      "date": "2027-05-21",
+      "session": "am",
+      "duration": "1h 45m",
+      "note": "Confirm with school whether he sits 2A (four themes, no textual studies) or 2B."
+    }
+  ],
+  "examNote": "Dates are from the AQA provisional summer 2027 timetable, version 1.0, January 2026. Paper 1 is Thursday 13 May 2027 am and Paper 2A is Friday 21 May 2027 am. Confirm with the school before relying on them.",
+  "offline": {
+    "commandWords": [
+      {
+        "word": "Give / State / Name",
+        "means": "Recall a single fact, belief, term or example with no explanation needed.",
+        "doThis": "Write one short, precise answer. For 2 marks give two separate simple points, no development required."
+      },
+      {
+        "word": "Explain",
+        "means": "Show knowledge and understanding of a belief, teaching or practice by identifying relevant points and adding detail.",
+        "doThis": "State a point, then develop it with a reason, example or consequence. For 'explain two', give two fully developed points, not four half points."
+      },
+      {
+        "word": "Explain, referring to scripture or sacred writings",
+        "means": "As Explain, but you must also include a specific quotation or clear reference to a named source of wisdom.",
+        "doThis": "Give your two developed points, and weave in a quotation or named text (e.g. Bible book/chapter or the Dhammapada) to support at least one point. A missing quotation caps your marks."
+      },
+      {
+        "word": "Explain two contrasting beliefs",
+        "means": "Give two different, ideally opposing, views on an issue, which may be from within one religion or between two religions.",
+        "doThis": "Name each view or group (e.g. 'Some Christians... whereas other Christians...' or 'Christians believe X, but Buddhists believe Y'), then develop each with reasoning."
+      },
+      {
+        "word": "Evaluate",
+        "means": "Weigh up a statement from more than one point of view and reach a justified, reasoned conclusion.",
+        "doThis": "Use the 12-mark ladder: give arguments for, arguments against, use religious teaching/sources of wisdom on both sides, refer to non-religious views if relevant, then give a personal reasoned conclusion."
+      },
+      {
+        "word": "Analyse",
+        "means": "Break an issue down into its parts and examine the strength of different arguments, usually within an evaluate answer.",
+        "doThis": "Do not just list views - comment on which are more convincing and why, using evidence or logic to support your judgement."
+      },
+      {
+        "word": "Refer to religion and belief in your answer",
+        "means": "An instruction on 12-mark questions requiring you to bring in specific named religious teaching, not just general opinion.",
+        "doThis": "Name the religion, the specific belief or teaching, and ideally a source of wisdom, on at least two points in your answer."
+      },
+      {
+        "word": "Compare",
+        "means": "Identify similarities and/or differences between two religions' beliefs or practices.",
+        "doThis": "Directly link the two religions in each sentence, e.g. 'Both Christians and Buddhists believe...' or 'Unlike Christians, Buddhists...'"
+      }
+    ],
+    "sections": [
+      {
+        "title": "The AQA five-part question structure",
+        "kind": "method",
+        "note": "Every RS question in Paper 1 and Paper 2A follows this identical shape: 1, 2, 4, 5, 12 marks, 24 marks total.",
+        "items": [
+          {
+            "term": "Part (a) - 1 mark, multiple choice",
+            "detail": "Pick the correct option from four given. No explanation needed and none is rewarded. Read all four options before choosing - one is usually a near-miss."
+          },
+          {
+            "term": "Part (b) - 2 marks",
+            "detail": "Give two simple, separate points (e.g. two beliefs, two reasons, two examples). One mark per point. No development needed - do not waste time explaining."
+          },
+          {
+            "term": "Part (c) - 4 marks",
+            "detail": "Explain two points, each developed with a reason or example. Typically 2 marks per point: 1 for the point, 1 for its development. No quotation required unless stated."
+          },
+          {
+            "term": "Part (d) - 5 marks",
+            "detail": "Explain two points as in part (c), but you must refer to scripture, sacred writings, or another named source of wisdom. Missing the reference loses at least one mark even if the explanation is otherwise strong."
+          },
+          {
+            "term": "Part (e) - 12 marks, the evaluation question",
+            "detail": "A statement is given for you to evaluate. 6 marks are for AO1 (knowledge and understanding shown through arguments for and against) and 6 for AO2 (analysis, evaluation, and a reasoned justified conclusion). No separate marks for spelling/grammar (SPaG) unless it is the designated SPaG question on the paper."
+          },
+          {
+            "term": "Timing across the whole paper",
+            "detail": "Paper 1 and Paper 2A are each 1h 45m for 96 marks: roughly 1 minute per mark, so allow about 24 minutes per five-part question, leaving time to check answers."
+          },
+          {
+            "term": "AO1 vs AO2 balance across the paper",
+            "detail": "Across the whole paper, AO1 (knowledge and understanding) and AO2 (analysis and evaluation) are each worth 50 percent of the marks - the 12-mark question is the main place AO2 is tested."
+          },
+          {
+            "term": "What 'refer to scripture or sacred writings' actually needs",
+            "detail": "A short quotation (even paraphrased accurately) or a clearly named text/source, e.g. 'the Bible teaches in Matthew 5 that...' or 'the Dhammapada teaches that...' - vague references like 'the Bible says so' are not enough."
+          }
+        ]
+      },
+      {
+        "title": "The 12-mark evaluation ladder in plain English",
+        "kind": "method",
+        "note": "This is the single biggest source of lost marks. Follow this structure every time.",
+        "items": [
+          {
+            "term": "Level 1 (1-3 marks)",
+            "detail": "Basic, undeveloped points on one side of the argument only, little or no use of religious teaching, no real conclusion."
+          },
+          {
+            "term": "Level 2 (4-6 marks)",
+            "detail": "One point of view is explained with some development and some religious teaching used, but the other side is missing or very thin, and any conclusion is asserted rather than justified."
+          },
+          {
+            "term": "Level 3 (7-9 marks)",
+            "detail": "Both sides of the argument are given with some development and supported by religious teaching or a source of wisdom on at least one side; a conclusion is given but only partly justified."
+          },
+          {
+            "term": "Level 4 (10-12 marks)",
+            "detail": "A sustained, well-developed argument covering both sides, with specific religious teaching/sources of wisdom used to support each side, different viewpoints considered (e.g. within a religion or between religions), and a clear reasoned conclusion that weighs the arguments rather than just restating one side."
+          },
+          {
+            "term": "Step 1: state the statement's key term",
+            "detail": "Briefly define the key term in the statement (e.g. 'euthanasia', 'Just War') so the examiner knows you understand what is being evaluated."
+          },
+          {
+            "term": "Step 2: arguments in favour of the statement",
+            "detail": "Give at least two developed points supporting the statement, each backed by a named religious teaching, quotation, or source of wisdom."
+          },
+          {
+            "term": "Step 3: arguments against the statement",
+            "detail": "Give at least two developed points opposing the statement, again backed by named teaching - ideally from a different religion or a different viewpoint within the same religion, to show breadth."
+          },
+          {
+            "term": "Step 4: consider a non-religious or contrasting view",
+            "detail": "Where relevant, mention a non-religious viewpoint (e.g. humanist) or a contrasting view within a religion (e.g. liberal vs literalist Christian) to show wider awareness."
+          },
+          {
+            "term": "Step 5: reach a justified conclusion",
+            "detail": "State which side you find more convincing and explain why in terms of the strength of the reasoning or evidence given - never just restate the statement or sit on the fence with no judgement."
+          },
+          {
+            "term": "Common mistake to avoid",
+            "detail": "Writing only one side of the argument, however well developed, caps the answer at Level 2 (around 4-6 marks) - always write both sides."
+          },
+          {
+            "term": "Common mistake to avoid",
+            "detail": "Giving a conclusion with no reasoning ('I think X because that is my opinion') scores no extra marks - the conclusion must weigh up the strength of points already made."
+          }
+        ]
+      },
+      {
+        "title": "Christianity quotation and source of wisdom bank",
+        "kind": "quote",
+        "note": "Sources of wisdom mainly come from the Bible. Learn the reference alongside the quotation.",
+        "items": [
+          {
+            "term": "God's power - Luke 1:37",
+            "detail": "\"For nothing is impossible with God.\" Use for: the nature of God, omnipotence."
+          },
+          {
+            "term": "God's love and salvation - John 3:16",
+            "detail": "\"For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.\" Use for: salvation, incarnation, God's nature."
+          },
+          {
+            "term": "Creation and stewardship - Genesis 2:15",
+            "detail": "\"The Lord God took the man and put him in the Garden of Eden to work it and take care of it.\" Use for: stewardship, environment."
+          },
+          {
+            "term": "Sanctity of life - Jeremiah 1:5",
+            "detail": "\"Before I formed you in the womb I knew you.\" Use for: abortion, sanctity of life."
+          },
+          {
+            "term": "Forgiveness - Matthew 18:21-22",
+            "detail": "Peter asks how many times to forgive; Jesus answers \"not seven times, but seventy-seven times.\" Use for: crime and punishment, forgiveness."
+          },
+          {
+            "term": "Holy Communion / Last Supper - Luke 22:19",
+            "detail": "\"This is my body given for you; do this in remembrance of me.\" Use for: Christianity practices, Eucharist."
+          },
+          {
+            "term": "Pacifism / non-retaliation - Matthew 5:38-39",
+            "detail": "\"You have heard that it was said, 'Eye for eye'... But I tell you, turn the other cheek.\" Use for: peace and conflict, pacifism."
+          },
+          {
+            "term": "Peacemaking - Matthew 5:9",
+            "detail": "\"Blessed are the peacemakers, for they will be called children of God.\" Use for: peace and conflict."
+          },
+          {
+            "term": "Old Testament justice - Exodus 21:24",
+            "detail": "\"Eye for eye.\" Use for: death penalty, retribution arguments (contrasts with Matthew 5:38-39)."
+          },
+          {
+            "term": "Equality - Galatians 3:28",
+            "detail": "\"There is neither Jew nor Gentile... for you are all one in Christ Jesus.\" Use for: human rights, racism, equality."
+          },
+          {
+            "term": "Danger of wealth - Matthew 19:24",
+            "detail": "\"It is easier for a camel to go through the eye of a needle than for a rich man to enter the kingdom of God.\" Use for: wealth, poverty."
+          },
+          {
+            "term": "Helping the needy - Matthew 25:40",
+            "detail": "\"Whatever you did for one of the least of these brothers and sisters of mine, you did for me.\" Use for: social justice, poverty, charity."
+          },
+          {
+            "term": "The Lord's Prayer - Matthew 6:9-13",
+            "detail": "The set prayer taught by Jesus to his disciples, used across almost all denominations. Use for: prayer, worship practices."
+          },
+          {
+            "term": "Homosexuality (traditional view) - Leviticus 18:22",
+            "detail": "Cited by more traditional/conservative Christians as evidence against same-sex relationships. Use for: contrasting Christian views on sexuality."
+          },
+          {
+            "term": "Great Commission - Matthew 28:19",
+            "detail": "Jesus instructs the disciples to \"go and make disciples of all nations, baptising them.\" Use for: mission, evangelism."
+          }
+        ]
+      },
+      {
+        "title": "Buddhism quotation and source of wisdom bank",
+        "kind": "quote",
+        "note": "Main sources are the Pali Canon (including the Dhammapada) and the sermons/teachings of the Buddha.",
+        "items": [
+          {
+            "term": "The mind shapes experience - Dhammapada 1:1",
+            "detail": "\"All that we are is the result of what we have thought.\" Use for: karma, the Three Poisons, mental discipline."
+          },
+          {
+            "term": "The Four Noble Truths (summary teaching)",
+            "detail": "The Buddha's first sermon at Sarnath taught that suffering (dukkha) exists, is caused by craving (tanha), can end, and the Eightfold Path leads to its end. Use for: any Buddhist beliefs question."
+          },
+          {
+            "term": "Non-harm / ahimsa - the First Precept",
+            "detail": "\"I undertake the precept to abstain from harming living beings.\" Use for: peace and conflict, crime and punishment, animal ethics."
+          },
+          {
+            "term": "Impermanence - a core teaching (anicca)",
+            "detail": "The Buddha taught that all conditioned things are impermanent and constantly changing, so clinging to them causes suffering. Use for: Three Marks of Existence, attachment to wealth."
+          },
+          {
+            "term": "Dependent arising (paticcasamuppada)",
+            "detail": "\"When this exists, that comes to be; when this ceases, that ceases.\" Use for: causation, no fixed self, interdependence with the environment."
+          },
+          {
+            "term": "Compassion for all beings (karuna)",
+            "detail": "The Buddha taught boundless compassion (karuna) for all sentient beings, extending loving-kindness without limit. Use for: Buddhism practices, crime and punishment, animal ethics."
+          },
+          {
+            "term": "The Bodhisattva vow (Mahayana)",
+            "detail": "A Bodhisattva vows to postpone their own final Nirvana until all beings are liberated from suffering. Use for: Mahayana beliefs, compassion, social justice."
+          },
+          {
+            "term": "Right action within the Eightfold Path",
+            "detail": "Right action includes not killing, not stealing and not engaging in sexual misconduct - closely mirrors the Five Precepts. Use for: crime and punishment, ethics."
+          },
+          {
+            "term": "Karma teaching",
+            "detail": "\"Whatever a person does, that they receive\" - actions (skilful or unskilful) have consequences that shape future experience and rebirth. Use for: crime and punishment, rebirth, moral responsibility."
+          },
+          {
+            "term": "The Buddha on hatred",
+            "detail": "\"Hatred does not cease by hatred, but by love (metta) alone is healed\" - a Dhammapada teaching. Use for: peace and conflict, forgiveness."
+          }
+        ]
+      },
+      {
+        "title": "Key definitions: Theme B Religion and Life, Theme D Peace and Conflict",
+        "kind": "def",
+        "items": [
+          {
+            "term": "Sanctity of life",
+            "detail": "The belief that life is sacred, holy, and belongs to God (or is uniquely precious), and should therefore be protected and respected."
+          },
+          {
+            "term": "Quality of life",
+            "detail": "A measure of how much wellbeing, comfort, dignity and enjoyment a person's life has, used by some to justify decisions like euthanasia."
+          },
+          {
+            "term": "Stewardship",
+            "detail": "The belief that humans are given responsibility by God to look after and care for the Earth on his behalf."
+          },
+          {
+            "term": "Dominion",
+            "detail": "The belief that humans have been given authority or rule over the Earth and its creatures by God (Genesis 1:28)."
+          },
+          {
+            "term": "Abortion",
+            "detail": "The deliberate ending of a pregnancy before birth; legal in the UK up to 24 weeks under specific conditions."
+          },
+          {
+            "term": "Euthanasia",
+            "detail": "The act of deliberately ending a person's life to relieve their suffering, illegal in the UK in almost all circumstances."
+          },
+          {
+            "term": "Voluntary euthanasia",
+            "detail": "Euthanasia carried out with the informed consent of the person whose life is ended."
+          },
+          {
+            "term": "Sustainable development",
+            "detail": "Development that meets present needs without compromising the ability of future generations to meet their own needs."
+          },
+          {
+            "term": "Evolution",
+            "detail": "The scientific theory that species change gradually over generations through natural selection, which some religious believers see as compatible with, and others as contradicting, creation."
+          },
+          {
+            "term": "Just War",
+            "detail": "A war judged to be morally acceptable because it meets a set of ethical criteria, such as just cause and last resort."
+          },
+          {
+            "term": "Holy War",
+            "detail": "A war believed to be commanded, sanctioned or blessed by God, fought for a religious cause."
+          },
+          {
+            "term": "Pacifism",
+            "detail": "The belief that all violence and war are wrong and that peaceful means should always be used instead."
+          },
+          {
+            "term": "Weapons of mass destruction (WMDs)",
+            "detail": "Nuclear, chemical or biological weapons capable of causing large-scale, indiscriminate death and destruction."
+          },
+          {
+            "term": "Terrorism",
+            "detail": "The use of violence and intimidation, often against civilians, in the pursuit of political or religious aims."
+          },
+          {
+            "term": "Reconciliation",
+            "detail": "The process of restoring friendly relations between people or groups after conflict, often involving forgiveness."
+          },
+          {
+            "term": "Retaliation",
+            "detail": "Responding to an attack or wrong with a similar or greater level of force or harm."
+          },
+          {
+            "term": "Ahimsa",
+            "detail": "The Buddhist and wider Indian religious principle of non-violence and non-harm towards all living beings."
+          }
+        ]
+      },
+      {
+        "title": "Key definitions: Theme E Crime and Punishment, Theme F Human Rights and Social Justice",
+        "kind": "def",
+        "items": [
+          {
+            "term": "Crime",
+            "detail": "An action that breaks the law of the land and is punishable by the state."
+          },
+          {
+            "term": "Retribution",
+            "detail": "An aim of punishment focused on making the criminal suffer or 'pay back' for the harm they caused."
+          },
+          {
+            "term": "Deterrence",
+            "detail": "An aim of punishment intended to discourage the criminal, and others, from committing crime through fear of punishment."
+          },
+          {
+            "term": "Reformation",
+            "detail": "An aim of punishment focused on helping the criminal change their behaviour and become a law-abiding citizen."
+          },
+          {
+            "term": "Corporal punishment",
+            "detail": "Punishing a criminal by inflicting physical pain, such as caning or whipping."
+          },
+          {
+            "term": "Free will",
+            "detail": "The belief that humans are able to make genuine choices about their actions, making them morally responsible for crime."
+          },
+          {
+            "term": "Forgiveness",
+            "detail": "Ceasing to feel resentment or anger towards someone who has done wrong, and no longer seeking punishment or revenge against them."
+          },
+          {
+            "term": "The death penalty",
+            "detail": "Execution as a legal punishment for a crime; abolished in the UK but practised in some other countries."
+          },
+          {
+            "term": "Human rights",
+            "detail": "Basic rights and freedoms believed to belong to every person, such as the right to life, freedom and equality."
+          },
+          {
+            "term": "Prejudice",
+            "detail": "A negative attitude or judgement towards a person or group formed without good reason, often before knowing them."
+          },
+          {
+            "term": "Discrimination",
+            "detail": "Acting unfairly against a person or group because of prejudice, e.g. based on race, gender or religion."
+          },
+          {
+            "term": "Positive discrimination",
+            "detail": "Deliberately favouring a group that has previously suffered discrimination, to correct historical unfairness."
+          },
+          {
+            "term": "Freedom of religion",
+            "detail": "The right to practise, change or not practise a religion without persecution or unfair treatment."
+          },
+          {
+            "term": "Tithe",
+            "detail": "Giving a proportion, traditionally a tenth, of one's income to God, the church or charity."
+          },
+          {
+            "term": "Exploitation",
+            "detail": "Taking unfair advantage of someone, especially the poor or vulnerable, such as through unfair wages or trafficking."
+          },
+          {
+            "term": "Emergency aid",
+            "detail": "Immediate, short-term help given after a disaster, such as food, water, shelter and medical care."
+          },
+          {
+            "term": "Long-term aid",
+            "detail": "Sustained development help aimed at addressing the root causes of poverty, such as education, infrastructure or clean water systems."
+          }
+        ]
+      },
+      {
+        "title": "Contrasting beliefs pairs",
+        "kind": "list",
+        "note": "Use these directly for 'explain two contrasting beliefs' questions (4 marks) - name the group each time.",
+        "items": [
+          {
+            "term": "Creation: Christian vs Buddhist",
+            "detail": "Christians believe God created the universe out of nothing (ex nihilo), described in Genesis; Buddhists generally have no creator God and instead explain existence through dependent arising and cycles of arising and passing away."
+          },
+          {
+            "term": "Self: Christian vs Buddhist",
+            "detail": "Christians believe in an eternal soul created by God that survives death; Buddhists teach anatta - there is no fixed, permanent self, only five ever-changing aggregates."
+          },
+          {
+            "term": "Life after death: Christian vs Buddhist",
+            "detail": "Christians believe in one life followed by judgement, then heaven or hell; Buddhists believe in samsara, a cycle of rebirth driven by karma, ending in Nirvana."
+          },
+          {
+            "term": "Death penalty: Christian vs Buddhist",
+            "detail": "Some Christians accept the death penalty citing Old Testament justice (Exodus 21:24); most Buddhists oppose it entirely because it breaks the First Precept against harming living beings."
+          },
+          {
+            "term": "War: Just War vs Pacifism (within Christianity)",
+            "detail": "Some Christians accept war can be justified if it meets Just War criteria; other Christians are pacifists who believe Jesus' teaching to 'turn the other cheek' (Matthew 5:39) rules out all violence."
+          },
+          {
+            "term": "Genesis: literalist vs liberal Christian",
+            "detail": "Literalist Christians read Genesis as a factual, historical account of a six-day creation; liberal Christians read it as symbolic, compatible with the Big Bang and evolution."
+          },
+          {
+            "term": "Holy Communion: Catholic vs Protestant",
+            "detail": "Catholics believe in transubstantiation - the bread and wine literally become Christ's body and blood; most Protestants see Communion as a symbolic memorial of the Last Supper."
+          },
+          {
+            "term": "Baptism: Christian denominations",
+            "detail": "Some denominations practise infant baptism as a sign of family faith; others (e.g. Baptists) practise only believers' baptism by full immersion once a person can choose for themselves."
+          },
+          {
+            "term": "Homosexuality: liberal vs traditional Christian",
+            "detail": "Liberal Christians believe loving same-sex relationships can be blessed by God; traditional/conservative Christians, citing texts like Leviticus 18:22, believe homosexual acts are against biblical teaching."
+          },
+          {
+            "term": "Wealth: prosperity vs simplicity within Christianity",
+            "detail": "Some Christians believe wealth can be a blessing from God to be used generously; others emphasise Jesus' warning that wealth endangers salvation (Matthew 19:24) and stress simplicity and giving."
+          },
+          {
+            "term": "Euthanasia: sanctity of life vs quality of life",
+            "detail": "Many religious believers oppose euthanasia because only God should give and take life (sanctity of life); others give more weight to relieving suffering and personal choice (quality of life)."
+          },
+          {
+            "term": "Punishment aim: retribution vs reformation",
+            "detail": "Some argue punishment should focus on retribution - making criminals suffer proportionately for their crime; others, citing forgiveness and compassion, argue reformation and helping offenders change matters more."
+          }
+        ]
+      },
+      {
+        "title": "The Just War criteria and the aims of punishment",
+        "kind": "list",
+        "note": "Just War theory is traditionally associated with Christian thinkers such as Augustine and Aquinas.",
+        "items": [
+          {
+            "term": "Just cause",
+            "detail": "There must be a good, morally acceptable reason for going to war, such as self-defence or protecting the innocent."
+          },
+          {
+            "term": "Legitimate/proper authority",
+            "detail": "The war must be declared by a recognised, legitimate government or authority, not a private group."
+          },
+          {
+            "term": "Right intention",
+            "detail": "The aim of the war must be to put right a wrong or restore peace, not for revenge, greed or conquest."
+          },
+          {
+            "term": "Reasonable chance of success",
+            "detail": "There must be a realistic possibility of winning - fighting a hopeless war causes needless suffering."
+          },
+          {
+            "term": "Last resort",
+            "detail": "All peaceful means of resolving the conflict (diplomacy, negotiation, sanctions) must have been tried and failed first."
+          },
+          {
+            "term": "Proportionality",
+            "detail": "The force used must be proportionate to the threat faced - the response must not cause more harm than the original wrong."
+          },
+          {
+            "term": "Discrimination between combatants and civilians",
+            "detail": "The war must distinguish between soldiers and non-combatants, and civilians must be protected as far as possible."
+          },
+          {
+            "term": "Aim of restoring peace",
+            "detail": "The ultimate goal must be to end the conflict and re-establish a just and lasting peace, not permanent war."
+          },
+          {
+            "term": "Retribution (aim of punishment)",
+            "detail": "Making the offender suffer or 'pay back' for the harm done, based on the idea that wrongdoing deserves punishment - often linked to 'an eye for an eye' (Exodus 21:24)."
+          },
+          {
+            "term": "Deterrence (aim of punishment)",
+            "detail": "Discouraging the offender and the wider public from committing crime through fear of punishment; can be individual (stopping this offender re-offending) or general (warning society)."
+          },
+          {
+            "term": "Reformation (aim of punishment)",
+            "detail": "Helping the offender understand the harm caused and change their behaviour so they can become a law-abiding member of society, often through education, therapy or religious guidance."
+          },
+          {
+            "term": "Protection of the public (aim of punishment)",
+            "detail": "Removing a dangerous offender from society, e.g. through imprisonment, to prevent them from causing further harm."
+          },
+          {
+            "term": "Vindication of the law (aim of punishment)",
+            "detail": "Punishment upholds the authority and legitimacy of the law, showing that laws are enforced and taken seriously."
+          },
+          {
+            "term": "Religious view: forgiveness alongside punishment",
+            "detail": "Many Christians believe punishment does not remove the need for forgiveness - the offender can still be forgiven personally even while serving a legal punishment."
+          },
+          {
+            "term": "Religious view: karma and punishment (Buddhism)",
+            "detail": "Buddhists see punishment as a consequence connected to karma, but emphasise the offender's capacity to change (reformation) is central, since all beings can move away from unskilful action."
+          },
+          {
+            "term": "Balancing the aims",
+            "detail": "In evaluation questions, weigh whether retribution and deterrence (harsher, backward-looking) or reformation (compassionate, forward-looking) should take priority, using religious teaching to support each side."
+          }
+        ]
+      },
+      {
+        "title": "Buddhist doctrine lists",
+        "kind": "list",
+        "note": "Learn these lists exactly - they are common 'give two' and 'state' questions worth easy marks.",
+        "items": [
+          {
+            "term": "The Three Marks of Existence",
+            "detail": "Anicca (impermanence - everything changes), dukkha (suffering - life involves unsatisfactoriness), anatta (no fixed, permanent self)."
+          },
+          {
+            "term": "The Four Noble Truths",
+            "detail": "1) Dukkha: suffering exists. 2) Samudaya: suffering is caused by craving (tanha). 3) Nirodha: suffering can end. 4) Magga: the Eightfold Path is the way to end suffering."
+          },
+          {
+            "term": "The Noble Eightfold Path (1-4)",
+            "detail": "Right view, right intention, right speech, right action - the wisdom and ethical conduct groups of the path."
+          },
+          {
+            "term": "The Noble Eightfold Path (5-8)",
+            "detail": "Right livelihood, right effort, right mindfulness, right concentration - the ethical conduct and mental discipline groups of the path."
+          },
+          {
+            "term": "The Five Moral Precepts",
+            "detail": "Avoid harming living things; avoid taking what is not given; avoid sexual misconduct; avoid wrong speech; avoid substances that cloud the mind."
+          },
+          {
+            "term": "The Six Perfections (paramitas), 1-3",
+            "detail": "Generosity (dana), morality/discipline (sila), patience (khanti) - qualities a Bodhisattva cultivates in Mahayana Buddhism."
+          },
+          {
+            "term": "The Six Perfections (paramitas), 4-6",
+            "detail": "Energy/effort (virya), meditation (dhyana), wisdom (prajna) - completing the six qualities cultivated by a Bodhisattva."
+          },
+          {
+            "term": "The Three Poisons",
+            "detail": "Greed/attachment (raga), hatred/aversion (dosa), ignorance/delusion (moha) - the three root causes of suffering and unskilful action."
+          },
+          {
+            "term": "The Four Sublime States (Brahmaviharas)",
+            "detail": "Metta (loving-kindness), karuna (compassion), mudita (sympathetic joy), upekkha (equanimity)."
+          },
+          {
+            "term": "The Five Aggregates (skandhas)",
+            "detail": "Form, sensation, perception, mental formations, consciousness - the five changing components mistaken for a permanent self in Theravada teaching."
+          },
+          {
+            "term": "Arhat vs Bodhisattva",
+            "detail": "An Arhat (Theravada ideal) reaches enlightenment for themselves; a Bodhisattva (Mahayana ideal) delays final Nirvana to help all beings become enlightened first."
+          },
+          {
+            "term": "The Four Sights",
+            "detail": "An old man, a sick man, a dead man, and a holy man - what the Buddha saw that inspired him to leave the palace and seek the end of suffering."
+          }
+        ]
+      },
+      {
+        "title": "Exam-day plan",
+        "kind": "list",
+        "items": [
+          {
+            "term": "Paper 1: 8062/11 + 8062/13 - The study of religions (Buddhism and Christianity)",
+            "detail": "1h 45m, 96 marks, four five-part questions total (two on Buddhism, two on Christianity). Spend about 24 minutes per five-part question: roughly 1 min on part (a), 2 min on (b), 4-5 min on (c), 5-6 min on (d) including finding a quotation, and 10-11 min on the 12-mark (e) with a clear plan of for/against/conclusion."
+          },
+          {
+            "term": "Paper 2A: 8062/2A - Thematic studies (four themes)",
+            "detail": "1h 45m, 96 marks, four five-part questions, one per theme studied (Theme B, D, E, F). Same timing pattern as Paper 1: about 24 minutes per question, with the most time reserved for the 12-mark evaluation question."
+          },
+          {
+            "term": "Before you start writing on any paper",
+            "detail": "Check which topic/theme each question covers before answering, and underline the command word and mark allocation on every part so you match the depth of answer to the marks available."
+          },
+          {
+            "term": "For every 5-mark part (d) question",
+            "detail": "Plan your quotation or named source of wisdom before writing your first sentence, so it does not get forgotten under time pressure."
+          },
+          {
+            "term": "For every 12-mark part (e) question",
+            "detail": "Spend one minute jotting a quick plan: point for, point against, point for, point against, non-religious/contrasting view if relevant, conclusion - then write in that order."
+          },
+          {
+            "term": "Last 5 minutes of each paper",
+            "detail": "Check that every part (a) multiple choice has an answer circled, every 'give two' has exactly two distinct points, and every 12-mark answer ends with an explicit judgement sentence."
+          },
+          {
+            "term": "What to bring and check the night before",
+            "detail": "Two black pens, a spare pen, your exam number, and a watch, since phones are banned - lay these out the night before so the morning is calm."
+          },
+          {
+            "term": "If you get stuck on the 12-mark question",
+            "detail": "Write down the key term's definition and one belief you know for certain, even if unsure how to structure the full evaluation - a partial, relevant answer scores far more than a blank space."
+          }
+        ]
+      }
+    ]
+  }
+}

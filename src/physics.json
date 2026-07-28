@@ -40,6 +40,620 @@
       "verified": true
     }
   ],
+  "offline": {
+    "commandWords": [
+      {
+        "word": "Calculate",
+        "means": "Work out a numerical answer using given data and an equation.",
+        "doThis": "Write the equation, substitute values with units, show working line by line, and give a final answer with the correct unit."
+      },
+      {
+        "word": "Determine",
+        "means": "Use given information or a graph to establish a value or relationship.",
+        "doThis": "Show the reading taken from data or graph and the steps used to reach the value."
+      },
+      {
+        "word": "Describe",
+        "means": "State what happens, in order, without explaining why.",
+        "doThis": "Give a sequence of observations or steps using correct physics vocabulary, no reasoning needed."
+      },
+      {
+        "word": "Explain",
+        "means": "Give reasons or a mechanism, using physics to justify why something happens.",
+        "doThis": "Link cause to effect using connectives like 'because' or 'this means', referencing a physics idea each time."
+      },
+      {
+        "word": "Evaluate",
+        "means": "Weigh up evidence or a method and reach a justified conclusion.",
+        "doThis": "Give points for and against, refer to the data or method given, then state a supported judgement."
+      },
+      {
+        "word": "Estimate",
+        "means": "Give an approximate value using reasonable assumptions.",
+        "doThis": "State the assumption or approximate figure used, then calculate using it, showing working."
+      },
+      {
+        "word": "Plot",
+        "means": "Mark points accurately on a grid from a data table.",
+        "doThis": "Use a sensible scale that fills the grid, plot each point as a small clear cross, do not force through the origin."
+      },
+      {
+        "word": "Sketch",
+        "means": "Draw the general shape of a graph without plotting exact points.",
+        "doThis": "Show the correct shape, intercepts and trend; label axes but do not add a scale unless asked."
+      },
+      {
+        "word": "Suggest",
+        "means": "Apply physics knowledge to a new or unfamiliar situation.",
+        "doThis": "There may be more than one accepted answer; use physics principles you know and apply them logically to the context given."
+      },
+      {
+        "word": "Compare",
+        "means": "Identify similarities and differences between two things.",
+        "doThis": "Write direct comparative sentences using words like 'whereas' or 'both', covering at least one similarity and one difference."
+      },
+      {
+        "word": "Justify",
+        "means": "Use evidence or physics reasoning to support a statement or choice.",
+        "doThis": "State the claim, then give the physics reason or data point that supports it directly."
+      },
+      {
+        "word": "Show that",
+        "means": "Prove a given value is correct by full calculation.",
+        "doThis": "Write the equation, substitute, calculate to one more significant figure than the target, and compare to the given value."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Equations you must recall from memory",
+        "kind": "formula",
+        "note": "These 21 equations are NOT printed on the exam paper. Higher tier AQA Physics 8463.",
+        "items": [
+          {
+            "term": "Weight",
+            "detail": "W = m x g (weight in N, mass in kg, gravitational field strength in N/kg). Use for any object resting, hanging or falling near Earth."
+          },
+          {
+            "term": "Work done",
+            "detail": "W = F x d (work in J, force in N, distance in m, along the line of action of the force). Use whenever a force moves something."
+          },
+          {
+            "term": "Force applied to a spring",
+            "detail": "F = k x e (force in N, spring constant in N/m, extension in m). Use for springs within their limit of proportionality."
+          },
+          {
+            "term": "Moment of a force",
+            "detail": "M = F x d (moment in Nm, force in N, perpendicular distance in m). Use for levers, spanners, balancing problems."
+          },
+          {
+            "term": "Speed (distance-time)",
+            "detail": "v = s / t (speed in m/s, distance in m, time in s). Use for constant speed or to find average speed."
+          },
+          {
+            "term": "Acceleration",
+            "detail": "a = (v - u) / t (acceleration in m/s^2, final velocity v, initial velocity u in m/s, time in s). Use whenever velocity changes over time."
+          },
+          {
+            "term": "Newton's second law",
+            "detail": "F = m x a (force in N, mass in kg, acceleration in m/s^2). Use to link a resultant force to acceleration."
+          },
+          {
+            "term": "Momentum",
+            "detail": "p = m x v (momentum in kg m/s, mass in kg, velocity in m/s). Use for collisions, explosions and conservation of momentum questions."
+          },
+          {
+            "term": "Kinetic energy",
+            "detail": "Ek = 1/2 x m x v^2 (energy in J, mass in kg, speed in m/s). Use for a moving object's energy store."
+          },
+          {
+            "term": "Gravitational potential energy",
+            "detail": "Ep = m x g x h (energy in J, mass in kg, g in N/kg, height in m). Use for height changes near Earth's surface."
+          },
+          {
+            "term": "Elastic potential energy",
+            "detail": "Ee = 1/2 x k x e^2 (energy in J, spring constant in N/m, extension in m). Use only within the limit of proportionality."
+          },
+          {
+            "term": "Power",
+            "detail": "P = E / t or P = W / t (power in W, energy or work in J, time in s). Use for rate of energy transfer or rate of doing work."
+          },
+          {
+            "term": "Efficiency",
+            "detail": "efficiency = useful output energy transfer / total input energy transfer (no unit, or x100 for percent). Use to compare useful vs wasted energy."
+          },
+          {
+            "term": "Wave speed",
+            "detail": "v = f x lambda (speed in m/s, frequency in Hz, wavelength in m). Use for any wave, including sound and light."
+          },
+          {
+            "term": "Charge flow",
+            "detail": "Q = I x t (charge in coulombs, current in amps, time in s). Use whenever current flows for a given time."
+          },
+          {
+            "term": "Potential difference (energy)",
+            "detail": "E = Q x V (energy in J, charge in C, potential difference in V). Use for energy transferred by charge moving through a component."
+          },
+          {
+            "term": "Density",
+            "detail": "rho = m / V (density in kg/m^3, mass in kg, volume in m^3). Required practical equation for regular and irregular solids and liquids."
+          },
+          {
+            "term": "Distance from speed and time (rearranged)",
+            "detail": "s = v x t. Use to find distance when speed is constant and time is known."
+          },
+          {
+            "term": "Pressure (solid on surface)",
+            "detail": "P = F / A (pressure in Pa, force in N, area in m^2). Use for a solid pressing on a surface, not for fluids."
+          },
+          {
+            "term": "Change in thermal energy",
+            "detail": "Delta E = m x c x Delta theta (energy in J, mass in kg, specific heat capacity in J/kg degC, temperature change in degC). Use when temperature changes but no state change occurs."
+          },
+          {
+            "term": "Energy for a change of state",
+            "detail": "E = m x L (energy in J, mass in kg, specific latent heat in J/kg). Use only during melting/freezing or boiling/condensing, when temperature stays constant."
+          }
+        ]
+      },
+      {
+        "title": "Equations given on the AQA physics equation sheet",
+        "kind": "formula",
+        "note": "Printed on the exam paper insert. You still must know when to use each one and be able to rearrange it.",
+        "items": [
+          {
+            "term": "Force on a current-carrying conductor",
+            "detail": "F = B x I x l (force in N, magnetic flux density in T, current in A, length in m). Use for motor effect problems."
+          },
+          {
+            "term": "Transformer turns rule",
+            "detail": "Vp / Vs = np / ns (primary/secondary potential difference in V, primary/secondary turns). Use for step-up/step-down transformer questions."
+          },
+          {
+            "term": "Force on a wire in a field (Alt)",
+            "detail": "Given on sheet alongside motor effect; combine with F=BIl for full circuit and field questions."
+          },
+          {
+            "term": "Orbital equations (qualitative)",
+            "detail": "Orbital relationships for period and speed are given as descriptive relationships, not a single recalled equation; use given data in the question."
+          },
+          {
+            "term": "GPE change with weight given",
+            "detail": "When weight is already given rather than mass and g separately, the sheet shows Ep = weight x height for direct substitution."
+          },
+          {
+            "term": "Refractive index",
+            "detail": "n = sin(angle of incidence) / sin(angle of refraction). Use for light passing between two media in required practical work."
+          },
+          {
+            "term": "Period of a wave",
+            "detail": "T = 1 / f (period in s, frequency in Hz). Given alongside wave speed equation; use to link period and frequency."
+          },
+          {
+            "term": "Electrical power (two forms)",
+            "detail": "P = V x I and P = I^2 x R, both given on sheet. Use P=VI when V and I are known; use I^2R when current and resistance are known and V is not."
+          },
+          {
+            "term": "Force and change in momentum",
+            "detail": "F = (m x delta v) / t (force in N, change in momentum in kg m/s, time in s). Use for impact/safety questions like airbags and seatbelts."
+          },
+          {
+            "term": "Circular motion period-speed link",
+            "detail": "For an object in a circular orbit, v = (2 x pi x r) / T (speed in m/s, radius in m, time period T in s). Given on sheet for space physics questions."
+          }
+        ]
+      },
+      {
+        "title": "SI units and prefixes",
+        "kind": "data",
+        "items": [
+          {
+            "term": "Base unit: length",
+            "detail": "Metre, m. All distances must be converted to metres before substituting into equations."
+          },
+          {
+            "term": "Base unit: mass",
+            "detail": "Kilogram, kg. Convert grams to kilograms by dividing by 1000 before using force, energy or momentum equations."
+          },
+          {
+            "term": "Base unit: time",
+            "detail": "Second, s. Convert minutes and hours to seconds (x60, x3600) before substituting."
+          },
+          {
+            "term": "Base unit: current",
+            "detail": "Ampere, A."
+          },
+          {
+            "term": "Base unit: temperature",
+            "detail": "Kelvin, K, for gas law work; Celsius, degC, for heat capacity/latent heat. To convert: K = degC + 273."
+          },
+          {
+            "term": "Derived unit: force",
+            "detail": "Newton, N, equals kg m/s^2."
+          },
+          {
+            "term": "Derived unit: energy",
+            "detail": "Joule, J, equals kg m^2/s^2 or N m."
+          },
+          {
+            "term": "Derived unit: power",
+            "detail": "Watt, W, equals J/s."
+          },
+          {
+            "term": "Derived unit: pressure",
+            "detail": "Pascal, Pa, equals N/m^2."
+          },
+          {
+            "term": "Derived unit: frequency",
+            "detail": "Hertz, Hz, equals 1/s (cycles per second)."
+          },
+          {
+            "term": "Derived unit: charge",
+            "detail": "Coulomb, C, equals A x s."
+          },
+          {
+            "term": "Prefix giga",
+            "detail": "G = x 1,000,000,000 (10^9)."
+          },
+          {
+            "term": "Prefix mega",
+            "detail": "M = x 1,000,000 (10^6)."
+          },
+          {
+            "term": "Prefix kilo",
+            "detail": "k = x 1,000 (10^3)."
+          },
+          {
+            "term": "Prefix centi",
+            "detail": "c = x 0.01 (10^-2). 1 cm = 0.01 m."
+          },
+          {
+            "term": "Prefix milli",
+            "detail": "m = x 0.001 (10^-3). 1 mm = 0.001 m; 1 mA = 0.001 A."
+          },
+          {
+            "term": "Prefix micro",
+            "detail": "mu = x 0.000001 (10^-6)."
+          },
+          {
+            "term": "Prefix nano",
+            "detail": "n = x 0.000000001 (10^-9)."
+          },
+          {
+            "term": "Converting cm to m",
+            "detail": "Divide by 100. 15 cm = 0.15 m. Always convert before substituting into any equation - a very common lost mark."
+          },
+          {
+            "term": "Converting mm to m",
+            "detail": "Divide by 1000. 25 mm = 0.025 m."
+          },
+          {
+            "term": "Converting g to kg",
+            "detail": "Divide by 1000. 250 g = 0.25 kg."
+          }
+        ]
+      },
+      {
+        "title": "Required practicals (Physics 8463)",
+        "kind": "method",
+        "items": [
+          {
+            "term": "RP1: Specific heat capacity",
+            "detail": "Measure mass, apply known current/voltage to a heater in the material, record temperature rise over time. Independent: energy supplied; dependent: temperature change. Examiners want insulation to reduce heat loss to surroundings noted as a key limitation."
+          },
+          {
+            "term": "RP2: Thermal insulation",
+            "detail": "Compare temperature of water in beakers wrapped in different insulating materials over time. Independent: insulating material; dependent: temperature drop. Control the starting temperature and volume of water."
+          },
+          {
+            "term": "RP3: Density of materials",
+            "detail": "Measure mass with a balance; measure volume by dimensions (regular solid) or displacement (irregular solid/liquid). Calculate density = mass / volume. Examiners want correct handling of water displacement for irregular shapes."
+          },
+          {
+            "term": "RP4: Resistance of a wire",
+            "detail": "Vary length of wire in circuit, measure current and potential difference, calculate resistance = V / I. Independent: wire length; dependent: resistance. Keep wire diameter and material constant."
+          },
+          {
+            "term": "RP5: I-V characteristics",
+            "detail": "Vary potential difference across a resistor, filament lamp and diode, measure current, plot I-V graphs. Examiners want the differences in graph shape explained (resistor = straight line, filament = curves as it heats, diode = only conducts one way)."
+          },
+          {
+            "term": "RP6: Waves in a solid/spring and in water",
+            "detail": "Measure wavelength and frequency of waves on a stretched string or ripple tank, calculate speed = f x lambda. Independent: frequency; dependent: wavelength measured with a ruler/strobe method."
+          },
+          {
+            "term": "RP7: Radiation and absorption (infrared)",
+            "detail": "Use a Leslie cube with different surfaces (matt black, shiny) and an infrared detector to compare emission; also compare absorption using temperature probes. Examiners want the link between surface type and emitter/absorber efficiency."
+          },
+          {
+            "term": "RP8: Force and extension of a spring",
+            "detail": "Add masses to a spring, measure extension with a ruler, plot force against extension to find the spring constant from the gradient, and identify the limit of proportionality. Independent: force added; dependent: extension."
+          },
+          {
+            "term": "RP9: Acceleration (motion)",
+            "detail": "Use light gates or a ramp and trolley to measure velocity at two points and time between them, calculate acceleration = change in velocity / time. Independent: ramp angle or force; dependent: acceleration."
+          },
+          {
+            "term": "RP10: Frequency of a wave using an oscilloscope",
+            "detail": "Use an oscilloscope trace to read time period from the screen scale, then calculate frequency = 1 / T. Examiners want correct reading of the time-base scale in seconds per division."
+          }
+        ]
+      },
+      {
+        "title": "Key definitions: heat, pressure, radioactivity",
+        "kind": "def",
+        "items": [
+          {
+            "term": "Specific heat capacity",
+            "detail": "The energy required to raise the temperature of one kilogram of a substance by one degree Celsius (unit J/kg degC)."
+          },
+          {
+            "term": "Specific latent heat",
+            "detail": "The energy required to change the state of one kilogram of a substance with no change in temperature (unit J/kg)."
+          },
+          {
+            "term": "Specific latent heat of fusion",
+            "detail": "The energy needed to change one kilogram of a substance from solid to liquid at its melting point, with no temperature change."
+          },
+          {
+            "term": "Specific latent heat of vaporisation",
+            "detail": "The energy needed to change one kilogram of a substance from liquid to gas at its boiling point, with no temperature change."
+          },
+          {
+            "term": "Internal energy",
+            "detail": "The total kinetic energy and potential energy of all the particles that make up a system."
+          },
+          {
+            "term": "Pressure",
+            "detail": "Force acting normally (at right angles) per unit area: P = F / A, measured in pascals."
+          },
+          {
+            "term": "Absolute zero",
+            "detail": "-273 degC (0 K), the temperature at which particles have minimum kinetic energy and gas pressure would theoretically reach zero."
+          },
+          {
+            "term": "Atom (nuclear model)",
+            "detail": "A neutral particle with a small, dense, positively charged nucleus (protons and neutrons) surrounded by electrons in shells; atomic radius about 1 x 10^-10 m, nuclear radius about 1 x 10^-14 m."
+          },
+          {
+            "term": "Isotope",
+            "detail": "Atoms of the same element (same proton number) with a different number of neutrons, so a different mass number."
+          },
+          {
+            "term": "Ionising radiation",
+            "detail": "Radiation with enough energy to remove electrons from atoms it passes through, creating ions."
+          },
+          {
+            "term": "Activity",
+            "detail": "The rate at which a source of unstable nuclei decays, measured in becquerels (Bq), where 1 Bq = 1 decay per second."
+          },
+          {
+            "term": "Count rate",
+            "detail": "The number of decays recorded per unit time by a detector, e.g. a Geiger-Muller tube; it is proportional to activity but not identical to it because not all decays are detected."
+          },
+          {
+            "term": "Half-life",
+            "detail": "The time taken for the number of nuclei of the original isotope in a sample to halve, or for the count rate/activity from a sample to fall to half its initial level."
+          },
+          {
+            "term": "Irradiation",
+            "detail": "The process of exposing an object to radiation from a source; the object does not become radioactive itself."
+          },
+          {
+            "term": "Contamination (radioactive)",
+            "detail": "The unwanted presence of radioactive atoms on or in another material, which can then continue to emit radiation from within or on that material."
+          }
+        ]
+      },
+      {
+        "title": "National Grid and energy resources fact bank",
+        "kind": "data",
+        "items": [
+          {
+            "term": "National Grid purpose",
+            "detail": "A system of cables and transformers linking power stations to consumers, distributing electrical power efficiently around the country."
+          },
+          {
+            "term": "Why transmit at high voltage",
+            "detail": "For a fixed power, higher transmission voltage means lower current; since power loss to heat in cables is I^2 x R, lower current greatly reduces energy wasted."
+          },
+          {
+            "term": "Step-up transformer",
+            "detail": "Located at the power station; increases voltage and decreases current for efficient transmission."
+          },
+          {
+            "term": "Step-down transformer",
+            "detail": "Located near consumers (local substations); decreases voltage to a safe, usable level, e.g. 230 V mains in the UK."
+          },
+          {
+            "term": "Renewable energy resources",
+            "detail": "Wind, solar, geothermal, hydroelectric, tidal, wave and biofuel; resources that are replenished as they are used, at a rate comparable to consumption."
+          },
+          {
+            "term": "Non-renewable energy resources",
+            "detail": "Coal, oil, natural gas, nuclear fuel; resources that will eventually run out because they form far slower than they are used."
+          },
+          {
+            "term": "Wind power",
+            "detail": "Turbines convert kinetic energy of moving air into electrical energy; no fuel cost or pollution, but unreliable and can spoil the landscape."
+          },
+          {
+            "term": "Solar power",
+            "detail": "Photovoltaic cells convert light directly into electricity; reliable in daylight, no pollution when running, but output is low on cloudy days or at night."
+          },
+          {
+            "term": "Hydroelectric power",
+            "detail": "Water stored in a reservoir is released through turbines; reliable and quick to respond to demand, but has high initial environmental and construction impact."
+          },
+          {
+            "term": "Tidal power",
+            "detail": "Uses the rise and fall of tides to drive turbines; predictable timing but not constant power, and can affect estuary ecosystems."
+          },
+          {
+            "term": "Nuclear power",
+            "detail": "Uses fission of uranium or plutonium to heat water and drive turbines; low running carbon emissions but produces radioactive waste and has high decommissioning costs."
+          },
+          {
+            "term": "Fossil fuels",
+            "detail": "Coal, oil and gas release energy on combustion; reliable and high output, but release carbon dioxide (contributing to global warming) and other pollutants."
+          },
+          {
+            "term": "Trend in UK energy use",
+            "detail": "Increasing use of renewables and gas, decreasing use of coal, aiming to reduce carbon dioxide emissions over time."
+          },
+          {
+            "term": "Energy demand and supply matching",
+            "detail": "Power stations must be able to respond quickly to changes in demand; pumped storage hydroelectric schemes provide rapid-response backup."
+          }
+        ]
+      },
+      {
+        "title": "Common examiner traps",
+        "kind": "list",
+        "items": [
+          {
+            "term": "Ratio traps in half-life questions",
+            "detail": "After n half-lives, the fraction remaining is (1/2)^n, not 1/(2n). E.g. after 3 half-lives, 1/8 remains, not 1/6."
+          },
+          {
+            "term": "Count rate is not activity",
+            "detail": "A detector only records a fraction of decays (not all radiation reaches it or is detected), so measured count rate underestimates true activity; do not treat them as numerically equal."
+          },
+          {
+            "term": "Forgetting to convert cm to m",
+            "detail": "Any length in cm or mm must be converted to metres before use in an equation - a very common lost mark, especially in density, pressure and wave speed questions."
+          },
+          {
+            "term": "Confusing mass and weight",
+            "detail": "Mass (kg) is constant; weight (N) depends on gravitational field strength and changes with location. Do not use the same number for both without converting via W = m x g."
+          },
+          {
+            "term": "Distance vs displacement",
+            "detail": "Distance is total path length (scalar); displacement is straight-line distance from start to finish in a given direction (vector). Area under a speed-time graph gives distance, not displacement, unless direction is tracked."
+          },
+          {
+            "term": "Gradient vs area under graph confusion",
+            "detail": "On a distance-time graph, the gradient gives speed. On a velocity-time graph, the gradient gives acceleration AND the area under the graph gives distance travelled - do not mix these up."
+          },
+          {
+            "term": "Sign errors in nuclear equations",
+            "detail": "In alpha decay, mass number decreases by 4 and atomic number by 2; in beta decay, mass number is unchanged and atomic number increases by 1. Check both numbers balance on each side of the equation."
+          },
+          {
+            "term": "Significant figures mismatch",
+            "detail": "Do not give a final answer to more significant figures than the least precise piece of data in the question; also do not round intermediate steps too early as this introduces error."
+          },
+          {
+            "term": "Confusing energy stores with types of energy",
+            "detail": "AQA uses 'energy stores' (kinetic, thermal, chemical, elastic potential, gravitational potential, nuclear, magnetic, electrostatic) and 'energy transfers' (mechanically, electrically, by heating, by radiation) as separate categories - do not mix the two lists."
+          },
+          {
+            "term": "Resultant force direction",
+            "detail": "A resultant force of zero does not mean no forces act; it means the forces are balanced. Always state 'resultant force' rather than just 'force' in an explanation."
+          },
+          {
+            "term": "Efficiency cannot exceed 1 (or 100 percent)",
+            "detail": "If a calculated efficiency is greater than 1, an error has been made - check which energy value was used as the numerator versus denominator."
+          },
+          {
+            "term": "Parallel vs series circuit rules",
+            "detail": "In series: current is the same everywhere, potential differences add up. In parallel: potential difference is the same across each branch, currents add up. Mixing these up is a frequent error."
+          }
+        ]
+      },
+      {
+        "title": "Maths skills in physics",
+        "kind": "method",
+        "items": [
+          {
+            "term": "Rearranging before substituting",
+            "detail": "Isolate the unknown algebraically first, e.g. from Q = I x t, to find t: t = Q / I. Only substitute numbers after rearranging to reduce errors."
+          },
+          {
+            "term": "Rearranging a squared term",
+            "detail": "From Ek = 1/2 x m x v^2, to find v: v = sqrt((2 x Ek) / m). Remember to take the square root as the last step, applied to the whole right-hand side."
+          },
+          {
+            "term": "Standard form basics",
+            "detail": "Write numbers as A x 10^n where 1 <= A < 10. E.g. 0.00034 = 3.4 x 10^-4; 250000 = 2.5 x 10^5. Use for very large or very small physics quantities."
+          },
+          {
+            "term": "Multiplying in standard form",
+            "detail": "Multiply the A values together and add the powers of 10, then convert back to correct standard form if needed. E.g. (2 x 10^3) x (3 x 10^4) = 6 x 10^7."
+          },
+          {
+            "term": "Significant figures - counting",
+            "detail": "Count digits from the first non-zero digit. 0.00450 has 3 significant figures (4, 5, 0). Leading zeros never count; trailing zeros after a decimal point do count."
+          },
+          {
+            "term": "Significant figures - giving an answer",
+            "detail": "Match your final answer to the significant figures of the least precise data given in the question, typically 2 or 3 sf at GCSE unless told otherwise."
+          },
+          {
+            "term": "Reading a gradient",
+            "detail": "Gradient = change in y / change in x, using two points far apart on the line for accuracy. On a distance-time graph this gives speed; on a velocity-time graph this gives acceleration."
+          },
+          {
+            "term": "Area under a graph",
+            "detail": "For straight-line sections, split into rectangles and triangles and sum the areas. On a velocity-time graph, area = distance travelled; on a force-extension graph, area = work done/elastic potential energy."
+          },
+          {
+            "term": "Drawing a line/curve of best fit",
+            "detail": "Draw a single smooth line that passes as close as possible to all points, with roughly equal numbers of points above and below; ignore clear anomalies when drawing the line but still plot them."
+          },
+          {
+            "term": "Percentage change and percentage difference",
+            "detail": "Percentage change = (change / original value) x 100. Used for efficiency, percentage uncertainty and comparing experimental to expected values."
+          },
+          {
+            "term": "Estimating using powers of ten",
+            "detail": "For 'estimate' questions, round each value to 1 significant figure or the nearest convenient power of ten before calculating, and state the assumption made."
+          },
+          {
+            "term": "Direct and inverse proportion on graphs",
+            "detail": "Direct proportion gives a straight line through the origin. Inverse proportion (e.g. pressure vs volume at constant temperature) gives a curve where P x V is constant - plotting P against 1/V gives a straight line through the origin instead."
+          }
+        ]
+      },
+      {
+        "title": "Exam-day plan",
+        "kind": "list",
+        "items": [
+          {
+            "term": "Paper 1: 8463/1H",
+            "detail": "1 hour 45 minutes, 100 marks. Covers energy, electricity, particle model of matter, atomic structure. Aim for roughly 1 minute per mark, leaving 5-10 minutes to check calculations and units at the end."
+          },
+          {
+            "term": "Paper 2: 8463/2H",
+            "detail": "1 hour 45 minutes, 100 marks. Covers forces, waves, magnetism and electromagnetism, space physics. Aim for roughly 1 minute per mark; attempt all 6-mark and calculation questions even if unsure, as partial working earns marks."
+          },
+          {
+            "term": "First 5 minutes of any paper",
+            "detail": "Skim the whole paper, note which required practicals and equation-sheet topics appear, and start with the questions you are most confident on to bank early marks."
+          },
+          {
+            "term": "Before submitting",
+            "detail": "Check every calculation has correct units, every graph has labelled axes, and no multiple-choice question has been left blank."
+          },
+          {
+            "term": "Answering multiple choice questions",
+            "detail": "Read all options before choosing, cross out options you know are wrong, and never leave a multiple choice question blank - a guess has a chance of being right."
+          },
+          {
+            "term": "Command word check before answering",
+            "detail": "Underline the command word (describe, explain, evaluate, calculate) in each question before writing, to avoid describing when an explanation is required or vice versa."
+          },
+          {
+            "term": "Using the mark allocation as a guide",
+            "detail": "A question worth 3 marks needs roughly 3 distinct linked points; a 1-mark question needs a single short, precise answer - do not overwrite short-answer questions."
+          },
+          {
+            "term": "Calculation questions",
+            "detail": "Always show the equation used, substitute with units, and every working step, even if unsure of the final answer, since method marks are awarded for correct working."
+          }
+        ]
+      }
+    ]
+  },
   "topics": [
     {
       "id": "ph-magnetism",

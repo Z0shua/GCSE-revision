@@ -6,7 +6,7 @@ Static, free, account-free revision system mapped to the **King Edward VI Five W
 
 | File | What it is |
 | --- | --- |
-| `index.html` | Deliverable 2 - revision tracker: Shaky/Nearly/Solid ratings on a spaced-review ladder, due-today queue, blurt mode, focus timer, past-paper log, week rota, exam countdown, JSON export/import, dark mode |
+| `index.html` | Deliverable 2 - revision tracker: Shaky/Nearly/Solid ratings on a spaced-review ladder, due-today queue, blurt mode, focus timer, past-paper log, week rota, exam countdown, the **Notes** tab (1177 offline reference entries, printable), JSON export/import, dark mode |
 | `study.html` | Deliverable 3 - AI room: Ask it, Quiz me, Check my blurt, Teach it back. Browser-only, key stored in localStorage, ratings write straight into the tracker |
 | `data.js` | **Single source of truth.** `const GCSE_DATA = {...}` - every subject, topic, sub-topic, flashcard and link |
 | `STUDY_MATRIX.md` | Deliverable 1 - the topic matrix, generated from `data.js` |
@@ -14,8 +14,8 @@ Static, free, account-free revision system mapped to the **King Edward VI Five W
 | `make_matrix.py` | Regenerates `STUDY_MATRIX.md` from `data.js` |
 | `build_data.py` | Rebuilds `data.js` from the per-subject files in `src/` |
 | `src/*.json` | Editable per-subject source files |
-| `gcse_flashcards.csv` | 334 basic Anki cards (Front, Back, Tags) |
-| `gcse_cloze.csv` | 163 cloze-deletion Anki cards (Text, Back Extra, Tags) |
+| `gcse_flashcards.csv` | 1220 basic Anki cards (Front, Back, Tags) - 555 from the topic lists plus 665 generated from the offline notes |
+| `gcse_cloze.csv` | 264 cloze-deletion Anki cards (Text, Back Extra, Tags) |
 | `gcse_study_matrix.csv` | The matrix as a spreadsheet, for reference |
 
 ## Deployment guide (10 steps)
@@ -40,9 +40,34 @@ Static, free, account-free revision system mapped to the **King Edward VI Five W
 
 ## Exam board status
 
-Verified from KEFW Curriculum Intent documents: Biology AQA 8461, Chemistry AQA 8462, Physics AQA 8463, Geography Pearson Edexcel B 1GB0, Spanish Pearson Edexcel 1SP1 (the 2024 reformed specification, which is what a Year 11 sits in summer 2027; the legacy 1SP0 papers are kept as a secondary link because there is more back catalogue).
+Every board is **verified** against the [examination boards list published by King Edward VI Five Ways](https://view.publitas.com/king-edward-vi-five-ways-schoo/examination-boards/page/1), cross-checked against the KEFW Curriculum Intent documents for each subject. Nothing in this repository is assumed any more.
 
-**Unconfirmed - check with the school:** English Language (AQA 8700 assumed), English Literature (AQA 8702 and the Power and Conflict cluster assumed), Mathematics (Pearson Edexcel 1MA1 assumed; AQA 8300 is the alternative). KEFW publishes no consolidated exam-board list on its curriculum or subjects pages. These subjects are flagged in the dashboard, in `STUDY_MATRIX.md`, and with the Anki tag `BOARD_UNVERIFIED`.
+| Subject | Board | Spec | Papers in summer 2027 |
+| --- | --- | --- | --- |
+| English Language | AQA | 8700 | 24 May am, 8 Jun am |
+| English Literature | **Cambridge OCR** | J352 | 12 May am, 19 May am |
+| Mathematics (Higher) | Pearson Edexcel | 1MA1 | 14 May am, 27 May am, 14 Jun am |
+| Biology (Triple) | AQA | 8461 | 11 May am, 10 Jun am |
+| Chemistry (Triple) | AQA | 8462 | 17 May am, 15 Jun am |
+| Physics (Triple) | AQA | 8463 | 25 May am, 18 Jun pm |
+| Geography | Pearson Edexcel B | 1GB0 | 18 May am, 26 May pm, 10 Jun pm |
+| Spanish (Higher) | Pearson Edexcel | 1SP1 | speaking 12 Apr - 21 May, then 9, 16 and 17 Jun |
+| Religious Studies | AQA | 8062 | 13 May am, 21 May am |
+| Food Preparation and Nutrition | AQA | 8585 | 24 May pm, plus NEA 1 and NEA 2 |
+
+English and English Literature sit with **different boards**, so never use an AQA English Literature paper for the Literature exam. Spanish uses the 2024 reformed 1SP1 specification, which is what a Year 11 sits in summer 2027; the legacy 1SP0 papers are kept as a secondary link because there is more back catalogue.
+
+Set texts for OCR J352 are confirmed as **Dr Jekyll and Mr Hyde**, **Macbeth** and **An Inspector Calls**. The poetry cluster has not been confirmed, so all three OCR clusters (Love and Relationships, Conflict, Youth and Age) are included; delete the two he does not study from `src/english-literature.json` once you know.
+
+Religious Studies is AQA Religious Studies A: **Christianity and Buddhism** for Paper 1 and four themes for Paper 2. Confirm with the school whether he sits Paper **2A** (four themes, no textual studies) or 2B.
+
+Date sources: [AQA provisional May/June 2027 timetable](https://www.aqa.org.uk/exams-administration/dates-and-timetables), [Pearson Edexcel provisional summer 2027 timetable](https://qualifications.pearson.com/content/dam/pdf/Support/Examination-timetables-for-UK-Edexcel-GCSE/gcse-summer-2027-prov.pdf), [OCR final June 2027 timetable](https://www.ocr.org.uk/Images/758618-june-2027-final-exam-timetable-gcse-and-cambridge-nationals.pdf), [JCQ key dates for June 2027](https://www.jcq.org.uk/wp-content/uploads/sites/2/2026/05/Key_Dates_June2027_FINAL.pdf). The AQA and Pearson timetables are provisional and can still move; the OCR one is final.
+
+## The Notes tab (offline reference)
+
+The **Notes** tab in `index.html` holds 1177 written-out reference entries across the ten subjects, so the site is usable with the wi-fi off once it has loaded: the equations he has to recall versus the ones printed on the sheet, every required practical, ion charges and analysis tests, circle theorems with the exact reason wording, Spanish tense tables, named geography case studies with real figures, quotation banks for Macbeth, Jekyll and Hyde and An Inspector Calls, the AQA RS five-part question structure, the nutrient reference table and the NEA 1 and NEA 2 mark breakdowns. Every subject also has its command words explained and an exam-day plan per paper.
+
+**Print / save as PDF** opens every section first, then prints, so nothing is lost on paper. The lookup-shaped sections (formulae, definitions, quotations, figures) are also turned into Anki cards automatically, tagged `Reference`.
 
 ## How the study system works
 

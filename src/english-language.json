@@ -2,8 +2,8 @@
   "id": "english-language",
   "name": "English Language",
   "board": "AQA",
-  "boardVerified": false,
-  "boardNote": "FLAGGED: KEFW publishes no exam-board list on its curriculum or subjects pages, and no English curriculum PDF was supplied. AQA 8700 is the most common England board for GCSE English Language but is UNCONFIRMED for KEFW. Confirm with the school before relying on these papers.",
+  "boardVerified": true,
+  "boardNote": "VERIFIED from the King Edward VI Five Ways published examination boards list, which names AQA for English and Cambridge OCR for English Literature. The two are different boards, so never use an AQA English Literature past paper for the Literature exam.",
   "specCode": "8700",
   "tier": "Single tier",
   "accent": "amber",
@@ -263,5 +263,542 @@
       "duration": "1h 45m"
     }
   ],
-  "examNote": "Dates are from the provisional summer 2027 timetables (AQA v1.0 January 2026; Pearson Edexcel provisional). Confirm with the school before relying on them."
+  "examNote": "Dates are from the provisional summer 2027 timetables (AQA v1.0 January 2026; Pearson Edexcel provisional). Confirm with the school before relying on them.",
+  "offline": {
+    "commandWords": [
+      {
+        "word": "Identify/list",
+        "means": "State facts or details directly and briefly taken from the text, with no analysis required.",
+        "doThis": "Give exactly the number of points asked for, staying strictly inside the line numbers given, and do not explain or analyse."
+      },
+      {
+        "word": "Explain",
+        "means": "Give reasons or show understanding of why or how something is the case.",
+        "doThis": "State the point, then give a reason or piece of evidence that justifies or clarifies it."
+      },
+      {
+        "word": "How does the writer use language/structure",
+        "means": "Asks you to identify specific techniques and analyse their effect on the reader.",
+        "doThis": "Name the technique, quote or reference it precisely, then explain the effect it creates and link it to the question focus."
+      },
+      {
+        "word": "To what extent do you agree",
+        "means": "An evaluative command asking you to judge a statement using evidence, methods and your own critical response.",
+        "doThis": "State your overall view, support it with evidence and analysis of methods from the named part of the source, and consider a balanced view if relevant."
+      },
+      {
+        "word": "Compare",
+        "means": "Examine two sources together, looking at similarities and/or differences in content, ideas or methods.",
+        "doThis": "Write about both sources in the same paragraph using comparative connectives, rather than describing one source and then the other."
+      },
+      {
+        "word": "Summarise",
+        "means": "Give the key similarities or differences between sources in your own words, using inference.",
+        "doThis": "Do not just quote - paraphrase and combine information from both sources, showing you have understood beyond the literal words."
+      },
+      {
+        "word": "Write about",
+        "means": "An instruction to produce an original piece of writing in a specified form, for a specified audience and purpose.",
+        "doThis": "Identify form, audience and purpose before writing a single word, and match your tone and structure to all three throughout."
+      },
+      {
+        "word": "Evaluate",
+        "means": "Weigh up the success or effectiveness of a text, method or argument and reach a judgement.",
+        "doThis": "Give evidence for and against, then state clearly how successful or convincing you find it and why."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Paper and question structure with marks and timings",
+        "kind": "data",
+        "note": "Both papers are 1 hour 45 minutes (105 minutes), 80 marks, 50 percent of the GCSE each.",
+        "items": [
+          {
+            "term": "Paper 1 overview",
+            "detail": "Explorations in Creative Reading and Writing. 1 hour 45 minutes, 80 marks, 50 percent of GCSE. One unseen 20th or 21st century literary fiction extract for Section A, one writing task for Section B."
+          },
+          {
+            "term": "Paper 1 Q1 (4 marks)",
+            "detail": "List four things about a specified, narrow part of the source (e.g. lines 1-4). No analysis needed. Suggested time: about 5 minutes."
+          },
+          {
+            "term": "Paper 1 Q2 (8 marks)",
+            "detail": "Analyse how the writer uses language in a specified section to describe/present something. Suggested time: about 10 minutes."
+          },
+          {
+            "term": "Paper 1 Q3 (8 marks)",
+            "detail": "Analyse how the writer has structured the text to interest the reader, considering the whole extract (openings, shifts, endings). Suggested time: about 10 minutes."
+          },
+          {
+            "term": "Paper 1 Q4 (20 marks)",
+            "detail": "Evaluate a given statement about a specified section (usually the second half of the source), using the text as evidence for how far you agree. Suggested time: about 20 minutes."
+          },
+          {
+            "term": "Paper 1 Section A total",
+            "detail": "40 marks across Q1-Q4, worth 25 percent of the whole GCSE. Suggested reading and annotation time before starting: about 5-10 minutes."
+          },
+          {
+            "term": "Paper 1 Section B: the writing task",
+            "detail": "One extended writing task (choice of picture prompt or written prompt, pick one). 40 marks: 24 for content and organisation, 16 for technical accuracy. Suggested time: about 45 minutes, including 5 minutes planning."
+          },
+          {
+            "term": "Paper 2 overview",
+            "detail": "Writers' Viewpoints and Perspectives. 1 hour 45 minutes, 80 marks, 50 percent of GCSE. Two linked non-fiction sources (often one 19th century, one modern) for Section A, one viewpoint writing task for Section B."
+          },
+          {
+            "term": "Paper 2 Q1 (4 marks)",
+            "detail": "Identify four true statements from a list about a specified source, or a short factual retrieval task about a stated section. Suggested time: about 5 minutes."
+          },
+          {
+            "term": "Paper 2 Q2 (8 marks)",
+            "detail": "Summarise the differences or similarities between the two sources, using inference and your own words, not just quotation. Suggested time: about 8 minutes."
+          },
+          {
+            "term": "Paper 2 Q3 (12 marks)",
+            "detail": "Analyse how the writer of one named source uses language to achieve a particular purpose or effect. Suggested time: about 12 minutes."
+          },
+          {
+            "term": "Paper 2 Q4 (16 marks)",
+            "detail": "Compare how the two writers convey their different attitudes or perspectives on a theme, analysing methods and using evidence from both sources. Suggested time: about 16 minutes."
+          },
+          {
+            "term": "Paper 2 Section A total",
+            "detail": "40 marks across Q1-Q4, worth 25 percent of the whole GCSE. Suggested reading and annotation time before starting: about 8-10 minutes given two sources."
+          },
+          {
+            "term": "Paper 2 Section B: writing to present a viewpoint",
+            "detail": "One extended writing task in a specified form (letter, article, speech, essay, leaflet/website text) presenting a viewpoint. 40 marks: 24 for content and organisation, 16 for technical accuracy. Suggested time: about 45 minutes, including 5 minutes planning."
+          },
+          {
+            "term": "Whole-paper timing check",
+            "detail": "For a 105-minute paper with 15 minutes' initial reading recommended by AQA, budget roughly: 15 minutes reading both sources, 40 minutes on the four reading questions, 45 minutes on the writing task, with 5 minutes spare to check spelling and punctuation."
+          }
+        ]
+      },
+      {
+        "title": "What each question rewards",
+        "kind": "def",
+        "items": [
+          {
+            "term": "Paper 1 Q1: retrieval",
+            "detail": "Rewards simple, accurate identification of explicit details within the exact line numbers given - no marks for analysis or going outside the range."
+          },
+          {
+            "term": "Paper 1 Q2: language analysis",
+            "detail": "Rewards identifying specific language choices (words, phrases, language features, sentence forms) and explaining their effect using accurate terminology."
+          },
+          {
+            "term": "Paper 1 Q3: structure analysis",
+            "detail": "Rewards understanding of how the whole text is organised to interest the reader - focus, time, perspective shifts, and the relationship between beginning, middle and end."
+          },
+          {
+            "term": "Paper 1 Q4: evaluation",
+            "detail": "Rewards a critical, evidence-based personal response to a given statement, referring to specified methods and their effect on the reader, across the named section only."
+          },
+          {
+            "term": "Paper 1 Q5 (the writing task)",
+            "detail": "Rewards imaginative, well-organised content matched to purpose (24 marks) and a wide range of accurate vocabulary, sentence structures, spelling and punctuation used for effect (16 marks)."
+          },
+          {
+            "term": "Paper 2 Q1: retrieval",
+            "detail": "Rewards simple, accurate identification of true statements or explicit facts from a specified source or section."
+          },
+          {
+            "term": "Paper 2 Q2: synthesis and inference",
+            "detail": "Rewards combining and comparing information from both sources in your own words, showing understanding that goes beyond the literal wording of the text."
+          },
+          {
+            "term": "Paper 2 Q3: language analysis for purpose",
+            "detail": "Rewards identifying specific language choices in one source and analysing how they help the writer achieve their purpose (to inform, persuade, describe, entertain)."
+          },
+          {
+            "term": "Paper 2 Q4: comparison of viewpoints and methods",
+            "detail": "Rewards sustained comparison of the writers' differing attitudes or perspectives, referring to methods across both sources rather than summarising content."
+          },
+          {
+            "term": "Paper 2 Q5 (the writing task)",
+            "detail": "Rewards a convincing, well-organised viewpoint matched to form, audience and purpose (24 marks) and accurate, varied technical expression (16 marks)."
+          },
+          {
+            "term": "Technical accuracy marks generally",
+            "detail": "In both writing tasks, the 16 accuracy marks reward range and control of vocabulary and sentence structures used deliberately for effect, plus consistently accurate spelling and punctuation - not just error-free writing."
+          }
+        ]
+      },
+      {
+        "title": "Language and structure terminology glossary",
+        "kind": "def",
+        "items": [
+          {
+            "term": "Simile",
+            "detail": "A direct comparison between two things using 'like' or 'as', e.g. 'the wind howled like a wolf'."
+          },
+          {
+            "term": "Metaphor",
+            "detail": "Describing one thing directly as if it were another, without 'like' or 'as', to suggest a deeper meaning or quality."
+          },
+          {
+            "term": "Extended metaphor",
+            "detail": "A metaphor sustained and developed across several sentences or an entire paragraph rather than used once."
+          },
+          {
+            "term": "Personification",
+            "detail": "Giving human qualities or actions to a non-human thing, e.g. 'the sea whispered against the shore'."
+          },
+          {
+            "term": "Pathetic fallacy",
+            "detail": "Using weather or the natural environment to reflect or create a mood or atmosphere in the writing."
+          },
+          {
+            "term": "Semantic field",
+            "detail": "A group of words linked by a shared theme or topic, e.g. words connected to war, decay, or light, used to build a consistent impression."
+          },
+          {
+            "term": "Onomatopoeia",
+            "detail": "A word that imitates the sound it describes, e.g. 'crash', 'hiss', 'thud'."
+          },
+          {
+            "term": "Alliteration",
+            "detail": "The repetition of the same consonant sound at the start of two or more nearby words, used for emphasis or rhythm."
+          },
+          {
+            "term": "Sibilance",
+            "detail": "The repetition of 's' or soft consonant sounds, often creating a hissing, sinister or soothing effect depending on context."
+          },
+          {
+            "term": "Declarative sentence",
+            "detail": "A statement sentence, the most common sentence type, used to assert information plainly and confidently."
+          },
+          {
+            "term": "Imperative sentence",
+            "detail": "A command sentence (e.g. 'Stop.' 'Consider this.'), used to instruct or address the reader directly."
+          },
+          {
+            "term": "Interrogative sentence",
+            "detail": "A question sentence, used to engage the reader directly or create curiosity/doubt."
+          },
+          {
+            "term": "Exclamative sentence",
+            "detail": "A sentence ending in an exclamation mark used to convey strong emotion or emphasis."
+          },
+          {
+            "term": "Minor sentence",
+            "detail": "A grammatically incomplete sentence (e.g. 'Silence.') used deliberately for dramatic impact or pace."
+          },
+          {
+            "term": "Simple sentence",
+            "detail": "A sentence with one main clause (one subject, one verb), often used for clarity or sudden impact."
+          },
+          {
+            "term": "Compound sentence",
+            "detail": "Two main clauses joined by a coordinating conjunction (and, but, or), giving equal weight to both ideas."
+          },
+          {
+            "term": "Complex sentence",
+            "detail": "A main clause plus one or more subordinate clauses, allowing more detail, nuance or sophistication."
+          },
+          {
+            "term": "Cyclical structure",
+            "detail": "A text that ends by returning to an idea, image or phrase from its opening, creating a sense of completion or entrapment."
+          },
+          {
+            "term": "Foreshadowing",
+            "detail": "An early hint or suggestion of something that will become significant later in the text."
+          },
+          {
+            "term": "Narrative perspective/viewpoint",
+            "detail": "The position from which a story is told - first person (I), second person (you), or third person (he/she/they) - which shapes what the reader knows and how they respond."
+          },
+          {
+            "term": "Discourse markers",
+            "detail": "Words or phrases that connect ideas across sentences and paragraphs, e.g. however, therefore, in contrast, consequently."
+          },
+          {
+            "term": "Rhetorical question",
+            "detail": "A question asked for effect, not requiring a literal answer, used to persuade or provoke thought in the reader."
+          },
+          {
+            "term": "Triples (rule of three)",
+            "detail": "A group of three words or phrases used together for persuasive rhythm and emphasis, e.g. 'strong, safe and secure'."
+          },
+          {
+            "term": "Anecdote",
+            "detail": "A short, personal or illustrative story used to make an argument more relatable or persuasive."
+          },
+          {
+            "term": "Direct address",
+            "detail": "Speaking straight to the reader using 'you', creating a sense of personal connection or obligation."
+          }
+        ]
+      },
+      {
+        "title": "Sentence stems for Q2, Q3 and Q4",
+        "kind": "phrase",
+        "note": "Q numbering follows Paper 1 (language Q2, structure Q3) and Paper 2 (language-for-purpose Q3, comparison Q4); stems are grouped by skill so they work for either paper.",
+        "items": [
+          {
+            "term": "Opening a language analysis point (Paper 1 Q2 / Paper 2 Q3)",
+            "detail": "The writer uses [technique] to suggest/present ___, which creates an impression of ___ for the reader."
+          },
+          {
+            "term": "Embedding a quotation in language analysis",
+            "detail": "The description of '___' suggests that ___, implying ___."
+          },
+          {
+            "term": "Zooming in on a single word",
+            "detail": "The word '___' specifically connotes ___, which reinforces the sense that ___."
+          },
+          {
+            "term": "Opening a structure analysis point (Paper 1 Q3)",
+            "detail": "The writer structures the text by ___, which has the effect of ___ on the reader as they move through the extract."
+          },
+          {
+            "term": "Describing a shift in focus (structure)",
+            "detail": "The focus shifts from ___ to ___, drawing the reader's attention towards ___."
+          },
+          {
+            "term": "Describing the ending (structure)",
+            "detail": "The extract ends by ___, which leaves the reader with a sense of ___ and connects back to ___."
+          },
+          {
+            "term": "Opening an evaluative point (Paper 1 Q4)",
+            "detail": "To a large/limited extent I agree that ___, because the writer presents ___ through ___."
+          },
+          {
+            "term": "Introducing a qualification in evaluation",
+            "detail": "However, this impression is complicated by ___, which suggests ___."
+          },
+          {
+            "term": "Opening a comparison point (Paper 2 Q4)",
+            "detail": "Both writers convey ___, but while Source A presents this through ___, Source B instead uses ___."
+          },
+          {
+            "term": "Signalling contrast in comparison",
+            "detail": "Whereas the writer of Source A adopts a tone of ___, the writer of Source B instead conveys ___ through ___."
+          },
+          {
+            "term": "Signalling similarity in comparison",
+            "detail": "Similarly to Source A, Source B also presents ___, shown through ___."
+          },
+          {
+            "term": "Concluding a comparison paragraph",
+            "detail": "Overall, this suggests the two writers' attitudes towards ___ differ/align because ___."
+          }
+        ]
+      },
+      {
+        "title": "Mark-scheme ladder for the 40-mark writing question, in plain English",
+        "kind": "list",
+        "note": "Applies to both Paper 1 Section B (descriptive/narrative) and Paper 2 Section B (viewpoint writing). Content and organisation = 24 marks; technical accuracy = 16 marks.",
+        "items": [
+          {
+            "term": "Content and organisation - Level 1 (1-5 marks)",
+            "detail": "Simple, limited communication; simple awareness of purpose; ideas linked but not always logically; simple vocabulary and few, if any, linguistic devices."
+          },
+          {
+            "term": "Content and organisation - Level 2 (6-11 marks)",
+            "detail": "Some successful communication; sustained attempt to match purpose; conscious use of vocabulary with some linguistic devices; some use of paragraphs and discourse markers."
+          },
+          {
+            "term": "Content and organisation - Level 3 (12-16 marks)",
+            "detail": "Clear communication; generally well-matched to purpose; clearly chosen vocabulary and appropriate linguistic devices; coherent paragraphs with at least one effective structural feature."
+          },
+          {
+            "term": "Content and organisation - Level 4 (17-21 marks)",
+            "detail": "Convincing, engaging communication; conscious crafting of language for effect; range of developed, complex ideas convincingly matched to purpose; varied and effective structural features."
+          },
+          {
+            "term": "Content and organisation - Level 5 (22-24 marks)",
+            "detail": "Compelling, highly convincing communication; sophisticated, extensive vocabulary and register consistently matched to purpose; sustained crafting of structure for deliberate effect."
+          },
+          {
+            "term": "Technical accuracy - Level 1 (1-4 marks)",
+            "detail": "Some evidence of conscious punctuation, though not always effective; simple range of sentence forms; frequent spelling errors, especially with more complex words."
+          },
+          {
+            "term": "Technical accuracy - Level 2 (5-8 marks)",
+            "detail": "Attempts a variety of sentence forms but punctuation is not fully secure; some use of Standard English with some control of agreement; some accurate spelling of more complex words."
+          },
+          {
+            "term": "Technical accuracy - Level 3 (9-12 marks)",
+            "detail": "Variety of sentence forms used for effect; sentence demarcation mostly secure and mostly accurate; generally accurate spelling, including ambitious vocabulary."
+          },
+          {
+            "term": "Technical accuracy - Level 4 (13-16 marks)",
+            "detail": "Sentence demarcation consistently secure and deliberately controlled; wide, extensive vocabulary with consistently accurate, sometimes ambitious spelling; a full range of punctuation used accurately and for effect."
+          },
+          {
+            "term": "How the two halves combine",
+            "detail": "Content/organisation and technical accuracy are marked separately and added together, so a well-organised answer with weak accuracy or vice versa will still lose significant marks - both halves matter."
+          },
+          {
+            "term": "What separates top bands from middle bands",
+            "detail": "Deliberate, purposeful crafting: choosing techniques and sentence structures because they create a specific effect for a specific purpose, not just using them correctly."
+          },
+          {
+            "term": "Fastest way to move up a technical accuracy level",
+            "detail": "Secure, consistently accurate sentence demarcation (correct capital letters and end punctuation on every sentence) is weighted heavily and is the most reliable way to avoid being capped in a low level."
+          }
+        ]
+      },
+      {
+        "title": "Punctuation and sentence-variety devices with examples",
+        "kind": "method",
+        "items": [
+          {
+            "term": "Full stop for a simple, punchy statement",
+            "detail": "Use a short simple sentence to create impact or finality, e.g. 'The house was empty.' Effective straight after a longer, more descriptive sentence."
+          },
+          {
+            "term": "Comma to separate items in a list",
+            "detail": "Example: 'The room was cold, dark and silent.' Do not put a comma before 'and' in a simple list of this kind."
+          },
+          {
+            "term": "Comma to add a subordinate clause",
+            "detail": "Example: 'Shivering, she pulled her coat tighter.' Adds detail or sets a scene before the main clause."
+          },
+          {
+            "term": "Semicolon to join two related independent clauses",
+            "detail": "Example: 'The wind howled outside; inside, the fire crackled gently.' Both halves could stand alone as full sentences, but the semicolon shows they are closely linked."
+          },
+          {
+            "term": "Colon to introduce a list, explanation or quotation",
+            "detail": "Example: 'She had one goal: survival.' The colon must follow a grammatically complete clause."
+          },
+          {
+            "term": "Dash for an abrupt interruption or added emphasis",
+            "detail": "Example: 'He reached for the door - then stopped.' Creates a sudden shift or dramatic pause, useful in narrative and descriptive writing."
+          },
+          {
+            "term": "Brackets/parenthesis for extra, removable detail",
+            "detail": "Example: 'The old house (long abandoned) stood at the end of the lane.' The bracketed detail could be deleted without damaging the main sentence."
+          },
+          {
+            "term": "Ellipsis for trailing off or building suspense",
+            "detail": "Example: 'She turned the handle slowly...' Suggests hesitation, unfinished thought, or unresolved tension - use sparingly for effect."
+          },
+          {
+            "term": "Minor sentence for dramatic impact",
+            "detail": "Example: 'Silence.' A grammatically incomplete sentence used deliberately, most effective when it follows longer, more complex sentences."
+          },
+          {
+            "term": "Varying sentence openers",
+            "detail": "Open sentences with an adverb ('Cautiously, she stepped forward'), a connective ('Meanwhile, the storm grew'), or a verb ('Waving, he called out') instead of always starting with the subject."
+          },
+          {
+            "term": "Short sentence after long sentences for contrast",
+            "detail": "A sequence of longer, flowing sentences followed by one short sentence creates a sudden change of pace that mirrors tension or shock."
+          },
+          {
+            "term": "Question marks and exclamation marks for tone",
+            "detail": "A question mark can create curiosity or unease ('What was that noise?'); an exclamation mark signals strong emotion but should be used sparingly to avoid weakening its impact."
+          }
+        ]
+      },
+      {
+        "title": "Spelling and grammar traps",
+        "kind": "list",
+        "items": [
+          {
+            "term": "their / there / they're",
+            "detail": "'Their' shows possession (their house). 'There' refers to a place or is used as a sentence starter (there is/are). 'They're' is short for 'they are'."
+          },
+          {
+            "term": "your / you're",
+            "detail": "'Your' shows possession (your book). 'You're' is short for 'you are'. If you can replace it with 'you are' and it still makes sense, use 'you're'."
+          },
+          {
+            "term": "its / it's",
+            "detail": "'Its' shows possession with no apostrophe (the dog wagged its tail). 'It's' is short for 'it is' or 'it has'. This is the opposite of normal possessive apostrophe rules, so it is a common trap."
+          },
+          {
+            "term": "affect / effect",
+            "detail": "'Affect' is usually a verb meaning to influence (the weather affects my mood). 'Effect' is usually a noun meaning the result (the effect was dramatic)."
+          },
+          {
+            "term": "should have / should of",
+            "detail": "'Should of', 'could of' and 'would of' are always wrong - the correct form is always 'should have', 'could have', 'would have'."
+          },
+          {
+            "term": "Apostrophes never make a word plural",
+            "detail": "'I have three dog's' is wrong; it should be 'I have three dogs'. Apostrophes are only for possession or missing letters, never simple plurals."
+          },
+          {
+            "term": "Possessive pronouns never take an apostrophe",
+            "detail": "Its, yours, ours, hers and theirs never have an apostrophe, unlike possessive nouns (the dog's bone, but never the dogs's or its')."
+          },
+          {
+            "term": "Plural possession placement",
+            "detail": "For a plural noun already ending in s, the apostrophe goes after the s: 'the teachers' staffroom' (belonging to multiple teachers), not 'teacher's' unless there is only one teacher."
+          },
+          {
+            "term": "Comma splice",
+            "detail": "Joining two complete sentences with only a comma is a common error, e.g. 'I went to the shop, I bought some milk.' Fix with a full stop, a semicolon, or a conjunction."
+          },
+          {
+            "term": "Subject-verb agreement",
+            "detail": "The verb must agree with its subject in number: 'They were good friends' not 'They was good friends'; 'The dog barks' not 'The dog bark'."
+          },
+          {
+            "term": "Inconsistent tense",
+            "detail": "Stay in one tense (usually past or present) throughout a piece of narrative or descriptive writing unless deliberately signalling a flashback or shift, and make that shift clear to the reader."
+          },
+          {
+            "term": "to / too / two",
+            "detail": "'To' is a preposition or part of an infinitive verb (go to school, to run). 'Too' means also or excessively. 'Two' is the number 2."
+          },
+          {
+            "term": "Commonly misspelled subject-specific words",
+            "detail": "Learn these exactly: definitely, separate, necessary, occurred, embarrass, argument, believe, immediately, government, environment, rhythm, Wednesday."
+          },
+          {
+            "term": "Homophone slip in tense forms",
+            "detail": "'Were' is a past tense verb (they were); 'where' refers to place; 'we're' is short for 'we are' - check which one is needed before writing."
+          },
+          {
+            "term": "Avoid informal contractions/slang in formal writing",
+            "detail": "Words like 'gonna', 'kinda' or 'coulda' should never appear in exam writing - always use the full, formal form even in dialogue unless deliberately capturing informal speech for characterisation."
+          }
+        ]
+      },
+      {
+        "title": "Exam-day plan",
+        "kind": "list",
+        "items": [
+          {
+            "term": "Paper 1: Explorations in Creative Reading and Writing",
+            "detail": "1 hour 45 minutes, 80 marks, 50 percent of GCSE. Suggested split: 15 minutes reading the fiction extract and annotating, then roughly 5/10/10/20 minutes for Q1-Q4 (40 marks), then about 45 minutes for the Section B writing task (40 marks) including 5 minutes planning."
+          },
+          {
+            "term": "Paper 2: Writers' Viewpoints and Perspectives",
+            "detail": "1 hour 45 minutes, 80 marks, 50 percent of GCSE. Suggested split: 15 minutes reading both linked non-fiction sources and annotating, then roughly 5/8/12/16 minutes for Q1-Q4 (40 marks), then about 45 minutes for the Section B viewpoint writing task (40 marks) including 5 minutes planning."
+          },
+          {
+            "term": "The night before both papers",
+            "detail": "Review the terminology glossary and sentence stems once rather than trying to learn large amounts of new material; a rested mind spots inference and structure more reliably than a tired, over-crammed one."
+          },
+          {
+            "term": "First five minutes of each paper",
+            "detail": "Read the whole paper's questions before reading the source in detail, so you know what to look for as you annotate the extract(s)."
+          },
+          {
+            "term": "During the reading section",
+            "detail": "Annotate as you read: mark short quotations for language (Q2/Q3), structural shifts, and anything relevant to the given statement in the final evaluative question, so you are not re-reading from scratch for each question."
+          },
+          {
+            "term": "Before starting the writing task",
+            "detail": "Spend the full 5 minutes planning: identify form, audience and purpose, and jot 4-5 paragraph ideas or images before writing a single sentence."
+          },
+          {
+            "term": "Final five minutes of each paper",
+            "detail": "Proofread the writing task specifically for sentence demarcation (capital letters and end punctuation), tense consistency and any homophone traps, since technical accuracy is worth 16 of the 40 writing marks."
+          },
+          {
+            "term": "Equipment and timing checks",
+            "detail": "Bring a spare pen and a watch or check the exam room clock; since both papers are 105 minutes with two very different sections, decide your section-switch time (around the 55-60 minute mark) before the exam starts and stick to it."
+          }
+        ]
+      }
+    ]
+  }
 }

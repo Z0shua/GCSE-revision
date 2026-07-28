@@ -35,6 +35,506 @@
       "verified": true
     }
   ],
+  "offline": {
+    "commandWords": [
+      {
+        "word": "Traduce al español",
+        "means": "Translate the English sentence into Spanish.",
+        "doThis": "Translate meaning, not word for word; check tense, gender agreement and accents before moving on."
+      },
+      {
+        "word": "Traduce al inglés",
+        "means": "Translate the Spanish sentence into English.",
+        "doThis": "Produce natural English; do not leave any Spanish word untranslated, and check tense carefully (preterite vs imperfect vs perfect)."
+      },
+      {
+        "word": "Menciona / Da",
+        "means": "State a fact or piece of information briefly.",
+        "doThis": "Give a short, direct answer in the required language with no extra justification needed."
+      },
+      {
+        "word": "Escribe sobre",
+        "means": "Write about the given topic in an extended piece.",
+        "doThis": "Use a range of tenses, connectives and opinions; aim for the word count given and check verb endings match the subject."
+      },
+      {
+        "word": "Describe la foto / Photo card",
+        "means": "Describe what you see in the image during the speaking exam.",
+        "doThis": "Use present tense for what is happening, mention people, place, objects and a general observation or opinion."
+      },
+      {
+        "word": "Role-play / Juego de rol",
+        "means": "Respond to five prompts in an unscripted conversation with the teacher-examiner.",
+        "doThis": "Answer directly, use the correct tense implied by each prompt, and produce a spontaneous reply to the unpredictable question."
+      },
+      {
+        "word": "Justifica tu opinión",
+        "means": "Support your opinion with a reason, not just state it.",
+        "doThis": "Use porque, ya que or dado que followed by a specific reason, not a vague comment."
+      },
+      {
+        "word": "Compara",
+        "means": "Identify similarities and/or differences between two things.",
+        "doThis": "Use comparative structures (mas...que, menos...que, tan...como) to directly link the two items being compared."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Verb tense formation (text tables): endings and key irregulars",
+        "kind": "formula",
+        "note": "Regular endings shown for -AR/-ER/-IR patterns using hablar, comer, vivir as models; key irregulars given separately.",
+        "items": [
+          {
+            "term": "Present tense regular endings -AR (hablar)",
+            "detail": "hablo, hablas, habla, hablamos, habláis, hablan (I speak, you speak, he/she speaks, we speak, you-all speak, they speak)."
+          },
+          {
+            "term": "Present tense regular endings -ER (comer)",
+            "detail": "como, comes, come, comemos, coméis, comen (I eat, you eat, he/she eats, we eat, you-all eat, they eat)."
+          },
+          {
+            "term": "Present tense regular endings -IR (vivir)",
+            "detail": "vivo, vives, vive, vivimos, vivís, viven (I live, you live, he/she lives, we live, you-all live, they live)."
+          },
+          {
+            "term": "Present tense key irregulars",
+            "detail": "ser: soy, eres, es, somos, sois, son. estar: estoy, estás, está, estamos, estáis, están. tener: tengo, tienes, tiene, tenemos, tenéis, tienen. ir: voy, vas, va, vamos, vais, van. hacer: hago, haces, hace, hacemos, hacéis, hacen."
+          },
+          {
+            "term": "Preterite regular endings -AR (hablar)",
+            "detail": "hablé, hablaste, habló, hablamos, hablasteis, hablaron (I spoke, you spoke, he/she spoke, we spoke, you-all spoke, they spoke). Note accent on 1st/3rd person singular."
+          },
+          {
+            "term": "Preterite regular endings -ER/-IR (comer/vivir)",
+            "detail": "comí, comiste, comió, comimos, comisteis, comieron / viví, viviste, vivió, vivimos, vivisteis, vivieron."
+          },
+          {
+            "term": "Preterite key irregulars",
+            "detail": "ser/ir (same form): fui, fuiste, fue, fuimos, fuisteis, fueron. hacer: hice, hiciste, hizo, hicimos, hicisteis, hicieron. tener: tuve, tuviste, tuvo, tuvimos, tuvisteis, tuvieron. estar: estuve, estuviste, estuvo, estuvimos, estuvisteis, estuvieron."
+          },
+          {
+            "term": "Imperfect regular endings -AR (hablar)",
+            "detail": "hablaba, hablabas, hablaba, hablábamos, hablabais, hablaban (I used to speak / was speaking, etc)."
+          },
+          {
+            "term": "Imperfect regular endings -ER/-IR (comer/vivir)",
+            "detail": "comía, comías, comía, comíamos, comíais, comían / vivía, vivías, vivía, vivíamos, vivíais, vivían."
+          },
+          {
+            "term": "Imperfect key irregulars",
+            "detail": "ser: era, eras, era, éramos, erais, eran. ir: iba, ibas, iba, íbamos, ibais, iban. ver: veía, veías, veía, veíamos, veíais, veían. (Only these three verbs are irregular in the imperfect.)"
+          },
+          {
+            "term": "Near future tense formation",
+            "detail": "ir (present tense) + a + infinitive, e.g. voy a estudiar (I am going to study), vamos a comer (we are going to eat)."
+          },
+          {
+            "term": "Simple future regular endings (all verb types)",
+            "detail": "Add é, ás, á, emos, éis, án to the FULL infinitive: hablaré, hablarás, hablará, hablaremos, hablaréis, hablarán (I will speak, etc)."
+          },
+          {
+            "term": "Simple future key irregular stems",
+            "detail": "tener->tendr-, hacer->har-, poder->podr-, decir->dir-, salir->saldr-, poner->pondr-, venir->vendr-; then add the normal future endings, e.g. tendré (I will have)."
+          },
+          {
+            "term": "Conditional regular endings (all verb types)",
+            "detail": "Add ía, ías, ía, íamos, íais, ían to the FULL infinitive: hablaría, hablarías, hablaría, hablaríamos, hablaríais, hablarían (I would speak, etc)."
+          },
+          {
+            "term": "Conditional key irregular stems",
+            "detail": "Same irregular stems as the future: tendr-, har-, podr-, dir-, saldr-, pondr-, vendr-, then add conditional endings, e.g. tendría (I would have)."
+          },
+          {
+            "term": "Present perfect formation",
+            "detail": "Present tense of haber (he, has, ha, hemos, habéis, han) + past participle, e.g. he comido (I have eaten), ha hablado (he/she has spoken)."
+          },
+          {
+            "term": "Regular past participles",
+            "detail": "-AR verbs: stem + ado (hablado). -ER/-IR verbs: stem + ido (comido, vivido)."
+          },
+          {
+            "term": "Irregular past participles",
+            "detail": "hacer->hecho, decir->dicho, escribir->escrito, ver->visto, poner->puesto, volver->vuelto, romper->roto, abrir->abierto, morir->muerto."
+          },
+          {
+            "term": "Present subjunctive regular formation",
+            "detail": "Take the yo form of the present tense, remove the -o, then add opposite endings: -AR verbs use e, es, e, emos, éis, en; -ER/-IR verbs use a, as, a, amos, áis, an. E.g. hablar->hable; comer->coma."
+          },
+          {
+            "term": "Present subjunctive key irregulars",
+            "detail": "ser->sea, estar->esté, ir->vaya, haber->haya, saber->sepa, dar->dé - these do not follow the yo-form pattern and must be learned separately."
+          },
+          {
+            "term": "Radical-changing verbs in the present tense",
+            "detail": "e->ie (querer: quiero, quieres, quiere, queremos, queréis, quieren); o->ue (poder: puedo, puedes, puede, podemos, podéis, pueden); e->i (pedir: pido, pides, pide, pedimos, pedís, piden). All persons change except nosotros/vosotros."
+          }
+        ]
+      },
+      {
+        "title": "High-frequency verbs",
+        "kind": "list",
+        "items": [
+          {
+            "term": "ser (to be, permanent)",
+            "detail": "Used for identity, characteristics, origin, profession, time and dates, e.g. Soy español, Es profesora."
+          },
+          {
+            "term": "estar (to be, temporary/location)",
+            "detail": "Used for location, temporary states and feelings, and with the gerund for continuous actions, e.g. Estoy cansado, Está en Madrid, Estoy comiendo."
+          },
+          {
+            "term": "tener (to have)",
+            "detail": "Also used in fixed expressions: tener hambre (to be hungry), tener sed (to be thirsty), tener... años (to be... years old), tener que + infinitive (to have to)."
+          },
+          {
+            "term": "hacer (to do/make)",
+            "detail": "Used for weather (hace sol, hace frío) and time expressions (hace dos años = two years ago)."
+          },
+          {
+            "term": "ir (to go)",
+            "detail": "Used alone (voy al colegio) and to form the near future (voy a + infinitive)."
+          },
+          {
+            "term": "poder (to be able to, can)",
+            "detail": "Radical-changing (o->ue); followed directly by an infinitive, e.g. puedo ayudar (I can help)."
+          },
+          {
+            "term": "querer (to want)",
+            "detail": "Radical-changing (e->ie); followed by an infinitive or noun, e.g. quiero viajar (I want to travel)."
+          },
+          {
+            "term": "gustar (to like, verb of interest)",
+            "detail": "Used with an indirect object pronoun: me gusta (I like, singular thing), me gustan (I like, plural things), me gustaría (I would like)."
+          },
+          {
+            "term": "haber (to have, auxiliary)",
+            "detail": "Only used to form compound tenses (he comido = I have eaten); never used alone to mean 'to possess' (use tener for that)."
+          },
+          {
+            "term": "decir (to say/tell)",
+            "detail": "Irregular yo form (digo); irregular preterite (dije, dijiste, dijo...) and irregular future stem (dir-)."
+          },
+          {
+            "term": "saber (to know facts/how to)",
+            "detail": "Irregular yo form (sé); use for facts and skills, e.g. Sé nadar (I know how to swim)."
+          },
+          {
+            "term": "conocer (to know people/places)",
+            "detail": "Irregular yo form (conozco); used for familiarity with people or places, e.g. Conozco a María."
+          },
+          {
+            "term": "poner (to put)",
+            "detail": "Irregular yo form (pongo); irregular future/conditional stem (pondr-)."
+          },
+          {
+            "term": "salir (to leave/go out)",
+            "detail": "Irregular yo form (salgo); irregular future/conditional stem (saldr-)."
+          },
+          {
+            "term": "venir (to come)",
+            "detail": "Radical-changing (e->ie) plus irregular yo form (vengo); irregular future/conditional stem (vendr-)."
+          }
+        ]
+      },
+      {
+        "title": "Opinion, justification, connectives and time markers",
+        "kind": "phrase",
+        "items": [
+          {
+            "term": "En mi opinión / A mi parecer / Desde mi punto de vista",
+            "detail": "In my opinion / As I see it / From my point of view - higher-level openers for opinion sentences."
+          },
+          {
+            "term": "Creo que / Pienso que / Opino que",
+            "detail": "I believe that / I think that / I am of the opinion that - followed by an indicative verb (not subjunctive) when stating a belief."
+          },
+          {
+            "term": "Me parece que + indicative",
+            "detail": "It seems to me that... - used to introduce a personal judgement about a topic."
+          },
+          {
+            "term": "porque / ya que / dado que / puesto que",
+            "detail": "because / since / given that / since - all introduce a reason; ya que, dado que and puesto que are higher-level alternatives to porque."
+          },
+          {
+            "term": "sin embargo / no obstante",
+            "detail": "however / nevertheless - used to introduce a contrasting point."
+          },
+          {
+            "term": "por otro lado / en cambio",
+            "detail": "on the other hand / on the other hand (in contrast) - used to present an alternative viewpoint."
+          },
+          {
+            "term": "aunque",
+            "detail": "although - can be followed by indicative (known fact) or subjunctive (hypothetical/uncertain), e.g. aunque llueve (although it is raining) vs aunque llueva (although it may rain)."
+          },
+          {
+            "term": "por lo tanto / así que",
+            "detail": "therefore / so - used to introduce a consequence or conclusion."
+          },
+          {
+            "term": "además / también",
+            "detail": "furthermore, in addition / also - used to add a further point."
+          },
+          {
+            "term": "primero, luego, después, finalmente",
+            "detail": "first, then, afterwards, finally - sequencing connectives for narrating a series of events."
+          },
+          {
+            "term": "ayer, anoche, la semana pasada, el año pasado",
+            "detail": "yesterday, last night, last week, last year - preterite time markers signalling a completed past action."
+          },
+          {
+            "term": "normalmente, todos los días, a menudo, de vez en cuando",
+            "detail": "normally, every day, often, from time to time - present tense / imperfect habitual time markers."
+          },
+          {
+            "term": "mañana, la semana que viene, el año que viene, en el futuro",
+            "detail": "tomorrow, next week, next year, in the future - near future / simple future time markers."
+          },
+          {
+            "term": "de repente, mientras",
+            "detail": "suddenly (preterite trigger, interrupting action), while (imperfect trigger, background action) - classic preterite/imperfect combination marker."
+          }
+        ]
+      },
+      {
+        "title": "Question words",
+        "kind": "list",
+        "items": [
+          {
+            "term": "Qué",
+            "detail": "What, e.g. ¿Qué haces? (What are you doing?). Always carries an accent as a question word."
+          },
+          {
+            "term": "Quién / Quiénes",
+            "detail": "Who (singular/plural), e.g. ¿Quién es? (Who is it?)."
+          },
+          {
+            "term": "Cuándo",
+            "detail": "When, e.g. ¿Cuándo naciste? (When were you born?)."
+          },
+          {
+            "term": "Dónde / Adónde",
+            "detail": "Where / to where, e.g. ¿Dónde vives? (Where do you live?), ¿Adónde vas? (Where are you going to?)."
+          },
+          {
+            "term": "Por qué",
+            "detail": "Why (two words, with accent) - answered using porque (one word, no accent on final e), meaning because."
+          },
+          {
+            "term": "Cómo",
+            "detail": "How, e.g. ¿Cómo es tu casa? (What is your house like?)."
+          },
+          {
+            "term": "Cuánto/a/os/as",
+            "detail": "How much/how many, agrees with the noun, e.g. ¿Cuántos hermanos tienes? (How many siblings do you have?)."
+          },
+          {
+            "term": "Cuál / Cuáles",
+            "detail": "Which (one/ones), e.g. ¿Cuál prefieres? (Which do you prefer?)."
+          }
+        ]
+      },
+      {
+        "title": "Phrases that raise a mark",
+        "kind": "phrase",
+        "items": [
+          {
+            "term": "Subjunctive trigger: cuando (future meaning)",
+            "detail": "cuando + present subjunctive when referring to a future event, e.g. Cuando termine mis estudios... (When I finish my studies...)."
+          },
+          {
+            "term": "Subjunctive trigger: para que",
+            "detail": "para que + subjunctive expresses purpose ('so that'), e.g. Estudio para que mis padres estén orgullosos (I study so that my parents are proud)."
+          },
+          {
+            "term": "Subjunctive trigger: es importante/necesario que",
+            "detail": "Impersonal expressions of necessity or importance take the subjunctive, e.g. Es importante que reciclemos (It is important that we recycle)."
+          },
+          {
+            "term": "Subjunctive trigger: ojalá",
+            "detail": "ojalá + subjunctive expresses a wish, e.g. Ojalá tenga éxito (I hope I am successful/If only I have success)."
+          },
+          {
+            "term": "Si clause: real/possible condition",
+            "detail": "Si + present indicative, + present or future, e.g. Si tengo tiempo, voy al gimnasio (If I have time, I go to the gym)."
+          },
+          {
+            "term": "Si clause: hypothetical condition",
+            "detail": "Si + imperfect subjunctive, + conditional, e.g. Si tuviera dinero, viajaría más (If I had money, I would travel more)."
+          },
+          {
+            "term": "Comparative structures",
+            "detail": "más...que (more than), menos...que (less than), tan...como (as...as), e.g. Mi hermano es más alto que yo."
+          },
+          {
+            "term": "Superlative structure",
+            "detail": "el/la/los/las + (noun) + más/menos + adjective, e.g. la ciudad más bonita de España (the prettiest city in Spain)."
+          },
+          {
+            "term": "Impersonal se construction",
+            "detail": "se + third person verb expresses a general/passive action without naming who does it, e.g. Se habla español (Spanish is spoken), Se reciclan las botellas."
+          },
+          {
+            "term": "Impersonal expressions: hay que / se debe / es necesario",
+            "detail": "hay que + infinitive (one must), se debe + infinitive (one should), es necesario + infinitive (it is necessary to) - all express obligation without a named subject."
+          },
+          {
+            "term": "Using a range of tenses in one paragraph",
+            "detail": "Combining preterite, imperfect and future/conditional in a single answer (e.g. narrating past, describing background, then stating future plans) is explicitly rewarded at higher tier."
+          },
+          {
+            "term": "Using a negative structure beyond no",
+            "detail": "nunca (never), nadie (nobody), nada (nothing), tampoco (neither) placed before the verb or with no...before and the negative word after, e.g. No como nunca carne."
+          }
+        ]
+      },
+      {
+        "title": "Topic vocabulary banks",
+        "kind": "list",
+        "note": "Matches the topics covered in the main file: customs and traditions, work/study, and the global dimension.",
+        "items": [
+          {
+            "term": "la fiesta / el festival / la celebración",
+            "detail": "the party/festival / the festival / the celebration - core customs and traditions vocabulary."
+          },
+          {
+            "term": "la Navidad / la Semana Santa / el Día de los Muertos",
+            "detail": "Christmas / Holy Week (Easter) / Day of the Dead - named festivals in Spain and Latin America."
+          },
+          {
+            "term": "los reyes magos / los fuegos artificiales / el desfile",
+            "detail": "the Three Kings / fireworks / the parade - festival vocabulary."
+          },
+          {
+            "term": "el trabajo / el puesto / la entrevista / el currículum",
+            "detail": "the job / the position / the interview / the CV - work and careers vocabulary."
+          },
+          {
+            "term": "el aprendizaje / la formación profesional / la carrera universitaria",
+            "detail": "the apprenticeship / vocational training / the university degree - post-16 study vocabulary."
+          },
+          {
+            "term": "ganar un sueldo / estar en paro / jubilarse",
+            "detail": "to earn a salary / to be unemployed / to retire - work-related verb phrases."
+          },
+          {
+            "term": "la contaminación / el calentamiento global / la sequía",
+            "detail": "pollution / global warming / drought - environmental problems vocabulary (global dimension)."
+          },
+          {
+            "term": "la deforestación / la especie en peligro de extinción / reciclar",
+            "detail": "deforestation / endangered species / to recycle - environment and conservation vocabulary."
+          },
+          {
+            "term": "la pobreza / el hambre / la falta de vivienda",
+            "detail": "poverty / hunger / homelessness - social issues vocabulary (global dimension)."
+          },
+          {
+            "term": "el voluntariado / la ONG / recaudar fondos",
+            "detail": "volunteering / the NGO (non-governmental organisation) / to raise funds - charity and volunteering vocabulary."
+          },
+          {
+            "term": "la igualdad / los derechos humanos / la discriminación",
+            "detail": "equality / human rights / discrimination - social issues vocabulary."
+          },
+          {
+            "term": "el medio ambiente / sostenible / las energías renovables",
+            "detail": "the environment / sustainable / renewable energies - environment vocabulary linking to global issues."
+          }
+        ]
+      },
+      {
+        "title": "Exam structure: all four papers with timings, and speaking openers",
+        "kind": "data",
+        "items": [
+          {
+            "term": "Paper 1: Speaking, overall structure",
+            "detail": "Three parts in one recorded assessment: role-play (based on a photo/situation), photo card discussion, and general conversation on two themes; total 7-9 minutes plus 12 minutes supervised preparation time, worth 25% of the GCSE."
+          },
+          {
+            "term": "Speaking Part 1: Role-play",
+            "detail": "Five prompts/tasks (including one unprepared question) based on a short scenario card; respond in Spanish to each bullet point in turn, using the correct tense (often present or a past tense) as implied by the prompt."
+          },
+          {
+            "term": "Speaking Part 2: Photo card",
+            "detail": "Describe a photo and answer follow-up questions linked to the theme; discussion lasts about 3-4 minutes at Higher tier."
+          },
+          {
+            "term": "Speaking Part 3: General conversation",
+            "detail": "Discussion of two themes chosen from the specification (one may be the same as the photo card theme), lasting about 5-6 minutes at Higher tier, requiring a range of tenses and opinions."
+          },
+          {
+            "term": "Role-play sentence openers",
+            "detail": "Quisiera... (I would like...), ¿Puedo...? (Can I...?), Prefiero... (I prefer...), ¿Cuesta...? (Does it cost...?), Me gustaría reservar/comprar... (I would like to book/buy...)."
+          },
+          {
+            "term": "Photo card sentence openers",
+            "detail": "En la foto se ve/hay... (In the photo you can see/there is...), En primer plano... (In the foreground...), Al fondo... (In the background...), Me parece que... (It seems to me that...), Esto me recuerda a... (This reminds me of...)."
+          },
+          {
+            "term": "General conversation sentence openers",
+            "detail": "Normalmente... (Normally...), El año pasado... (Last year...), En el futuro me gustaría... (In the future I would like to...), Por un lado... por otro lado... (On one hand... on the other hand...)."
+          },
+          {
+            "term": "Paper 2: Listening",
+            "detail": "1 hour, worth 25% of the GCSE. Higher tier questions in Spanish and English, including some dictation-style and multiple-choice tasks; play the recording twice."
+          },
+          {
+            "term": "Paper 3: Reading and translation into English",
+            "detail": "1 hour, worth 25% of the GCSE. Includes a range of authentic and adapted texts plus a translation of a short passage from Spanish into English."
+          },
+          {
+            "term": "Paper 4: Writing including translation into Spanish",
+            "detail": "1 hour 20 minutes, worth 25% of the GCSE. Includes shorter and extended writing tasks (Higher tier extended answer around 130-150 words using at least two tenses and opinions) plus a translation of English sentences/passage into Spanish."
+          },
+          {
+            "term": "Writing task sentence openers",
+            "detail": "En mi opinión... (In my opinion...), Además... (Furthermore...), Sin embargo... (However...), Para concluir... (To conclude...), Si pudiera... (If I could...)."
+          }
+        ]
+      },
+      {
+        "title": "Exam-day plan",
+        "kind": "list",
+        "items": [
+          {
+            "term": "Paper 1 (1SP1/1H) - Speaking",
+            "detail": "7-9 minutes plus 12 minutes supervised preparation, in a school-arranged window (12 April to 21 May 2027). Worth 25%. Prepare general conversation themes in advance but expect one unpredictable role-play question; speak clearly and correct yourself calmly if you make an error."
+          },
+          {
+            "term": "Paper 2 (1SP1/2H) - Listening",
+            "detail": "1 hour, worth 25%. Read every question before each recording starts, note numbers and negatives on first listen, and use the second playing to check and fill gaps."
+          },
+          {
+            "term": "Paper 3 (1SP1/3H) - Reading",
+            "detail": "1 hour, worth 25%. Skim all questions first, use cognates and context to guess unfamiliar words, and leave the English translation passage until confident of the rest of the paper since it is time-consuming to check."
+          },
+          {
+            "term": "Paper 4 (1SP1/4H) - Writing",
+            "detail": "1 hour 20 minutes, worth 25%. Plan the extended writing answer for tense variety and opinions before writing, complete the translation into Spanish last if it is worth fewer marks, and leave 5 minutes to check verb endings and accents."
+          },
+          {
+            "term": "General accent-checking rule for all written papers",
+            "detail": "Read back every verb ending and check accents on words like está vs esta, sí vs si, and preterite endings (-ó vs -o) since these change meaning or tense."
+          },
+          {
+            "term": "Equipment and setup for the speaking exam",
+            "detail": "Bring the role-play and photo card stimulus cards you are given in preparation time, plus any notes made in the 12 minutes; no dictionaries are allowed in the preparation room."
+          },
+          {
+            "term": "Warm-up before the speaking exam",
+            "detail": "Mentally rehearse opinion phrases and at least one sentence in the past, present and future tense so a range of tenses comes out naturally in the general conversation."
+          },
+          {
+            "term": "Final check before submitting Paper 4 writing",
+            "detail": "Reread the extended writing task for tense variety (at least two tenses), adjective agreement, and that the word count target of 130 to 150 words has been met."
+          }
+        ]
+      }
+    ]
+  },
   "topics": [
     {
       "id": "sp-customs",

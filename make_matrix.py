@@ -32,7 +32,7 @@ def main():
     a("")
     a("> %s" % data["boardVerificationNote"])
     a("")
-    a("Legend: :white_check_mark: board confirmed from a KEFW document. :warning: board provisional - confirm with the school before relying on the past papers.")
+    a("Legend: :white_check_mark: board confirmed against the KEFW published examination boards list.")
     a("")
 
     # ── Summary table ──

@@ -1,278 +1,1184 @@
 {
   "id": "english-literature",
   "name": "English Literature",
-  "board": "AQA",
-  "boardVerified": false,
-  "boardNote": "FLAGGED: board and set texts are UNCONFIRMED for KEFW - no English curriculum PDF was supplied and KEFW publishes no exam-board list. AQA 8702 with the Power and Conflict poetry cluster is the most common England combination. Confirm the board AND the four set texts with the school, because Paper 1 and Paper 2 questions are text-specific.",
-  "specCode": "8702",
+  "board": "OCR",
+  "boardVerified": true,
+  "specCode": "J352",
   "tier": "Single tier",
   "accent": "rose",
-  "papers": "Paper 1: Shakespeare and the 19th-century novel (1h45, 40%). Paper 2: Modern texts and poetry (2h15, 60%). Closed book - all texts must be memorised.",
+  "boardNote": "VERIFIED from the King Edward VI Five Ways published examination boards list, which names Cambridge OCR for English Literature and AQA for English Language. Set texts confirmed by the family: The Strange Case of Dr Jekyll and Mr Hyde, Macbeth and An Inspector Calls. The poetry cluster has not been confirmed, so all three OCR clusters are included.",
+  "papers": "Component 01 Exploring modern and literary heritage texts, 2 hours, 80 marks, 50 percent: Section A modern prose or drama (40 marks), Section B 19th century prose (40 marks). Component 02 Exploring poetry and Shakespeare, 2 hours, 80 marks, 50 percent: Section A poetry across time from the OCR Poetry Anthology (40 marks), Section B Shakespeare (40 marks). Both papers are closed text.",
   "pastPapers": {
-    "label": "AQA GCSE English Literature 8702 assessment resources",
-    "url": "https://www.aqa.org.uk/subjects/english/gcse/english-literature-8702/assessment-resources",
+    "label": "OCR GCSE English Literature J352 assessment materials and past papers",
+    "url": "https://www.ocr.org.uk/qualifications/gcse/english-literature-j352-from-2015/assessment/",
     "verified": true
   },
   "resources": [
     {
-      "label": "BBC Bitesize GCSE English Literature (AQA)",
-      "url": "https://www.bbc.co.uk/bitesize/examspecs/zxqncwx",
+      "label": "OCR GCSE English Literature J352 specification (PDF)",
+      "url": "https://www.ocr.org.uk/images/168995-specification-accredited-gcse-english-literature-j352.pdf",
       "verified": true
     },
     {
-      "label": "BBC Bitesize AQA poetry anthology guides",
-      "url": "https://www.bbc.co.uk/bitesize/topics/zprysg8",
+      "label": "OCR GCSE English Literature J352 qualification page",
+      "url": "https://www.ocr.org.uk/qualifications/gcse/english-literature-j352-from-2015/",
       "verified": true
     },
     {
-      "label": "MME Revise free GCSE revision",
-      "url": "https://mmerevise.co.uk/",
+      "label": "BBC Bitesize GCSE English Literature",
+      "url": "https://www.bbc.co.uk/bitesize/subjects/zckw2hv",
       "verified": true
     },
     {
-      "label": "Physics and Maths Tutor revision notes",
-      "url": "https://www.physicsandmathstutor.com/",
+      "label": "Maths Made Easy GCSE English Literature revision",
+      "url": "https://mmerevise.co.uk/gcse-revision/gcse-english-literature/",
+      "verified": true
+    },
+    {
+      "label": "Revision World OCR English Literature past papers",
+      "url": "https://revisionworld.com/a2-level-level-revision/english-literature-gcse-level/english-literature-gcse-past-papers/ocr-gcse-english-literature-past-papers",
       "verified": true
     }
   ],
   "topics": [
     {
-      "id": "lit-shakespeare",
-      "name": "Paper 1 Section A: Shakespeare",
+      "id": "el-inspector-calls",
+      "name": "An Inspector Calls (Component 01, Section A)",
       "subtopics": [
-        "One question with a printed extract, then the play as a whole",
-        "30 marks plus 4 marks for spelling, punctuation and grammar",
-        "AO1 response and evidence, AO2 language form and structure, AO3 context",
-        "Closed book - quotations must be memorised",
-        "Tracking a character or theme across the whole play",
-        "Dramatic devices: soliloquy, aside, dramatic irony, stagecraft",
-        "Contextual frames: kingship, the divine right, gender, honour, the supernatural",
-        "Structure of an answer: thesis, extract analysis, whole-play development, conceptual conclusion"
+        "No extract is printed for the modern text question - you write a whole-play essay from a choice of two questions",
+        "J. B. Priestley's socialist purpose: writing in 1945 about events set in 1912, warning post-war Britain against returning to pre-war selfishness",
+        "Mr Birling: capitalist complacency, dramatic irony over the Titanic and 'the war will never happen'",
+        "Mrs Birling: hypocrisy, class snobbery, denial of responsibility towards Eva Smith",
+        "Sheila: the character who changes most, from spoilt fiancee to someone who accepts collective responsibility",
+        "Eric: drinking, financial dependence, theft, and his own culpability with Eva",
+        "Gerald Croft: the 'man of the world', his affair with Daisy Renton, and his relief when the Inspector is exposed as possibly false",
+        "Inspector Goole: mouthpiece for Priestley, omniscient control of pace and revelations, symbolic surname (ghoul)",
+        "Eva Smith/Daisy Renton: never appears on stage, represents the exploited working class and the invisibility of the poor",
+        "The cyclical structure: the final telephone call repeats the Act One announcement, trapping the family in the same crisis",
+        "Dramatic irony throughout, built from the audience's 1945 knowledge of two world wars and the Titanic's sinking",
+        "Stagecraft: the single set, the lighting change from 'pink and intimate' to 'brighter and harder', the doorbell as a structural device",
+        "Themes: collective versus individual responsibility, class and privilege, capitalism versus socialism, generational divide (older Birlings versus Sheila and Eric)",
+        "The play as a moral fable or 'well-made play' with a three-act structure building to a twist",
+        "Context: the 1912 setting (pre-Titanic, pre-war optimism) versus the 1945 audience who had lived through the Second World War and the founding of the welfare state",
+        "Key scenes: the engagement toast in Act One, the Inspector's exit speech ('fire and blood and anguish'), the final telephone call"
       ],
       "cards": [
         {
-          "front": "How is the Shakespeare question on AQA Paper 1 structured?",
-          "back": "A printed extract is given; you must analyse it and then widen your answer to the play as a whole. 30 marks plus 4 SPaG marks."
+          "front": "Why did Priestley set An Inspector Calls in 1912 but write it in 1945?",
+          "back": "To use dramatic irony: the 1945 audience knew the 1912 optimism about peace and prosperity (and the Titanic) was about to be shattered, reinforcing his warning against complacency."
         },
         {
-          "front": "What are the four assessment objectives in GCSE English Literature?",
-          "back": "AO1 informed personal response with evidence, AO2 analysis of language form and structure, AO3 relationship between text and context, AO4 accurate written expression."
+          "front": "How does Sheila change across the play?",
+          "back": "She moves from a spoilt, jealous fiancee in Act One to the character who most fully accepts responsibility and challenges her parents' refusal to learn, showing Priestley's hope for the younger generation."
         },
         {
-          "front": "What is a soliloquy and why does it matter in the exam?",
-          "back": "A speech delivered alone on stage revealing inner thoughts. It gives the audience privileged access to a character, so it is high-value evidence for character analysis."
+          "front": "What is the dramatic function of the Inspector's exit speech?",
+          "back": "It delivers Priestley's central socialist message directly to the audience: that if people do not learn collective responsibility, the world faces 'fire and blood and anguish' - a warning about war."
         },
         {
-          "front": "How much of the Shakespeare answer should be about the extract?",
-          "back": "Roughly half, then move deliberately outward to the rest of the play - answers that stay only in the extract cap in the middle bands."
+          "front": "Why does Priestley never let Eva Smith appear on stage?",
+          "back": "It keeps the focus on how each character treats her, turning her into a symbol of the invisible, exploited working class rather than an individual the audience can dismiss."
+        },
+        {
+          "front": "What is significant about the play's final telephone call?",
+          "back": "It repeats the opening announcement almost exactly, creating a cyclical structure that suggests the family's chance to learn may be about to repeat, or that they cannot escape the consequences of their actions."
+        },
+        {
+          "front": "How does Mr Birling's dramatic irony work in Act One?",
+          "back": "His confident, factually wrong predictions (Titanic 'unsinkable', no war coming) immediately undermine his authority for the audience, discrediting his capitalist worldview from the start."
+        },
+        {
+          "front": "What does Gerald's reaction to the Inspector possibly being fake reveal?",
+          "back": "His relief shows he wants to escape moral responsibility rather than learn from what happened, aligning him with the older generation despite his youth."
+        },
+        {
+          "front": "What does the surname 'Goole' suggest about the Inspector?",
+          "back": "It sounds like 'ghoul', hinting he may be supernatural, a moral force, or Eva's avenging conscience rather than a literal police inspector."
+        },
+        {
+          "front": "Give two ways stagecraft controls mood in the play.",
+          "back": "The single continuous set keeps tension concentrated in one room, and the lighting shifts from 'pink and intimate' to 'brighter and harder' when the Inspector arrives, exposing the family."
+        },
+        {
+          "front": "What is the central thematic conflict of the play?",
+          "back": "Individual responsibility and capitalism (the Birlings' view) versus collective responsibility and socialism (the Inspector's view), reflecting Priestley's own political beliefs."
         }
       ],
       "cloze": [
-        "The Shakespeare question is worth {{c1::30}} marks plus {{c2::4}} marks for SPaG.",
-        "AQA English Literature is a {{c1::closed book}} exam, so all quotations must be {{c2::memorised}}."
+        "An Inspector Calls is set in {{c1::1912}} but was written and first performed in {{c2::1945}}.",
+        "The Inspector's surname, {{c1::Goole}}, hints that he may be a {{c2::supernatural}} or moral force rather than a real policeman.",
+        "{{c1::Sheila}} is the character who changes most across the play, ending by challenging her parents.",
+        "The play ends with a {{c1::telephone call}} that repeats the opening announcement, creating a {{c2::cyclical}} structure.",
+        "Priestley uses the 1912 setting for {{c1::dramatic irony}}, since the audience knew the Titanic would sink and war would follow."
       ]
     },
     {
-      "id": "lit-19c-novel",
-      "name": "Paper 1 Section B: The 19th-Century Novel",
+      "id": "el-jekyll-hyde",
+      "name": "The Strange Case of Dr Jekyll and Mr Hyde (Component 01, Section B)",
       "subtopics": [
-        "Extract-based question then the whole novel (30 marks, no SPaG marks here)",
-        "Common set texts: A Christmas Carol, Jekyll and Hyde, Great Expectations, Frankenstein, Jane Eyre, Sign of Four, Pride and Prejudice (FLAG: KEFW text unconfirmed)",
-        "Victorian context: class, poverty, Malthus and the Poor Laws, industrialisation",
-        "Duality, Gothic conventions, science versus religion, reputation and respectability",
-        "Narrative structure: staves, chapters, framed narrative, unreliable narration",
-        "Character arcs and moments of transformation",
-        "Symbolism and motif tracking (light, doors, weather, animals)",
-        "Building a thesis that answers the question in the first sentence"
+        "A printed extract question: analyse the given extract, then range across the whole novel",
+        "Robert Louis Stevenson writing in 1886 for a late-Victorian audience anxious about science, morality and respectability",
+        "Structure: a framed, multi-narrator novel - Utterson's third-person narrative, then Lanyon's letter, then Jekyll's final confession",
+        "The withholding of information: the mystery-thriller structure delays the reveal that Jekyll and Hyde are one person",
+        "Duality as the central idea: every man is 'not truly one, but truly two', a battle between civilised self and primitive urges",
+        "Dr Jekyll: respectable, repressed, scientifically curious, ultimately consumed by his own experiment",
+        "Mr Hyde: physically smaller, described as ape-like, primitive, associated with violence (Carew murder) and instinctive evil",
+        "Mr Utterson: the reliable, restrained lawyer whose investigation structures the reader's discovery of the truth",
+        "Dr Lanyon: the rational scientist destroyed by witnessing something that defies his scientific worldview",
+        "Victorian context: strict codes of respectability and reputation, fear of being publicly disgraced",
+        "Context: the Victorian double life, hidden vice behind a respectable public facade (echoes of real cases and Darwinian anxiety about man's animal nature)",
+        "Context: contemporary science, evolutionary theory, and fears that science could unleash uncontrollable forces",
+        "Gothic conventions: fog-bound London streets, locked doors, a sinister house, the uncanny, transformation/transgression",
+        "Symbolism: the door as a barrier between public and private selves, the two entrances to Jekyll's house",
+        "Key scenes: Enfield's account of Hyde trampling the girl, the Carew murder, Lanyon's witnessing of the transformation, Jekyll's final statement",
+        "Jekyll's final confession as a first-person unravelling of motive, guilt and loss of control over the transformations"
       ],
       "cards": [
         {
-          "front": "How many marks is the 19th-century novel question worth?",
-          "back": "30 marks. SPaG marks are only awarded on the Shakespeare question in Paper 1."
+          "front": "What is the central duality explored in Jekyll and Hyde?",
+          "back": "Stevenson presents every person as containing both a civilised, respectable self and a primitive, immoral self - 'man is not truly one, but truly two'."
         },
         {
-          "front": "Name three Gothic conventions examiners expect you to recognise.",
-          "back": "Uncanny or supernatural events, oppressive or labyrinthine settings, doubling and duality, physical decay, transgression of natural limits."
+          "front": "Why does Stevenson delay revealing that Jekyll and Hyde are the same person?",
+          "back": "The novel is structured as a mystery; withholding the connection builds suspense and lets the reader experience Utterson's own confusion and investigation."
         },
         {
-          "front": "Why is context (AO3) not just historical background information?",
-          "back": "Marks are awarded for showing how context shapes meaning in the text, not for standalone facts about the period."
+          "front": "What is the effect of using multiple narrators (Utterson, Lanyon's letter, Jekyll's confession)?",
+          "back": "Each narrator has a different degree of knowledge and reliability, gradually revealing more of the truth and letting Stevenson delay full disclosure until the very end."
         },
         {
-          "front": "What is a framed narrative?",
-          "back": "A story told inside another story, e.g. a letter or testimony that encloses the main narrative, which distances the reader and raises questions of reliability."
+          "front": "How is Hyde physically described, and why?",
+          "back": "As smaller, ape-like and giving an instinctive impression of deformity - his appearance reflects an atavistic, animalistic morality, tying into Victorian anxiety about evolution."
+        },
+        {
+          "front": "Why does Dr Lanyon die after witnessing the transformation?",
+          "back": "As a rational man of science, witnessing Hyde transform into Jekyll shatters his entire scientific worldview - the shock destroys him."
+        },
+        {
+          "front": "What does the locked door and Jekyll's cabinet symbolise?",
+          "back": "The barrier between Jekyll's respectable public life and his hidden, secret self - a physical symbol of Victorian double lives."
+        },
+        {
+          "front": "How does the novel reflect Victorian anxieties about respectability?",
+          "back": "Jekyll's fear of public disgrace drives him to create Hyde as an outlet for desires he cannot express respectably, mirroring real Victorian fears of hidden vice behind a public facade."
+        },
+        {
+          "front": "What role does fog play in the novel's setting?",
+          "back": "It is a Gothic device that obscures and disorientates, mirroring the moral confusion and hidden truths at the heart of the story, and reflects real Victorian London smog."
+        },
+        {
+          "front": "How does Jekyll lose control over his transformations?",
+          "back": "What begins as a deliberate, controlled experiment becomes involuntary - Hyde starts to emerge without the potion, showing addiction and the danger of indulging one's darker nature."
+        },
+        {
+          "front": "What is significant about Jekyll's final written confession?",
+          "back": "It is the only first-person account in the novel, finally giving the reader Jekyll's own motives, guilt and admission that he created Hyde to escape moral responsibility for his vices."
         }
       ],
       "cloze": [
-        "In the Victorian period, the {{c1::Poor Law}} of 1834 sent the destitute into workhouses.",
-        "A narrator whose account the reader cannot fully trust is called an {{c1::unreliable}} narrator."
+        "Stevenson presents every person as containing two natures: man is 'not truly {{c1::one}}, but truly {{c2::two}}'.",
+        "The novel withholds the truth that {{c1::Jekyll}} and {{c2::Hyde}} are the same person until near the end.",
+        "{{c1::Dr Lanyon}} dies after witnessing the transformation because it destroys his rational, scientific worldview.",
+        "Hyde is described as {{c1::ape-like}}, reflecting Victorian anxiety about {{c2::evolution}} and man's animal nature.",
+        "The final chapter is {{c1::Jekyll's}} own written confession, told in the first person."
       ]
     },
     {
-      "id": "lit-modern-text",
-      "name": "Paper 2 Section A: Modern Text",
+      "id": "el-macbeth",
+      "name": "Macbeth (Component 02, Section B)",
       "subtopics": [
-        "Choice of two essay questions - no extract given, 30 marks plus 4 SPaG marks",
-        "Common set texts: An Inspector Calls, Blood Brothers, Lord of the Flies, Animal Farm, DNA, Anita and Me (FLAG: KEFW text unconfirmed)",
-        "Whole-text knowledge with a bank of short memorised quotations",
-        "Themes: responsibility, class, gender, generational conflict, power",
-        "Dramatic or novelistic form: acts, stage directions, dramatic irony, allegory",
-        "Writer intention and audience effect",
-        "Choosing between the two questions quickly and committing",
-        "Essay plan in three to four minutes before writing"
+        "A printed extract question: analyse the given extract, then discuss the whole play",
+        "Shakespeare writing around 1606 for James I, who believed in the divine right of kings and had survived the Gunpowder Plot",
+        "The three witches (Weird Sisters): ambiguous prophecy, supernatural temptation, and Jacobean beliefs about witchcraft",
+        "Macbeth's initial nobility (Sergeant's report, 'brave Macbeth') set against his rapid moral decline",
+        "Macbeth's soliloquies as windows into a conscience at war with ambition ('If it were done, when 'tis done'; 'dagger' soliloquy)",
+        "Lady Macbeth: ambition, manipulation of Macbeth's masculinity, the sleepwalking and hand-washing that reveal guilt she cannot voice",
+        "The motif of blood: from 'brave Macbeth' with 'smoking' blade to Lady Macbeth's inability to wash imagined blood from her hands",
+        "The motif of darkness and unnatural disorder: disrupted sleep, storms, and the natural world reacting to regicide",
+        "Banquo: Macbeth's foil, murdered out of paranoia, whose ghost appears at the banquet as a symbol of guilt",
+        "Macduff: the avenging hero, learns of his family's murder, kills Macbeth in the final act, restoring order",
+        "Duncan: the rightful, divinely-sanctioned king, whose murder is a crime against both the state and natural/divine order",
+        "The theme of ambition and its corrupting effect on both Macbeths",
+        "The theme of kingship: contrast between Duncan's/Malcolm's legitimate rule and Macbeth's tyranny",
+        "The theme of the supernatural and fate versus free will - do the witches control Macbeth or merely reveal his own desires",
+        "Key scenes: the witches' first prophecy (Act 1), Duncan's murder (Act 2), Banquo's ghost at the banquet (Act 3), the sleepwalking scene (Act 5), the final duel with Macduff",
+        "Dramatic irony and structure: the rise-and-fall tragic arc typical of Shakespearean tragedy, with the order of Scotland restored under Malcolm at the end"
       ],
       "cards": [
         {
-          "front": "Is an extract provided for the Modern Text question?",
-          "back": "No. It is a whole-text essay with a choice of two questions, so quotations must be memorised."
+          "front": "Why might Shakespeare have written Macbeth to flatter King James I?",
+          "back": "James I believed in the divine right of kings and claimed descent from Banquo; the play condemns regicide and shows witchcraft (a subject James wrote about) as a real, dangerous force."
         },
         {
-          "front": "How many marks is the Modern Text question worth?",
-          "back": "30 marks plus 4 marks for spelling, punctuation and grammar."
+          "front": "How does Macbeth change from Act 1 to Act 5?",
+          "back": "He moves from a brave, loyal general praised by the Sergeant to a paranoid tyrant who murders friends and children, showing the corrupting effect of unchecked ambition."
         },
         {
-          "front": "What is dramatic irony?",
-          "back": "When the audience knows something a character does not, creating tension or moral judgement."
+          "front": "What is the dramatic function of Macbeth's soliloquies?",
+          "back": "They reveal his internal conflict between ambition and conscience, letting the audience see the moral cost of his actions that other characters cannot."
         },
         {
-          "front": "What is an allegory?",
-          "back": "A narrative in which characters and events stand for wider political, moral or historical ideas."
+          "front": "How does Lady Macbeth manipulate Macbeth before Duncan's murder?",
+          "back": "She questions his masculinity and courage, telling him to 'screw your courage to the sticking-place', pushing him past his own doubts."
+        },
+        {
+          "front": "Trace the blood motif across the play.",
+          "back": "Macbeth is first praised for his bloody, heroic actions in battle; after Duncan's murder blood becomes a symbol of guilt, culminating in Lady Macbeth's hallucinated bloodstains she cannot wash away."
+        },
+        {
+          "front": "What does Banquo's ghost at the banquet represent?",
+          "back": "Macbeth's guilty conscience made visible - only he can see the ghost, showing his growing psychological disintegration and isolation."
+        },
+        {
+          "front": "How does Shakespeare use the natural world to reflect the murder of Duncan?",
+          "back": "Unnatural disorder follows the regicide - storms, strange animal behaviour and darkness during daytime - reflecting the Jacobean belief that killing a king disrupted the natural and divine order."
+        },
+        {
+          "front": "What is Macduff's dramatic role in the play?",
+          "back": "He is the avenging hero who loses his family to Macbeth's tyranny and ultimately kills Macbeth, restoring rightful order under Malcolm."
+        },
+        {
+          "front": "Do the witches control Macbeth's fate, or reveal his own ambition?",
+          "back": "This is deliberately ambiguous - the prophecy could be read as manipulating him, or simply voicing an ambition that was already within him, which he then chooses to act on."
+        },
+        {
+          "front": "What does the sleepwalking scene reveal about Lady Macbeth?",
+          "back": "Unlike her earlier confident ruthlessness, she is now consumed by guilt she cannot control or voice while awake, showing psychological collapse."
         }
       ],
       "cloze": [
-        "In Paper 2 Section A you answer {{c1::one}} of {{c2::two}} questions on the modern text.",
-        "Paper 2 is worth {{c1::60}} percent of the GCSE English Literature grade."
+        "Macbeth is first described by the Sergeant as {{c1::brave}} before his moral decline begins.",
+        "Lady Macbeth tells Macbeth to 'screw your {{c1::courage}} to the sticking-place' to push him towards murder.",
+        "{{c1::Banquo's ghost}} appears at the banquet, visible only to Macbeth, symbolising his guilt.",
+        "After Duncan's murder, {{c1::blood}} becomes a recurring symbol of guilt that cannot be washed away.",
+        "{{c1::Macduff}} kills Macbeth in the final act, restoring order under {{c2::Malcolm}}."
       ]
     },
     {
-      "id": "lit-anthology-poetry",
-      "name": "Paper 2 Section B: Poetry Anthology",
+      "id": "el-poetry-love",
+      "name": "OCR Poetry Anthology: Love and Relationships Cluster",
       "subtopics": [
-        "One named poem is printed; you compare it with one poem of your choice from the same cluster",
-        "30 marks, no SPaG marks",
-        "Common cluster: Power and Conflict (FLAG: KEFW cluster unconfirmed)",
-        "Power and Conflict poems include Ozymandias, London, Extract from The Prelude, My Last Duchess, Charge of the Light Brigade, Exposure, Storm on the Island, Bayonet Charge, Remains, Poppies, War Photographer, Tissue, The Emigree, Checking Out Me History, Kamikaze",
-        "Comparing ideas, methods and contexts - not just listing features",
-        "Form and structure: sonnet, dramatic monologue, free verse, enjambment, caesura, volta",
-        "Thematic clusters within the anthology: power of humans, power of nature, effects of conflict, memory and loss",
-        "Making an integrated comparison in every paragraph rather than one poem then the other"
+        "This cluster is one of three options in the OCR Poetry Anthology 'Towards a World Unknown' - the family has not confirmed which cluster is studied, so treat this as preparation only until confirmed",
+        "The exam gives one named poem printed on the paper, plus a linked unseen poem; you compare the named poem with the unseen poem and may also be asked about a second anthology poem",
+        "Do not guess specific poem titles you are not certain belong to this cluster - focus revision on themes, comparative method and named poems only where certain",
+        "Likely thematic range for a Love and Relationships cluster: romantic love, loss of love, family bonds, one-sided or unrequited love, love across distance or time, the pain and joy love can bring",
+        "Comparative method: identify a shared theme or attitude between the named poem and the unseen poem, then compare how each poet presents it",
+        "Poetic form and structure relevant to love poetry: the sonnet form and its traditional association with romantic love, dramatic monologue giving one voice's perspective, structure that shifts at a volta",
+        "Voice and perspective: whether a poem is spoken in first person, addressed directly to a lover, or narrated about a relationship from outside",
+        "Imagery patterns common in love poetry: nature imagery for growth or decay of feeling, domestic imagery for intimacy, extended metaphor for a relationship",
+        "Tone shifts within a single poem, e.g. from tenderness to anger, or nostalgia to acceptance",
+        "Sound and rhythm: how rhyme scheme, metre or its absence (free verse) can mirror harmony or discord in a relationship",
+        "Comparing methods, not just content: two poems can share a theme (loss) but use very different techniques to convey it",
+        "Building flexible comparison points: form, structure, imagery, tone and language choices that can be adapted to whichever named poem appears",
+        "Practising with any unseen love-themed poem to build confidence comparing methods under time pressure",
+        "Revision priority: since the studied poems are unconfirmed, prioritise comparative skills and terminology over memorising specific poem content"
       ],
       "cards": [
         {
-          "front": "How is the Poetry Anthology question structured?",
-          "back": "One poem from your cluster is printed and named; you compare how it and one other poem you choose from the same cluster present a given theme. 30 marks."
+          "front": "How is the Poetry Anthology question on Component 02 structured?",
+          "back": "One named poem from your studied cluster is printed on the paper alongside a linked unseen poem; you compare how both poems present a given theme, focusing on methods."
         },
         {
-          "front": "What is a dramatic monologue?",
-          "back": "A poem spoken in the voice of a single created character, revealing their personality unintentionally, e.g. My Last Duchess."
+          "front": "Why does this revision set avoid naming specific poems in the Love and Relationships cluster?",
+          "back": "The family has not confirmed which OCR poetry cluster is studied, and the specific poem list has not been independently verified, so guessing titles risks embedding wrong facts - only certain themes and methods are covered."
         },
         {
-          "front": "Define enjambment and caesura.",
-          "back": "Enjambment: a sentence running over the line break without punctuation. Caesura: a deliberate pause inside a line, usually from punctuation."
+          "front": "What comparative approach should you use regardless of which poems appear?",
+          "back": "Identify a shared idea or theme first, then compare each poet's methods (form, structure, imagery, tone) for presenting it, rather than describing each poem separately."
         },
         {
-          "front": "What is a volta?",
-          "back": "A turn or shift in argument or mood within a poem, classically at line 9 of a Petrarchan sonnet."
+          "front": "Why is the sonnet form often associated with love poetry?",
+          "back": "Its traditional 14-line structure and volta (turn) suit exploring a single idea about love and then complicating or resolving it, a pattern many love poems adapt or subvert."
         },
         {
-          "front": "Why is integrated comparison better than a poem-by-poem structure?",
-          "back": "The mark scheme rewards sustained comparison of ideas and methods; separate blocks tend to become description and lose comparative marks."
+          "front": "What is a dramatic monologue and why might it suit a love poem?",
+          "back": "A poem spoken in a single created voice, which can reveal a speaker's feelings about a relationship more intimately, including feelings they may not fully realise themselves."
+        },
+        {
+          "front": "Give an example of how imagery might mirror a relationship in a love poem.",
+          "back": "Nature imagery (blossoming, withering) can mirror the growth or decline of feeling, while domestic imagery can convey intimacy or entrapment within a relationship."
+        },
+        {
+          "front": "How can rhyme and rhythm reflect the state of a relationship?",
+          "back": "A regular, harmonious rhyme scheme can suggest a stable or contented relationship, while broken rhythm, irregular line lengths or free verse can suggest conflict or emotional turmoil."
+        },
+        {
+          "front": "What is the risk of comparing two poems 'poem by poem'?",
+          "back": "It tends to become description of each poem in turn rather than sustained comparison, which limits marks for comparative analysis of methods."
         }
       ],
       "cloze": [
-        "In the Poetry Anthology question, {{c1::one}} poem is printed and you choose {{c2::one}} other from the same cluster.",
-        "A sudden turn in a poems argument or mood is called a {{c1::volta}}.",
-        "{{c1::Ozymandias}} by Shelley uses a ruined statue to show the impermanence of human power."
+        "The Love and Relationships cluster is one of {{c1::three}} themed clusters in the OCR Poetry Anthology.",
+        "In the exam, a {{c1::named}} poem is printed alongside a linked {{c2::unseen}} poem for comparison.",
+        "A poem spoken in a single created voice is called a {{c1::dramatic monologue}}.",
+        "A {{c1::volta}} is a turn or shift in a poem's argument or mood, often used in sonnets about love."
       ]
     },
     {
-      "id": "lit-unseen-poetry",
-      "name": "Paper 2 Section C: Unseen Poetry",
+      "id": "el-poetry-conflict",
+      "name": "OCR Poetry Anthology: Conflict Cluster",
       "subtopics": [
-        "Q1: analyse one unseen poem (24 marks)",
-        "Q2: compare the methods of that poem with a second unseen poem (8 marks)",
-        "No context marks are awarded - focus on ideas and methods",
-        "Fast reading strategy: read twice, annotate voice, tone shift, images, form",
-        "Identifying the central idea before analysing detail",
-        "Timing: about 30 minutes for Q1 and 15 minutes for Q2",
-        "Q2 must be about methods, not just content",
-        "Tentative language: perhaps, suggests, could imply"
+        "This cluster is one of three options in the OCR Poetry Anthology 'Towards a World Unknown' - the family has not confirmed which cluster is studied, so treat this as preparation only until confirmed",
+        "The exam gives one named poem printed on the paper, plus a linked unseen poem; you compare the named poem with the unseen poem and may also be asked about a second anthology poem",
+        "Do not guess specific poem titles you are not certain belong to this cluster - focus revision on themes, comparative method and named poems only where certain",
+        "Likely thematic range for a Conflict cluster: physical war and battle, the psychological aftermath of conflict, conflict between generations or cultures, inner emotional conflict, the cost of conflict to ordinary people",
+        "Perspective in conflict poetry: soldier's first-hand voice, a civilian or bystander's view, or a distanced/reflective narrator looking back",
+        "Imagery patterns common in conflict poetry: violent or visceral physical imagery, imagery of destruction and ruin, contrasting imagery of peace or home to heighten the horror of conflict",
+        "Structural devices: fragmented or disrupted structure to mirror chaos, regular structure used ironically to suggest false order, enjambment to create urgency or breathlessness",
+        "Tone in conflict poetry: anger, grief, irony, numbness, or a controlled, restrained tone that lets horror speak for itself",
+        "Sound devices: harsh consonants and plosives for violence, caesura for sudden shock or interruption",
+        "Comparative method: identify a shared idea about conflict (its cost, its glorification, its aftermath) then compare how each poet's methods present it differently",
+        "Comparing attitudes to conflict: some poems may glorify or question, condemn or memorialise - identify the poet's stance as part of the comparison",
+        "Building flexible comparison points around structure, imagery, tone and form so they can be adapted to whichever named poem appears",
+        "Practising with any unseen conflict-themed poem to build confidence comparing methods under time pressure",
+        "Revision priority: since the studied poems are unconfirmed, prioritise comparative skills and terminology over memorising specific poem content"
       ],
       "cards": [
         {
-          "front": "How are the marks split in the Unseen Poetry section?",
-          "back": "24 marks for analysing the first unseen poem, then 8 marks for comparing the methods of both poems. 32 marks total."
+          "front": "What kinds of conflict might appear across poems in this cluster?",
+          "back": "Physical war and battle, the psychological aftermath of conflict for soldiers or civilians, conflict between generations or cultures, and inner emotional conflict."
         },
         {
-          "front": "Does context earn marks in the Unseen Poetry section?",
-          "back": "No. AO3 is not assessed here, so time spent guessing historical context is wasted."
+          "front": "Why might a poet use fragmented or disrupted structure in a conflict poem?",
+          "back": "To mirror the chaos, disorientation or trauma of conflict, rather than presenting events in a calm, orderly way."
         },
         {
-          "front": "What must the 8-mark unseen comparison focus on?",
-          "back": "The poets methods - language, form and structure - and their differing effects, not a content summary."
+          "front": "How can caesura be used effectively in a conflict poem?",
+          "back": "A sudden pause mid-line can convey shock, interruption, or a sudden violent event, forcing the reader to pause as the speaker might."
         },
         {
-          "front": "Give a reliable four-step approach to an unseen poem.",
-          "back": "Identify the speaker and situation, find the tone shift, pick three method-rich images, then link each back to the central idea."
+          "front": "What is the effect of contrasting imagery of home or peace within a conflict poem?",
+          "back": "It heightens the horror or loss of conflict by reminding the reader what has been destroyed or is unreachable, creating emotional contrast."
+        },
+        {
+          "front": "Why might a poet choose a restrained, controlled tone to describe violence?",
+          "back": "Understatement can be more powerful than explicit horror, letting the facts or images speak for themselves and inviting the reader to supply the emotional response."
+        },
+        {
+          "front": "What should you compare when two conflict poems share a similar theme, such as loss?",
+          "back": "Not just that both mention loss, but how each poet's structure, imagery, form and tone create a different presentation or attitude towards that loss."
+        },
+        {
+          "front": "Give an example of a sound device used for violent effect in conflict poetry.",
+          "back": "Harsh plosive consonants (b, p, k, t) can mimic gunfire, explosions or physical blows, adding a visceral quality to the language."
+        },
+        {
+          "front": "Why is identifying the poet's attitude to conflict part of a strong comparison?",
+          "back": "Poems on conflict can glorify, question, mourn or condemn war differently; naming that stance sharpens the comparison beyond just shared subject matter."
         }
       ],
       "cloze": [
-        "Unseen Poetry Q1 is worth {{c1::24}} marks and Q2 is worth {{c2::8}} marks.",
-        "In the unseen poetry section, assessment objective {{c1::AO3}} (context) is not assessed."
+        "The Conflict cluster is one of {{c1::three}} themed clusters in the OCR Poetry Anthology.",
+        "A sudden pause within a line of poetry is called a {{c1::caesura}}, often used for shock in conflict poems.",
+        "Fragmented or disrupted {{c1::structure}} can be used to mirror the chaos of conflict.",
+        "Harsh {{c1::plosive}} consonants can be used to mimic violent sounds such as gunfire."
       ]
     },
     {
-      "id": "lit-exam-skills",
-      "name": "Literature Exam Skills and Quotation Banks",
+      "id": "el-poetry-youth-age",
+      "name": "OCR Poetry Anthology: Youth and Age Cluster",
       "subtopics": [
-        "Writing a conceptual thesis in the first two sentences",
-        "What-How-Why paragraph structure",
-        "Embedding short quotations inside your own sentences",
-        "Zooming in on a single word and offering multiple interpretations",
-        "Writing about form and structure, not only language",
-        "Weaving context into analysis rather than bolting it on",
-        "Building a quotation bank of 10-15 short quotations per text",
-        "Timed practice: full 45-minute answers under exam conditions"
+        "This cluster is one of three options in the OCR Poetry Anthology 'Towards a World Unknown' - the family has not confirmed which cluster is studied, so treat this as preparation only until confirmed",
+        "The exam gives one named poem printed on the paper, plus a linked unseen poem; you compare the named poem with the unseen poem and may also be asked about a second anthology poem",
+        "Do not guess specific poem titles you are not certain belong to this cluster - focus revision on themes, comparative method and named poems only where certain",
+        "Likely thematic range for a Youth and Age cluster: childhood memory, the passage of time, generational relationships (parent/child, grandparent/grandchild), the loss of innocence, ageing and mortality, nostalgia for the past",
+        "Perspective in Youth and Age poetry: an adult narrator looking back at childhood, a child's voice, or an older figure reflecting on the young",
+        "Imagery patterns common in this theme: seasonal imagery to represent life stages, imagery of growth and decay, sensory or nostalgic imagery tied to specific memories",
+        "Structural devices: chronological structure tracing a life or memory, circular structure returning to a starting image, contrast between past and present tenses",
+        "Tone: nostalgic, wistful, regretful, celebratory, or a mix that shifts across the poem",
+        "Comparative method: identify a shared idea about time, memory or generational relationships, then compare how each poet's methods present it differently",
+        "Comparing form: a poem with a tight, regular form might suggest order or control over memory, while an irregular form may suggest memory's unreliability",
+        "Symbolism common to this theme: objects that outlast people (photographs, houses, clothes), physical signs of ageing, or thresholds like doorways marking change",
+        "Building flexible comparison points around tense, structure, imagery and tone so they can be adapted to whichever named poem appears",
+        "Practising with any unseen poem on memory, childhood or ageing to build confidence comparing methods under time pressure",
+        "Revision priority: since the studied poems are unconfirmed, prioritise comparative skills and terminology over memorising specific poem content"
       ],
       "cards": [
         {
-          "front": "What is a conceptual thesis in a literature essay?",
-          "back": "A single overarching argument about what the writer is doing and why, stated up front and sustained through every paragraph."
+          "front": "What kinds of relationships or experiences might feature in a Youth and Age cluster?",
+          "back": "Childhood memory, generational relationships such as parent/child or grandparent/grandchild, the loss of innocence, ageing and mortality, and nostalgia for the past."
         },
         {
-          "front": "What does the What-How-Why paragraph structure mean?",
-          "back": "What the writer presents, How they do it (method plus quotation), Why it matters to the readers response and the writers purpose."
+          "front": "Why might a poet use a shift between past and present tense in a poem about memory?",
+          "back": "It can show the gap between how something felt at the time and how it is remembered or understood now, highlighting change or loss."
         },
         {
-          "front": "How many quotations per text is a realistic revision target?",
-          "back": "Ten to fifteen short, flexible quotations that can be redeployed across multiple themes - depth beats volume."
+          "front": "How can seasonal imagery be used to represent stages of life?",
+          "back": "Spring or summer can represent youth and growth, while autumn or winter can represent ageing, decline or approaching death."
         },
         {
-          "front": "Why is embedding quotations better than dropping them in?",
-          "back": "Embedded quotations keep the sentence fluent and let you analyse individual words precisely, which AO2 rewards."
+          "front": "What might a circular (returning) structure suggest in a poem about memory?",
+          "back": "That the speaker is unable to move on from a particular moment, or that the memory continues to shape the present."
+        },
+        {
+          "front": "Give an example of an object that might symbolise the passage of time in this cluster.",
+          "back": "A photograph, an old house or an item of clothing can outlast the people connected to it, symbolising memory, loss or the passing of time."
+        },
+        {
+          "front": "How might tone shift across a poem about ageing or childhood?",
+          "back": "It might move from nostalgic warmth to regret, or from innocence to a more painful adult understanding, and identifying that shift is valuable for analysis."
+        },
+        {
+          "front": "What should a comparison of two poems on this theme focus on beyond shared subject matter?",
+          "back": "How each poet's structure, imagery, tense and tone create a different attitude towards time, memory or the relationship being described."
+        },
+        {
+          "front": "Why is an irregular poetic form sometimes suited to a poem about memory?",
+          "back": "It can suggest memory's unreliability or fragmented nature, contrasting with a tight, regular form that might suggest a controlled, ordered recollection."
         }
       ],
       "cloze": [
-        "The paragraph structure What-{{c1::How}}-{{c2::Why}} keeps analysis focused on writer method and effect.",
-        "Assessment objective {{c1::AO2}} rewards analysis of language, form and structure."
+        "The Youth and Age cluster is one of {{c1::three}} themed clusters in the OCR Poetry Anthology.",
+        "{{c1::Seasonal}} imagery, such as autumn or winter, can represent ageing or decline.",
+        "A {{c1::circular}} structure that returns to its starting image can suggest a speaker is unable to move on from a memory.",
+        "Objects such as {{c1::photographs}} can symbolise memory or the passing of time because they outlast people."
+      ]
+    },
+    {
+      "id": "el-exam-skills",
+      "name": "Exam Skills and Essay Craft for J352",
+      "subtopics": [
+        "Both components are closed text: no copies of the texts are allowed in the exam, so quotations must be memorised",
+        "AO1: informed personal response supported by textual references and quotations",
+        "AO2: analysis of language, form and structure using accurate subject terminology",
+        "AO3: understanding of the relationship between texts and their contexts (worth less overall than AO1/AO2)",
+        "AO4: accurate spelling, punctuation and range of vocabulary/sentence structures, assessed only in Section B of each component",
+        "Writing a conceptual thesis statement in the opening sentences that answers the question directly",
+        "Point-Method-Effect (or What-How-Why) paragraph structure: make a point, show the method with embedded evidence, explain the effect and link to the question",
+        "Embedding short, precise quotations inside your own sentence rather than dropping them in as a separate sentence",
+        "Zooming in on individual words within a quotation and offering more than one possible interpretation",
+        "Writing about form and structure explicitly, not only language choices, to access full AO2 marks",
+        "Weaving context into analysis as part of interpretation, not as a separate paragraph of historical facts",
+        "For extract-based questions (modern text has no extract, but 19th century prose and Shakespeare do): spend real time analysing the extract closely before ranging outward",
+        "Time management across a 2-hour paper with two 40-mark sections: roughly 45-50 minutes reading/planning/writing each section, leaving a few minutes to check",
+        "Planning in the first few minutes: identify the question's key words, choose a line of argument, and jot 3-4 topic sentences before writing",
+        "For the poetry comparison, planning both poems side by side before writing to identify shared and contrasting methods early",
+        "Final proofreading pass focused on sentence accuracy in Section B answers where AO4 is assessed"
+      ],
+      "cards": [
+        {
+          "front": "Why must quotations be memorised for both OCR Literature components?",
+          "back": "Both components are closed text exams - no copies of the studied texts are permitted in the exam room."
+        },
+        {
+          "front": "What is assessed by AO3 in OCR GCSE English Literature?",
+          "back": "Understanding of the relationship between texts and the contexts in which they were written, worth 15% of the whole qualification overall - less than AO1 or AO2."
+        },
+        {
+          "front": "In which sections is AO4 assessed?",
+          "back": "Only in Section B of each component (19th century prose in Component 01, Shakespeare in Component 02), where it carries a separate small mark allocation for spelling, punctuation and sentence variety."
+        },
+        {
+          "front": "What does the Point-Method-Effect paragraph structure mean?",
+          "back": "State the point you are making, show the method the writer uses with embedded evidence, then explain the effect on the reader or meaning and link back to the question."
+        },
+        {
+          "front": "Why is embedding quotations better than dropping them into a separate sentence?",
+          "back": "It keeps the sentence fluent and lets you analyse individual words precisely within your own argument, which is exactly what AO2 rewards."
+        },
+        {
+          "front": "How should you approach the extract in a 19th century prose or Shakespeare question?",
+          "back": "Analyse the extract closely first, since it is the anchor for the whole answer, before ranging outward to make links with the rest of the text."
+        },
+        {
+          "front": "Roughly how much time should you spend on each 40-mark section in a 2-hour paper?",
+          "back": "Around 45-50 minutes each, leaving a short amount of time to check spelling, punctuation and grammar, especially in Section B answers."
+        },
+        {
+          "front": "What should you do in the first few minutes before writing an essay?",
+          "back": "Identify the key words in the question, decide your line of argument (thesis), and jot 3-4 topic sentences to structure your paragraphs."
+        },
+        {
+          "front": "Why weave context into analysis rather than writing a separate context paragraph?",
+          "back": "AO3 rewards context that shapes interpretation of the text, not standalone historical facts disconnected from the question."
+        },
+        {
+          "front": "Give one useful technique for offering deeper analysis of a quotation.",
+          "back": "Zoom in on a single word within the quotation and offer more than one plausible interpretation of its effect or connotation."
+        }
+      ],
+      "cloze": [
+        "Both OCR Literature components are {{c1::closed text}}, so all quotations must be {{c2::memorised}}.",
+        "AO4 is only assessed in {{c1::Section B}} of each component.",
+        "The paragraph structure Point-{{c1::Method}}-{{c2::Effect}} keeps analysis focused on the writer's technique and its impact.",
+        "AO3 (context) carries a {{c1::smaller}} overall weighting than AO1 or AO2 in this specification.",
+        "A strong essay opens with a {{c1::thesis}} statement that directly answers the question."
       ]
     }
   ],
   "exams": [
     {
-      "code": "8702/1",
-      "name": "Paper 1: Shakespeare and the 19th-century novel",
+      "code": "J352/01",
+      "name": "Component 01: Exploring modern and literary heritage texts",
       "date": "2027-05-12",
       "session": "am",
-      "duration": "1h 45m"
+      "duration": "2h"
     },
     {
-      "code": "8702/2",
-      "name": "Paper 2: Modern texts and poetry",
+      "code": "J352/02",
+      "name": "Component 02: Exploring poetry and Shakespeare",
       "date": "2027-05-19",
       "session": "am",
-      "duration": "2h 15m"
+      "duration": "2h"
     }
   ],
-  "examNote": "Dates are from the provisional summer 2027 timetables (AQA v1.0 January 2026; Pearson Edexcel provisional). Confirm with the school before relying on them."
+  "examNote": "Dates are from the OCR final examination timetable for June 2027: Component 01 Wednesday 12 May 2027 am and Component 02 Wednesday 19 May 2027 am, each 2 hours.",
+  "offline": {
+    "commandWords": [
+      {
+        "word": "Explore",
+        "means": "Investigate a character, theme or moment in depth, considering multiple angles and possible interpretations.",
+        "doThis": "Do not just describe what happens - offer an interpretation, support it with embedded quotations, and consider alternative readings."
+      },
+      {
+        "word": "Compare",
+        "means": "Examine two texts or poems together, looking at similarities and differences in ideas and methods.",
+        "doThis": "Write about both poems in every paragraph rather than one after the other, using linking words like 'similarly' or 'whereas'."
+      },
+      {
+        "word": "How does",
+        "means": "Asks you to identify a writer's methods and their effects on the reader or the meaning of the text.",
+        "doThis": "Name the technique or method, quote it, then explain the effect it creates and why the writer chose it."
+      },
+      {
+        "word": "How far do you agree",
+        "means": "An evaluative question giving a statement or view that you must judge, using evidence from the text.",
+        "doThis": "Decide your overall position early, then build a case using evidence from at least two moments in the text, acknowledging any complexity."
+      },
+      {
+        "word": "Present/presents",
+        "means": "Asks how a writer shows or constructs an idea, character or theme through their choices as a writer.",
+        "doThis": "Focus on the writer's deliberate choices (language, structure, form) rather than retelling the plot."
+      },
+      {
+        "word": "Analyse",
+        "means": "Break language, form or structure down into its parts and examine how each part creates meaning or effect.",
+        "doThis": "Zoom in on individual words or techniques, and explain precisely how they work rather than giving a general impression."
+      },
+      {
+        "word": "Discuss/consider",
+        "means": "Weigh up an idea from more than one angle before reaching a view.",
+        "doThis": "Present at least two ways of reading the moment or theme, then show which reading you find most convincing and why."
+      },
+      {
+        "word": "Elsewhere in the novel/play",
+        "means": "You must move beyond the printed extract to discuss other moments across the whole text.",
+        "doThis": "Choose two or three additional moments that develop or complicate the idea shown in the extract, not just similar repeats of it."
+      },
+      {
+        "word": "Effect",
+        "means": "The impact a writer's choice has on the reader's understanding, feelings or interpretation.",
+        "doThis": "Always follow up 'what' a writer does with 'so what' - state precisely what impression or feeling is created and why."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Quotation bank: Macbeth",
+        "kind": "quote",
+        "note": "Learn these exactly, including which character speaks them, so they can be embedded accurately in a closed-book exam.",
+        "items": [
+          {
+            "term": "So foul and fair a day I have not seen",
+            "detail": "Macbeth, Act 1 Scene 3. Echoes the witches' 'fair is foul, foul is fair' and shows Macbeth already speaking in their paradoxical language, hinting at his susceptibility to their influence."
+          },
+          {
+            "term": "Stars, hide your fires; let not light see my black and deep desires",
+            "detail": "Macbeth, Act 1 Scene 4. Shows Macbeth consciously choosing to hide his murderous ambition, proving he understands his own moral corruption from early in the play."
+          },
+          {
+            "term": "Look like the innocent flower, but be the serpent under't",
+            "detail": "Lady Macbeth to Macbeth, Act 1 Scene 5. Establishes the deception/appearance-versus-reality theme and Lady Macbeth's ruthless practicality compared to Macbeth's hesitancy."
+          },
+          {
+            "term": "Screw your courage to the sticking-place",
+            "detail": "Lady Macbeth, Act 1 Scene 7. Shows her manipulating Macbeth's sense of masculinity and courage to push him towards regicide."
+          },
+          {
+            "term": "Is this a dagger which I see before me",
+            "detail": "Macbeth, Act 2 Scene 1. Opens the famous soliloquy showing his guilt-ridden hallucination before Duncan's murder, revealing his conscience is already at war with his ambition."
+          },
+          {
+            "term": "Will all great Neptune's ocean wash this blood clean from my hand?",
+            "detail": "Macbeth, Act 2 Scene 2. Shows immediate, overwhelming guilt after killing Duncan; blood becomes a symbol of guilt that cannot be washed away."
+          },
+          {
+            "term": "A little water clears us of this deed",
+            "detail": "Lady Macbeth, Act 2 Scene 2. Contrasts her apparent coldness and practicality with Macbeth's horror, though this composure later collapses into guilt in Act 5."
+          },
+          {
+            "term": "Duncan is in his grave; after life's fitful fever he sleeps well",
+            "detail": "Macbeth, Act 3 Scene 2. Shows Macbeth's growing envy of the dead and his own tormented, sleepless guilt as king."
+          },
+          {
+            "term": "It will have blood; they say, blood will have blood",
+            "detail": "Macbeth, Act 3 Scene 4, after seeing Banquo's ghost. Shows his belief that murder demands retribution, foreshadowing his own downfall."
+          },
+          {
+            "term": "By the pricking of my thumbs, something wicked this way comes",
+            "detail": "Second Witch, Act 4 Scene 1. Shows how far Macbeth has fallen - even the witches now identify him as the embodiment of evil approaching."
+          },
+          {
+            "term": "Double, double toil and trouble; fire burn and cauldron bubble",
+            "detail": "Witches, Act 4 Scene 1. Reinforces the supernatural, ritualistic atmosphere surrounding the prophecies that further seal Macbeth's fate."
+          },
+          {
+            "term": "Out, damned spot! Out, I say!",
+            "detail": "Lady Macbeth, Act 5 Scene 1 (sleepwalking scene). Shows her mental collapse and inability to escape guilt she could not voice while awake."
+          },
+          {
+            "term": "Life's but a walking shadow, a poor player that struts and frets his hour upon the stage",
+            "detail": "Macbeth, Act 5 Scene 5, on hearing of Lady Macbeth's death. Shows his descent into nihilism and despair, believing life to be meaningless."
+          },
+          {
+            "term": "Tomorrow, and tomorrow, and tomorrow",
+            "detail": "Macbeth, Act 5 Scene 5. Opens the famous despairing soliloquy on the meaningless repetition of time, reflecting his total loss of hope and purpose."
+          },
+          {
+            "term": "I bear a charmed life, which must not yield to one of woman born",
+            "detail": "Macbeth, Act 5 Scene 8. Shows his false confidence in the witches' prophecy just before Macduff reveals he was not 'of woman born' in the natural sense, leading to Macbeth's defeat."
+          },
+          {
+            "term": "Lay on, Macduff, and damned be him that first cries 'Hold, enough!'",
+            "detail": "Macbeth, Act 5 Scene 8, his final line. Shows he dies fighting rather than surrendering, a final flash of the soldierly courage seen in Act 1."
+          },
+          {
+            "term": "This dead butcher and his fiend-like queen",
+            "detail": "Malcolm, Act 5 Scene 9. The play's final judgement on the Macbeths, showing how far they have fallen from the noble figures introduced at the start."
+          },
+          {
+            "term": "Brave Macbeth (well he deserves that name)",
+            "detail": "The Sergeant/Captain, Act 1 Scene 2. Establishes Macbeth's initial heroism and reputation before his moral decline, useful for tracking his full character arc."
+          },
+          {
+            "term": "When shall we three meet again?",
+            "detail": "First Witch, Act 1 Scene 1. Opens the play, immediately establishing a supernatural, ominous atmosphere before any human character appears."
+          },
+          {
+            "term": "Nought's had, all's spent, where our desire is got without content",
+            "detail": "Lady Macbeth, Act 3 Scene 2. Shows that achieving the throne has brought no satisfaction, reinforcing the theme that unchecked ambition is ultimately self-destructive."
+          }
+        ]
+      },
+      {
+        "title": "Quotation bank: The Strange Case of Dr Jekyll and Mr Hyde",
+        "kind": "quote",
+        "note": "Chapter references follow the standard ten-chapter structure. Learn who narrates each quotation - Utterson's narrative, Lanyon's letter, or Jekyll's final statement.",
+        "items": [
+          {
+            "term": "There is something wrong with his appearance; something displeasing, something downright detestable",
+            "detail": "Enfield describing Hyde, Chapter 1. Establishes the instinctive revulsion Hyde provokes despite no one being able to define exactly why - hints at an unnatural, primitive quality."
+          },
+          {
+            "term": "O my poor old Harry Jekyll, if ever I read Satan's signature upon a face, it is on that of your new friend",
+            "detail": "Utterson, Chapter 2. Religious imagery marks Hyde as evil, and shows even the rational lawyer resorting to the supernatural to explain him - a key Gothic move. Note the affectionate 'Harry', which sets up Utterson's loyalty as a motive for the whole investigation."
+          },
+          {
+            "term": "If he be Mr Hyde, I shall be Mr Seek",
+            "detail": "Utterson, Chapter 2. Shows the lawyer's rational, investigative determination and sets up the novel's detective/mystery structure."
+          },
+          {
+            "term": "Man is not truly one, but truly two",
+            "detail": "Jekyll's final statement, Chapter 10. States the novel's central theme of duality directly - every person contains both a civilised and a primitive self."
+          },
+          {
+            "term": "All human beings...are commingled out of good and evil",
+            "detail": "Jekyll's final statement, Chapter 10. Extends the duality theme to all humanity, not just Jekyll, universalising the novel's moral warning."
+          },
+          {
+            "term": "He had a kind of black sneering coolness...like Satan",
+            "detail": "Enfield, Chapter 1, describing Hyde after the trampling of the girl. Religious imagery aligns Hyde explicitly with Satan and evil; Enfield stresses Hyde's calm, which is more frightening than rage. Use for: Hyde as pure evil, Gothic villain, first impressions."
+          },
+          {
+            "term": "I saw that ... I was slowly losing hold of my original and better self",
+            "detail": "Jekyll's final statement, Chapter 10. Shows Jekyll's growing loss of control over the transformations, addiction to being Hyde, and his own moral collapse."
+          },
+          {
+            "term": "Hyde grew in stature...as if he were slowly liquefying",
+            "detail": "Jekyll's final statement, Chapter 10. Physically enacts the growing dominance of Hyde over Jekyll, symbolising evil overtaking the civilised self."
+          },
+          {
+            "term": "The most racking pangs succeeded: a grinding in the bones, deadly nausea",
+            "detail": "Jekyll's final statement, describing the transformation, Chapter 10. Shows the transformation is physically violent and painful, reinforcing that unleashing one's darker nature has a real cost."
+          },
+          {
+            "term": "This, too, was myself",
+            "detail": "Jekyll's final statement, Chapter 10. Jekyll's admission that Hyde is not a separate being but genuinely part of him, reinforcing that evil is innate rather than external."
+          },
+          {
+            "term": "London has nothing like him",
+            "detail": "Enfield describing Hyde's unsettling presence, Chapter 1. Shows Hyde as uniquely disturbing even in a large, morally complex Victorian city."
+          },
+          {
+            "term": "He was perfectly cool and made no resistance, but gave me one look so ugly",
+            "detail": "Description of Hyde after trampling the girl, Chapter 1. Shows Hyde's total lack of remorse and casual cruelty, foreshadowing the later murder of Carew."
+          },
+          {
+            "term": "It wasn't like a man; it was like some damned Juggernaut",
+            "detail": "Enfield's account of Hyde trampling the girl, Chapter 1. Dehumanises Hyde from the earliest description, foreshadowing his non-human, primitive nature."
+          },
+          {
+            "term": "The doctor was confounded... he grew pale, and a shudder overtook him",
+            "detail": "Reaction of the doctor treating the trampled girl on seeing Hyde, Chapter 1. Shows even a professional, rational man reacts instinctively with horror to Hyde's presence."
+          },
+          {
+            "term": "With a transient sense of unfamiliarity...a leap of welcome",
+            "detail": "Jekyll's final statement describing his first transformation, Chapter 10. Shows Jekyll's initial excitement and freedom in becoming Hyde, before the addiction turns destructive."
+          },
+          {
+            "term": "I felt younger, lighter, happier in body",
+            "detail": "Jekyll's final statement, Chapter 10. Shows the seductive appeal of shedding respectable restraint, explaining why Jekyll continues the experiment despite the danger."
+          },
+          {
+            "term": "Since I had learned to dread the direction of my worse self, I would...forget in the pursuit of pleasure",
+            "detail": "Jekyll's final statement, Chapter 10. Reveals Jekyll's underlying hedonism and desire to escape the moral restrictions of Victorian respectability."
+          },
+          {
+            "term": "He is now become the beast that was within me",
+            "detail": "Jekyll's final statement, Chapter 10. Confirms that Hyde represents an internal, innate evil rather than something externally created, reinforcing the duality theme."
+          },
+          {
+            "term": "The pleasures which I made haste to seek in my disguise were...undignified",
+            "detail": "Jekyll's final statement, Chapter 10. Hints, without full disclosure (a Victorian narrative convention), at Hyde's vices, letting the reader infer moral transgression."
+          },
+          {
+            "term": "Utterson stood a while when Mr Hyde had left him, the picture of disquietude",
+            "detail": "Chapter 2, after Utterson's first meeting with Hyde. Shows Utterson's rational unease, reinforcing that Hyde provokes instinctive fear even in level-headed characters."
+          }
+        ]
+      },
+      {
+        "title": "Quotation bank: An Inspector Calls",
+        "kind": "quote",
+        "note": "This is a play with no printed extract in the exam, so precise, correctly-attributed quotations are essential for the whole-text essay.",
+        "items": [
+          {
+            "term": "The Titanic...unsinkable, absolutely unsinkable",
+            "detail": "Mr Birling, Act 1. Dramatic irony undermines his authority and capitalist confidence immediately, since the audience knows the Titanic sank."
+          },
+          {
+            "term": "A man has to make his own way...has to look after himself and his own",
+            "detail": "Mr Birling, Act 1. States the capitalist, individualist philosophy that the play systematically dismantles through the Inspector's investigation."
+          },
+          {
+            "term": "The way some of these cranks talk and write now, you'd think everybody has to look after everybody else",
+            "detail": "Mr Birling, Act 1. Dismisses socialist ideas, which Priestley uses to make Birling appear foolish and out of touch to a post-war audience."
+          },
+          {
+            "term": "I don't think you ought to have said that to her about her not being one of the family",
+            "detail": "Sheila to Gerald, Act 3. Marks the start of her ability to judge her own family and fiance critically, showing her moral development."
+          },
+          {
+            "term": "We are members of one body. We all have to share something",
+            "detail": "The Inspector, Act 1. States Priestley's central socialist message of collective responsibility directly to the audience."
+          },
+          {
+            "term": "But these girls aren't cheap labour - they're people",
+            "detail": "Sheila, Act 1. Shows Sheila's growing moral awareness and empathy, contrasting with her parents' view of workers as mere resources."
+          },
+          {
+            "term": "I'll never, never do it again to anybody",
+            "detail": "Sheila, Act 1, after learning of her role in Eva's dismissal. Shows genuine remorse and change, distinct from her parents' denial."
+          },
+          {
+            "term": "The girl killed herself - and died a horrible death. But each of you helped to kill her",
+            "detail": "The Inspector, Act 3. Directly states the play's central argument that individual actions have collective consequences."
+          },
+          {
+            "term": "If you don't come down sharply on some of these people, they'd soon be asking for the earth",
+            "detail": "Mr Birling, Act 1, on why he refused Eva's pay rise request. Reveals his ruthless, self-interested attitude to his workers."
+          },
+          {
+            "term": "I was in a state when a girl says she'll do anything to help",
+            "detail": "Eric, Act 3, admitting his exploitation of Eva. Shows his guilt and immaturity, contrasting with his parents' refusal to accept blame."
+          },
+          {
+            "term": "You're the one I blame for this",
+            "detail": "Sheila to Gerald, Act 2, on learning of his affair with Eva/Daisy. Shows Sheila's honesty and refusal to pretend all is well, unlike the older generation."
+          },
+          {
+            "term": "Fire and blood and anguish",
+            "detail": "The Inspector's final speech, Act 3. Warns of war and suffering if society does not learn collective responsibility - dramatic irony for a 1945 audience who had lived through two world wars."
+          },
+          {
+            "term": "The famous younger generation who know it all. And they can't even take a joke",
+            "detail": "Mrs Birling, Act 3. Shows her dismissive, condescending attitude to Sheila and Eric's growing conscience, reinforcing her refusal to change."
+          },
+          {
+            "term": "I did nothing I'm ashamed of",
+            "detail": "Mrs Birling, Act 2, defending her refusal to help Eva through the charity committee. Shows her total lack of self-awareness and hypocrisy."
+          },
+          {
+            "term": "She was giving herself ridiculous airs",
+            "detail": "Mrs Birling on Eva Smith, Act 2. Reveals Mrs Birling's class snobbery, judging Eva for daring to use the name 'Mrs Birling'."
+          },
+          {
+            "term": "Just used the phrase I'd been thinking myself",
+            "detail": "Gerald, Act 3, on the Inspector possibly repeating others' words. Shows Gerald's relief in seeking ways to discredit the Inspector rather than face guilt."
+          },
+          {
+            "term": "Everything's all right now, Sheila. What about this ring?",
+            "detail": "Gerald, Act 3, once he believes the Inspector was a hoax. Shows he wants to return to the status quo rather than learn anything, unlike Sheila."
+          },
+          {
+            "term": "Public men, Mr Birling, have responsibilities as well as privileges",
+            "detail": "The Inspector, Act 1. Directly challenges Birling's belief that status brings only rights and no duties, reinforcing the responsibility theme."
+          },
+          {
+            "term": "It's the way I like to be treated by a maid",
+            "detail": "Mr Birling, Act 1, on Eva's dismissal from Milward's over a customer complaint. Shows his casual complicity in class-based cruelty even when not the direct cause."
+          },
+          {
+            "term": "One Eva Smith has gone - but there are millions and millions of Eva Smiths and John Smiths still left with us",
+            "detail": "The Inspector, Act 3. Universalises Eva's story, extending the moral warning beyond this one family to society as a whole."
+          }
+        ]
+      },
+      {
+        "title": "Assessment objectives in plain English and how marks split",
+        "kind": "def",
+        "note": "Percentages are of the whole GCSE. AO4 (SPaG) is assessed only in Section B of each component.",
+        "items": [
+          {
+            "term": "AO1",
+            "detail": "Read, understand and respond to texts: give an informed personal response and support it with textual references and quotations. Worth 40% of the whole GCSE overall - the single biggest AO."
+          },
+          {
+            "term": "AO2",
+            "detail": "Analyse the language, form and structure a writer uses to create meanings and effects, using accurate subject terminology. Also worth 40% overall, jointly the biggest AO with AO1."
+          },
+          {
+            "term": "AO3",
+            "detail": "Show understanding of the relationship between texts and the contexts in which they were written. Worth only 15% overall - do not let context dominate an answer at the expense of AO1/AO2."
+          },
+          {
+            "term": "AO4",
+            "detail": "Use a range of vocabulary and sentence structures for clarity, purpose and effect, with accurate spelling and punctuation. Worth 5% overall, assessed only in Section B of each component (19th century prose and Shakespeare)."
+          },
+          {
+            "term": "Component 01 AO split",
+            "detail": "Exploring modern and literary heritage texts is worth 50% of the GCSE overall: within it, AO1 carries about 20%, AO2 about 17.5%, AO3 about 10%, AO4 about 2.5% (Section B only)."
+          },
+          {
+            "term": "Component 02 AO split",
+            "detail": "Exploring poetry and Shakespeare is worth 50% of the GCSE overall: within it, AO1 carries about 20%, AO2 about 22.5%, AO3 about 5%, AO4 about 2.5% (Shakespeare, Section B only)."
+          },
+          {
+            "term": "Why AO1 and AO2 dominate",
+            "detail": "Together they make up 80% of the whole qualification, so every paragraph should combine a clear personal response (AO1) with close analysis of the writer's methods (AO2)."
+          },
+          {
+            "term": "Comparison across the qualification",
+            "detail": "25% of all marks in the specification relate to tasks requiring comparison between texts - this includes the modern text extract comparison and the poetry comparison."
+          },
+          {
+            "term": "Where AO3 earns marks",
+            "detail": "AO3 rewards context that is used to deepen interpretation of a specific moment or choice in the text, not standalone historical facts stated without being linked to meaning."
+          },
+          {
+            "term": "AO4 marking in Section B",
+            "detail": "AO4 uses a separate short marking grid assessing accuracy of spelling and punctuation and range of vocabulary and sentence structures, worth a small number of extra marks on top of the main AO1-3 marks."
+          }
+        ]
+      },
+      {
+        "title": "Essay structure and timing for each section",
+        "kind": "method",
+        "note": "Each component is 2 hours for 80 marks across two 40-mark sections - budget roughly half the time to each, leaving a few minutes to check.",
+        "items": [
+          {
+            "term": "Component 01 Section A: Modern prose or drama (no extract)",
+            "detail": "No extract is printed. Choose one of two whole-text essay questions. Spend 5 minutes planning a thesis and 3-4 topic sentences, then write 4-5 Point-Method-Effect paragraphs across about 40 minutes, leaving a couple of minutes to check."
+          },
+          {
+            "term": "Component 01 Section B: 19th century prose (extract given)",
+            "detail": "An extract is printed; the question asks you to discuss it and then range 'elsewhere in the novel'. Spend 5-8 minutes annotating the extract closely, then write roughly half your answer on the extract and half ranging outward, in about 40 minutes total including AO4 accuracy."
+          },
+          {
+            "term": "Component 02 Section A: Poetry across time (named plus unseen poem)",
+            "detail": "A named anthology poem and a linked unseen poem are printed. Spend 5-8 minutes annotating both for shared and contrasting methods, then write in an integrated, poem-by-poem-in-every-paragraph structure across about 40 minutes."
+          },
+          {
+            "term": "Component 02 Section B: Shakespeare (extract given)",
+            "detail": "An extract is printed; the question asks you to discuss it and then range across the whole play. Spend 5-8 minutes annotating the extract, write roughly half on the extract and half elsewhere in the play, across about 40 minutes, saving time to check AO4 accuracy."
+          },
+          {
+            "term": "Opening thesis sentence",
+            "detail": "State a clear, conceptual argument that directly answers the question in your first one or two sentences, e.g. 'Priestley presents Sheila as the character most capable of moral growth, using her arc to model the collective responsibility he wants his audience to adopt.'"
+          },
+          {
+            "term": "Point-Method-Effect paragraph shape",
+            "detail": "Point: state the idea. Method: embed a short quotation showing the technique. Effect: explain precisely what impression or meaning this creates and link it back to the question."
+          },
+          {
+            "term": "How much time to spend on the extract versus 'elsewhere'",
+            "detail": "For extract-based questions, aim for roughly equal time and space on the printed extract and on the rest of the text - staying only in the extract caps marks in the middle bands."
+          },
+          {
+            "term": "Concluding a literature essay",
+            "detail": "Do not simply summarise; end by returning to the conceptual thesis and stating what the overall analysis reveals about the writer's wider purpose or message."
+          },
+          {
+            "term": "Timing checkpoint",
+            "detail": "If a component is 2 hours for 80 marks, you should be starting your second section by the 60-minute mark; if you are still writing your first answer past that point, move on and return only if time allows."
+          },
+          {
+            "term": "Final minutes",
+            "detail": "Use any remaining minutes to check that quotations are accurately remembered and that Section B answers (19th century prose, Shakespeare) have accurate spelling, punctuation and varied sentence structures for AO4."
+          }
+        ]
+      },
+      {
+        "title": "Literary terminology glossary",
+        "kind": "def",
+        "items": [
+          {
+            "term": "Soliloquy",
+            "detail": "A speech delivered by a character alone on stage, revealing inner thoughts the audience can trust as sincere - high-value evidence for character analysis."
+          },
+          {
+            "term": "Dramatic irony",
+            "detail": "When the audience knows something a character does not, creating tension, foreboding or moral judgement of that character."
+          },
+          {
+            "term": "Foreshadowing",
+            "detail": "An early hint or clue about events that will happen later in the text, building tension or preparing the reader/audience."
+          },
+          {
+            "term": "Stagecraft",
+            "detail": "The practical elements of staging a play - lighting, set, props, entrances and exits - used deliberately by a playwright to create meaning."
+          },
+          {
+            "term": "Duality",
+            "detail": "The idea that a person or thing contains two opposing natures or identities, central to Jekyll and Hyde and relevant to conflicted characters generally."
+          },
+          {
+            "term": "Gothic convention",
+            "detail": "A recurring feature of Gothic fiction: the uncanny, oppressive settings, decay, transgression of natural limits, and the blurring of good and evil."
+          },
+          {
+            "term": "Frame narrative",
+            "detail": "A story told inside another story or through embedded documents (letters, testimonies), distancing the reader and often raising questions of reliability."
+          },
+          {
+            "term": "Motif",
+            "detail": "An image, idea or phrase that recurs throughout a text, building cumulative meaning, e.g. blood in Macbeth or doors in Jekyll and Hyde."
+          },
+          {
+            "term": "Pathetic fallacy",
+            "detail": "Giving the natural world human emotions or using weather/nature to reflect a character's mood or a play's atmosphere, e.g. the storm after Duncan's murder."
+          },
+          {
+            "term": "Volta",
+            "detail": "A turn or shift in argument, tone or mood within a poem, classically found around line 9 of a Petrarchan sonnet."
+          },
+          {
+            "term": "Enjambment",
+            "detail": "A sentence or phrase that runs over a line break without punctuation, creating flow, urgency or surprise."
+          },
+          {
+            "term": "Caesura",
+            "detail": "A deliberate pause within a line of poetry, usually created by punctuation, often used for emphasis or sudden shock."
+          },
+          {
+            "term": "Dramatic monologue",
+            "detail": "A poem spoken in the voice of a single created character, often revealing something about them that they do not intend to reveal."
+          },
+          {
+            "term": "Extended metaphor",
+            "detail": "A metaphor developed and sustained across multiple lines or an entire poem, deepening a single comparison."
+          },
+          {
+            "term": "Juxtaposition",
+            "detail": "Placing two contrasting ideas, images or characters close together to highlight their difference."
+          },
+          {
+            "term": "Symbolism",
+            "detail": "Using an object, person or place to represent a wider idea beyond its literal meaning, e.g. Banquo's ghost symbolising Macbeth's guilt."
+          },
+          {
+            "term": "Tragic hero",
+            "detail": "A protagonist, often of noble status, whose own flaw (hamartia) leads to their downfall, as with Macbeth's ambition."
+          },
+          {
+            "term": "Foil",
+            "detail": "A character whose qualities contrast with another character, highlighting the second character's traits by comparison, e.g. Banquo as a foil to Macbeth."
+          },
+          {
+            "term": "Anaphora",
+            "detail": "The deliberate repetition of a word or phrase at the start of successive clauses or lines for emphasis, e.g. 'tomorrow, and tomorrow, and tomorrow'."
+          },
+          {
+            "term": "Allegory",
+            "detail": "A narrative in which characters and events stand for wider political, moral or historical ideas beyond the literal story."
+          }
+        ]
+      },
+      {
+        "title": "Context fact banks",
+        "kind": "data",
+        "items": [
+          {
+            "term": "Macbeth: King James I and the divine right of kings",
+            "detail": "James I believed monarchs were appointed by God (divine right), so a play in which killing a king unleashes chaos and disorder would have resonated as morally and politically correct to him."
+          },
+          {
+            "term": "Macbeth: the Gunpowder Plot (1605)",
+            "detail": "Shakespeare wrote Macbeth shortly after an assassination attempt on James I was foiled, making a play about the horror and consequences of regicide especially topical."
+          },
+          {
+            "term": "Macbeth: Jacobean beliefs about witchcraft",
+            "detail": "James I had written a book on witchcraft (Daemonologie) and witch trials were common; a Jacobean audience would have taken the witches' supernatural power seriously, not as fantasy."
+          },
+          {
+            "term": "Macbeth: the Great Chain of Being",
+            "detail": "A Jacobean belief that the universe had a fixed hierarchical order (God, king, nobles, commoners, nature); regicide was seen as a crime against this cosmic order, explaining the unnatural disorder after Duncan's murder."
+          },
+          {
+            "term": "Jekyll and Hyde: Victorian respectability",
+            "detail": "Victorian society placed huge importance on public reputation; men in particular were expected to maintain a respectable public image regardless of private conduct, explaining Jekyll's need for a hidden outlet."
+          },
+          {
+            "term": "Jekyll and Hyde: Darwin and evolutionary anxiety",
+            "detail": "Charles Darwin's theory of evolution (1859) raised fears that humans were closer to animals than previously believed; Hyde's ape-like, primitive appearance reflects this anxiety about a hidden 'animal' nature in man."
+          },
+          {
+            "term": "Jekyll and Hyde: the Gothic double/doppelganger tradition",
+            "detail": "Stevenson was writing within a tradition of 'double' narratives exploring a hidden or evil twin self, tapping into contemporary fascination with psychology and the unconscious mind."
+          },
+          {
+            "term": "Jekyll and Hyde: real Victorian double lives",
+            "detail": "Late-Victorian London had well-publicised cases of respectable public figures living secret, scandalous double lives, which likely informed the novel's exploration of hidden vice behind a genteel facade."
+          },
+          {
+            "term": "An Inspector Calls: the 1912 setting",
+            "detail": "Set shortly before the sinking of the Titanic (1912) and the First World War (1914-18), a period of confident, complacent optimism among the wealthy that Priestley uses ironically."
+          },
+          {
+            "term": "An Inspector Calls: written and first performed in 1945",
+            "detail": "Priestley wrote the play as the Second World War ended, hoping Britain would build a fairer, more socialist post-war society rather than return to pre-war inequality."
+          },
+          {
+            "term": "An Inspector Calls: Priestley's socialism",
+            "detail": "Priestley was a committed socialist who believed in collective responsibility and a fairer distribution of wealth, views he expresses directly through the Inspector's speeches."
+          },
+          {
+            "term": "An Inspector Calls: the birth of the welfare state",
+            "detail": "The play anticipates ideas that shaped the UK's post-war welfare state (founded 1945-48), reflecting a shift towards state responsibility for citizens' wellbeing."
+          },
+          {
+            "term": "An Inspector Calls: Edwardian class and gender attitudes",
+            "detail": "In 1912, working-class women like Eva Smith had very limited legal or economic protection and were dependent on the goodwill of employers, explaining her vulnerability to the Birlings and Gerald."
+          },
+          {
+            "term": "General: the 19th century Poor Law and workhouses",
+            "detail": "The Poor Law Amendment Act of 1834 sent destitute people into workhouses with harsh conditions, reflecting Victorian attitudes that poverty was often a moral failing rather than a social problem - relevant background for any 19th century prose text."
+          },
+          {
+            "term": "General: comparison weighting",
+            "detail": "25% of all marks across the whole GCSE English Literature specification relate to tasks that require comparison, underlining why comparative skills matter beyond just the poetry section."
+          }
+        ]
+      },
+      {
+        "title": "Comparison and evaluation sentence stems",
+        "kind": "phrase",
+        "items": [
+          {
+            "term": "Opening a comparative thesis",
+            "detail": "Both [poem/text A] and [poem/text B] explore the idea of ___, but while [A] presents it as ___, [B] instead suggests ___."
+          },
+          {
+            "term": "Introducing a shared method",
+            "detail": "Both poets use ___ to convey ___, though the effect differs because ___."
+          },
+          {
+            "term": "Introducing a contrasting method",
+            "detail": "Whereas [poet A] relies on ___ to suggest ___, [poet B] instead uses ___ to create a sense of ___."
+          },
+          {
+            "term": "Linking two poems in one sentence",
+            "detail": "This mirrors/contrasts with the way [poem B] presents a similar/different idea through ___."
+          },
+          {
+            "term": "Discourse markers for comparison",
+            "detail": "Similarly; in contrast; whereas; by contrast; in a comparable way; conversely; on the other hand; just as ___, so too ___."
+          },
+          {
+            "term": "Evaluating 'how far do you agree'",
+            "detail": "To a significant extent, [text] supports this view, since ___; however, this reading is complicated by ___."
+          },
+          {
+            "term": "Introducing a qualification",
+            "detail": "While this is true in [moment], the picture becomes more complex when ___."
+          },
+          {
+            "term": "Making a tentative interpretation",
+            "detail": "This could suggest ___, or perhaps more convincingly, it implies ___."
+          },
+          {
+            "term": "Concluding an evaluative paragraph",
+            "detail": "Ultimately, this suggests that [writer] wants the reader/audience to ___."
+          },
+          {
+            "term": "Linking context to interpretation",
+            "detail": "This reflects the [Victorian/Jacobean/post-war] belief that ___, which deepens our understanding of ___."
+          },
+          {
+            "term": "Analysing effect precisely",
+            "detail": "This choice of ___ creates an impression of ___, forcing the reader/audience to ___."
+          },
+          {
+            "term": "Comparing writer's overall purpose",
+            "detail": "Both writers seem to want their audience to reconsider ___, but [A] achieves this through ___ while [B] achieves it through ___."
+          }
+        ]
+      },
+      {
+        "title": "Exam-day plan",
+        "kind": "list",
+        "items": [
+          {
+            "term": "Component 01 (J352/01): Exploring modern and literary heritage texts",
+            "detail": "2 hours, 80 marks, closed text. Section A: modern prose or drama essay, no extract, choice of two questions, about 40 minutes. Section B: 19th century prose extract question plus 'elsewhere in the novel', about 40 minutes including AO4 accuracy. Spend 5 minutes planning each section; leave 2-3 minutes at the end to check quotations and spelling."
+          },
+          {
+            "term": "Component 01 Section A time split",
+            "detail": "Of the roughly 40 minutes: 5 minutes reading the question and planning a thesis with 3-4 topic sentences, 32-33 minutes writing 4-5 Point-Method-Effect paragraphs on An Inspector Calls, 2 minutes checking quotation accuracy."
+          },
+          {
+            "term": "Component 01 Section B time split",
+            "detail": "Of the roughly 40 minutes: 5-8 minutes annotating the printed Jekyll and Hyde extract, then split the remaining time evenly between close analysis of the extract and moving 'elsewhere in the novel', with 2-3 minutes left for AO4 accuracy checks."
+          },
+          {
+            "term": "Component 02 (J352/02): Exploring poetry and Shakespeare",
+            "detail": "2 hours, 80 marks, closed text. Section A: named anthology poem plus a linked unseen poem for comparison, about 40 minutes, spend 5-8 minutes annotating both poems before writing. Section B: Shakespeare extract plus 'elsewhere in the play', about 40 minutes including AO4 accuracy. Leave 2-3 minutes at the end to check quotations and spelling."
+          },
+          {
+            "term": "Component 02 Section A time split",
+            "detail": "Of the roughly 40 minutes: 5-8 minutes annotating the named poem and unseen poem for shared and contrasting methods, 30 minutes writing an integrated comparison (both poems in every paragraph), 2 minutes for a final check."
+          },
+          {
+            "term": "Component 02 Section B time split",
+            "detail": "Of the roughly 40 minutes: 5-8 minutes annotating the printed Macbeth extract, then split the remaining time evenly between the extract and moving 'elsewhere in the play', with 2-3 minutes left for AO4 accuracy checks since this is the other section where AO4 is marked."
+          },
+          {
+            "term": "The night before both papers",
+            "detail": "Re-read your quotation banks for all three set texts once rather than trying to learn new material; sleep matters more than last-minute cramming for a closed-book exam."
+          },
+          {
+            "term": "On the morning of each paper",
+            "detail": "Quickly recite 3-4 key quotations per text from memory to warm up recall; check you have pens, a spare pen, and your exam equipment list."
+          },
+          {
+            "term": "If a question looks unfamiliar",
+            "detail": "Break it into key words, decide which theme or character it is really asking about, and use your flexible quotation bank rather than panicking about a 'new' angle."
+          },
+          {
+            "term": "Halfway checkpoint in each paper",
+            "detail": "By the 60-minute mark in a 2-hour paper you should be starting your second section; if Section A has overrun significantly, move to Section B and return only if time remains at the end."
+          }
+        ]
+      }
+    ]
+  }
 }
