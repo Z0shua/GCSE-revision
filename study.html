@@ -33,21 +33,22 @@
   .dot2 { animation-delay: .2s } .dot3 { animation-delay: .4s }
 </style>
 </head>
-<body class="bg-stone-50 text-stone-800 dark:bg-stone-950 dark:text-stone-200 antialiased">
+<body class="bg-stone-100 text-stone-900 dark:bg-stone-950 dark:text-stone-100 antialiased">
 
-<header class="sticky top-0 z-30 border-b border-stone-200 bg-stone-50/90 backdrop-blur dark:border-stone-800 dark:bg-stone-950/90">
-  <div class="mx-auto flex max-w-5xl flex-wrap items-center gap-3 px-4 py-3 sm:px-6">
-    <div class="w-full min-w-0 sm:flex-1">
-      <h1 class="text-base font-semibold leading-tight tracking-tight sm:truncate sm:text-lg">AI Study Companion</h1>
-      <p class="text-xs leading-snug text-stone-500 dark:text-stone-400 sm:truncate">Runs entirely in this browser &middot; nothing is stored on a server</p>
-    </div>
-    <nav class="flex w-full items-center justify-end gap-2 sm:w-auto">
-      <a href="index.html" class="rounded-lg border border-stone-300 px-3 py-2 text-xs font-medium transition hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">Tracker</a>
-      <button id="settingsBtn" type="button" class="rounded-lg bg-stone-800 px-3 py-2 text-xs font-medium text-white transition hover:bg-stone-700 dark:bg-stone-200 dark:text-stone-900 dark:hover:bg-white">Settings</button>
-      <button id="themeBtn" type="button" aria-label="Toggle dark mode" class="rounded-lg border border-stone-300 px-2.5 py-2 text-xs transition hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">
-        <span class="dark:hidden">Dark</span><span class="hidden dark:inline">Light</span>
+<header class="sticky top-0 z-30 border-b border-stone-200 bg-stone-100/95 backdrop-blur dark:border-stone-800 dark:bg-stone-950/95">
+  <div class="mx-auto max-w-5xl px-3 sm:px-5">
+    <div class="flex h-14 items-center gap-2">
+      <span class="text-xl leading-none" aria-hidden="true">💬</span>
+      <div class="min-w-0 flex-1">
+        <h1 class="truncate text-sm font-semibold sm:text-base">AI room</h1>
+        <p id="hdrSub" class="truncate text-[11px] text-stone-500 dark:text-stone-400">Runs in this browser only</p>
+      </div>
+      <a href="index.html" class="rounded-lg border border-stone-300 px-2.5 py-1.5 text-xs font-medium transition hover:bg-stone-200 dark:border-stone-700 dark:hover:bg-stone-800">Tracker</a>
+      <button id="settingsBtn" type="button" class="rounded-lg border border-stone-300 px-2.5 py-1.5 text-xs font-medium transition hover:bg-stone-200 dark:border-stone-700 dark:hover:bg-stone-800">Set&nbsp;up</button>
+      <button id="themeBtn" type="button" aria-label="Toggle dark mode" class="rounded-lg border border-stone-300 px-2 py-1.5 text-xs transition hover:bg-stone-200 dark:border-stone-700 dark:hover:bg-stone-800">
+        <span class="dark:hidden">🌙</span><span class="hidden dark:inline">☀️</span>
       </button>
-    </nav>
+    </div>
   </div>
 </header>
 
@@ -82,7 +83,7 @@
       <label for="subtopicSel" class="mb-1 block text-[11px] font-medium uppercase tracking-wide text-stone-500 dark:text-stone-400">Sub-topic</label>
       <select id="subtopicSel" class="w-full rounded-lg border border-stone-300 bg-white px-2.5 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-stone-300 dark:border-stone-700 dark:bg-stone-900 dark:focus:ring-stone-700"></select>
     </div>
-    <div>
+    <div id="marksWrap">
       <label for="marksSel" class="mb-1 block text-[11px] font-medium uppercase tracking-wide text-stone-500 dark:text-stone-400">Question size</label>
       <select id="marksSel" class="w-full rounded-lg border border-stone-300 bg-white px-2.5 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-stone-300 dark:border-stone-700 dark:bg-stone-900 dark:focus:ring-stone-700">
         <option value="2">2 marks - recall</option>
@@ -94,10 +95,27 @@
   </section>
 
   <!-- ══ Mode tabs ══ -->
-  <div class="mb-4 inline-flex rounded-xl border border-stone-300 p-1 dark:border-stone-700" role="tablist">
-    <button type="button" data-mode="chat" class="mode-tab rounded-lg px-4 py-1.5 text-xs font-semibold" role="tab">Q&amp;A partner</button>
-    <button type="button" data-mode="quiz" class="mode-tab rounded-lg px-4 py-1.5 text-xs font-semibold" role="tab">Quizbot</button>
+  <div class="mb-3 flex flex-wrap gap-1 rounded-xl border border-stone-300 p-1 dark:border-stone-700" role="tablist">
+    <button type="button" data-mode="chat" class="mode-tab rounded-lg px-3 py-1.5 text-xs font-semibold" role="tab">Ask it</button>
+    <button type="button" data-mode="quiz" class="mode-tab rounded-lg px-3 py-1.5 text-xs font-semibold" role="tab">Quiz me</button>
+    <button type="button" data-mode="blurt" class="mode-tab rounded-lg px-3 py-1.5 text-xs font-semibold" role="tab">Check my blurt</button>
+    <button type="button" data-mode="teach" class="mode-tab rounded-lg px-3 py-1.5 text-xs font-semibold" role="tab">Teach it back</button>
   </div>
+
+  <!-- ══ Tracker bridge ══ -->
+  <section id="trackerBar" class="mb-4 rounded-xl border border-stone-200 bg-white p-3 dark:border-stone-800 dark:bg-stone-900">
+    <div class="flex flex-wrap items-center gap-2">
+      <div class="min-w-0 flex-1">
+        <p class="text-[11px] font-medium uppercase tracking-wide text-stone-500 dark:text-stone-400">This sub-topic in your tracker</p>
+        <p id="trackerStatus" class="truncate text-sm">&mdash;</p>
+      </div>
+      <div class="flex basis-full gap-1.5 sm:basis-auto">
+        <button type="button" data-rate="1" class="tr-btn flex-1 rounded-lg border border-rose-300 px-2.5 py-1.5 text-xs font-semibold text-rose-700 hover:bg-rose-50 dark:border-rose-900 dark:text-rose-400 dark:hover:bg-rose-950/40 sm:flex-none">Shaky</button>
+        <button type="button" data-rate="2" class="tr-btn flex-1 rounded-lg border border-amber-300 px-2.5 py-1.5 text-xs font-semibold text-amber-700 hover:bg-amber-50 dark:border-amber-900 dark:text-amber-400 dark:hover:bg-amber-950/40 sm:flex-none">Nearly</button>
+        <button type="button" data-rate="3" class="tr-btn flex-1 rounded-lg border border-emerald-300 px-2.5 py-1.5 text-xs font-semibold text-emerald-700 hover:bg-emerald-50 dark:border-emerald-900 dark:text-emerald-400 dark:hover:bg-emerald-950/40 sm:flex-none">Solid</button>
+      </div>
+    </div>
+  </section>
 
   <!-- ══ Quiz control bar ══ -->
   <section id="quizBar" class="mb-4 hidden rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
@@ -313,6 +331,92 @@
     return lines.join('\n');
   }
 
+  /* ─────────────── Tracker bridge ───────────────
+     study.html writes into exactly the same localStorage record the tracker
+     uses (kefw.gcse.v2), with the same Leitner ladder, so a rating given here
+     shows up on the tracker's "due for a second look" queue. If the record does
+     not exist yet the student has not opened the tracker, and we say so instead
+     of inventing a fresh one. */
+  var TRACK_KEY = 'kefw.gcse.v2';
+  var BOX_DAYS  = [1, 3, 7, 21, 60];
+  var RATE_WORD = { 1: 'Shaky', 2: 'Getting there', 3: 'Solid' };
+
+  function ymd(d) {
+    return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  }
+  function parseISO(s) { var p = String(s).split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  function addDays(iso, n) { var d = parseISO(iso); d.setDate(d.getDate() + n); return ymd(d); }
+  function daysBetween(a, b) { return Math.round((parseISO(b) - parseISO(a)) / 86400000); }
+  function shortDate(iso) {
+    return parseISO(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+  }
+  var TODAY = ymd(new Date());
+
+  function loadTracker() {
+    var s = null;
+    try { s = JSON.parse(localStorage.getItem(TRACK_KEY) || 'null'); } catch (e) { s = null; }
+    if (!s || s.app !== 'kefw-gcse' || !s.items) return null;
+    return s;
+  }
+  function saveTracker(s) {
+    try { localStorage.setItem(TRACK_KEY, JSON.stringify(s)); return true; }
+    catch (e) { return false; }
+  }
+  function currentItemKey() {
+    var s = currentSubject(), t = currentTopic();
+    var i = subtopicSel.selectedIndex;
+    if (!s || !t || i < 0 || !subtopicSel.value) return null;
+    var idx = t.subtopics.indexOf(subtopicSel.value);
+    if (idx < 0) return null;
+    return s.id + '|' + t.id + '|' + idx;
+  }
+  function rateInTracker(r) {
+    var key = currentItemKey();
+    if (!key) { toast('Pick a sub-topic first.'); return; }
+    var s = loadTracker();
+    if (!s) { toast('Open the tracker once first, then ratings can be saved.'); return; }
+    var x = s.items[key] || { r: 0, box: 0, seen: null, due: null };
+    if (r === 3) {
+      x.box = Math.min((x.r === 3 ? x.box : 0) + 1, BOX_DAYS.length);
+      x.due = addDays(TODAY, BOX_DAYS[x.box - 1]);
+    } else if (r === 2) {
+      x.box = Math.max(1, Math.min(x.box, 2));
+      x.due = addDays(TODAY, 2);
+    } else {
+      x.box = 0;
+      x.due = addDays(TODAY, 1);
+    }
+    x.r = r; x.seen = TODAY;
+    s.items[key] = x;
+    if (s.lastActiveDay !== TODAY) {
+      var gap = s.lastActiveDay ? daysBetween(s.lastActiveDay, TODAY) : 999;
+      s.streak = (gap === 1) ? (s.streak || 0) + 1 : 1;
+      s.lastActiveDay = TODAY;
+      if (s.streak > (s.bestStreak || 0)) s.bestStreak = s.streak;
+    }
+    if (!saveTracker(s)) { toast('Browser storage is blocked, so that was not saved.'); return; }
+    toast('Saved as ' + RATE_WORD[r] + ' \u2014 back on ' + shortDate(x.due) + '.');
+    renderTrackerBar();
+  }
+  function renderTrackerBar() {
+    var el = $('trackerStatus');
+    var st = currentSubtopic();
+    var rateBtns = document.querySelectorAll('#trackerBar [data-rate]');
+    Array.prototype.forEach.call(rateBtns, function (b) { b.disabled = !st; b.classList.toggle('opacity-40', !st); });
+    if (!st) { el.textContent = 'Pick one sub-topic above to rate it'; return; }
+    var s = loadTracker();
+    var key = currentItemKey();
+    if (!s) { el.textContent = 'Tracker not started on this device yet'; return; }
+    var x = key ? s.items[key] : null;
+    if (!x || !x.r) { el.innerHTML = '<span class="text-stone-500 dark:text-stone-400">Not rated yet</span>'; return; }
+    var colour = x.r === 3 ? 'text-emerald-700 dark:text-emerald-400'
+               : x.r === 2 ? 'text-amber-700 dark:text-amber-400'
+                           : 'text-rose-700 dark:text-rose-400';
+    var when = x.due ? (x.due <= TODAY ? 'due now' : 'back on ' + shortDate(x.due)) : '';
+    el.innerHTML = '<span class="font-semibold ' + colour + '">' + RATE_WORD[x.r] + '</span>' +
+                   '<span class="text-stone-500 dark:text-stone-400"> \u00b7 ' + escapeHtml(when) + '</span>';
+  }
+
   function chatSystemPrompt() {
     return [
       'You are a patient, precise GCSE subject tutor for a Year 11 student in England who is studying independently at home.',
@@ -364,6 +468,55 @@
       '- For extended-response questions, state which level or band the answer sits in and what the next band requires.',
       '- If the answer is blank, off-topic, or nonsense, award 0 and say why in one sentence before giving the model answer.',
       '- Write in British English. Plain text and simple markdown only.'
+    ].join('\n');
+  }
+
+  /* Blurting: write down everything you can remember, then check it against the
+     specification. The model's job is to be a checker, not a re-teacher. */
+  function blurtSystemPrompt() {
+    return [
+      'You are a GCSE examiner checking a student\'s blurt: everything they could write down from memory on one topic, with the book shut.',
+      '',
+      'CONTEXT:',
+      contextBlock(),
+      '',
+      'You will be given the raw blurt. Check it against the sub-topic list above and against the specification content for this board.',
+      '',
+      'Output exactly these four sections and nothing else:',
+      'GOT IT: bullet list of the sub-topics or ideas the blurt genuinely covers, quoting the student\'s own words in brackets. Only credit something if it is actually there.',
+      'MISSING: bullet list of the sub-topics from the list above that are absent or barely touched. Give the one-line version of each so the student knows what it is, but do not teach it in full.',
+      'MUDDLED: bullet list of anything factually wrong, back to front, or using a word the mark scheme would not accept, with the correction in one short sentence each.',
+      'DO THIS NEXT: the two or three items to revise first, hardest and most exam-heavy first, and one retrieval task for each.',
+      '',
+      'RULES:',
+      '- Be direct and specific. A vague "revise the whole topic" is useless.',
+      '- If the blurt is very short, say so plainly and list what a full blurt on this topic would have contained.',
+      '- Never invent a sub-topic that is not on the list above or in the specification.',
+      '- Do not praise for its own sake. One sentence of honest summary at most, inside GOT IT.',
+      '- British English. Plain text and simple markdown only, no tables.'
+    ].join('\n');
+  }
+
+  /* Teach it back: self-explanation. The model plays a bright but ignorant
+     younger student, so gaps in the explanation surface as questions. */
+  function teachSystemPrompt() {
+    return [
+      'You are playing a Year 8 student who is bright, curious and knows nothing about this topic. A Year 11 student is going to explain it to you.',
+      '',
+      'CONTEXT (this is what the explanation is supposed to cover - you know it privately, but you must stay in character):',
+      contextBlock(),
+      '',
+      'Output exactly these three sections and nothing else:',
+      'WHERE IT LANDED: one or two sentences, in character, saying which part you genuinely understood from the explanation.',
+      'WHERE I GOT LOST: bullet list of the exact points where the explanation was vague, circular, used a word without defining it, or skipped a step. Quote the phrase that lost you.',
+      'MY QUESTIONS: two or three short questions a curious Year 8 would ask that the explanation cannot currently answer. These must target the real gaps, not trivia.',
+      '',
+      'RULES:',
+      '- Do not teach the topic back. Do not supply the missing content. Your value is exposing the gaps.',
+      '- If the explanation only names things without saying how or why, say that explicitly.',
+      '- If the explanation is genuinely complete and correct, say so, then ask one harder application question.',
+      '- Never award a mark or a score in this mode.',
+      '- British English. Plain text and simple markdown only.'
     ].join('\n');
   }
 
@@ -566,8 +719,10 @@
     $('newQuestionBtn').disabled = v;
     $('markBtn').disabled = v || !awaitingAnswer;
     $('modelAnswerBtn').disabled = v || !currentQuestion;
-    if (v && label) $('sendBtn').textContent = 'Working';
-    if (!v) $('sendBtn').textContent = 'Send';
+    $('sendBtn').textContent = v ? 'Working' : sendLabel();
+  }
+  function sendLabel() {
+    return mode === 'blurt' ? 'Check it' : mode === 'teach' ? 'Explain' : 'Send';
   }
 
   // ─────────────────────────── Mode handling ───────────────────────────
@@ -581,7 +736,14 @@
       b.setAttribute('aria-selected', on ? 'true' : 'false');
     });
     $('quizBar').classList.toggle('hidden', mode !== 'quiz');
-    elInput.placeholder = mode === 'quiz' ? 'Type your exam answer\u2026' : 'Ask a question\u2026';
+    // Mark tariff only means anything in quiz mode.
+    $('marksWrap').classList.toggle('hidden', mode !== 'quiz');
+    elInput.placeholder =
+      mode === 'quiz'  ? 'Type your exam answer\u2026' :
+      mode === 'blurt' ? 'Book shut \u2014 type all you remember\u2026' :
+      mode === 'teach' ? 'Explain it in your own words, as if to a Year 8\u2026' :
+                         'Ask a question\u2026';
+    $('sendBtn').textContent = mode === 'blurt' ? 'Check it' : mode === 'teach' ? 'Explain' : 'Send';
     renderSuggestions();
     resetTranscript();
   }
@@ -592,34 +754,56 @@
     currentQuestion = null;
     awaitingAnswer = false;
     var s = currentSubject(), t = currentTopic();
+    var where = '<strong>' + escapeHtml(s.name) + '</strong> \u00b7 <strong>' + escapeHtml(t.name) + '</strong>';
     if (mode === 'chat') {
       addBubble('system',
-        '<p class="font-semibold">Q&amp;A study partner</p>' +
-        '<p class="mt-1 text-stone-600 dark:text-stone-400">Tuned for <strong>' + escapeHtml(s.name) + '</strong> (' +
-        escapeHtml(s.board) + ' ' + escapeHtml(s.specCode) + '), topic <strong>' + escapeHtml(t.name) +
-        '</strong>. Ask anything on the specification, or paste a question you are stuck on. Changing the subject or topic above starts a fresh conversation.</p>');
+        '<p class="font-semibold">Ask it anything</p>' +
+        '<p class="mt-1 text-stone-600 dark:text-stone-400">Set to ' + where + ' (' +
+        escapeHtml(s.board) + ' ' + escapeHtml(s.specCode) +
+        '). Ask anything on the specification, or paste a question you are stuck on. Every answer ends with a check question, so you have to use it rather than read it. Changing subject or topic starts a fresh conversation.</p>');
+    } else if (mode === 'quiz') {
+      addBubble('system',
+        '<p class="font-semibold">Quiz me</p>' +
+        '<p class="mt-1 text-stone-600 dark:text-stone-400">Press <strong>New exam question</strong> for a ' +
+        escapeHtml(marksSel.value) + '-mark ' + where + ' question. Write your answer below, then <strong>Mark my answer</strong> marks it out of ' +
+        escapeHtml(marksSel.value) + ' against mark-scheme conventions and names the points you missed.</p>');
+    } else if (mode === 'blurt') {
+      addBubble('system',
+        '<p class="font-semibold">Check my blurt</p>' +
+        '<p class="mt-1 text-stone-600 dark:text-stone-400">Close the book. Give yourself five minutes and type everything you can remember about ' + where +
+        '. Send it and you get back four lists: what you got, what is missing, what is muddled, and what to do next. ' +
+        'The blurt timer lives on the tracker if you want one.</p>');
     } else {
       addBubble('system',
-        '<p class="font-semibold">Quizbot</p>' +
-        '<p class="mt-1 text-stone-600 dark:text-stone-400">Press <strong>New exam question</strong> for a ' +
-        escapeHtml(marksSel.value) + '-mark <strong>' + escapeHtml(s.name) + '</strong> question on <strong>' +
-        escapeHtml(t.name) + '</strong>. Type your answer below, then press <strong>Mark my answer</strong> for a mark out of ' +
-        escapeHtml(marksSel.value) + ' against mark-scheme conventions.</p>');
+        '<p class="font-semibold">Teach it back</p>' +
+        '<p class="mt-1 text-stone-600 dark:text-stone-400">Explain ' + where +
+        ' in your own words, as if to a Year 8 who has never met it. You will get a reply in character: what landed, where it got lost, and the questions your explanation cannot yet answer. ' +
+        'If you cannot explain it simply, that is the gap.</p>');
     }
     setBusy(false);
     updateKeyNotice();
+    renderTrackerBar();
   }
 
   function renderSuggestions() {
     var t = currentTopic();
     var picks = t.subtopics.slice(0, 3);
-    var chips = mode === 'chat'
-      ? picks.map(function (st) { return 'Explain ' + st.toLowerCase() + ' simply, then quiz me on it'; })
-          .concat(['Give me the five things most students get wrong in ' + t.name.toLowerCase(),
-                   'What exact wording does the mark scheme want for ' + t.name.toLowerCase() + '?'])
-      : ['Give me a question on the hardest part of ' + t.name.toLowerCase(),
-         'Give me a calculation question' ,
-         'Give me a question that mixes two sub-topics'];
+    var chips;
+    if (mode === 'chat') {
+      chips = picks.map(function (st) { return 'Explain ' + st.toLowerCase() + ' simply, then quiz me on it'; })
+        .concat(['Give me the five things most students get wrong in ' + t.name,
+                 'What exact wording does the mark scheme want for ' + t.name + '?']);
+    } else if (mode === 'quiz') {
+      chips = ['Give me a question on the hardest part of ' + t.name,
+               'Give me a calculation question',
+               'Give me a question that mixes two sub-topics'];
+    } else if (mode === 'blurt') {
+      chips = ['What should a full blurt on ' + t.name + ' contain?',
+               'List the sub-topics here in the order I should blurt them'];
+    } else {
+      chips = ['Ask me to explain ' + (picks[0] || t.name) + ' from scratch',
+               'What would a Year 8 not understand about ' + t.name + '?'];
+    }
     $('suggestions').innerHTML = chips.map(function (c) {
       return '<button type="button" data-chip="' + escapeHtml(c) + '" ' +
         'class="rounded-full border border-stone-300 px-3 py-1.5 text-[11px] text-stone-600 transition hover:bg-stone-100 dark:border-stone-700 dark:text-stone-400 dark:hover:bg-stone-800">' +
@@ -650,6 +834,45 @@
         showError(err);
       })
       .then(function () { setBusy(false); });
+  }
+
+  /* Blurt check and teach-back are single-shot: one long piece of student
+     writing in, one structured critique out. Keeping them out of the rolling
+     chat history stops the model drifting back into tutor mode. */
+  function sendOneShot(text) {
+    if (busy) return;
+    var isBlurt = mode === 'blurt';
+    if (text.trim().split(/\s+/).length < 8) {
+      toast(isBlurt ? 'Write a bit more first \u2014 a real blurt is a paragraph or two.'
+                    : 'Give it a proper go \u2014 a few sentences at least.');
+      return;
+    }
+    addBubble('user', renderMarkdown(text));
+    var thinking = addThinking(isBlurt ? 'Checking it against the specification' : 'Reading your explanation');
+    setBusy(true);
+
+    var sys = isBlurt ? blurtSystemPrompt() : teachSystemPrompt();
+    var ask = isBlurt
+      ? 'Here is my blurt. Check it using the four sections specified.\n\n' + text
+      : 'Here is my explanation. Reply in character using the three sections specified.\n\n' + text;
+
+    callModel([{ role: 'system', content: sys }, { role: 'user', content: ask }],
+              { temperature: isBlurt ? 0.2 : 0.5, maxTokens: 1300 })
+      .then(function (reply) {
+        thinking.remove();
+        addBubble('assistant', renderMarkdown(reply) + rateNudge());
+      })
+      .catch(function (err) { thinking.remove(); showError(err); })
+      .then(function () { setBusy(false); });
+  }
+
+  /* Retrieval only pays off if the honest verdict gets recorded, so every piece
+     of feedback ends by pointing at the rating buttons rather than at more chat. */
+  function rateNudge() {
+    var st = currentSubtopic();
+    if (!st) return '';
+    return '<p class="mt-3 border-t border-stone-200 pt-2 text-[11px] text-stone-500 dark:border-stone-800 dark:text-stone-400">' +
+           'Now rate <strong>' + escapeHtml(st) + '</strong> honestly at the top of the page. Shaky is the useful answer \u2014 it is what pulls the topic back into your queue.</p>';
   }
 
   function showError(err) {
@@ -722,7 +945,7 @@
           badge = '<p class="mb-2"><span class="inline-flex rounded-full px-2.5 py-1 text-xs font-bold tabular-nums ' + colour + '">' +
                   got + ' / ' + outOf + '</span></p>';
         }
-        addBubble('assistant', badge + renderMarkdown(fb));
+        addBubble('assistant', badge + renderMarkdown(fb) + rateNudge());
         marked += 1;
         $('scoreLine').textContent = 'Session: ' + marked + (marked === 1 ? ' question marked' : ' questions marked');
         awaitingAnswer = false;
@@ -783,7 +1006,16 @@
   topicSel.addEventListener('change', function () {
     fillSubtopics(); rememberSelection(); renderSuggestions(); resetTranscript();
   });
-  subtopicSel.addEventListener('change', renderSuggestions);
+  subtopicSel.addEventListener('change', function () {
+    rememberSelection(); renderSuggestions(); renderTrackerBar();
+  });
+  $('trackerBar').addEventListener('click', function (ev) {
+    var b = ev.target.closest('[data-rate]');
+    if (b) rateInTracker(Number(b.dataset.rate));
+  });
+  // The tracker may be open in another tab; keep the status line honest.
+  window.addEventListener('storage', function (ev) { if (ev.key === TRACK_KEY) renderTrackerBar(); });
+  window.addEventListener('focus', renderTrackerBar);
   marksSel.addEventListener('change', rememberSelection);
 
   Array.prototype.forEach.call(document.querySelectorAll('.mode-tab'), function (b) {
@@ -798,6 +1030,7 @@
     elInput.style.height = 'auto';
     if (mode === 'quiz' && awaitingAnswer) markAnswer(text);
     else if (mode === 'quiz') generateQuestion(text);
+    else if (mode === 'blurt' || mode === 'teach') sendOneShot(text);
     else sendChat(text);
   });
 
@@ -828,6 +1061,8 @@
   $('suggestions').addEventListener('click', function (ev) {
     var chip = ev.target.closest('[data-chip]');
     if (!chip) return;
+    // A chip is always a question about the topic, so it goes through the tutor
+    // prompt even in blurt or teach mode - a blurt prompt cannot answer it.
     if (mode === 'quiz') generateQuestion(chip.dataset.chip);
     else sendChat(chip.dataset.chip);
   });
@@ -904,6 +1139,7 @@
   fillSubjects();
   restoreSelection();
   setMode('chat');
+  renderTrackerBar();
   updateKeyNotice();
   if (!getKey()) openSettings();
 })();

@@ -14,10 +14,26 @@
     "verified": true
   },
   "resources": [
-    { "label": "BBC Bitesize GCSE English Literature (AQA)", "url": "https://www.bbc.co.uk/bitesize/examspecs/zxqncwx", "verified": true },
-    { "label": "BBC Bitesize AQA poetry anthology guides", "url": "https://www.bbc.co.uk/bitesize/topics/zprysg8", "verified": true },
-    { "label": "MME Revise free GCSE revision", "url": "https://mmerevise.co.uk/", "verified": true },
-    { "label": "Physics and Maths Tutor revision notes", "url": "https://www.physicsandmathstutor.com/", "verified": true }
+    {
+      "label": "BBC Bitesize GCSE English Literature (AQA)",
+      "url": "https://www.bbc.co.uk/bitesize/examspecs/zxqncwx",
+      "verified": true
+    },
+    {
+      "label": "BBC Bitesize AQA poetry anthology guides",
+      "url": "https://www.bbc.co.uk/bitesize/topics/zprysg8",
+      "verified": true
+    },
+    {
+      "label": "MME Revise free GCSE revision",
+      "url": "https://mmerevise.co.uk/",
+      "verified": true
+    },
+    {
+      "label": "Physics and Maths Tutor revision notes",
+      "url": "https://www.physicsandmathstutor.com/",
+      "verified": true
+    }
   ],
   "topics": [
     {
@@ -34,10 +50,22 @@
         "Structure of an answer: thesis, extract analysis, whole-play development, conceptual conclusion"
       ],
       "cards": [
-        { "front": "How is the Shakespeare question on AQA Paper 1 structured?", "back": "A printed extract is given; you must analyse it and then widen your answer to the play as a whole. 30 marks plus 4 SPaG marks." },
-        { "front": "What are the four assessment objectives in GCSE English Literature?", "back": "AO1 informed personal response with evidence, AO2 analysis of language form and structure, AO3 relationship between text and context, AO4 accurate written expression." },
-        { "front": "What is a soliloquy and why does it matter in the exam?", "back": "A speech delivered alone on stage revealing inner thoughts. It gives the audience privileged access to a character, so it is high-value evidence for character analysis." },
-        { "front": "How much of the Shakespeare answer should be about the extract?", "back": "Roughly half, then move deliberately outward to the rest of the play - answers that stay only in the extract cap in the middle bands." }
+        {
+          "front": "How is the Shakespeare question on AQA Paper 1 structured?",
+          "back": "A printed extract is given; you must analyse it and then widen your answer to the play as a whole. 30 marks plus 4 SPaG marks."
+        },
+        {
+          "front": "What are the four assessment objectives in GCSE English Literature?",
+          "back": "AO1 informed personal response with evidence, AO2 analysis of language form and structure, AO3 relationship between text and context, AO4 accurate written expression."
+        },
+        {
+          "front": "What is a soliloquy and why does it matter in the exam?",
+          "back": "A speech delivered alone on stage revealing inner thoughts. It gives the audience privileged access to a character, so it is high-value evidence for character analysis."
+        },
+        {
+          "front": "How much of the Shakespeare answer should be about the extract?",
+          "back": "Roughly half, then move deliberately outward to the rest of the play - answers that stay only in the extract cap in the middle bands."
+        }
       ],
       "cloze": [
         "The Shakespeare question is worth {{c1::30}} marks plus {{c2::4}} marks for SPaG.",
@@ -58,10 +86,22 @@
         "Building a thesis that answers the question in the first sentence"
       ],
       "cards": [
-        { "front": "How many marks is the 19th-century novel question worth?", "back": "30 marks. SPaG marks are only awarded on the Shakespeare question in Paper 1." },
-        { "front": "Name three Gothic conventions examiners expect you to recognise.", "back": "Uncanny or supernatural events, oppressive or labyrinthine settings, doubling and duality, physical decay, transgression of natural limits." },
-        { "front": "Why is context (AO3) not just historical background information?", "back": "Marks are awarded for showing how context shapes meaning in the text, not for standalone facts about the period." },
-        { "front": "What is a framed narrative?", "back": "A story told inside another story, e.g. a letter or testimony that encloses the main narrative, which distances the reader and raises questions of reliability." }
+        {
+          "front": "How many marks is the 19th-century novel question worth?",
+          "back": "30 marks. SPaG marks are only awarded on the Shakespeare question in Paper 1."
+        },
+        {
+          "front": "Name three Gothic conventions examiners expect you to recognise.",
+          "back": "Uncanny or supernatural events, oppressive or labyrinthine settings, doubling and duality, physical decay, transgression of natural limits."
+        },
+        {
+          "front": "Why is context (AO3) not just historical background information?",
+          "back": "Marks are awarded for showing how context shapes meaning in the text, not for standalone facts about the period."
+        },
+        {
+          "front": "What is a framed narrative?",
+          "back": "A story told inside another story, e.g. a letter or testimony that encloses the main narrative, which distances the reader and raises questions of reliability."
+        }
       ],
       "cloze": [
         "In the Victorian period, the {{c1::Poor Law}} of 1834 sent the destitute into workhouses.",
@@ -82,10 +122,22 @@
         "Essay plan in three to four minutes before writing"
       ],
       "cards": [
-        { "front": "Is an extract provided for the Modern Text question?", "back": "No. It is a whole-text essay with a choice of two questions, so quotations must be memorised." },
-        { "front": "How many marks is the Modern Text question worth?", "back": "30 marks plus 4 marks for spelling, punctuation and grammar." },
-        { "front": "What is dramatic irony?", "back": "When the audience knows something a character does not, creating tension or moral judgement." },
-        { "front": "What is an allegory?", "back": "A narrative in which characters and events stand for wider political, moral or historical ideas." }
+        {
+          "front": "Is an extract provided for the Modern Text question?",
+          "back": "No. It is a whole-text essay with a choice of two questions, so quotations must be memorised."
+        },
+        {
+          "front": "How many marks is the Modern Text question worth?",
+          "back": "30 marks plus 4 marks for spelling, punctuation and grammar."
+        },
+        {
+          "front": "What is dramatic irony?",
+          "back": "When the audience knows something a character does not, creating tension or moral judgement."
+        },
+        {
+          "front": "What is an allegory?",
+          "back": "A narrative in which characters and events stand for wider political, moral or historical ideas."
+        }
       ],
       "cloze": [
         "In Paper 2 Section A you answer {{c1::one}} of {{c2::two}} questions on the modern text.",
@@ -106,11 +158,26 @@
         "Making an integrated comparison in every paragraph rather than one poem then the other"
       ],
       "cards": [
-        { "front": "How is the Poetry Anthology question structured?", "back": "One poem from your cluster is printed and named; you compare how it and one other poem you choose from the same cluster present a given theme. 30 marks." },
-        { "front": "What is a dramatic monologue?", "back": "A poem spoken in the voice of a single created character, revealing their personality unintentionally, e.g. My Last Duchess." },
-        { "front": "Define enjambment and caesura.", "back": "Enjambment: a sentence running over the line break without punctuation. Caesura: a deliberate pause inside a line, usually from punctuation." },
-        { "front": "What is a volta?", "back": "A turn or shift in argument or mood within a poem, classically at line 9 of a Petrarchan sonnet." },
-        { "front": "Why is integrated comparison better than a poem-by-poem structure?", "back": "The mark scheme rewards sustained comparison of ideas and methods; separate blocks tend to become description and lose comparative marks." }
+        {
+          "front": "How is the Poetry Anthology question structured?",
+          "back": "One poem from your cluster is printed and named; you compare how it and one other poem you choose from the same cluster present a given theme. 30 marks."
+        },
+        {
+          "front": "What is a dramatic monologue?",
+          "back": "A poem spoken in the voice of a single created character, revealing their personality unintentionally, e.g. My Last Duchess."
+        },
+        {
+          "front": "Define enjambment and caesura.",
+          "back": "Enjambment: a sentence running over the line break without punctuation. Caesura: a deliberate pause inside a line, usually from punctuation."
+        },
+        {
+          "front": "What is a volta?",
+          "back": "A turn or shift in argument or mood within a poem, classically at line 9 of a Petrarchan sonnet."
+        },
+        {
+          "front": "Why is integrated comparison better than a poem-by-poem structure?",
+          "back": "The mark scheme rewards sustained comparison of ideas and methods; separate blocks tend to become description and lose comparative marks."
+        }
       ],
       "cloze": [
         "In the Poetry Anthology question, {{c1::one}} poem is printed and you choose {{c2::one}} other from the same cluster.",
@@ -132,10 +199,22 @@
         "Tentative language: perhaps, suggests, could imply"
       ],
       "cards": [
-        { "front": "How are the marks split in the Unseen Poetry section?", "back": "24 marks for analysing the first unseen poem, then 8 marks for comparing the methods of both poems. 32 marks total." },
-        { "front": "Does context earn marks in the Unseen Poetry section?", "back": "No. AO3 is not assessed here, so time spent guessing historical context is wasted." },
-        { "front": "What must the 8-mark unseen comparison focus on?", "back": "The poets methods - language, form and structure - and their differing effects, not a content summary." },
-        { "front": "Give a reliable four-step approach to an unseen poem.", "back": "Identify the speaker and situation, find the tone shift, pick three method-rich images, then link each back to the central idea." }
+        {
+          "front": "How are the marks split in the Unseen Poetry section?",
+          "back": "24 marks for analysing the first unseen poem, then 8 marks for comparing the methods of both poems. 32 marks total."
+        },
+        {
+          "front": "Does context earn marks in the Unseen Poetry section?",
+          "back": "No. AO3 is not assessed here, so time spent guessing historical context is wasted."
+        },
+        {
+          "front": "What must the 8-mark unseen comparison focus on?",
+          "back": "The poets methods - language, form and structure - and their differing effects, not a content summary."
+        },
+        {
+          "front": "Give a reliable four-step approach to an unseen poem.",
+          "back": "Identify the speaker and situation, find the tone shift, pick three method-rich images, then link each back to the central idea."
+        }
       ],
       "cloze": [
         "Unseen Poetry Q1 is worth {{c1::24}} marks and Q2 is worth {{c2::8}} marks.",
@@ -156,15 +235,44 @@
         "Timed practice: full 45-minute answers under exam conditions"
       ],
       "cards": [
-        { "front": "What is a conceptual thesis in a literature essay?", "back": "A single overarching argument about what the writer is doing and why, stated up front and sustained through every paragraph." },
-        { "front": "What does the What-How-Why paragraph structure mean?", "back": "What the writer presents, How they do it (method plus quotation), Why it matters to the readers response and the writers purpose." },
-        { "front": "How many quotations per text is a realistic revision target?", "back": "Ten to fifteen short, flexible quotations that can be redeployed across multiple themes - depth beats volume." },
-        { "front": "Why is embedding quotations better than dropping them in?", "back": "Embedded quotations keep the sentence fluent and let you analyse individual words precisely, which AO2 rewards." }
+        {
+          "front": "What is a conceptual thesis in a literature essay?",
+          "back": "A single overarching argument about what the writer is doing and why, stated up front and sustained through every paragraph."
+        },
+        {
+          "front": "What does the What-How-Why paragraph structure mean?",
+          "back": "What the writer presents, How they do it (method plus quotation), Why it matters to the readers response and the writers purpose."
+        },
+        {
+          "front": "How many quotations per text is a realistic revision target?",
+          "back": "Ten to fifteen short, flexible quotations that can be redeployed across multiple themes - depth beats volume."
+        },
+        {
+          "front": "Why is embedding quotations better than dropping them in?",
+          "back": "Embedded quotations keep the sentence fluent and let you analyse individual words precisely, which AO2 rewards."
+        }
       ],
       "cloze": [
         "The paragraph structure What-{{c1::How}}-{{c2::Why}} keeps analysis focused on writer method and effect.",
         "Assessment objective {{c1::AO2}} rewards analysis of language, form and structure."
       ]
     }
-  ]
+  ],
+  "exams": [
+    {
+      "code": "8702/1",
+      "name": "Paper 1: Shakespeare and the 19th-century novel",
+      "date": "2027-05-12",
+      "session": "am",
+      "duration": "1h 45m"
+    },
+    {
+      "code": "8702/2",
+      "name": "Paper 2: Modern texts and poetry",
+      "date": "2027-05-19",
+      "session": "am",
+      "duration": "2h 15m"
+    }
+  ],
+  "examNote": "Dates are from the provisional summer 2027 timetables (AQA v1.0 January 2026; Pearson Edexcel provisional). Confirm with the school before relying on them."
 }

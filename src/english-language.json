@@ -14,10 +14,26 @@
     "verified": true
   },
   "resources": [
-    { "label": "BBC Bitesize GCSE English Language (AQA)", "url": "https://www.bbc.co.uk/bitesize/examspecs/zcbchv4", "verified": true },
-    { "label": "Physics and Maths Tutor GCSE English revision", "url": "https://www.physicsandmathstutor.com/", "verified": true },
-    { "label": "MME Revise free GCSE revision", "url": "https://mmerevise.co.uk/", "verified": true },
-    { "label": "Seneca Learning free GCSE courses", "url": "https://senecalearning.com/", "verified": true }
+    {
+      "label": "BBC Bitesize GCSE English Language (AQA)",
+      "url": "https://www.bbc.co.uk/bitesize/examspecs/zcbchv4",
+      "verified": true
+    },
+    {
+      "label": "Physics and Maths Tutor GCSE English revision",
+      "url": "https://www.physicsandmathstutor.com/",
+      "verified": true
+    },
+    {
+      "label": "MME Revise free GCSE revision",
+      "url": "https://mmerevise.co.uk/",
+      "verified": true
+    },
+    {
+      "label": "Seneca Learning free GCSE courses",
+      "url": "https://senecalearning.com/",
+      "verified": true
+    }
   ],
   "topics": [
     {
@@ -34,11 +50,26 @@
         "Timing: 15 min reading, then roughly 5 / 10 / 10 / 20 minutes per question"
       ],
       "cards": [
-        { "front": "AQA English Language Paper 1 Q1: what is the task and how many marks?", "back": "List four things about a specified part of the source. 4 marks. Stay strictly inside the given line numbers and do not analyse." },
-        { "front": "What does Paper 1 Q3 ask you to analyse?", "back": "Structure: how the writer has structured the text to interest the reader - the opening focus, changes of focus, and the ending. 8 marks." },
-        { "front": "Which part of the source must Paper 1 Q4 focus on?", "back": "The second part of the source only (the lines named in the question), evaluating how far you agree with a given statement. 20 marks." },
-        { "front": "Name three structural features you can write about in Q3.", "back": "Shifts in focus (wide to narrow), time shifts or flashback, cyclical structure, foreshadowing, paragraph length changes, a final revelation." },
-        { "front": "What is the difference between language and structure analysis?", "back": "Language = choices at word, phrase and sentence level. Structure = the order and shape of ideas across the whole extract." }
+        {
+          "front": "AQA English Language Paper 1 Q1: what is the task and how many marks?",
+          "back": "List four things about a specified part of the source. 4 marks. Stay strictly inside the given line numbers and do not analyse."
+        },
+        {
+          "front": "What does Paper 1 Q3 ask you to analyse?",
+          "back": "Structure: how the writer has structured the text to interest the reader - the opening focus, changes of focus, and the ending. 8 marks."
+        },
+        {
+          "front": "Which part of the source must Paper 1 Q4 focus on?",
+          "back": "The second part of the source only (the lines named in the question), evaluating how far you agree with a given statement. 20 marks."
+        },
+        {
+          "front": "Name three structural features you can write about in Q3.",
+          "back": "Shifts in focus (wide to narrow), time shifts or flashback, cyclical structure, foreshadowing, paragraph length changes, a final revelation."
+        },
+        {
+          "front": "What is the difference between language and structure analysis?",
+          "back": "Language = choices at word, phrase and sentence level. Structure = the order and shape of ideas across the whole extract."
+        }
       ],
       "cloze": [
         "AQA English Language Paper 1 Section A is worth {{c1::40}} marks across {{c2::four}} questions.",
@@ -60,10 +91,22 @@
         "Proofreading for spelling, punctuation and tense consistency in the last three minutes"
       ],
       "cards": [
-        { "front": "How are the 40 marks split in Paper 1 Section B?", "back": "24 marks for content and organisation, 16 marks for technical accuracy (SPaG, sentence variety, vocabulary range)." },
-        { "front": "How long should you spend on Paper 1 Section B?", "back": "About 45 minutes: 5 minutes planning, 35 minutes writing, 5 minutes proofreading." },
-        { "front": "Give three techniques that lift a descriptive piece into the top band.", "back": "Extended metaphor sustained across paragraphs, deliberate one-sentence paragraph for impact, and shifting sensory focus rather than listing adjectives." },
-        { "front": "Why is a cyclical structure useful in the narrative task?", "back": "It shows deliberate crafting and gives a controlled ending, which the mark scheme rewards under organisation." }
+        {
+          "front": "How are the 40 marks split in Paper 1 Section B?",
+          "back": "24 marks for content and organisation, 16 marks for technical accuracy (SPaG, sentence variety, vocabulary range)."
+        },
+        {
+          "front": "How long should you spend on Paper 1 Section B?",
+          "back": "About 45 minutes: 5 minutes planning, 35 minutes writing, 5 minutes proofreading."
+        },
+        {
+          "front": "Give three techniques that lift a descriptive piece into the top band.",
+          "back": "Extended metaphor sustained across paragraphs, deliberate one-sentence paragraph for impact, and shifting sensory focus rather than listing adjectives."
+        },
+        {
+          "front": "Why is a cyclical structure useful in the narrative task?",
+          "back": "It shows deliberate crafting and gives a controlled ending, which the mark scheme rewards under organisation."
+        }
       ],
       "cloze": [
         "In Paper 1 Section B, {{c1::16}} of the {{c2::40}} marks are for technical accuracy.",
@@ -84,10 +127,22 @@
         "Comparative discourse markers: whereas, by contrast, similarly"
       ],
       "cards": [
-        { "front": "Which Paper 2 question carries the most marks and what does it require?", "back": "Q4, 16 marks: compare how the two writers convey their different attitudes or perspectives, analysing methods and using evidence from both sources." },
-        { "front": "What is the key skill in Paper 2 Q2?", "back": "Synthesis and inference - combining information from both sources and drawing conclusions, not just quoting." },
-        { "front": "Paper 2 Q3 is worth how many marks and covers how many sources?", "back": "12 marks, one source only, focused on how language is used to achieve a stated purpose." },
-        { "front": "Give two useful comparison connectives for Q4.", "back": "Whereas, by contrast, in a similar way, conversely, on the other hand." }
+        {
+          "front": "Which Paper 2 question carries the most marks and what does it require?",
+          "back": "Q4, 16 marks: compare how the two writers convey their different attitudes or perspectives, analysing methods and using evidence from both sources."
+        },
+        {
+          "front": "What is the key skill in Paper 2 Q2?",
+          "back": "Synthesis and inference - combining information from both sources and drawing conclusions, not just quoting."
+        },
+        {
+          "front": "Paper 2 Q3 is worth how many marks and covers how many sources?",
+          "back": "12 marks, one source only, focused on how language is used to achieve a stated purpose."
+        },
+        {
+          "front": "Give two useful comparison connectives for Q4.",
+          "back": "Whereas, by contrast, in a similar way, conversely, on the other hand."
+        }
       ],
       "cloze": [
         "AQA English Language Paper 2 Q4 is worth {{c1::16}} marks and requires you to {{c2::compare}} the writers attitudes.",
@@ -108,10 +163,22 @@
         "24 marks content and organisation, 16 marks technical accuracy"
       ],
       "cards": [
-        { "front": "What does DAFOREST stand for?", "back": "Direct address, Anecdote, Facts, Opinion, Rhetorical question, Emotive language, Statistics, Triples (rule of three)." },
-        { "front": "Why include a counter-argument in Paper 2 Section B?", "back": "Acknowledging then refuting an opposing view shows a sophisticated, controlled argument, which is required for the top content band." },
-        { "front": "If the question asks for a letter, what two conventions must appear?", "back": "An appropriate salutation (Dear Sir or Madam / Dear Mr Smith) and a matching sign-off (Yours faithfully / Yours sincerely)." },
-        { "front": "What is the mark split for Paper 2 Section B?", "back": "24 marks content and organisation, 16 marks technical accuracy - the same as Paper 1 Section B." }
+        {
+          "front": "What does DAFOREST stand for?",
+          "back": "Direct address, Anecdote, Facts, Opinion, Rhetorical question, Emotive language, Statistics, Triples (rule of three)."
+        },
+        {
+          "front": "Why include a counter-argument in Paper 2 Section B?",
+          "back": "Acknowledging then refuting an opposing view shows a sophisticated, controlled argument, which is required for the top content band."
+        },
+        {
+          "front": "If the question asks for a letter, what two conventions must appear?",
+          "back": "An appropriate salutation (Dear Sir or Madam / Dear Mr Smith) and a matching sign-off (Yours faithfully / Yours sincerely)."
+        },
+        {
+          "front": "What is the mark split for Paper 2 Section B?",
+          "back": "24 marks content and organisation, 16 marks technical accuracy - the same as Paper 1 Section B."
+        }
       ],
       "cloze": [
         "Before writing in Paper 2 Section B you must identify the {{c1::form}}, {{c2::audience}} and {{c3::purpose}}.",
@@ -130,8 +197,14 @@
         "Independent candidates must arrange this through their exam centre"
       ],
       "cards": [
-        { "front": "Does the Spoken Language endorsement affect the GCSE English Language grade?", "back": "No. It is separately endorsed and reported as Pass, Merit, Distinction or Not Classified alongside the 9-1 grade." },
-        { "front": "What three things are assessed in the Spoken Language endorsement?", "back": "Presenting information and ideas, responding to questions and feedback, and using Standard English." }
+        {
+          "front": "Does the Spoken Language endorsement affect the GCSE English Language grade?",
+          "back": "No. It is separately endorsed and reported as Pass, Merit, Distinction or Not Classified alongside the 9-1 grade."
+        },
+        {
+          "front": "What three things are assessed in the Spoken Language endorsement?",
+          "back": "Presenting information and ideas, responding to questions and feedback, and using Standard English."
+        }
       ],
       "cloze": [
         "The Spoken Language endorsement is graded {{c1::Pass}}, {{c2::Merit}} or {{c3::Distinction}}."
@@ -151,15 +224,44 @@
         "Proofreading routine for the final three minutes of each writing task"
       ],
       "cards": [
-        { "front": "When do you use a semicolon rather than a comma?", "back": "To join two closely related independent clauses that could each stand alone as a sentence." },
-        { "front": "What does the paragraphing rule TipTop stand for?", "back": "Start a new paragraph when there is a change of Time, Place, Topic or Person." },
-        { "front": "Explain the difference between affect and effect.", "back": "Affect is usually a verb (to influence); effect is usually a noun (the result)." },
-        { "front": "What is a minor sentence and why use one?", "back": "A grammatically incomplete sentence, e.g. Silence. Used sparingly for dramatic emphasis." }
+        {
+          "front": "When do you use a semicolon rather than a comma?",
+          "back": "To join two closely related independent clauses that could each stand alone as a sentence."
+        },
+        {
+          "front": "What does the paragraphing rule TipTop stand for?",
+          "back": "Start a new paragraph when there is a change of Time, Place, Topic or Person."
+        },
+        {
+          "front": "Explain the difference between affect and effect.",
+          "back": "Affect is usually a verb (to influence); effect is usually a noun (the result)."
+        },
+        {
+          "front": "What is a minor sentence and why use one?",
+          "back": "A grammatically incomplete sentence, e.g. Silence. Used sparingly for dramatic emphasis."
+        }
       ],
       "cloze": [
         "A {{c1::colon}} introduces a list, explanation or quotation after a complete clause.",
         "Two independent clauses joined without a conjunction or correct punctuation creates a {{c1::comma splice}}."
       ]
     }
-  ]
+  ],
+  "exams": [
+    {
+      "code": "8700/1",
+      "name": "Paper 1: Explorations in Creative Reading and Writing",
+      "date": "2027-05-24",
+      "session": "am",
+      "duration": "1h 45m"
+    },
+    {
+      "code": "8700/2",
+      "name": "Paper 2: Writers' Viewpoints and Perspectives",
+      "date": "2027-06-08",
+      "session": "am",
+      "duration": "1h 45m"
+    }
+  ],
+  "examNote": "Dates are from the provisional summer 2027 timetables (AQA v1.0 January 2026; Pearson Edexcel provisional). Confirm with the school before relying on them."
 }

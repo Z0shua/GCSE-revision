@@ -4,7 +4,9 @@
 Run:  python3 build_data.py
 Output: ./data.js  and prints a SHA-256 of the canonical JSON payload.
 """
+import datetime
 import hashlib
+import re
 import json
 import os
 import sys
@@ -27,7 +29,10 @@ ORDER = [
 REQUIRED_SUBJECT_KEYS = {
     "id", "name", "board", "boardVerified", "boardNote",
     "specCode", "tier", "accent", "papers", "pastPapers", "resources", "topics",
+    "exams", "examNote",
 }
+
+DATE_RE = re.compile(r"^20\d\d-\d\d-\d\d$")
 
 
 def load_subject(sid):
@@ -49,6 +54,18 @@ def load_subject(sid):
         seen.add(topic["id"])
         if not topic["subtopics"]:
             sys.exit("ERROR %s topic %s has no subtopics" % (sid, topic["id"]))
+    if not data["exams"]:
+        sys.exit("ERROR %s has no exams listed" % sid)
+    for exam in data["exams"]:
+        for key in ("code", "name", "date", "session", "duration"):
+            if key not in exam:
+                sys.exit("ERROR %s exam %r missing %r" % (sid, exam.get("code"), key))
+        if not DATE_RE.match(exam["date"]):
+            sys.exit("ERROR %s exam %s has bad date %r" % (sid, exam["code"], exam["date"]))
+        try:
+            datetime.date(*[int(p) for p in exam["date"].split("-")])
+        except ValueError:
+            sys.exit("ERROR %s exam %s date is not a real date" % (sid, exam["code"]))
     return data
 
 
@@ -56,7 +73,7 @@ def main():
     subjects = [load_subject(sid) for sid in ORDER]
 
     payload = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "title": "GCSE Year 11 Revision Dashboard",
         "school": "King Edward VI Five Ways School, Birmingham",
         "curriculumSource": "https://www.kefw.org/academic/curriculum/",
@@ -67,6 +84,19 @@ def main():
             "Curriculum Intent PDFs. Boards marked unverified are provisional and must be "
             "confirmed with the school before past papers are used."
         ),
+        "examSeries": {
+            "name": "Summer 2027 (June series)",
+            "firstExam": "2027-05-10",
+            "lastExam": "2027-06-18",
+            "contingencyDay": "2027-06-23",
+            "resultsDay": "2027-08-19",
+            "source": "https://www.jcq.org.uk/wp-content/uploads/sites/2/2026/05/Key_Dates_June2027_FINAL.pdf",
+            "note": (
+                "National common-timetable dates from JCQ key dates for the June 2027 series. "
+                "Per-paper dates come from the AQA (provisional v1.0, January 2026) and "
+                "Pearson Edexcel provisional summer 2027 timetables and can still move."
+            ),
+        },
         "subjects": subjects,
     }
 

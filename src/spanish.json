@@ -3,14 +3,14 @@
   "name": "Spanish",
   "board": "Pearson Edexcel",
   "boardVerified": true,
-  "boardNote": "VERIFIED from the KEFW Spanish Curriculum Intent PDFs, which reference a recommended topic by Pearson, the Edexcel GCSE Spanish Interactive Vocabulary Tool, and Edexcel past paper codes 1H and 3H. Included as an optional extra track because KEFW Spanish curriculum documents were supplied; the brief asked for one humanity, which is covered by Geography.",
-  "specCode": "1SP0",
+  "boardNote": "Pearson Edexcel confirmed from the KEFW Spanish Curriculum Intent documents, which cite Pearson resources and the Edexcel vocabulary tool. Spec code updated to 1SP1: the reformed Spanish GCSE replaced 1SP0 for first teaching 2024, so summer 2027 is assessed on 1SP1. Verify with the school.",
+  "specCode": "1SP1",
   "tier": "Higher tier",
   "accent": "orange",
-  "papers": "Paper 1 Listening (25%), Paper 2 Speaking (25%), Paper 3 Reading (25%), Paper 4 Writing (25%). Higher tier papers are coded 1H, 2H, 3H and 4H.",
+  "papers": "Paper 1 Speaking (25%, school-arranged window). Paper 2 Listening (25%). Paper 3 Reading and translation into English (25%). Paper 4 Writing including translation into Spanish (25%). Higher tier.",
   "pastPapers": {
-    "label": "Pearson Edexcel GCSE Spanish (1SP0) course materials and past papers",
-    "url": "https://qualifications.pearson.com/en/qualifications/edexcel-gcses/spanish-2016.coursematerials.html",
+    "label": "Pearson Edexcel Spanish (2024) course materials and assessment materials",
+    "url": "https://qualifications.pearson.com/en/qualifications/edexcel-gcses/spanish-2024.coursematerials.html",
     "verified": true
   },
   "resources": [
@@ -209,5 +209,42 @@
         "The word {{c1::sí}} with an accent means yes, while si without an accent means if."
       ]
     }
-  ]
+  ],
+  "exams": [
+    {
+      "code": "1SP1/1H",
+      "name": "Paper 1: Speaking (school-arranged window)",
+      "date": "2027-04-12",
+      "session": "window",
+      "duration": "7-9m plus prep",
+      "note": "Speaking window runs 12 April to 21 May 2027; your school picks the day."
+    },
+    {
+      "code": "1SP1/2H",
+      "name": "Paper 2: Listening",
+      "date": "2027-06-09",
+      "session": "am",
+      "duration": "1h 00m"
+    },
+    {
+      "code": "1SP1/3H",
+      "name": "Paper 3: Reading",
+      "date": "2027-06-16",
+      "session": "pm",
+      "duration": "1h 00m"
+    },
+    {
+      "code": "1SP1/4H",
+      "name": "Paper 4: Writing",
+      "date": "2027-06-17",
+      "session": "pm",
+      "duration": "1h 20m"
+    }
+  ],
+  "examNote": "Dates are from the provisional summer 2027 timetables (AQA v1.0 January 2026; Pearson Edexcel provisional). Confirm with the school before relying on them.",
+  "altPastPapers": {
+    "label": "Legacy 1SP0 (2016) past papers - still useful extra practice, different paper structure",
+    "url": "https://qualifications.pearson.com/en/qualifications/edexcel-gcses/spanish-2016.coursematerials.html",
+    "verified": true
+  }
 }

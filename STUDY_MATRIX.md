@@ -3,7 +3,7 @@
 **School:** King Edward VI Five Ways School, Birmingham  
 **Year:** Year 11, academic year 2026 to 2027  
 **Curriculum source:** <https://www.kefw.org/academic/curriculum/>  
-**Data checksum (SHA-256):** `c35aa9f507c311dafc30815fa386a97e9c0e876d4b537dac9871652c803259ce`
+**Data checksum (SHA-256):** `ae8aba5797a7a7cb9f4a0153cfabb5fc5ce8b47b70f13cb292e27b9ff3ce47dc`
 
 > KEFW does not publish a consolidated exam-board list on its curriculum or subjects pages. Boards below marked verified were confirmed from the KEFW Curriculum Intent PDFs. Boards marked unverified are provisional and must be confirmed with the school before past papers are used.
 
@@ -20,7 +20,7 @@ Legend: :white_check_mark: board confirmed from a KEFW document. :warning: board
 | **Chemistry (Triple)** | :white_check_mark: AQA | 8462 | Higher tier | 6 | 83 | 89 | [Past papers and mark schemes](https://www.aqa.org.uk/subjects/science/gcse/chemistry-8462/assessment-resources) | [BBC Bitesize GCSE Chemistry (AQA)](https://www.bbc.co.uk/bitesize/examspecs/z8xtmnb) |
 | **Physics (Triple)** | :white_check_mark: AQA | 8463 | Higher tier | 7 | 80 | 83 | [Past papers and mark schemes](https://www.aqa.org.uk/subjects/science/gcse/physics-8463/assessment-resources) | [BBC Bitesize GCSE Physics (AQA)](https://www.bbc.co.uk/bitesize/examspecs/zsc9rdm) |
 | **Geography** | :white_check_mark: Pearson Edexcel B | 1GB0 | Single tier | 7 | 97 | 81 | [Past papers and mark schemes](https://qualifications.pearson.com/en/qualifications/edexcel-gcses/geography-b-2016.coursematerials.html) | [BBC Bitesize GCSE Geography (Edexcel)](https://www.bbc.co.uk/bitesize/examspecs/zsytxsg) |
-| **Spanish** | :white_check_mark: Pearson Edexcel | 1SP0 | Higher tier | 4 | 36 | 34 | [Past papers and mark schemes](https://qualifications.pearson.com/en/qualifications/edexcel-gcses/spanish-2016.coursematerials.html) | [BBC Bitesize GCSE Spanish (Edexcel)](https://www.bbc.co.uk/bitesize/examspecs/zwbhb7h) |
+| **Spanish** | :white_check_mark: Pearson Edexcel | 1SP1 | Higher tier | 4 | 36 | 34 | [Past papers and mark schemes](https://qualifications.pearson.com/en/qualifications/edexcel-gcses/spanish-2024.coursematerials.html) | [BBC Bitesize GCSE Spanish (Edexcel)](https://www.bbc.co.uk/bitesize/examspecs/zwbhb7h) |
 
 ## English Language
 
@@ -178,12 +178,13 @@ Legend: :white_check_mark: board confirmed from a KEFW document. :warning: board
 | Field | Value |
 | --- | --- |
 | Exam board | :white_check_mark: Pearson Edexcel |
-| Spec code | `1SP0` |
+| Spec code | `1SP1` |
 | Tier | Higher tier |
-| Assessment | Paper 1 Listening (25%), Paper 2 Speaking (25%), Paper 3 Reading (25%), Paper 4 Writing (25%). Higher tier papers are coded 1H, 2H, 3H and 4H. |
-| Official past papers | [Pearson Edexcel GCSE Spanish (1SP0) course materials and past papers](https://qualifications.pearson.com/en/qualifications/edexcel-gcses/spanish-2016.coursematerials.html) |
+| Assessment | Paper 1 Speaking (25%, school-arranged window). Paper 2 Listening (25%). Paper 3 Reading and translation into English (25%). Paper 4 Writing including translation into Spanish (25%). Higher tier. |
+| Official past papers | [Pearson Edexcel Spanish (2024) course materials and assessment materials](https://qualifications.pearson.com/en/qualifications/edexcel-gcses/spanish-2024.coursematerials.html) |
+| Alternative board papers | [Legacy 1SP0 (2016) past papers - still useful extra practice, different paper structure](https://qualifications.pearson.com/en/qualifications/edexcel-gcses/spanish-2016.coursematerials.html) |
 | Free revision resources | [BBC Bitesize GCSE Spanish (Edexcel)](https://www.bbc.co.uk/bitesize/examspecs/zwbhb7h) &middot; [Memrise free Spanish vocabulary courses](https://www.memrise.com/) &middot; [MME Revise GCSE Spanish revision](https://mmerevise.co.uk/) &middot; [Seneca Learning free GCSE Spanish course](https://senecalearning.com/) |
-| Board verification | VERIFIED from the KEFW Spanish Curriculum Intent PDFs, which reference a recommended topic by Pearson, the Edexcel GCSE Spanish Interactive Vocabulary Tool, and Edexcel past paper codes 1H and 3H. Included as an optional extra track because KEFW Spanish curriculum documents were supplied; the brief asked for one humanity, which is covered by Geography. |
+| Board verification | Pearson Edexcel confirmed from the KEFW Spanish Curriculum Intent documents, which cite Pearson resources and the Edexcel vocabulary tool. Spec code updated to 1SP1: the reformed Spanish GCSE replaced 1SP0 for first teaching 2024, so summer 2027 is assessed on 1SP1. Verify with the school. |
 
 | Topic | Core sub-topics | Cards |
 | --- | --- | --- |

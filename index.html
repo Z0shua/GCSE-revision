@@ -2,715 +2,1504 @@
 <html lang="en-GB" class="scroll-smooth">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GCSE Year 11 Revision Dashboard</title>
-<meta name="description" content="Self-study GCSE Year 11 revision tracker mapped to the King Edward VI Five Ways School curriculum.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="GCSE Year 11 revision dashboard: spaced retrieval practice, blurting, focus sessions and a past-paper log. Works offline, saves to this browser only.">
+<meta name="theme-color" content="#0c0a09">
+<title>Year 11 Revision Dashboard</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B1%3C/text%3E%3C/svg%3E">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
-  tailwind.config = {
-    darkMode: 'class',
-    theme: { extend: { fontFamily: { sans: ['ui-sans-serif','system-ui','-apple-system','Segoe UI','Roboto','Helvetica Neue','Arial','sans-serif'] } } }
-  };
-  // Apply the saved theme before first paint to avoid a flash.
-  (function () {
-    try {
-      var t = localStorage.getItem('kefw.theme');
-      if (t === 'dark' || (t === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-      }
-    } catch (e) {}
-  })();
+  tailwind.config = { darkMode: 'class' };
 </script>
 <style>
+  :root { --accent: #10b981; }
   html { -webkit-text-size-adjust: 100%; }
-  body { text-wrap: pretty; }
-  .no-scrollbar::-webkit-scrollbar { display: none; }
-  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .tabular { font-variant-numeric: tabular-nums; }
+  /* Deliberately minimal motion: research on Seneca/Blooket-style tools showed
+     slow decorative animation is the single most complained-about feature. */
+  .grow-t { transition: height .25s ease-out, opacity .25s ease-out; }
+  .bar-t { transition: width .3s ease-out; }
   details > summary { list-style: none; cursor: pointer; }
   details > summary::-webkit-details-marker { display: none; }
   details[open] .chev { transform: rotate(90deg); }
-  .chev { transition: transform .18s ease; }
-  @media print { .no-print { display: none !important; } }
+  .chev { transition: transform .15s ease-out; }
+  .no-print { }
+  @media print {
+    .no-print, header, #tabbar { display: none !important; }
+    body { background: #fff !important; color: #000 !important; }
+    .printable { break-inside: avoid; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition-duration: .001ms !important; animation-duration: .001ms !important; }
+  }
+  textarea, input, select, button { font: inherit; }
+  .r-btn { -webkit-tap-highlight-color: transparent; }
 </style>
+<script>
+  // Set the theme before first paint so there is no white flash in a dark room.
+  try {
+    var t = localStorage.getItem('kefw.theme');
+    if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+  } catch (e) {}
+</script>
 </head>
-<body class="bg-stone-50 text-stone-800 dark:bg-stone-950 dark:text-stone-200 antialiased">
+<body class="bg-stone-100 text-stone-900 dark:bg-stone-950 dark:text-stone-100 antialiased pb-24 sm:pb-8">
 
-<!-- ══ Header ══ -->
-<header class="sticky top-0 z-30 border-b border-stone-200 bg-stone-50/90 backdrop-blur dark:border-stone-800 dark:bg-stone-950/90">
-  <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3 sm:px-6">
-    <div class="w-full min-w-0 sm:flex-1">
-      <h1 class="text-base font-semibold leading-tight tracking-tight sm:truncate sm:text-lg">Year 11 Revision Dashboard</h1>
-      <p class="text-xs leading-snug text-stone-500 dark:text-stone-400 sm:truncate">King Edward VI Five Ways curriculum &middot; 2026&ndash;27</p>
+<!-- ============================== HEADER ============================== -->
+<header class="sticky top-0 z-30 border-b border-stone-200 bg-stone-100/95 backdrop-blur dark:border-stone-800 dark:bg-stone-950/95 no-print">
+  <div class="mx-auto max-w-5xl px-3 sm:px-5">
+    <div class="flex h-14 items-center gap-2">
+      <span class="text-xl leading-none" aria-hidden="true">🌱</span>
+      <div class="min-w-0 flex-1">
+        <h1 class="truncate text-sm font-semibold sm:text-base"><span class="sm:hidden">Year 11</span><span class="hidden sm:inline">Year 11 Revision</span></h1>
+        <p id="hdrSub" class="truncate text-[11px] text-stone-500 dark:text-stone-400">Loading…</p>
+      </div>
+      <button id="quickStart" class="hidden rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-emerald-700 sm:block">Start a session</button>
+      <button id="themeBtn" class="rounded-lg border border-stone-300 px-2.5 py-1.5 text-xs hover:bg-stone-200 dark:border-stone-700 dark:hover:bg-stone-800" aria-label="Switch between light and dark">
+        <span id="themeIcon">🌙</span>
+      </button>
+      <button id="exportBtn" class="rounded-lg border border-stone-300 px-2.5 py-1.5 text-xs font-medium hover:bg-stone-200 dark:border-stone-700 dark:hover:bg-stone-800" title="Download a backup of your progress">Back up</button>
     </div>
-    <nav class="flex w-full items-center justify-end gap-2 sm:w-auto">
-      <a href="study.html"
-         class="rounded-lg bg-stone-800 px-3 py-2 text-xs font-medium text-white transition hover:bg-stone-700 dark:bg-stone-200 dark:text-stone-900 dark:hover:bg-white">
-        Study companion
-      </a>
-      <button id="exportBtn" type="button"
-        class="rounded-lg bg-emerald-600 px-3 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 dark:focus:ring-offset-stone-950">
-        Export progress
-      </button>
-      <button id="themeBtn" type="button" aria-label="Toggle dark mode"
-        class="rounded-lg border border-stone-300 px-2.5 py-2 text-xs transition hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">
-        <span class="dark:hidden">Dark</span><span class="hidden dark:inline">Light</span>
-      </button>
+    <nav class="hidden gap-1 pb-2 sm:flex" aria-label="Sections">
+      <button data-tab="today"    class="tab rounded-lg px-3 py-1.5 text-sm font-medium">Today</button>
+      <button data-tab="subjects" class="tab rounded-lg px-3 py-1.5 text-sm font-medium">Subjects</button>
+      <button data-tab="papers"   class="tab rounded-lg px-3 py-1.5 text-sm font-medium">Past papers</button>
+      <button data-tab="progress" class="tab rounded-lg px-3 py-1.5 text-sm font-medium">Progress</button>
+      <a href="study.html" class="ml-auto rounded-lg px-3 py-1.5 text-sm font-medium text-emerald-700 hover:bg-emerald-50 dark:text-emerald-400 dark:hover:bg-emerald-950">AI study room →</a>
     </nav>
   </div>
 </header>
 
-<main class="mx-auto max-w-6xl px-4 pb-24 pt-6 sm:px-6">
+<div id="backupBanner" class="hidden border-b border-amber-300 bg-amber-100 px-3 py-2 text-xs text-amber-900 dark:border-amber-800 dark:bg-amber-950 dark:text-amber-200 no-print">
+  <div class="mx-auto flex max-w-5xl items-center gap-2">
+    <span id="backupText" class="flex-1"></span>
+    <button id="backupNow" class="rounded bg-amber-800 px-2 py-1 font-semibold text-white hover:bg-amber-900">Back up now</button>
+    <button id="snoozeBtn" class="rounded border border-amber-500 px-2 py-1 hover:bg-amber-200 dark:hover:bg-amber-900">Later</button>
+  </div>
+</div>
 
-  <!-- ══ Backup reminder ══ -->
-  <div id="backupBanner" class="mb-5 hidden rounded-xl border border-amber-300 bg-amber-50 p-4 dark:border-amber-800/60 dark:bg-amber-950/40">
-    <div class="flex flex-wrap items-start justify-between gap-3">
-      <div class="min-w-0">
-        <p class="text-sm font-semibold text-amber-900 dark:text-amber-200">Time to back up your progress</p>
-        <p id="backupText" class="mt-0.5 text-xs leading-relaxed text-amber-800 dark:text-amber-300/90"></p>
+<main class="mx-auto max-w-5xl px-3 py-4 sm:px-5 sm:py-6">
+
+<!-- ============================== TODAY ============================== -->
+<section id="view-today" class="space-y-4">
+
+  <div class="grid gap-3 sm:grid-cols-3">
+    <!-- countdown -->
+    <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900 sm:col-span-2">
+      <div class="flex items-baseline gap-3">
+        <div>
+          <p class="text-xs uppercase tracking-wide text-stone-500 dark:text-stone-400">First written paper</p>
+          <p class="tabular text-3xl font-bold" id="cdDays">—</p>
+        </div>
+        <div class="flex-1 border-l border-stone-200 pl-3 dark:border-stone-800">
+          <p class="text-xs uppercase tracking-wide text-stone-500 dark:text-stone-400">Next assessment</p>
+          <p class="text-sm font-semibold leading-tight" id="cdNext">—</p>
+          <p class="text-xs text-stone-500 dark:text-stone-400" id="cdNextDate"></p>
+        </div>
       </div>
-      <div class="flex shrink-0 gap-2">
-        <button type="button" data-act="export"
-          class="rounded-lg bg-amber-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-amber-700">Export now</button>
-        <button type="button" id="snoozeBtn"
-          class="rounded-lg border border-amber-400 px-3 py-1.5 text-xs font-medium text-amber-900 hover:bg-amber-100 dark:border-amber-700 dark:text-amber-200 dark:hover:bg-amber-900/40">Remind me tomorrow</button>
-      </div>
+      <p class="mt-3 text-[11px] leading-snug text-stone-500 dark:text-stone-400">
+        Provisional dates from the exam boards' summer 2027 timetables. Check them against the school's own timetable when it arrives.
+        <button id="showTimetable" class="underline decoration-dotted hover:text-stone-800 dark:hover:text-stone-200">See all papers</button>
+      </p>
+    </div>
+    <!-- streak, deliberately low-stakes -->
+    <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <p class="text-xs uppercase tracking-wide text-stone-500 dark:text-stone-400">Days on the trot</p>
+      <p class="tabular text-3xl font-bold" id="streakDays">0</p>
+      <p class="text-[11px] leading-snug text-stone-500 dark:text-stone-400" id="streakHint"></p>
+      <p class="mt-1 text-[11px] text-stone-400 dark:text-stone-500">Best: <span id="bestStreak" class="tabular">0</span>. Missing a day costs you nothing.</p>
     </div>
   </div>
 
-  <!-- ══ Stats ══ -->
-  <section class="mb-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-    <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
-      <p class="text-[11px] font-medium uppercase tracking-wide text-stone-500 dark:text-stone-400">Overall progress</p>
-      <p class="mt-1 text-2xl font-semibold tabular-nums" id="overallPct">0%</p>
-      <div class="mt-2 h-2 w-full overflow-hidden rounded-full bg-stone-200 dark:bg-stone-800">
-        <div id="overallBar" class="h-full w-0 rounded-full bg-emerald-500 transition-all duration-500"></div>
+  <!-- today's suggestion + start -->
+  <div class="rounded-xl border border-emerald-200 bg-emerald-50 p-4 dark:border-emerald-900 dark:bg-emerald-950/40">
+    <div class="flex flex-wrap items-start gap-3">
+      <div class="min-w-0 flex-1">
+        <h2 class="text-base font-semibold text-emerald-900 dark:text-emerald-200">Today's plan</h2>
+        <p class="mt-0.5 text-sm text-emerald-800 dark:text-emerald-300" id="phaseAdvice">—</p>
+        <div id="todaySubjects" class="mt-2 flex flex-wrap gap-1.5"></div>
       </div>
-      <p class="mt-1.5 text-xs text-stone-500 dark:text-stone-400" id="overallCount">0 of 0 sub-topics</p>
-    </div>
-
-    <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
-      <p class="text-[11px] font-medium uppercase tracking-wide text-stone-500 dark:text-stone-400">Current streak</p>
-      <p class="mt-1 text-2xl font-semibold tabular-nums" id="streakDays">0 days</p>
-      <p class="mt-2 text-xs leading-relaxed text-stone-500 dark:text-stone-400" id="streakHint">Tick anything today to start your streak.</p>
-    </div>
-
-    <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
-      <p class="text-[11px] font-medium uppercase tracking-wide text-stone-500 dark:text-stone-400">This week</p>
-      <p class="mt-1 text-2xl font-semibold tabular-nums" id="weekCount">0 / 20</p>
-      <div class="mt-2 h-2 w-full overflow-hidden rounded-full bg-stone-200 dark:bg-stone-800">
-        <div id="weekBar" class="h-full w-0 rounded-full bg-sky-500 transition-all duration-500"></div>
-      </div>
-      <div class="mt-1.5 flex items-center gap-2">
-        <label for="weeklyTarget" class="text-xs text-stone-500 dark:text-stone-400">Weekly target</label>
-        <input id="weeklyTarget" type="number" min="1" max="200" step="1"
-          class="w-16 rounded-md border border-stone-300 bg-white px-1.5 py-0.5 text-xs tabular-nums dark:border-stone-700 dark:bg-stone-800">
+      <div class="flex w-full gap-2 sm:w-auto">
+        <button id="startFocus" class="flex-1 rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700 sm:flex-none">Start focus session</button>
+        <button id="shuffleDay" class="rounded-lg border border-emerald-300 px-3 py-2.5 text-sm font-medium text-emerald-900 hover:bg-emerald-100 dark:border-emerald-800 dark:text-emerald-200 dark:hover:bg-emerald-900" title="Swap today's subjects">Shuffle</button>
       </div>
     </div>
+    <p class="mt-3 text-[11px] text-emerald-700 dark:text-emerald-400" id="motivation"></p>
+  </div>
 
-    <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
-      <p class="text-[11px] font-medium uppercase tracking-wide text-stone-500 dark:text-stone-400">Longest streak</p>
-      <p class="mt-1 text-2xl font-semibold tabular-nums" id="bestStreak">0 days</p>
-      <p class="mt-2 text-xs text-stone-500 dark:text-stone-400" id="lastExportInfo">No backup taken yet.</p>
+  <!-- effort this week -->
+  <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+    <div class="flex items-end justify-between gap-2">
+      <h2 class="text-sm font-semibold">This week</h2>
+      <p class="tabular text-xs text-stone-500 dark:text-stone-400"><span id="weekMins">0</span> min · <span id="weekCount">0</span> topics rated · <span id="weekPapers">0</span> papers</p>
     </div>
-  </section>
+    <div class="mt-2 h-2.5 w-full overflow-hidden rounded-full bg-stone-200 dark:bg-stone-800">
+      <div id="weekBar" class="bar-t h-full rounded-full bg-emerald-500" style="width:0%"></div>
+    </div>
+    <p class="mt-1.5 text-[11px] text-stone-500 dark:text-stone-400" id="weekHint"></p>
+  </div>
 
-  <!-- ══ Motivation ══ -->
-  <section class="mb-6 rounded-xl border border-stone-200 bg-gradient-to-br from-white to-stone-100 p-5 dark:border-stone-800 dark:from-stone-900 dark:to-stone-900/40">
-    <p class="text-sm font-medium leading-relaxed" id="motivation">Pick one sub-topic and start. That is the whole plan for the next twenty minutes.</p>
-    <p class="mt-1 text-xs text-stone-500 dark:text-stone-400" id="nextUp"></p>
-  </section>
+  <!-- due for review -->
+  <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+    <div class="flex flex-wrap items-center justify-between gap-2">
+      <div>
+        <h2 class="text-sm font-semibold">Due for a second look <span id="dueCount" class="tabular ml-1 rounded-full bg-stone-200 px-2 py-0.5 text-xs font-medium dark:bg-stone-800">0</span></h2>
+        <p class="text-[11px] text-stone-500 dark:text-stone-400">Come back to things just as they start to fade. Solid answers get pushed further out: 1 → 3 → 7 → 21 → 60 days.</p>
+      </div>
+      <button id="dueBlurt" class="rounded-lg border border-stone-300 px-3 py-1.5 text-xs font-medium hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">Blurt a topic instead</button>
+    </div>
+    <div id="dueList" class="mt-3 space-y-1.5"></div>
+  </div>
 
-  <!-- ══ Controls ══ -->
-  <section class="mb-5 flex flex-wrap items-center gap-2">
-    <input id="search" type="search" placeholder="Search sub-topics&hellip;"
-      class="min-w-0 flex-1 rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm placeholder:text-stone-400 focus:border-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-300 dark:border-stone-700 dark:bg-stone-900 dark:focus:ring-stone-700 sm:max-w-xs">
-    <button type="button" id="hideDoneBtn"
-      class="rounded-lg border border-stone-300 px-3 py-2 text-xs font-medium hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">Hide completed</button>
-    <button type="button" id="expandBtn"
-      class="rounded-lg border border-stone-300 px-3 py-2 text-xs font-medium hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">Expand all</button>
-    <label class="cursor-pointer rounded-lg border border-stone-300 px-3 py-2 text-xs font-medium hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">
-      Import progress
-      <input id="importInput" type="file" accept="application/json,.json" class="hidden">
+  <!-- week planner -->
+  <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900 printable">
+    <div class="flex flex-wrap items-center justify-between gap-2">
+      <h2 class="text-sm font-semibold">Your week</h2>
+      <div class="flex gap-2 no-print">
+        <button id="rebuildWeek" class="rounded-lg border border-stone-300 px-3 py-1.5 text-xs font-medium hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">New rota</button>
+        <button id="printWeek" class="rounded-lg border border-stone-300 px-3 py-1.5 text-xs font-medium hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">Print</button>
+      </div>
+    </div>
+    <p class="mt-0.5 text-[11px] text-stone-500 dark:text-stone-400">Two or three subjects a day, every subject at least once a week, weighted towards whatever you have marked shaky. Swap days freely: a rota you can bend is one you'll keep.</p>
+    <div id="weekGrid" class="mt-3 grid gap-2 sm:grid-cols-7"></div>
+  </div>
+</section>
+
+<!-- ============================== SUBJECTS ============================== -->
+<section id="view-subjects" class="hidden space-y-4">
+  <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+    <div class="flex flex-wrap items-center gap-2">
+      <input id="search" type="search" placeholder="Search topics…" class="min-w-0 flex-1 rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm placeholder:text-stone-400 focus:border-emerald-500 focus:outline-none dark:border-stone-700 dark:bg-stone-950">
+      <select id="filterSel" class="rounded-lg border border-stone-300 bg-white px-2 py-2 text-sm dark:border-stone-700 dark:bg-stone-950">
+        <option value="all">Everything</option>
+        <option value="due">Due today</option>
+        <option value="shaky">Shaky only</option>
+        <option value="new">Not started</option>
+        <option value="notsolid">Not solid yet</option>
+      </select>
+      <button id="expandBtn" class="rounded-lg border border-stone-300 px-3 py-2 text-sm font-medium hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">Open all</button>
+    </div>
+    <div class="mt-3 flex flex-wrap items-center gap-3 text-[11px] text-stone-500 dark:text-stone-400">
+      <span class="inline-flex items-center gap-1"><span class="inline-block h-2.5 w-2.5 rounded-full bg-stone-300 dark:bg-stone-700"></span>Not started</span>
+      <span class="inline-flex items-center gap-1"><span class="inline-block h-2.5 w-2.5 rounded-full bg-rose-500"></span>Shaky</span>
+      <span class="inline-flex items-center gap-1"><span class="inline-block h-2.5 w-2.5 rounded-full bg-amber-500"></span>Getting there</span>
+      <span class="inline-flex items-center gap-1"><span class="inline-block h-2.5 w-2.5 rounded-full bg-emerald-500"></span>Solid</span>
+      <span class="ml-auto">Rate honestly. Shaky is the useful answer — it is what pulls a topic back into the queue.</span>
+    </div>
+  </div>
+  <div id="subjects" class="space-y-3"></div>
+  <p id="noResults" class="hidden rounded-xl border border-stone-200 bg-white p-6 text-center text-sm text-stone-500 dark:border-stone-800 dark:bg-stone-900 dark:text-stone-400">Nothing matches that. Try a shorter word.</p>
+</section>
+
+<!-- ============================== PAST PAPERS ============================== -->
+<section id="view-papers" class="hidden space-y-4">
+  <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+    <h2 class="text-sm font-semibold">Log a past paper</h2>
+    <p class="mt-0.5 text-[11px] text-stone-500 dark:text-stone-400">The score matters less than <em>why</em> the marks went. Three to five full papers per subject, marked against the real mark scheme, is the single highest-value thing left before an exam.</p>
+    <div class="mt-3 grid gap-2 sm:grid-cols-2">
+      <label class="block"><span class="text-xs font-medium">Subject</span>
+        <select id="pSubject" class="mt-1 w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm dark:border-stone-700 dark:bg-stone-950"></select>
+      </label>
+      <label class="block"><span class="text-xs font-medium">Paper</span>
+        <select id="pPaper" class="mt-1 w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm dark:border-stone-700 dark:bg-stone-950"></select>
+      </label>
+      <label class="block"><span class="text-xs font-medium">Date sat</span>
+        <input id="pDate" type="date" class="mt-1 w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm dark:border-stone-700 dark:bg-stone-950">
+      </label>
+      <div class="grid grid-cols-2 gap-2">
+        <label class="block"><span class="text-xs font-medium">Marks scored</span>
+          <input id="pScore" type="number" min="0" step="1" inputmode="numeric" class="mt-1 w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm dark:border-stone-700 dark:bg-stone-950">
+        </label>
+        <label class="block"><span class="text-xs font-medium">Out of</span>
+          <input id="pTotal" type="number" min="1" step="1" inputmode="numeric" class="mt-1 w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm dark:border-stone-700 dark:bg-stone-950">
+        </label>
+      </div>
+    </div>
+    <fieldset class="mt-3">
+      <legend class="text-xs font-medium">Where did the marks actually go? (tick all that apply)</legend>
+      <div id="pReasons" class="mt-1.5 flex flex-wrap gap-1.5"></div>
+    </fieldset>
+    <label class="mt-3 block"><span class="text-xs font-medium">Topics to go back to</span>
+      <input id="pNote" type="text" placeholder="e.g. required practical write-ups, moles calculations" class="mt-1 w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm placeholder:text-stone-400 dark:border-stone-700 dark:bg-stone-950">
     </label>
-    <button type="button" id="resetBtn"
-      class="rounded-lg border border-rose-300 px-3 py-2 text-xs font-medium text-rose-700 hover:bg-rose-50 dark:border-rose-900 dark:text-rose-400 dark:hover:bg-rose-950/40">Reset all</button>
-  </section>
+    <div class="mt-3 flex flex-wrap gap-2">
+      <button id="pSave" class="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700">Save paper</button>
+      <span id="pMsg" class="self-center text-xs text-stone-500 dark:text-stone-400"></span>
+    </div>
+  </div>
 
-  <!-- ══ Subjects ══ -->
-  <section id="subjects" class="grid gap-4 lg:grid-cols-2"></section>
+  <div id="paperInsight" class="hidden rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm dark:border-amber-900 dark:bg-amber-950/40"></div>
 
-  <!-- ══ Board verification notice ══ -->
-  <section class="mt-8 rounded-xl border border-stone-200 bg-white p-5 text-sm dark:border-stone-800 dark:bg-stone-900">
-    <h2 class="text-sm font-semibold">Exam board verification</h2>
-    <p class="mt-2 text-xs leading-relaxed text-stone-600 dark:text-stone-400" id="boardNoteGlobal"></p>
-    <ul class="mt-3 space-y-2" id="boardList"></ul>
-  </section>
+  <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+    <h2 class="text-sm font-semibold">Paper history</h2>
+    <div id="paperList" class="mt-3 overflow-x-auto"></div>
+  </div>
 
-  <footer class="mt-8 text-xs leading-relaxed text-stone-500 dark:text-stone-500">
-    <p>All progress is stored only in this browser (localStorage). Export a JSON backup weekly so nothing is lost if the cache is cleared or you change device.</p>
-    <p class="mt-1">Data checksum <span id="checksum" class="font-mono"></span> &middot; shared identically by this page, the study companion and the Anki generator.</p>
-  </footer>
+  <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+    <h2 class="text-sm font-semibold">Where to get the papers</h2>
+    <div id="paperLinks" class="mt-3 space-y-2 text-sm"></div>
+  </div>
+</section>
+
+<!-- ============================== PROGRESS ============================== -->
+<section id="view-progress" class="hidden space-y-4">
+  <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+    <div class="flex items-end justify-between">
+      <div>
+        <h2 class="text-sm font-semibold">Confidence across the whole course</h2>
+        <p class="text-[11px] text-stone-500 dark:text-stone-400">Shaky counts a third, getting there two thirds, solid full marks. <span id="overallCount" class="tabular"></span></p>
+      </div>
+      <p class="tabular text-3xl font-bold" id="overallPct">0%</p>
+    </div>
+    <div class="mt-2 h-3 w-full overflow-hidden rounded-full bg-stone-200 dark:bg-stone-800">
+      <div id="overallBar" class="bar-t h-full rounded-full bg-emerald-500" style="width:0%"></div>
+    </div>
+    <p class="mt-2 text-xs text-stone-600 dark:text-stone-300" id="nextUp"></p>
+  </div>
+
+  <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+    <h2 class="text-sm font-semibold">By subject</h2>
+    <div id="subjBars" class="mt-3 space-y-2.5"></div>
+  </div>
+
+  <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+    <h2 class="text-sm font-semibold">Weakest topics right now</h2>
+    <p class="text-[11px] text-stone-500 dark:text-stone-400">Lowest confidence first. This is your list, not a judgement.</p>
+    <div id="weakList" class="mt-3 space-y-1.5"></div>
+  </div>
+
+  <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900 printable">
+    <div class="flex items-center justify-between">
+      <h2 class="text-sm font-semibold">Week in review</h2>
+      <button id="printSummary" class="rounded-lg border border-stone-300 px-3 py-1.5 text-xs font-medium hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800 no-print">Print or screenshot</button>
+    </div>
+    <p class="text-[11px] text-stone-500 dark:text-stone-400">Sunday habit: plan, check, adjust. Two minutes here is worth an hour of drifting.</p>
+    <div id="weekReview" class="mt-3 space-y-2 text-sm"></div>
+  </div>
+
+  <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+    <h2 class="text-sm font-semibold">Exam timetable</h2>
+    <p class="text-[11px] text-stone-500 dark:text-stone-400" id="seriesNote"></p>
+    <div id="timetable" class="mt-3 overflow-x-auto"></div>
+  </div>
+
+  <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+    <h2 class="text-sm font-semibold">Exam boards and spec codes</h2>
+    <p class="mt-0.5 text-[11px] text-stone-500 dark:text-stone-400" id="boardNoteGlobal"></p>
+    <div id="boardList" class="mt-3 space-y-1.5 text-sm"></div>
+  </div>
+
+  <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900 no-print">
+    <h2 class="text-sm font-semibold">Your data</h2>
+    <p class="mt-0.5 text-[11px] text-stone-500 dark:text-stone-400">Everything lives in this browser only — nothing is uploaded anywhere. Clearing browsing data wipes it, so back up weekly.</p>
+    <p class="mt-1 text-[11px] text-stone-500 dark:text-stone-400" id="lastExportInfo"></p>
+    <div class="mt-3 flex flex-wrap gap-2">
+      <button id="exportBtn2" class="rounded-lg bg-stone-900 px-4 py-2 text-sm font-semibold text-white hover:bg-stone-700 dark:bg-stone-100 dark:text-stone-900 dark:hover:bg-white">Download backup</button>
+      <label class="cursor-pointer rounded-lg border border-stone-300 px-4 py-2 text-sm font-medium hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">
+        Restore from file<input id="importInput" type="file" accept="application/json,.json" class="hidden">
+      </label>
+      <button id="resetBtn" class="rounded-lg border border-rose-300 px-4 py-2 text-sm font-medium text-rose-700 hover:bg-rose-50 dark:border-rose-900 dark:text-rose-400 dark:hover:bg-rose-950">Reset everything</button>
+      <button id="replayOnboard" class="rounded-lg border border-stone-300 px-4 py-2 text-sm font-medium hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">Show the intro again</button>
+    </div>
+    <p class="mt-3 break-all text-[10px] text-stone-400 dark:text-stone-500">Data checksum <span id="checksum" class="tabular"></span></p>
+  </div>
+</section>
+
 </main>
 
-<!-- ══ Toast ══ -->
-<div id="toast" class="pointer-events-none fixed bottom-4 left-1/2 z-50 -translate-x-1/2 rounded-lg bg-stone-900 px-4 py-2 text-sm text-white opacity-0 shadow-lg transition-opacity duration-300 dark:bg-stone-100 dark:text-stone-900"></div>
+<!-- ============================== MOBILE TABS ============================== -->
+<nav id="tabbar" class="fixed bottom-0 left-0 right-0 z-30 border-t border-stone-200 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur dark:border-stone-800 dark:bg-stone-900/95 sm:hidden no-print" aria-label="Sections">
+  <div class="grid grid-cols-5">
+    <button data-tab="today"    class="mtab flex flex-col items-center gap-0.5 py-2 text-[10px] font-medium"><span class="text-lg leading-none">🗓️</span>Today</button>
+    <button data-tab="subjects" class="mtab flex flex-col items-center gap-0.5 py-2 text-[10px] font-medium"><span class="text-lg leading-none">📚</span>Subjects</button>
+    <button data-tab="papers"   class="mtab flex flex-col items-center gap-0.5 py-2 text-[10px] font-medium"><span class="text-lg leading-none">📝</span>Papers</button>
+    <button data-tab="progress" class="mtab flex flex-col items-center gap-0.5 py-2 text-[10px] font-medium"><span class="text-lg leading-none">📈</span>Progress</button>
+    <a href="study.html" class="flex flex-col items-center gap-0.5 py-2 text-[10px] font-medium text-emerald-700 dark:text-emerald-400"><span class="text-lg leading-none">💬</span>AI room</a>
+  </div>
+</nav>
+
+<!-- ============================== MODALS ============================== -->
+<div id="modalWrap" class="fixed inset-0 z-40 hidden items-end justify-center bg-stone-900/60 p-0 backdrop-blur-sm sm:items-center sm:p-4 no-print">
+  <div id="modalBox" role="dialog" aria-modal="true" class="max-h-[92vh] w-full overflow-y-auto rounded-t-2xl bg-white p-5 shadow-xl dark:bg-stone-900 sm:max-w-lg sm:rounded-2xl"></div>
+</div>
+
+<div id="toast" class="pointer-events-none fixed bottom-20 left-1/2 z-50 -translate-x-1/2 rounded-lg bg-stone-900 px-4 py-2 text-sm text-white opacity-0 transition-opacity dark:bg-stone-100 dark:text-stone-900 sm:bottom-6 no-print"></div>
 
 <script src="data.js"></script>
 <script>
+/* =====================================================================
+   Year 11 Revision Dashboard
+   All state is local to this browser. No network calls except the
+   Tailwind CDN stylesheet and the outbound resource links.
+   ===================================================================== */
 (function () {
   'use strict';
 
-  // ─────────────────────────── Constants ───────────────────────────
-  var STORE_KEY   = 'kefw.gcse.progress.v1';
-  var THEME_KEY   = 'kefw.theme';
-  var GRACE_HOURS = 24;   // "next-midnight grace period": a day is kept alive
-                          // until the end of the FOLLOWING calendar day.
-  var EXPORT_REMINDER_DAYS = 7;
+  var D = (typeof GCSE_DATA !== 'undefined') ? GCSE_DATA : null;
+  if (!D) { document.body.innerHTML = '<p style="padding:2rem;font:16px system-ui">data.js failed to load. Keep index.html and data.js in the same folder.</p>'; return; }
 
-  var ACCENTS = {
-    amber:   { bar: 'bg-amber-500',   dot: 'bg-amber-500',   ring: 'focus:ring-amber-500',   text: 'text-amber-700 dark:text-amber-400' },
-    rose:    { bar: 'bg-rose-500',    dot: 'bg-rose-500',    ring: 'focus:ring-rose-500',    text: 'text-rose-700 dark:text-rose-400' },
-    blue:    { bar: 'bg-blue-500',    dot: 'bg-blue-500',    ring: 'focus:ring-blue-500',    text: 'text-blue-700 dark:text-blue-400' },
-    emerald: { bar: 'bg-emerald-500', dot: 'bg-emerald-500', ring: 'focus:ring-emerald-500', text: 'text-emerald-700 dark:text-emerald-400' },
-    violet:  { bar: 'bg-violet-500',  dot: 'bg-violet-500',  ring: 'focus:ring-violet-500',  text: 'text-violet-700 dark:text-violet-400' },
-    sky:     { bar: 'bg-sky-500',     dot: 'bg-sky-500',     ring: 'focus:ring-sky-500',     text: 'text-sky-700 dark:text-sky-400' },
-    teal:    { bar: 'bg-teal-500',    dot: 'bg-teal-500',    ring: 'focus:ring-teal-500',    text: 'text-teal-700 dark:text-teal-400' },
-    orange:  { bar: 'bg-orange-500',  dot: 'bg-orange-500',  ring: 'focus:ring-orange-500',  text: 'text-orange-700 dark:text-orange-400' }
-  };
+  var KEY = 'kefw.gcse.v2';
+  var LEGACY = 'kefw.gcse.progress.v1';
+  var BOX_DAYS = [1, 3, 7, 21, 60];           // expanding spaced-review ladder
+  var REASONS = ['Knowledge gap', 'Exam technique', 'Ran out of time', 'Misread the question', 'Careless slip'];
+  var ACCENT_LIGHT = { amber:'#d97706', rose:'#e11d48', blue:'#2563eb', emerald:'#059669', violet:'#7c3aed', sky:'#0284c7', teal:'#0d9488', orange:'#ea580c' };
+  var ACCENT_DARK  = { amber:'#fbbf24', rose:'#fb7185', blue:'#60a5fa', emerald:'#34d399', violet:'#a78bfa', sky:'#38bdf8', teal:'#2dd4bf', orange:'#fb923c' };
+  // Subject colours need more lift on a black background to stay readable.
+  var ACCENT = new Proxy({}, { get: function (_, k) {
+    return (document.documentElement.classList.contains('dark') ? ACCENT_DARK : ACCENT_LIGHT)[k];
+  } });
+  var RAG = [
+    { r:1, label:'Shaky',         short:'Shaky',  colour:'#e11d48' },
+    { r:2, label:'Getting there', short:'Nearly', colour:'#d97706' },
+    { r:3, label:'Solid',         short:'Solid',  colour:'#059669' }
+  ];
+  var DAY_NAMES = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
 
-  // ─────────────────────────── Date helpers ───────────────────────────
-  function dayKey(d) {
-    d = d || new Date();
-    var m = String(d.getMonth() + 1).padStart(2, '0');
-    var day = String(d.getDate()).padStart(2, '0');
-    return d.getFullYear() + '-' + m + '-' + day;
+  /* ---------------------------- date helpers ---------------------------- */
+  function todayISO(d) { d = d || new Date(); return ymd(d); }
+  function ymd(d) {
+    return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
   }
-  function parseDayKey(k) {
-    var p = String(k || '').split('-');
-    if (p.length !== 3) return null;
-    var d = new Date(Number(p[0]), Number(p[1]) - 1, Number(p[2]));
-    return isNaN(d.getTime()) ? null : d;
+  function parseISO(s) { var p = String(s).split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  function addDays(iso, n) { var d = parseISO(iso); d.setDate(d.getDate() + n); return ymd(d); }
+  function daysBetween(a, b) { return Math.round((parseISO(b) - parseISO(a)) / 86400000); }
+  function mondayOf(iso) { var d = parseISO(iso); var w = (d.getDay() + 6) % 7; d.setDate(d.getDate() - w); return ymd(d); }
+  function prettyDate(iso) {
+    var d = parseISO(iso);
+    return d.toLocaleDateString('en-GB', { weekday:'short', day:'numeric', month:'short', year:'numeric' });
   }
-  function daysBetween(aKey, bKey) {
-    var a = parseDayKey(aKey), b = parseDayKey(bKey);
-    if (!a || !b) return null;
-    return Math.round((b - a) / 86400000);
-  }
-  /* ISO week start (Monday) for the given date, as a day key. */
-  function weekStartKey(d) {
-    d = d || new Date();
-    var x = new Date(d.getFullYear(), d.getMonth(), d.getDate());
-    var dow = (x.getDay() + 6) % 7; // Mon = 0
-    x.setDate(x.getDate() - dow);
-    return dayKey(x);
-  }
-  function hoursSince(iso) {
-    if (!iso) return Infinity;
-    var t = Date.parse(iso);
-    if (isNaN(t)) return Infinity;
-    return (Date.now() - t) / 3600000;
-  }
-  function fmtDate(iso) {
-    var t = Date.parse(iso);
-    if (isNaN(t)) return 'never';
-    return new Date(t).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  function shortDate(iso) {
+    var d = parseISO(iso);
+    return d.toLocaleDateString('en-GB', { day:'numeric', month:'short' });
   }
 
-  // ─────────────────────────── State ───────────────────────────
-  function blankState() {
+  /* ---------------------------- state ---------------------------- */
+  var TODAY = todayISO();
+  var state = null;
+
+  function blank() {
     return {
-      version: 1,
-      done: {},              // itemKey -> ISO timestamp completed
-      streak: 0,
-      bestStreak: 0,
-      lastActiveDay: null,   // day key of the most recent tick
-      lastExport: null,      // ISO
-      snoozeUntil: null,     // ISO - backup reminder snooze
-      weeklyTarget: 20,
-      hideDone: false,
-      createdAt: new Date().toISOString()
+      app:'kefw-gcse', version:2, createdAt:new Date().toISOString(),
+      items:{}, papers:[], sessions:[],
+      plan:{ week:mondayOf(TODAY), days:{} },
+      streak:0, bestStreak:0, lastActiveDay:null,
+      lastExport:null, snoozeUntil:null,
+      onboarded:false, name:''
     };
   }
 
-  var state = blankState();
-
   function load() {
-    try {
-      var raw = localStorage.getItem(STORE_KEY);
-      if (!raw) return;
-      var parsed = JSON.parse(raw);
-      if (parsed && typeof parsed === 'object') state = normalise(parsed);
-    } catch (e) {
-      console.warn('Could not read saved progress:', e);
-    }
+    var s = null;
+    try { s = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { s = null; }
+    if (!s || s.app !== 'kefw-gcse') s = migrate();
+    var b = blank();
+    for (var k in b) if (!(k in s)) s[k] = b[k];
+    if (!s.plan || !s.plan.days) s.plan = b.plan;
+    state = s;
+    rollStreak();
+    ensureWeek();
   }
 
-  function normalise(obj) {
-    var s = blankState();
-    if (obj.done && typeof obj.done === 'object') {
-      Object.keys(obj.done).forEach(function (k) {
-        var v = obj.done[k];
-        if (v === true) s.done[k] = new Date().toISOString();
-        else if (typeof v === 'string') s.done[k] = v;
-      });
+  // Anyone who used version 1 kept a flat map of ticked sub-topics.
+  // A tick meant "done", which we read as solid, on the first rung of the ladder.
+  function migrate() {
+    var s = blank(), old = null;
+    try { old = JSON.parse(localStorage.getItem(LEGACY) || 'null'); } catch (e) { old = null; }
+    if (!old) return s;
+    var done = old.done || {};
+    for (var key in done) {
+      var when = (typeof done[key] === 'string') ? done[key].slice(0, 10) : TODAY;
+      s.items[key] = { r:3, box:1, seen:when, due:addDays(when, BOX_DAYS[0]) };
     }
-    s.streak        = Number(obj.streak) || 0;
-    s.bestStreak    = Number(obj.bestStreak) || 0;
-    s.lastActiveDay = typeof obj.lastActiveDay === 'string' ? obj.lastActiveDay : null;
-    s.lastExport    = typeof obj.lastExport === 'string' ? obj.lastExport : null;
-    s.snoozeUntil   = typeof obj.snoozeUntil === 'string' ? obj.snoozeUntil : null;
-    s.weeklyTarget  = Math.min(200, Math.max(1, Number(obj.weeklyTarget) || 20));
-    s.hideDone      = !!obj.hideDone;
-    s.createdAt     = typeof obj.createdAt === 'string' ? obj.createdAt : s.createdAt;
+    s.streak = old.streak || 0;
+    s.bestStreak = old.bestStreak || 0;
+    s.lastActiveDay = old.lastActiveDay || null;
+    s.lastExport = old.lastExport || null;
+    s.snoozeUntil = old.snoozeUntil || null;
+    s.createdAt = old.createdAt || s.createdAt;
+    s.onboarded = Object.keys(s.items).length > 0;
     return s;
   }
 
+  var saveTimer = null;
   function save() {
-    try {
-      localStorage.setItem(STORE_KEY, JSON.stringify(state));
-    } catch (e) {
-      toast('Could not save - browser storage is full or blocked.');
-    }
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(function () {
+      try { localStorage.setItem(KEY, JSON.stringify(state)); }
+      catch (e) { toast('Could not save — browser storage is full or blocked.'); }
+    }, 60);
   }
 
-  // ─────────────────────────── Streak ───────────────────────────
-  /*
-   * Grace period rule: a streak day stays alive until the end of the NEXT
-   * calendar day. So working on Monday and again on Tuesday continues the
-   * streak; working Monday then Wednesday resets it to 1. Re-evaluated on
-   * load so an idle day is reflected without needing a tick.
-   */
-  function recomputeStreakOnLoad() {
+  /* A day stays alive until the end of the FOLLOWING calendar day, so a late
+     night or a missed evening does not wipe the count. No shaming either way. */
+  function rollStreak() {
     if (!state.lastActiveDay) { state.streak = 0; return; }
-    var gap = daysBetween(state.lastActiveDay, dayKey());
-    if (gap === null || gap < 0) { state.streak = 0; state.lastActiveDay = null; return; }
-    if (gap > 1) state.streak = 0;   // grace period expired
+    var gap = daysBetween(state.lastActiveDay, TODAY);
+    if (gap <= 1) return;
+    state.streak = 0;
   }
-
-  function registerActivity() {
-    var today = dayKey();
-    if (state.lastActiveDay === today) return;      // already counted today
-    var gap = state.lastActiveDay ? daysBetween(state.lastActiveDay, today) : null;
-    if (gap === 1) state.streak += 1;               // inside the grace period
-    else state.streak = 1;                          // first day, or streak broken
-    state.lastActiveDay = today;
+  function markActive() {
+    if (state.lastActiveDay === TODAY) return;
+    var gap = state.lastActiveDay ? daysBetween(state.lastActiveDay, TODAY) : 999;
+    state.streak = (gap === 1) ? state.streak + 1 : 1;
+    state.lastActiveDay = TODAY;
     if (state.streak > state.bestStreak) state.bestStreak = state.streak;
   }
 
-  // ─────────────────────────── Data indexing ───────────────────────────
-  var SUBJECTS = GCSE_DATA.subjects;
-
-  function itemKey(sid, tid, i) { return sid + '|' + tid + '|' + i; }
-
-  var ALL_ITEMS = [];
-  SUBJECTS.forEach(function (s) {
+  /* ---------------------------- data indexes ---------------------------- */
+  var SUBJ = D.subjects;
+  var ALL_ITEMS = [];   // { key, subject, topic, text }
+  SUBJ.forEach(function (s) {
     s.topics.forEach(function (t) {
-      t.subtopics.forEach(function (label, i) {
-        ALL_ITEMS.push({ key: itemKey(s.id, t.id, i), subject: s, topic: t, label: label });
+      t.subtopics.forEach(function (st, i) {
+        ALL_ITEMS.push({ key: s.id + '|' + t.id + '|' + i, s:s, t:t, text:st });
       });
     });
   });
-  var TOTAL_ITEMS = ALL_ITEMS.length;
+  var TOTAL = ALL_ITEMS.length;
 
-  function isDone(key) { return Object.prototype.hasOwnProperty.call(state.done, key); }
-  function doneCount() { return Object.keys(state.done).length; }
+  var ALL_EXAMS = [];
+  SUBJ.forEach(function (s) {
+    s.exams.forEach(function (e) { ALL_EXAMS.push({ s:s, e:e }); });
+  });
+  ALL_EXAMS.sort(function (a, b) { return a.e.date < b.e.date ? -1 : 1; });
 
-  function doneCountFor(sid, tid) {
-    var n = 0, prefix = tid ? sid + '|' + tid + '|' : sid + '|';
-    Object.keys(state.done).forEach(function (k) { if (k.indexOf(prefix) === 0) n++; });
-    return n;
-  }
+  function it(key) { return state.items[key] || null; }
+  function rOf(key) { var x = it(key); return x ? x.r : 0; }
+  function isDue(key) { var x = it(key); return !!(x && x.r > 0 && x.due && x.due <= TODAY); }
 
-  function weekDoneCount() {
-    var start = weekStartKey();
-    var n = 0;
-    Object.keys(state.done).forEach(function (k) {
-      var d = state.done[k];
-      var t = Date.parse(d);
-      if (isNaN(t)) return;
-      if (weekStartKey(new Date(t)) === start) n++;
-    });
-    return n;
-  }
-
-  // ─────────────────────────── Motivation ───────────────────────────
-  function motivationFor(streak, pct) {
-    if (streak === 0) {
-      return pct > 0
-        ? 'Streak reset, progress kept. One tick today restarts it - pick the easiest sub-topic on the list.'
-        : 'Pick one sub-topic and start. That is the whole plan for the next twenty minutes.';
-    }
-    if (streak === 1) return 'Day one done. The only day that matters is the next one - come back tomorrow and it becomes a habit.';
-    if (streak === 2) return 'Two days running. Do not break the chain today; short and consistent beats long and occasional.';
-    if (streak < 5)   return streak + ' days in a row. This is the stage where it stops feeling like willpower and starts feeling normal.';
-    if (streak < 8)   return streak + ' straight days - almost a full week. Add one past-paper question today to make the revision active.';
-    if (streak < 15)  return streak + ' days without a gap. You are now revising more consistently than most of your year group.';
-    if (streak < 30)  return streak + ' days. Serious momentum. Shift some time to timed exam questions rather than re-reading notes.';
-    if (streak < 60)  return streak + ' days unbroken. Protect it: on a bad day, tick one small sub-topic rather than skipping entirely.';
-    return streak + ' days. This is what a grade 8 or 9 work pattern actually looks like. Keep the weekly export up to date.';
-  }
-
-  function nextUpText() {
-    var pending = ALL_ITEMS.filter(function (it) { return !isDone(it.key); });
-    if (!pending.length) return 'Every sub-topic on the tracker is ticked. Move fully to timed past papers.';
-    var it = pending[0];
-    return 'Next unticked: ' + it.subject.name + ' \u2192 ' + it.topic.name + ' \u2192 ' + it.label;
-  }
-
-  // ─────────────────────────── Rendering ───────────────────────────
-  var elSubjects = document.getElementById('subjects');
-
-  function esc(s) {
-    return String(s).replace(/[&<>"']/g, function (c) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
-    });
-  }
-
-  function boardBadge(s) {
-    return s.boardVerified
-      ? '<span class="inline-flex items-center gap-1 rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">Board verified</span>'
-      : '<span class="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-900 dark:bg-amber-950 dark:text-amber-300">Board unverified</span>';
-  }
-
-  function buildSubjects() {
-    var html = SUBJECTS.map(function (s) {
-      var a = ACCENTS[s.accent] || ACCENTS.blue;
-      var resources = s.resources.map(function (r) {
-        return '<a href="' + esc(r.url) + '" target="_blank" rel="noopener noreferrer" ' +
-               'class="rounded-md border border-stone-300 px-2 py-1 text-[11px] transition hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">' +
-               esc(r.label) + '</a>';
-      }).join('');
-
-      var alt = s.altPastPapers
-        ? '<a href="' + esc(s.altPastPapers.url) + '" target="_blank" rel="noopener noreferrer" ' +
-          'class="rounded-md border border-stone-300 px-2 py-1 text-[11px] transition hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">' +
-          esc(s.altPastPapers.label) + '</a>'
-        : '';
-
-      var topics = s.topics.map(function (t) {
-        var items = t.subtopics.map(function (label, i) {
-          var key = itemKey(s.id, t.id, i);
-          var done = isDone(key);
-          return '<li data-item="' + esc(key) + '" data-done="' + done + '" ' +
-                 'data-search="' + esc((label + ' ' + t.name + ' ' + s.name).toLowerCase()) + '">' +
-                 '<label class="flex cursor-pointer items-start gap-2.5 rounded-lg px-2 py-1.5 transition hover:bg-stone-100 dark:hover:bg-stone-800/70">' +
-                 '<input type="checkbox" data-key="' + esc(key) + '"' + (done ? ' checked' : '') +
-                 ' class="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-stone-400 text-emerald-600 focus:ring-2 ' + a.ring + ' dark:border-stone-600 dark:bg-stone-800">' +
-                 '<span class="text-[13px] leading-snug ' + (done ? 'text-stone-400 line-through dark:text-stone-600' : '') + '">' + esc(label) + '</span>' +
-                 '</label></li>';
-        }).join('');
-
-        var td = doneCountFor(s.id, t.id), tt = t.subtopics.length;
-        return '<details class="group rounded-lg border border-stone-200 dark:border-stone-800" data-topic="' + esc(t.id) + '">' +
-          '<summary class="flex items-center gap-2 px-3 py-2.5">' +
-            '<span class="chev shrink-0 text-stone-400">&#9656;</span>' +
-            '<span class="min-w-0 flex-1 text-[13px] font-medium leading-snug">' + esc(t.name) + '</span>' +
-            '<span class="shrink-0 rounded-full bg-stone-100 px-2 py-0.5 text-[11px] tabular-nums text-stone-600 dark:bg-stone-800 dark:text-stone-400" data-topic-count>' + td + '/' + tt + '</span>' +
-          '</summary>' +
-          '<ul class="space-y-0.5 border-t border-stone-200 px-2 py-2 dark:border-stone-800">' + items + '</ul>' +
-        '</details>';
-      }).join('');
-
-      var sd = doneCountFor(s.id), st = s.topics.reduce(function (n, t) { return n + t.subtopics.length; }, 0);
-      var pct = st ? Math.round(sd / st * 100) : 0;
-
-      return '<article class="flex flex-col rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900" data-subject="' + esc(s.id) + '">' +
-        '<header class="mb-3">' +
-          '<div class="flex flex-wrap items-center gap-2">' +
-            '<span class="h-2.5 w-2.5 shrink-0 rounded-full ' + a.dot + '"></span>' +
-            '<h2 class="text-sm font-semibold">' + esc(s.name) + '</h2>' +
-            boardBadge(s) +
-          '</div>' +
-          '<p class="mt-1 text-[11px] text-stone-500 dark:text-stone-400">' + esc(s.board) + ' &middot; spec ' + esc(s.specCode) + ' &middot; ' + esc(s.tier) + '</p>' +
-          '<p class="mt-1 text-[11px] leading-relaxed text-stone-500 dark:text-stone-400">' + esc(s.papers) + '</p>' +
-          '<div class="mt-2.5 flex items-center gap-2">' +
-            '<div class="h-1.5 flex-1 overflow-hidden rounded-full bg-stone-200 dark:bg-stone-800">' +
-              '<div class="h-full rounded-full ' + a.bar + ' transition-all duration-500" style="width:' + pct + '%" data-subject-bar></div>' +
-            '</div>' +
-            '<span class="shrink-0 text-[11px] tabular-nums text-stone-500 dark:text-stone-400" data-subject-count>' + sd + '/' + st + '</span>' +
-          '</div>' +
-        '</header>' +
-        '<div class="mb-3 flex flex-wrap gap-1.5">' +
-          '<a href="' + esc(s.pastPapers.url) + '" target="_blank" rel="noopener noreferrer" ' +
-            'class="rounded-md bg-stone-800 px-2 py-1 text-[11px] font-medium text-white transition hover:bg-stone-700 dark:bg-stone-200 dark:text-stone-900 dark:hover:bg-white">Past papers &amp; mark schemes</a>' +
-          alt + resources +
-        '</div>' +
-        (s.boardVerified ? '' :
-          '<p class="mb-3 rounded-lg border border-amber-300 bg-amber-50 p-2.5 text-[11px] leading-relaxed text-amber-900 dark:border-amber-800/60 dark:bg-amber-950/40 dark:text-amber-300">' + esc(s.boardNote) + '</p>') +
-        '<div class="space-y-1.5">' + topics + '</div>' +
-      '</article>';
-    }).join('');
-
-    elSubjects.innerHTML = html;
-  }
-
-  function buildBoardNotes() {
-    document.getElementById('boardNoteGlobal').textContent = GCSE_DATA.boardVerificationNote;
-    document.getElementById('boardList').innerHTML = SUBJECTS.map(function (s) {
-      return '<li class="rounded-lg border border-stone-200 p-3 dark:border-stone-800">' +
-        '<div class="flex flex-wrap items-center gap-2">' +
-          '<span class="text-xs font-semibold">' + esc(s.name) + '</span>' + boardBadge(s) +
-          '<span class="text-[11px] text-stone-500 dark:text-stone-400">' + esc(s.board) + ' ' + esc(s.specCode) + '</span>' +
-        '</div>' +
-        '<p class="mt-1.5 text-[11px] leading-relaxed text-stone-600 dark:text-stone-400">' + esc(s.boardNote) + '</p>' +
-      '</li>';
-    }).join('');
-    document.getElementById('checksum').textContent = GCSE_DATA.dataChecksum || 'n/a';
-  }
-
-  // ─────────────────────────── Stats refresh ───────────────────────────
-  function refreshStats() {
-    var dc = doneCount();
-    var pct = TOTAL_ITEMS ? Math.round(dc / TOTAL_ITEMS * 100) : 0;
-    document.getElementById('overallPct').textContent = pct + '%';
-    document.getElementById('overallBar').style.width = pct + '%';
-    document.getElementById('overallCount').textContent = dc + ' of ' + TOTAL_ITEMS + ' sub-topics';
-
-    document.getElementById('streakDays').textContent = state.streak + (state.streak === 1 ? ' day' : ' days');
-    document.getElementById('bestStreak').textContent = state.bestStreak + (state.bestStreak === 1 ? ' day' : ' days');
-
-    var hint;
-    if (!state.lastActiveDay) hint = 'Tick anything today to start your streak.';
-    else if (state.lastActiveDay === dayKey()) hint = 'Counted for today. Next tick must be by the end of tomorrow.';
-    else if (daysBetween(state.lastActiveDay, dayKey()) === 1) hint = 'Grace period active - tick one sub-topic today to keep the streak.';
-    else hint = 'Streak lapsed. Ticking anything today starts a new one at day 1.';
-    document.getElementById('streakHint').textContent = hint;
-
-    var wc = weekDoneCount(), wt = state.weeklyTarget;
-    document.getElementById('weekCount').textContent = wc + ' / ' + wt;
-    document.getElementById('weekBar').style.width = Math.min(100, Math.round(wc / wt * 100)) + '%';
-    document.getElementById('weeklyTarget').value = wt;
-
-    document.getElementById('motivation').textContent = motivationFor(state.streak, pct);
-    document.getElementById('nextUp').textContent = nextUpText();
-
-    document.getElementById('lastExportInfo').textContent = state.lastExport
-      ? 'Last backup ' + fmtDate(state.lastExport) + '.'
-      : 'No backup taken yet.';
-
-    refreshBackupBanner();
-  }
-
-  function refreshBackupBanner() {
-    var banner = document.getElementById('backupBanner');
-    var snoozed = state.snoozeUntil && Date.parse(state.snoozeUntil) > Date.now();
-    var days = state.lastExport ? Math.floor(hoursSince(state.lastExport) / 24) : null;
-    var overdue = state.lastExport === null
-      ? doneCount() > 0
-      : hoursSince(state.lastExport) > EXPORT_REMINDER_DAYS * 24;
-
-    if (overdue && !snoozed) {
-      document.getElementById('backupText').textContent = state.lastExport === null
-        ? 'You have ticked ' + doneCount() + ' sub-topic(s) but never exported a backup. Clearing your browser data would erase all of it. Export the JSON file now and keep it somewhere safe.'
-        : 'Your last backup was ' + days + ' days ago. Export a fresh JSON file so your progress survives a cache clear or a change of device.';
-      banner.classList.remove('hidden');
+  function rate(key, r) {
+    var x = it(key) || { r:0, box:0, seen:null, due:null };
+    if (r === 3) {
+      x.box = Math.min((x.r === 3 ? x.box : 0) + 1, BOX_DAYS.length);
+      x.due = addDays(TODAY, BOX_DAYS[x.box - 1]);
+    } else if (r === 2) {
+      x.box = Math.max(1, Math.min(x.box, 2));
+      x.due = addDays(TODAY, 2);
     } else {
-      banner.classList.add('hidden');
+      x.box = 0;
+      x.due = addDays(TODAY, 1);
     }
+    x.r = r; x.seen = TODAY;
+    state.items[key] = x;
+    markActive();
+    save();
   }
 
-  function refreshCounts(sid, tid) {
-    var article = elSubjects.querySelector('[data-subject="' + sid + '"]');
-    if (!article) return;
-    var subject = SUBJECTS.filter(function (s) { return s.id === sid; })[0];
-    var st = subject.topics.reduce(function (n, t) { return n + t.subtopics.length; }, 0);
-    var sd = doneCountFor(sid);
-    article.querySelector('[data-subject-count]').textContent = sd + '/' + st;
-    article.querySelector('[data-subject-bar]').style.width = (st ? Math.round(sd / st * 100) : 0) + '%';
-
-    var det = article.querySelector('[data-topic="' + tid + '"]');
-    if (det) {
-      var topic = subject.topics.filter(function (t) { return t.id === tid; })[0];
-      det.querySelector('[data-topic-count]').textContent = doneCountFor(sid, tid) + '/' + topic.subtopics.length;
+  function score() {
+    var w = 0, started = 0, solid = 0;
+    for (var k in state.items) {
+      var r = state.items[k].r;
+      if (!r) continue;
+      started++;
+      if (r === 3) { w += 1; solid++; } else if (r === 2) { w += 2 / 3; } else { w += 1 / 3; }
     }
+    return { weighted:w, pct: TOTAL ? Math.round(w / TOTAL * 100) : 0, started:started, solid:solid };
   }
 
-  // ─────────────────────────── Filtering ───────────────────────────
-  function applyFilters() {
-    var q = document.getElementById('search').value.trim().toLowerCase();
-    var hide = state.hideDone;
-    document.getElementById('hideDoneBtn').textContent = hide ? 'Show completed' : 'Hide completed';
-
-    SUBJECTS.forEach(function (s) {
-      var article = elSubjects.querySelector('[data-subject="' + s.id + '"]');
-      var subjectVisible = 0;
-      s.topics.forEach(function (t) {
-        var det = article.querySelector('[data-topic="' + t.id + '"]');
-        var visible = 0;
-        Array.prototype.forEach.call(det.querySelectorAll('li[data-item]'), function (li) {
-          var matchQ = !q || li.getAttribute('data-search').indexOf(q) !== -1;
-          var matchDone = !(hide && li.getAttribute('data-done') === 'true');
-          var show = matchQ && matchDone;
-          li.classList.toggle('hidden', !show);
-          if (show) visible++;
-        });
-        det.classList.toggle('hidden', visible === 0);
-        if (visible > 0 && q) det.setAttribute('open', '');
-        subjectVisible += visible;
+  function subjectScore(s) {
+    var tot = 0, w = 0, shaky = 0, due = 0, newer = 0;
+    s.topics.forEach(function (t) {
+      t.subtopics.forEach(function (st, i) {
+        var key = s.id + '|' + t.id + '|' + i, r = rOf(key);
+        tot++;
+        if (r === 3) w += 1; else if (r === 2) w += 2 / 3; else if (r === 1) { w += 1 / 3; shaky++; } else newer++;
+        if (isDue(key)) due++;
       });
-      article.classList.toggle('hidden', subjectVisible === 0);
+    });
+    return { total:tot, weighted:w, pct: tot ? Math.round(w / tot * 100) : 0, shaky:shaky, due:due, fresh:newer };
+  }
+
+  /* ---------------------------- exam phase ---------------------------- */
+  function daysToFirstExam() { return daysBetween(TODAY, D.examSeries.firstExam); }
+
+  /* Hours ramp up as the exams get closer. Ranges, not orders: a fixed
+     "3 hours a day" target ten months out is how people quit in week two. */
+  function phase() {
+    var d = daysToFirstExam();
+    if (d > 210) return { min:30,  max:45,  label:'Long game', line:'Months out. Thirty to forty-five minutes a day, most days, beats a heroic weekend.' };
+    if (d > 120) return { min:45,  max:60,  label:'Building',  line:'Forty-five to sixty minutes a day. Get every subject on the board at least once a week.' };
+    if (d > 60)  return { min:60,  max:90,  label:'Turning up the heat', line:'An hour to ninety minutes a day, and start whole past papers under timed conditions.' };
+    if (d > 30)  return { min:90,  max:150, label:'Final stretch', line:'Ninety minutes to two and a half hours. Mostly past papers and the topics you have marked shaky.' };
+    if (d >= 0)  return { min:150, max:240, label:'Exam season', line:'Two to four hours, broken into blocks with real breaks. Sleep is part of the revision.' };
+    return { min:0, max:0, label:'Done', line:'Exams are behind you.' };
+  }
+
+  /* ---------------------------- week rota ---------------------------- */
+  function weightedSubjectOrder() {
+    // Subjects with more shaky / unstarted material come round more often.
+    return SUBJ.map(function (s) {
+      var sc = subjectScore(s);
+      return { id:s.id, need: sc.shaky * 2 + sc.fresh + sc.due * 1.5 + 1 };
+    }).sort(function (a, b) { return b.need - a.need; });
+  }
+
+  function buildWeek() {
+    var order = weightedSubjectOrder();
+    // Every subject once, then fill the remaining slots with the neediest.
+    var slots = [];
+    SUBJ.forEach(function (s) { slots.push(s.id); });
+    var i = 0;
+    while (slots.length < 21) { slots.push(order[i % order.length].id); i++; }
+    // Shuffle, then deal three per day avoiding a repeat inside one day.
+    shuffle(slots);
+    var days = {};
+    for (var d = 0; d < 7; d++) days[d] = [];
+    var pool = slots.slice();
+    for (var d2 = 0; d2 < 7; d2++) {
+      while (days[d2].length < 3 && pool.length) {
+        var pick = -1;
+        for (var j = 0; j < pool.length; j++) { if (days[d2].indexOf(pool[j]) === -1) { pick = j; break; } }
+        if (pick === -1) break;
+        days[d2].push(pool.splice(pick, 1)[0]);
+      }
+    }
+    state.plan = { week: mondayOf(TODAY), days: days };
+    save();
+  }
+
+  function shuffleDay(d) {
+    var order = weightedSubjectOrder(), out = [];
+    var candidates = order.slice();
+    shuffle(candidates);
+    // Bias to need: take from the top half most of the time.
+    candidates.sort(function (a, b) { return (b.need * Math.random()) - (a.need * Math.random()); });
+    for (var i = 0; i < candidates.length && out.length < 3; i++) {
+      if (out.indexOf(candidates[i].id) === -1) out.push(candidates[i].id);
+    }
+    state.plan.days[d] = out;
+    save();
+  }
+
+  function shuffle(a) {
+    for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
+    return a;
+  }
+
+  function ensureWeek() {
+    if (state.plan.week !== mondayOf(TODAY) || Object.keys(state.plan.days).length !== 7) buildWeek();
+  }
+  function dayIndex() { return (parseISO(TODAY).getDay() + 6) % 7; }
+  function subjectById(id) { for (var i = 0; i < SUBJ.length; i++) if (SUBJ[i].id === id) return SUBJ[i]; return null; }
+
+  /* ---------------------------- week effort ---------------------------- */
+  function weekStats() {
+    var start = mondayOf(TODAY), mins = 0, rated = 0, papers = 0, solidified = 0, days = {};
+    state.sessions.forEach(function (x) {
+      if (x.d >= start) { mins += x.m; days[x.d] = 1; }
+    });
+    for (var k in state.items) {
+      var x = state.items[k];
+      if (x.seen && x.seen >= start) { rated++; if (x.r === 3) solidified++; }
+    }
+    state.papers.forEach(function (p) { if (p.date >= start) papers++; });
+    return { mins:mins, rated:rated, papers:papers, solidified:solidified, activeDays:Object.keys(days).length, start:start };
+  }
+
+  /* ---------------------------- UI helpers ---------------------------- */
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' })[c]; }); }
+  var toastTimer = null;
+  function toast(msg) {
+    var el = $('toast'); el.textContent = msg; el.style.opacity = '1';
+    clearTimeout(toastTimer); toastTimer = setTimeout(function () { el.style.opacity = '0'; }, 2200);
+  }
+
+  /* ---------------------------- tabs ---------------------------- */
+  var TABS = ['today', 'subjects', 'papers', 'progress'];
+  var activeTab = 'today';
+  function showTab(name) {
+    if (TABS.indexOf(name) === -1) name = 'today';
+    activeTab = name;
+    TABS.forEach(function (t) { $('view-' + t).classList.toggle('hidden', t !== name); });
+    document.querySelectorAll('.tab').forEach(function (b) {
+      var on = b.dataset.tab === name;
+      b.className = 'tab rounded-lg px-3 py-1.5 text-sm font-medium ' + (on
+        ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900'
+        : 'text-stone-600 hover:bg-stone-200 dark:text-stone-300 dark:hover:bg-stone-800');
+    });
+    document.querySelectorAll('.mtab').forEach(function (b) {
+      var on = b.dataset.tab === name;
+      b.className = 'mtab flex flex-col items-center gap-0.5 py-2 text-[10px] font-medium ' + (on
+        ? 'text-emerald-700 dark:text-emerald-400'
+        : 'text-stone-500 dark:text-stone-400');
+    });
+    if (name === 'papers') renderPapers();
+    if (name === 'progress') renderProgress();
+    window.scrollTo(0, 0);
+  }
+
+  /* ============================ RENDER: TODAY ============================ */
+  function renderToday() {
+    var d = daysToFirstExam();
+    $('cdDays').textContent = d > 0 ? d + (d === 1 ? ' day' : ' days') : (d === 0 ? 'Today' : 'Passed');
+    var next = null;
+    for (var i = 0; i < ALL_EXAMS.length; i++) { if (ALL_EXAMS[i].e.date >= TODAY) { next = ALL_EXAMS[i]; break; } }
+    if (next) {
+      $('cdNext').textContent = next.s.name + ' — ' + next.e.name.replace(/^Paper /, 'Paper ');
+      $('cdNextDate').textContent = prettyDate(next.e.date) + ' · ' + (next.e.session === 'window' ? 'school-arranged window' : next.e.session) + ' · ' + next.e.duration;
+    } else { $('cdNext').textContent = 'All done'; $('cdNextDate').textContent = ''; }
+
+    $('streakDays').textContent = state.streak;
+    $('bestStreak').textContent = state.bestStreak;
+    $('streakHint').textContent = state.lastActiveDay === TODAY
+      ? 'Today is counted.'
+      : (state.streak > 0 ? 'Rate one topic and today counts.' : 'Rate anything at all to start it off.');
+
+    var ph = phase();
+    $('phaseAdvice').textContent = ph.line;
+    $('hdrSub').textContent = ph.label + ' · ' + d + ' days to the first paper';
+
+    var dayList = state.plan.days[dayIndex()] || [];
+    $('todaySubjects').innerHTML = dayList.map(function (id) {
+      var s = subjectById(id); if (!s) return '';
+      var sc = subjectScore(s);
+      return '<button data-goto="' + esc(s.id) + '" class="goto rounded-lg border px-2.5 py-1.5 text-xs font-semibold hover:opacity-80" style="border-color:' + ACCENT[s.accent] + ';color:' + ACCENT[s.accent] + '">' +
+             esc(s.name) + ' <span class="font-normal opacity-70">' + sc.pct + '%</span></button>';
+    }).join('');
+
+    var ws = weekStats();
+    var targetMins = ph.min * 6;
+    $('weekMins').textContent = ws.mins;
+    $('weekCount').textContent = ws.rated;
+    $('weekPapers').textContent = ws.papers;
+    var pct = targetMins ? Math.min(100, Math.round(ws.mins / targetMins * 100)) : 0;
+    $('weekBar').style.width = pct + '%';
+    $('weekHint').textContent = 'Week of ' + shortDate(ws.start) + '. A reasonable target at this stage is about ' +
+      targetMins + ' minutes across the week (' + ph.min + '–' + ph.max + ' a day, one day off). ' +
+      (ws.mins === 0 ? 'Timed sessions get logged here automatically.' : 'You are at ' + pct + '% of that.');
+
+    $('motivation').textContent = motivate(ws, ph);
+
+    renderDue();
+    renderWeekGrid();
+  }
+
+  function motivate(ws, ph) {
+    var sc = score();
+    if (state.papers.length === 0 && daysToFirstExam() < 150) return 'You have not logged a past paper yet. One paper tells you more than three hours of reading.';
+    if (ws.mins === 0 && ws.rated === 0) return 'Nothing logged this week yet. Twenty-five minutes on one topic is a complete, respectable session.';
+    if (ws.mins >= ph.min * 6) return 'You have already hit a full week of study. Anything else is a bonus — take a proper evening off.';
+    if (sc.pct >= 80) return 'Most of the course is solid. Now it is about keeping it there and squeezing marks out of technique.';
+    if (ws.rated > 0 && ws.solidified === 0) return 'Plenty rated, nothing moved to solid yet. That is normal — shaky topics are exactly the ones worth your time.';
+    if (ws.activeDays >= 5) return 'Five days on the go this week. Consistency is the whole trick.';
+    return 'Confidence across the course is ' + sc.pct + '%. Chip at the shaky list and it climbs on its own.';
+  }
+
+  function renderDue() {
+    var due = ALL_ITEMS.filter(function (x) { return isDue(x.key); });
+    // Interleave subjects: mixing topics up beats blocking one subject for an hour.
+    var byS = {}, order = [];
+    due.forEach(function (x) { if (!byS[x.s.id]) { byS[x.s.id] = []; order.push(x.s.id); } byS[x.s.id].push(x); });
+    var mixed = [], added = true;
+    while (added) {
+      added = false;
+      order.forEach(function (id) { if (byS[id].length) { mixed.push(byS[id].shift()); added = true; } });
+    }
+    $('dueCount').textContent = mixed.length;
+    var show = mixed.slice(0, 12);
+    if (!show.length) {
+      $('dueList').innerHTML = '<p class="rounded-lg bg-stone-50 p-3 text-sm text-stone-500 dark:bg-stone-950 dark:text-stone-400">' +
+        (Object.keys(state.items).length ? 'Nothing due today. Go forwards into new material, or blurt a topic to test yourself anyway.' : 'Once you rate a few topics they will reappear here on a spaced schedule.') + '</p>';
+      return;
+    }
+    $('dueList').innerHTML = show.map(function (x) { return itemRow(x, true); }).join('') +
+      (mixed.length > show.length ? '<p class="pt-1 text-[11px] text-stone-500 dark:text-stone-400">' + (mixed.length - show.length) + ' more waiting. No need to clear them all today.</p>' : '');
+  }
+
+  function itemRow(x, showSubject) {
+    var r = rOf(x.key), cur = r ? RAG[r - 1] : null;
+    var dot = cur ? cur.colour : '#a8a29e';
+    return '<div class="flex flex-wrap items-center gap-2 rounded-lg border border-stone-200 bg-stone-50 p-2 dark:border-stone-800 dark:bg-stone-950">' +
+      '<span class="mt-0.5 inline-block h-2.5 w-2.5 shrink-0 rounded-full" style="background:' + dot + '"></span>' +
+      '<div class="min-w-0 flex-1 basis-[70%] sm:basis-auto">' +
+        '<p class="text-sm leading-snug">' + esc(x.text) + '</p>' +
+        (showSubject ? '<p class="text-[11px] text-stone-500 dark:text-stone-400">' + esc(x.s.name) + ' · ' + esc(x.t.name) + '</p>' : '') +
+      '</div>' +
+      ragButtons(x.key, r) +
+    '</div>';
+  }
+
+  function ragButtons(key, r) {
+    return '<div class="ml-auto flex shrink-0 gap-1">' + RAG.map(function (g) {
+      var on = r === g.r;
+      return '<button class="r-btn rate rounded-md px-2 py-1 text-[11px] font-semibold" data-key="' + esc(key) + '" data-r="' + g.r + '" ' +
+        'style="' + (on ? 'background:' + g.colour + ';color:#fff' : 'border:1px solid ' + g.colour + '55;color:' + g.colour) + '" ' +
+        'aria-label="' + g.label + '">' + g.short + '</button>';
+    }).join('') + '</div>';
+  }
+
+  function renderWeekGrid() {
+    var di = dayIndex();
+    $('weekGrid').innerHTML = DAY_NAMES.map(function (name, i) {
+      var ids = state.plan.days[i] || [];
+      var isToday = i === di;
+      return '<div class="rounded-lg border p-2 ' + (isToday
+        ? 'border-emerald-400 bg-emerald-50 dark:border-emerald-700 dark:bg-emerald-950/40'
+        : 'border-stone-200 bg-stone-50 dark:border-stone-800 dark:bg-stone-950') + '">' +
+        '<div class="flex items-center justify-between"><p class="text-[11px] font-semibold ' + (isToday ? 'text-emerald-800 dark:text-emerald-300' : 'text-stone-500 dark:text-stone-400') + '">' + name.slice(0, 3) + '</p>' +
+        '<button class="shufDay text-[10px] text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 no-print" data-day="' + i + '" title="Swap this day">↻</button></div>' +
+        '<ul class="mt-1 space-y-0.5">' + ids.map(function (id) {
+          var s = subjectById(id); if (!s) return '';
+          return '<li class="truncate text-[11px]" style="color:' + ACCENT[s.accent] + '">' + esc(s.name.replace(' (Triple)', '')) + '</li>';
+        }).join('') + '</ul></div>';
+    }).join('');
+  }
+
+  /* ============================ RENDER: SUBJECTS ============================ */
+  function renderSubjects() {
+    // Remember which topics are expanded: re-rendering must not fold up the
+    // list you are working through.
+    var openSet = {};
+    document.querySelectorAll('#subjects details[data-tk]').forEach(function (d) { if (d.open) openSet[d.dataset.tk] = 1; });
+    var q = ($('search').value || '').trim().toLowerCase();
+    var filt = $('filterSel').value;
+    var html = '', anyShown = false;
+
+    SUBJ.forEach(function (s) {
+      var sc = subjectScore(s);
+      var topicsHtml = '', shownInSubject = 0;
+
+      s.topics.forEach(function (t) {
+        var rows = '', shown = 0, tw = 0, tn = 0, tdue = 0;
+        t.subtopics.forEach(function (st, i) {
+          var key = s.id + '|' + t.id + '|' + i, r = rOf(key);
+          tn++;
+          tw += (r === 3 ? 1 : r === 2 ? 2 / 3 : r === 1 ? 1 / 3 : 0);
+          if (isDue(key)) tdue++;
+          var matchQ = !q || st.toLowerCase().indexOf(q) !== -1 || t.name.toLowerCase().indexOf(q) !== -1 || s.name.toLowerCase().indexOf(q) !== -1;
+          var matchF = filt === 'all' || (filt === 'due' && isDue(key)) || (filt === 'shaky' && r === 1) ||
+                       (filt === 'new' && r === 0) || (filt === 'notsolid' && r !== 3);
+          if (!matchQ || !matchF) return;
+          shown++;
+          rows += '<div class="flex flex-wrap items-center gap-2 border-t border-stone-100 py-2 dark:border-stone-800">' +
+            '<span class="inline-block h-2 w-2 shrink-0 rounded-full" style="background:' + (r ? RAG[r - 1].colour : '#d6d3d1') + '"></span>' +
+            '<p class="min-w-0 flex-1 basis-[70%] text-sm leading-snug sm:basis-auto">' + esc(st) +
+              (isDue(key) ? ' <span class="ml-1 rounded bg-stone-200 px-1 text-[10px] align-middle dark:bg-stone-800">due</span>' : '') +
+            '</p>' + ragButtons(key, r) + '</div>';
+        });
+        if (!shown) return;
+        shownInSubject += shown;
+        var tpct = tn ? Math.round(tw / tn * 100) : 0;
+        var tk = s.id + '|' + t.id;
+        topicsHtml += '<details class="rounded-lg bg-stone-50 px-3 dark:bg-stone-950" data-tk="' + esc(tk) + '" ' + ((q || openSet[tk]) ? 'open' : '') + '>' +
+          '<summary class="flex items-center gap-2 py-2.5">' +
+            '<span class="chev text-stone-400">▸</span>' +
+            '<span class="min-w-0 flex-1 text-sm font-medium">' + esc(t.name) + '</span>' +
+            (tdue ? '<span class="rounded-full bg-amber-200 px-1.5 text-[10px] font-semibold text-amber-900 dark:bg-amber-900 dark:text-amber-200">' + tdue + ' due</span>' : '') +
+            '<span class="tabular text-[11px] text-stone-500 dark:text-stone-400">' + tpct + '%</span>' +
+            '<button class="blurtBtn rounded-md border border-stone-300 px-2 py-0.5 text-[11px] font-medium hover:bg-stone-200 dark:border-stone-700 dark:hover:bg-stone-800" data-s="' + esc(s.id) + '" data-t="' + esc(t.id) + '">Blurt</button>' +
+          '</summary>' +
+          '<div class="pb-2">' + rows + '</div>' +
+        '</details>';
+      });
+
+      if (!shownInSubject) return;
+      anyShown = true;
+
+      var warn = s.boardVerified ? '' :
+        '<p class="mt-2 rounded-lg border border-amber-300 bg-amber-50 p-2 text-[11px] text-amber-900 dark:border-amber-800 dark:bg-amber-950 dark:text-amber-200">' +
+        '⚠ Exam board not confirmed by the school. ' + esc(s.boardNote) + '</p>';
+
+      html += '<section class="overflow-hidden rounded-xl border border-stone-200 bg-white dark:border-stone-800 dark:bg-stone-900">' +
+        '<div class="border-l-4 p-4" style="border-color:' + ACCENT[s.accent] + '">' +
+          '<div class="flex flex-wrap items-baseline gap-2">' +
+            '<h2 class="text-base font-semibold" id="s-' + esc(s.id) + '">' + esc(s.name) + '</h2>' +
+            '<span class="rounded-full bg-stone-100 px-2 py-0.5 text-[11px] font-medium text-stone-600 dark:bg-stone-800 dark:text-stone-300">' + esc(s.board) + '</span>' +
+            '<span class="text-[11px] text-stone-500 dark:text-stone-400">' + esc(s.tier) + '</span>' +
+            '<span class="tabular ml-auto text-sm font-semibold">' + sc.pct + '%</span>' +
+          '</div>' +
+          '<div class="mt-2 h-2 w-full overflow-hidden rounded-full bg-stone-200 dark:bg-stone-800">' +
+            '<div class="bar-t h-full rounded-full" style="width:' + sc.pct + '%;background:' + ACCENT[s.accent] + '"></div>' +
+          '</div>' +
+          '<p class="mt-1.5 text-[11px] text-stone-500 dark:text-stone-400">' + sc.shaky + ' shaky · ' + sc.fresh + ' not started · ' + sc.due + ' due · ' + esc(s.papers) + '</p>' +
+          warn +
+          '<div class="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-[11px]">' +
+            linkPill(s.pastPapers, 'Past papers') +
+            (s.altPastPapers ? linkPill(s.altPastPapers, 'Also') : '') +
+            s.resources.map(function (r) { return linkPill(r, ''); }).join('') +
+          '</div>' +
+        '</div>' +
+        '<div class="space-y-1.5 px-3 pb-3">' + topicsHtml + '</div>' +
+      '</section>';
+    });
+
+    $('subjects').innerHTML = html;
+    $('noResults').classList.toggle('hidden', anyShown);
+    // Keep the toggle label honest.
+    var all = document.querySelectorAll('#subjects details');
+    var anyClosed = [].some.call(all, function (d) { return !d.open; });
+    $('expandBtn').textContent = (all.length && !anyClosed) ? 'Close all' : 'Open all';
+  }
+
+  function linkPill(r, prefix) {
+    if (!r) return '';
+    var flag = r.verified === false ? ' <span title="Could not be checked automatically">⚠</span>' : '';
+    return '<a href="' + esc(r.url) + '" target="_blank" rel="noopener noreferrer" class="text-emerald-700 underline decoration-dotted hover:decoration-solid dark:text-emerald-400">' +
+      (prefix ? esc(prefix) + ': ' : '') + esc(r.label) + flag + '</a>';
+  }
+
+  /* ============================ RENDER: PAPERS ============================ */
+  function fillPaperForm() {
+    $('pSubject').innerHTML = SUBJ.map(function (s) { return '<option value="' + esc(s.id) + '">' + esc(s.name) + '</option>'; }).join('');
+    $('pReasons').innerHTML = REASONS.map(function (r, i) {
+      return '<label class="cursor-pointer rounded-lg border border-stone-300 px-2.5 py-1.5 text-xs has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50 dark:border-stone-700 dark:has-[:checked]:bg-amber-950">' +
+        '<input type="checkbox" class="mr-1 align-middle" value="' + esc(r) + '" name="preason">' + esc(r) + '</label>';
+    }).join('');
+    $('pDate').value = TODAY;
+    syncPaperOptions();
+    $('pSubject').addEventListener('change', syncPaperOptions);
+  }
+  function syncPaperOptions() {
+    var s = subjectById($('pSubject').value) || SUBJ[0];
+    $('pPaper').innerHTML = s.exams.map(function (e) {
+      return '<option value="' + esc(e.code) + '">' + esc(e.code) + ' — ' + esc(e.name) + '</option>';
+    }).join('') + '<option value="other">Other / mixed practice</option>';
+  }
+
+  function savePaper() {
+    var sid = $('pSubject').value, sc = parseInt($('pScore').value, 10), tot = parseInt($('pTotal').value, 10);
+    if (!isFinite(sc) || !isFinite(tot) || tot <= 0 || sc < 0) { $('pMsg').textContent = 'Add the marks scored and the total.'; return; }
+    if (sc > tot) { $('pMsg').textContent = 'Scored more than the total — check the numbers.'; return; }
+    var reasons = [].slice.call(document.querySelectorAll('input[name="preason"]:checked')).map(function (c) { return c.value; });
+    state.papers.push({
+      id: 'p' + Date.now(), subject:sid, paper:$('pPaper').value,
+      date: $('pDate').value || TODAY, score:sc, total:tot,
+      reasons:reasons, note: $('pNote').value.trim()
+    });
+    markActive(); save();
+    $('pScore').value = ''; $('pTotal').value = ''; $('pNote').value = '';
+    document.querySelectorAll('input[name="preason"]:checked').forEach(function (c) { c.checked = false; });
+    $('pMsg').textContent = 'Saved.';
+    setTimeout(function () { $('pMsg').textContent = ''; }, 2500);
+    renderPapers(); renderToday();
+    toast('Paper logged');
+  }
+
+  function renderPapers() {
+    var ps = state.papers.slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+    if (!ps.length) {
+      $('paperList').innerHTML = '<p class="text-sm text-stone-500 dark:text-stone-400">No papers logged yet.</p>';
+      $('paperInsight').classList.add('hidden');
+    } else {
+      $('paperList').innerHTML = '<table class="w-full min-w-[560px] text-left text-sm"><thead><tr class="text-[11px] uppercase tracking-wide text-stone-500 dark:text-stone-400">' +
+        '<th class="pb-1 pr-2">Date</th><th class="pb-1 pr-2">Subject</th><th class="pb-1 pr-2">Paper</th><th class="pb-1 pr-2">Score</th><th class="pb-1 pr-2">Marks lost to</th><th class="pb-1"></th></tr></thead><tbody>' +
+        ps.map(function (p) {
+          var s = subjectById(p.subject);
+          var pct = Math.round(p.score / p.total * 100);
+          return '<tr class="border-t border-stone-100 dark:border-stone-800">' +
+            '<td class="py-1.5 pr-2 whitespace-nowrap tabular">' + esc(shortDate(p.date)) + '</td>' +
+            '<td class="py-1.5 pr-2" style="color:' + (s ? ACCENT[s.accent] : '') + '">' + esc(s ? s.name.replace(' (Triple)', '') : p.subject) + '</td>' +
+            '<td class="py-1.5 pr-2 text-[11px]">' + esc(p.paper) + '</td>' +
+            '<td class="py-1.5 pr-2 tabular whitespace-nowrap"><strong>' + pct + '%</strong> <span class="text-[11px] text-stone-500 dark:text-stone-400">' + p.score + '/' + p.total + '</span></td>' +
+            '<td class="py-1.5 pr-2 text-[11px]">' + esc(p.reasons.join(', ') || '—') + (p.note ? '<br><span class="text-stone-500 dark:text-stone-400">' + esc(p.note) + '</span>' : '') + '</td>' +
+            '<td class="py-1.5 text-right"><button class="delPaper text-[11px] text-stone-400 hover:text-rose-600" data-id="' + esc(p.id) + '">remove</button></td>' +
+          '</tr>';
+        }).join('') + '</tbody></table>';
+
+      var counts = {}, best = null;
+      ps.forEach(function (p) { p.reasons.forEach(function (r) { counts[r] = (counts[r] || 0) + 1; if (!best || counts[r] > counts[best]) best = r; }); });
+      var advice = {
+        'Knowledge gap': 'Marks are going on content you have not locked in. Rate those topics shaky and let the review queue bring them back.',
+        'Exam technique': 'You know it but are not writing what the mark scheme rewards. Read the mark scheme for the same question type three times in a row and copy its wording.',
+        'Ran out of time': 'Practise single sections against a clock rather than whole papers for a bit, and decide in advance how many minutes each question gets.',
+        'Misread the question': 'Underline the command word and the units before writing anything. Cheap marks, easily reclaimed.',
+        'Careless slip': 'Build in five minutes at the end purely to re-check working and units.'
+      };
+      var avg = Math.round(ps.reduce(function (a, p) { return a + p.score / p.total; }, 0) / ps.length * 100);
+      $('paperInsight').classList.remove('hidden');
+      $('paperInsight').innerHTML = '<p class="font-semibold">' + ps.length + ' paper' + (ps.length === 1 ? '' : 's') + ' logged · average ' + avg + '%</p>' +
+        (best ? '<p class="mt-1">Most common cause of lost marks: <strong>' + esc(best) + '</strong> (' + counts[best] + '×). ' + esc(advice[best] || '') + '</p>'
+              : '<p class="mt-1">Tick why marks went next time — that is where the pattern shows up.</p>');
+    }
+
+    $('paperLinks').innerHTML = SUBJ.map(function (s) {
+      return '<div class="border-t border-stone-100 pt-2 first:border-0 first:pt-0 dark:border-stone-800">' +
+        '<p class="font-medium" style="color:' + ACCENT[s.accent] + '">' + esc(s.name) + ' <span class="text-[11px] font-normal text-stone-500 dark:text-stone-400">' + esc(s.board) + ' ' + esc(s.specCode) + (s.boardVerified ? '' : ' ⚠ unconfirmed') + '</span></p>' +
+        '<p class="text-[11px]">' + linkPill(s.pastPapers, '') + (s.altPastPapers ? ' · ' + linkPill(s.altPastPapers, 'Also') : '') + '</p>' +
+      '</div>';
+    }).join('');
+  }
+
+  /* ============================ RENDER: PROGRESS ============================ */
+  function renderProgress() {
+    var sc = score();
+    $('overallPct').textContent = sc.pct + '%';
+    $('overallBar').style.width = sc.pct + '%';
+    $('overallCount').textContent = sc.started + ' of ' + TOTAL + ' sub-topics touched, ' + sc.solid + ' solid.';
+
+    var firstNew = null;
+    for (var i = 0; i < ALL_ITEMS.length; i++) { if (!rOf(ALL_ITEMS[i].key)) { firstNew = ALL_ITEMS[i]; break; } }
+    $('nextUp').textContent = firstNew
+      ? 'Next untouched: ' + firstNew.s.name + ' → ' + firstNew.t.name + ' → ' + firstNew.text
+      : 'Every sub-topic has been rated at least once. From here it is all consolidation.';
+
+    $('subjBars').innerHTML = SUBJ.map(function (s) {
+      var x = subjectScore(s);
+      return '<div>' +
+        '<div class="flex items-baseline gap-2 text-xs"><span class="font-medium">' + esc(s.name) + '</span>' +
+        '<span class="ml-auto tabular text-stone-500 dark:text-stone-400">' + x.shaky + ' shaky · ' + x.fresh + ' new</span>' +
+        '<span class="tabular w-9 text-right font-semibold">' + x.pct + '%</span></div>' +
+        '<div class="mt-1 h-2 w-full overflow-hidden rounded-full bg-stone-200 dark:bg-stone-800"><div class="bar-t h-full rounded-full" style="width:' + x.pct + '%;background:' + ACCENT[s.accent] + '"></div></div>' +
+      '</div>';
+    }).join('');
+
+    // weakest topics: average confidence per topic, unstarted counts as 0
+    var rows = [];
+    SUBJ.forEach(function (s) {
+      s.topics.forEach(function (t) {
+        var w = 0, n = 0, due = 0;
+        t.subtopics.forEach(function (st, i) {
+          var key = s.id + '|' + t.id + '|' + i, r = rOf(key);
+          n++; w += (r === 3 ? 1 : r === 2 ? 2 / 3 : r === 1 ? 1 / 3 : 0);
+          if (isDue(key)) due++;
+        });
+        rows.push({ s:s, t:t, pct: n ? w / n : 0, due:due });
+      });
+    });
+    rows.sort(function (a, b) { return a.pct - b.pct; });
+    $('weakList').innerHTML = rows.slice(0, 10).map(function (x) {
+      return '<div class="flex items-center gap-2 rounded-lg border border-stone-200 bg-stone-50 p-2 dark:border-stone-800 dark:bg-stone-950">' +
+        '<span class="inline-block h-2.5 w-2.5 shrink-0 rounded-full" style="background:' + ACCENT[x.s.accent] + '"></span>' +
+        '<div class="min-w-0 flex-1"><p class="truncate text-sm">' + esc(x.t.name) + '</p><p class="text-[11px] text-stone-500 dark:text-stone-400">' + esc(x.s.name) + '</p></div>' +
+        '<span class="tabular text-xs font-semibold">' + Math.round(x.pct * 100) + '%</span>' +
+        '<button class="blurtBtn rounded-md border border-stone-300 px-2 py-1 text-[11px] font-medium hover:bg-stone-200 dark:border-stone-700 dark:hover:bg-stone-800" data-s="' + esc(x.s.id) + '" data-t="' + esc(x.t.id) + '">Blurt</button>' +
+      '</div>';
+    }).join('');
+
+    var ws = weekStats();
+    var due = ALL_ITEMS.filter(function (x) { return isDue(x.key); }).length;
+    $('weekReview').innerHTML =
+      '<ul class="space-y-1">' +
+      '<li>Week beginning <strong>' + esc(prettyDate(ws.start)) + '</strong></li>' +
+      '<li><strong>' + ws.mins + '</strong> minutes logged over <strong>' + ws.activeDays + '</strong> day' + (ws.activeDays === 1 ? '' : 's') + '</li>' +
+      '<li><strong>' + ws.rated + '</strong> sub-topics rated, <strong>' + ws.solidified + '</strong> moved to solid</li>' +
+      '<li><strong>' + ws.papers + '</strong> past paper' + (ws.papers === 1 ? '' : 's') + ' logged</li>' +
+      '<li><strong>' + due + '</strong> sub-topics currently due for review</li>' +
+      '<li>Course confidence <strong>' + sc.pct + '%</strong> · <strong>' + daysToFirstExam() + '</strong> days to the first paper</li>' +
+      '</ul>' +
+      '<p class="rounded-lg bg-stone-50 p-2 text-[11px] text-stone-600 dark:bg-stone-950 dark:text-stone-300">Three questions worth answering out loud: what actually worked this week, what did I avoid, and what is the one thing I will change next week?</p>';
+
+    $('seriesNote').textContent = D.examSeries.note;
+    $('timetable').innerHTML = '<table class="w-full min-w-[520px] text-left text-sm"><thead><tr class="text-[11px] uppercase tracking-wide text-stone-500 dark:text-stone-400">' +
+      '<th class="pb-1 pr-2">Date</th><th class="pb-1 pr-2">Subject</th><th class="pb-1 pr-2">Paper</th><th class="pb-1 pr-2">Length</th><th class="pb-1">Days</th></tr></thead><tbody>' +
+      ALL_EXAMS.map(function (x) {
+        var dd = daysBetween(TODAY, x.e.date);
+        return '<tr class="border-t border-stone-100 dark:border-stone-800' + (dd < 0 ? ' opacity-50' : '') + '">' +
+          '<td class="py-1.5 pr-2 whitespace-nowrap tabular">' + esc(shortDate(x.e.date)) + ' <span class="text-[11px] text-stone-500 dark:text-stone-400">' + esc(x.e.session) + '</span></td>' +
+          '<td class="py-1.5 pr-2" style="color:' + ACCENT[x.s.accent] + '">' + esc(x.s.name.replace(' (Triple)', '')) + '</td>' +
+          '<td class="py-1.5 pr-2 text-[11px]">' + esc(x.e.code) + ' ' + esc(x.e.name) + '</td>' +
+          '<td class="py-1.5 pr-2 text-[11px] whitespace-nowrap">' + esc(x.e.duration) + '</td>' +
+          '<td class="py-1.5 tabular whitespace-nowrap">' + (dd < 0 ? '—' : dd) + '</td>' +
+        '</tr>';
+      }).join('') + '</tbody></table>' +
+      '<p class="mt-2 text-[11px] text-stone-500 dark:text-stone-400">Results day ' + esc(prettyDate(D.examSeries.resultsDay)) + '. Contingency day ' + esc(prettyDate(D.examSeries.contingencyDay)) + ' — keep it free.</p>';
+
+    $('boardNoteGlobal').textContent = D.boardVerificationNote;
+    $('boardList').innerHTML = SUBJ.map(function (s) {
+      return '<div class="flex flex-wrap items-baseline gap-2 border-t border-stone-100 pt-1.5 first:border-0 first:pt-0 dark:border-stone-800">' +
+        '<span class="font-medium">' + esc(s.name) + '</span>' +
+        '<span class="text-stone-600 dark:text-stone-300">' + esc(s.board) + ' ' + esc(s.specCode) + '</span>' +
+        (s.boardVerified
+          ? '<span class="rounded bg-emerald-100 px-1.5 text-[11px] font-medium text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">confirmed from school documents</span>'
+          : '<span class="rounded bg-amber-100 px-1.5 text-[11px] font-medium text-amber-900 dark:bg-amber-950 dark:text-amber-300">⚠ not confirmed — check with school</span>') +
+      '</div>';
+    }).join('');
+
+    $('checksum').textContent = D.dataChecksum;
+    $('lastExportInfo').textContent = state.lastExport
+      ? 'Last backup ' + prettyDate(state.lastExport.slice(0, 10)) + '.'
+      : 'You have never backed up.';
+  }
+
+  /* ============================ MODALS ============================ */
+  var closeModalHook = null;
+  function openModal(html, onClose) {
+    $('modalBox').innerHTML = html;
+    $('modalWrap').classList.remove('hidden');
+    $('modalWrap').classList.add('flex');
+    closeModalHook = onClose || null;
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    $('modalWrap').classList.add('hidden');
+    $('modalWrap').classList.remove('flex');
+    document.body.style.overflow = '';
+    if (closeModalHook) { var f = closeModalHook; closeModalHook = null; f(); }
+    $('modalBox').innerHTML = '';
+  }
+  $('modalWrap').addEventListener('click', function (e) { if (e.target === $('modalWrap')) closeModal(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !$('modalWrap').classList.contains('hidden')) closeModal(); });
+
+  /* ------------------------- onboarding ------------------------- */
+  function onboarding() {
+    openModal(
+      '<h2 class="text-lg font-bold">How this thing works</h2>' +
+      '<p class="mt-1 text-sm text-stone-600 dark:text-stone-300">Four ideas, none of them complicated.</p>' +
+      '<ol class="mt-3 space-y-2.5 text-sm">' +
+        '<li><strong>1. Rate, do not tick.</strong> Every sub-topic gets shaky, getting there, or solid. Being honest about shaky is the whole point.</li>' +
+        '<li><strong>2. Things come back.</strong> Anything you mark solid returns after 1, then 3, 7, 21 and 60 days. Mark it shaky and it is back tomorrow.</li>' +
+        '<li><strong>3. Blurt, do not re-read.</strong> Hit Blurt on any topic: five minutes, blank page, write everything you know, then see what you missed. Highlighting notes feels productive and teaches you almost nothing.</li>' +
+        '<li><strong>4. Log your past papers.</strong> Record <em>why</em> marks went, not just the score. The site tells you your commonest cause.</li>' +
+      '</ol>' +
+      '<p class="mt-3 rounded-lg bg-stone-100 p-2.5 text-[11px] text-stone-600 dark:bg-stone-950 dark:text-stone-300">Everything saves in this browser only, so hit <strong>Back up</strong> once a week. There is no account, no login and no one watching. Miss a day and nothing bad happens.</p>' +
+      '<div class="mt-4 flex gap-2"><button id="obDone" class="flex-1 rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700">Got it</button></div>'
+    );
+    $('obDone').addEventListener('click', function () { state.onboarded = true; save(); closeModal(); });
+  }
+
+  /* ------------------------- focus session ------------------------- */
+  var sess = null;
+  function startFocus() {
+    var dayList = (state.plan.days[dayIndex()] || []).map(function (id) { return subjectById(id); }).filter(Boolean);
+    openModal(
+      '<h2 class="text-lg font-bold">Focus session</h2>' +
+      '<p class="mt-1 text-sm text-stone-600 dark:text-stone-300">Four short phases. Look, then recall with everything hidden, then check, then a real break away from the screen.</p>' +
+      '<label class="mt-3 block text-sm"><span class="font-medium">Subject</span>' +
+        '<select id="fsSubject" class="mt-1 w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm dark:border-stone-700 dark:bg-stone-950">' +
+        (dayList.length ? '<optgroup label="On the plan today">' + dayList.map(function (s) { return '<option value="' + esc(s.id) + '">' + esc(s.name) + '</option>'; }).join('') + '</optgroup>' : '') +
+        '<optgroup label="All subjects">' + SUBJ.map(function (s) { return '<option value="' + esc(s.id) + '">' + esc(s.name) + '</option>'; }).join('') + '</optgroup>' +
+        '</select></label>' +
+      '<fieldset class="mt-3"><legend class="text-sm font-medium">Length</legend>' +
+        '<div class="mt-1 flex gap-2">' + [25, 35, 45].map(function (m, i) {
+          return '<label class="flex-1 cursor-pointer rounded-lg border border-stone-300 px-3 py-2 text-center text-sm has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-50 dark:border-stone-700 dark:has-[:checked]:bg-emerald-950">' +
+            '<input type="radio" name="fslen" value="' + m + '" class="sr-only"' + (i === 0 ? ' checked' : '') + '>' + m + ' min</label>';
+        }).join('') + '</div></fieldset>' +
+      '<div class="mt-4 flex gap-2"><button id="fsGo" class="flex-1 rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700">Begin</button>' +
+      '<button id="fsCancel" class="rounded-lg border border-stone-300 px-4 py-2.5 text-sm dark:border-stone-700">Cancel</button></div>'
+    );
+    $('fsCancel').addEventListener('click', closeModal);
+    $('fsGo').addEventListener('click', function () {
+      var sid = $('fsSubject').value;
+      var mins = parseInt(document.querySelector('input[name="fslen"]:checked').value, 10);
+      runSession(sid, mins);
     });
   }
 
-  // ─────────────────────────── Import / export ───────────────────────────
-  function exportProgress() {
+  function runSession(sid, mins) {
+    var s = subjectById(sid);
+    // Proportions: look over it, recall it blind, mark it, then get off the screen.
+    var plan = [
+      { name:'Look over it', desc:'Notes, spec points, a page of the textbook. No highlighting.', f:0.20 },
+      { name:'Recall it blind', desc:'Everything hidden. Write, say or sketch what you know from memory.', f:0.45 },
+      { name:'Check and mark', desc:'Compare against your notes. What did you miss? Rate those bits shaky.', f:0.20 },
+      { name:'Break, away from the screen', desc:'Stand up, water, window. This bit is not optional.', f:0.15 }
+    ];
+    var total = mins * 60;
+    plan.forEach(function (p) { p.secs = Math.max(60, Math.round(total * p.f)); });
+    sess = { sid:sid, mins:mins, phase:0, left:plan[0].secs, plan:plan, paused:false, elapsed:0, logged:false };
+
+    openModal(
+      '<div class="flex items-start justify-between gap-2"><div>' +
+        '<p class="text-xs uppercase tracking-wide text-stone-500 dark:text-stone-400">' + esc(s.name) + ' · ' + mins + ' min</p>' +
+        '<h2 id="fsPhase" class="text-lg font-bold"></h2>' +
+        '<p id="fsDesc" class="text-sm text-stone-600 dark:text-stone-300"></p>' +
+      '</div><div class="text-right"><p id="fsClock" class="tabular text-3xl font-bold">00:00</p>' +
+      '<p id="fsStep" class="text-[11px] text-stone-500 dark:text-stone-400"></p></div></div>' +
+      '<div class="mt-3 h-2 w-full overflow-hidden rounded-full bg-stone-200 dark:bg-stone-800"><div id="fsBar" class="h-full rounded-full bg-emerald-500" style="width:0%"></div></div>' +
+      '<div class="mt-4 flex items-end justify-center">' + plantSVG() + '</div>' +
+      '<p class="mt-1 text-center text-[11px] text-stone-500 dark:text-stone-400">It grows for this session only. Nothing dies if you stop, and nothing carries over.</p>' +
+      '<div class="mt-4 grid grid-cols-3 gap-2">' +
+        '<button id="fsPause" class="rounded-lg border border-stone-300 px-3 py-2.5 text-sm font-medium dark:border-stone-700">Pause</button>' +
+        '<button id="fsSkip" class="rounded-lg border border-stone-300 px-3 py-2.5 text-sm font-medium dark:border-stone-700">Next phase</button>' +
+        '<button id="fsStop" class="rounded-lg bg-stone-900 px-3 py-2.5 text-sm font-semibold text-white dark:bg-stone-100 dark:text-stone-900">Finish</button>' +
+      '</div>',
+      function () { stopSession(false); }
+    );
+
+    $('fsPause').addEventListener('click', function () {
+      sess.paused = !sess.paused;
+      $('fsPause').textContent = sess.paused ? 'Resume' : 'Pause';
+    });
+    $('fsSkip').addEventListener('click', nextPhase);
+    $('fsStop').addEventListener('click', function () { stopSession(true); });
+    paintSession();
+    sessTimer = setInterval(tick, 1000);
+  }
+
+  var sessTimer = null;
+  function tick() {
+    if (!sess || sess.paused) return;
+    sess.left--; sess.elapsed++;
+    if (sess.left <= 0) { nextPhase(); return; }
+    paintSession();
+  }
+  function nextPhase() {
+    if (!sess) return;
+    if (sess.phase >= sess.plan.length - 1) { stopSession(true); return; }
+    sess.phase++;
+    sess.left = sess.plan[sess.phase].secs;
+    paintSession();
+    toast('Next: ' + sess.plan[sess.phase].name);
+  }
+  function paintSession() {
+    if (!sess || !$('fsClock')) return;
+    var p = sess.plan[sess.phase];
+    $('fsPhase').textContent = p.name;
+    $('fsDesc').textContent = p.desc;
+    $('fsStep').textContent = 'Phase ' + (sess.phase + 1) + ' of ' + sess.plan.length;
+    var m = Math.floor(sess.left / 60), s = sess.left % 60;
+    $('fsClock').textContent = String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+    var frac = Math.min(1, sess.elapsed / (sess.mins * 60));
+    $('fsBar').style.width = Math.round(frac * 100) + '%';
+    growPlant(frac);
+  }
+  function stopSession(showSummary) {
+    clearInterval(sessTimer); sessTimer = null;
+    if (!sess) return;
+    var mins = Math.round(sess.elapsed / 60), sid = sess.sid;
+    if (!sess.logged && mins >= 1) {
+      state.sessions.push({ d:TODAY, m:mins, s:sid, k:'focus' });
+      sess.logged = true;
+      markActive(); save();
+    }
+    var done = sess; sess = null;
+    if (showSummary) {
+      var s = subjectById(sid);
+      closeModalHook = null;
+      openModal(
+        '<h2 class="text-lg font-bold">' + (mins >= 1
+          ? mins + ' minute' + (mins === 1 ? '' : 's') + ' on ' + esc(s.name)
+          : 'Session ended early') + '</h2>' +
+        '<p class="mt-1 text-sm text-stone-600 dark:text-stone-300">' + (mins >= 1
+          ? 'Logged. Now the bit that makes it stick: mark what you could not recall as shaky so it comes back tomorrow.'
+          : 'Under a minute, so nothing was logged. No harm done — start another whenever you are ready.') + '</p>' +
+        '<div class="mt-4 grid gap-2">' +
+          '<button id="ssRate" class="rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700">Rate ' + esc(s.name) + ' topics</button>' +
+          '<button id="ssAgain" class="rounded-lg border border-stone-300 px-4 py-2.5 text-sm font-medium dark:border-stone-700">Another session</button>' +
+          '<button id="ssClose" class="rounded-lg px-4 py-2.5 text-sm text-stone-500 dark:text-stone-400">Done for now</button>' +
+        '</div>'
+      );
+      $('ssRate').addEventListener('click', function () { closeModal(); gotoSubject(sid); });
+      $('ssAgain').addEventListener('click', function () { closeModal(); startFocus(); });
+      $('ssClose').addEventListener('click', closeModal);
+    }
+    renderToday();
+  }
+
+  function plantSVG() {
+    return '<svg viewBox="0 0 120 120" width="130" height="130" role="img" aria-label="A plant that grows as the session goes on">' +
+      '<rect x="30" y="104" width="60" height="8" rx="3" fill="#a16207" opacity=".35"></rect>' +
+      '<rect id="plStem" x="58" y="104" width="4" height="0" rx="2" fill="#059669" class="grow-t"></rect>' +
+      '<ellipse id="plL1" cx="46" cy="86" rx="15" ry="7" fill="#10b981" opacity="0" class="grow-t" transform="rotate(-18 46 86)"></ellipse>' +
+      '<ellipse id="plL2" cx="74" cy="70" rx="15" ry="7" fill="#10b981" opacity="0" class="grow-t" transform="rotate(18 74 70)"></ellipse>' +
+      '<ellipse id="plL3" cx="44" cy="54" rx="14" ry="6.5" fill="#34d399" opacity="0" class="grow-t" transform="rotate(-22 44 54)"></ellipse>' +
+      '<circle id="plBud" cx="60" cy="34" r="0" fill="#f59e0b" class="grow-t"></circle>' +
+    '</svg>';
+  }
+  function growPlant(frac) {
+    var stem = document.getElementById('plStem'); if (!stem) return;
+    var h = Math.round(8 + frac * 70);
+    stem.setAttribute('height', h);
+    stem.setAttribute('y', 104 - h);
+    document.getElementById('plL1').setAttribute('opacity', frac > 0.2 ? '1' : '0');
+    document.getElementById('plL2').setAttribute('opacity', frac > 0.45 ? '1' : '0');
+    document.getElementById('plL3').setAttribute('opacity', frac > 0.7 ? '1' : '0');
+    document.getElementById('plBud').setAttribute('r', frac > 0.92 ? 9 : 0);
+  }
+
+  /* ------------------------- blurt ------------------------- */
+  var blurt = null;
+  function startBlurt(sid, tid) {
+    var s = subjectById(sid); if (!s) return;
+    var t = null;
+    s.topics.forEach(function (x) { if (x.id === tid) t = x; });
+    if (!t) t = s.topics[0];
+    blurt = { s:s, t:t, left:300, started:Date.now(), revealed:false };
+
+    openModal(
+      '<div class="flex items-start justify-between gap-2">' +
+        '<div><p class="text-xs uppercase tracking-wide text-stone-500 dark:text-stone-400">' + esc(s.name) + '</p>' +
+        '<h2 class="text-lg font-bold leading-tight">' + esc(t.name) + '</h2></div>' +
+        '<p id="blClock" class="tabular text-2xl font-bold">05:00</p>' +
+      '</div>' +
+      '<p class="mt-2 text-sm text-stone-600 dark:text-stone-300">Notes shut. Write down everything you can remember about this topic — bullet points, diagrams described in words, formulae, whatever comes. Do not stop to check anything.</p>' +
+      '<textarea id="blText" rows="9" class="mt-3 w-full rounded-lg border border-stone-300 bg-white p-3 text-sm dark:border-stone-700 dark:bg-stone-950" placeholder="Everything you know, straight out of your head…"></textarea>' +
+      '<div class="mt-3 flex gap-2">' +
+        '<button id="blReveal" class="flex-1 rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700">Show me what I missed</button>' +
+        '<button id="blQuit" class="rounded-lg border border-stone-300 px-4 py-2.5 text-sm dark:border-stone-700">Stop</button>' +
+      '</div>',
+      function () { clearInterval(blurtTimer); blurtTimer = null; blurt = null; }
+    );
+    $('blQuit').addEventListener('click', closeModal);
+    $('blReveal').addEventListener('click', revealBlurt);
+    $('blText').focus();
+    blurtTimer = setInterval(function () {
+      if (!blurt) return;
+      blurt.left--;
+      if ($('blClock')) {
+        var m = Math.floor(Math.max(0, blurt.left) / 60), sec = Math.max(0, blurt.left) % 60;
+        $('blClock').textContent = String(m).padStart(2, '0') + ':' + String(sec).padStart(2, '0');
+        if (blurt.left <= 0) { $('blClock').classList.add('text-rose-600'); }
+      }
+      if (blurt.left <= -1 && !blurt.revealed) { revealBlurt(); }
+    }, 1000);
+  }
+  var blurtTimer = null;
+
+  function revealBlurt() {
+    if (!blurt || blurt.revealed) return;
+    blurt.revealed = true;
+    clearInterval(blurtTimer); blurtTimer = null;
+    var s = blurt.s, t = blurt.t;
+    var written = ($('blText') && $('blText').value || '').toLowerCase();
+    var mins = Math.max(1, Math.round((Date.now() - blurt.started) / 60000));
+
+    var rows = t.subtopics.map(function (st, i) {
+      var key = s.id + '|' + t.id + '|' + i;
+      // Rough hint only: does a distinctive word from the sub-topic appear?
+      var words = st.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(function (w) { return w.length > 4; });
+      var hinted = words.length ? words.some(function (w) { return written.indexOf(w) !== -1; }) : false;
+      return '<div class="flex flex-wrap items-center gap-2 border-t border-stone-100 py-2 dark:border-stone-800">' +
+        '<p class="min-w-0 flex-1 text-sm leading-snug">' + esc(st) + (hinted ? ' <span class="text-[10px] text-emerald-600 dark:text-emerald-400">looks mentioned</span>' : '') + '</p>' +
+        '<div class="flex shrink-0 gap-1">' +
+          '<button class="blHad rounded-md px-2 py-1 text-[11px] font-semibold" data-key="' + esc(key) + '" style="border:1px solid #05966955;color:#059669">Had it</button>' +
+          '<button class="blMiss rounded-md px-2 py-1 text-[11px] font-semibold" data-key="' + esc(key) + '" style="border:1px solid #e11d4855;color:#e11d48">Missed it</button>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+
+    openModal(
+      '<h2 class="text-lg font-bold">' + esc(t.name) + ' — the checklist</h2>' +
+      '<p class="mt-1 text-sm text-stone-600 dark:text-stone-300">Go down the list honestly. Anything you mark missed comes back tomorrow. That is a good outcome, not a bad one.</p>' +
+      '<div id="blRows" class="mt-3">' + rows + '</div>' +
+      '<div class="mt-4 flex gap-2">' +
+        '<button id="blFinish" class="flex-1 rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700">Save and finish</button>' +
+      '</div>' +
+      '<p class="mt-2 text-center text-[11px] text-stone-500 dark:text-stone-400">' + mins + ' minute' + (mins === 1 ? '' : 's') + ' will be logged.</p>'
+    );
+    $('blRows').addEventListener('click', function (e) {
+      var had = e.target.closest('.blHad'), miss = e.target.closest('.blMiss');
+      if (had) { rate(had.dataset.key, rOf(had.dataset.key) === 3 ? 3 : 2); flag(had, '#059669'); }
+      if (miss) { rate(miss.dataset.key, 1); flag(miss, '#e11d48'); }
+    });
+    $('blFinish').addEventListener('click', function () {
+      state.sessions.push({ d:TODAY, m:mins, s:s.id, t:t.id, k:'blurt' });
+      markActive(); save();
+      closeModalHook = null;
+      closeModal();
+      toast('Blurt saved — ' + mins + ' min logged');
+      renderToday(); renderSubjects();
+    });
+  }
+  function flag(btn, colour) {
+    var wrap = btn.parentElement;
+    [].forEach.call(wrap.children, function (b) { b.style.background = ''; b.style.color = b.classList.contains('blHad') ? '#059669' : '#e11d48'; });
+    btn.style.background = colour; btn.style.color = '#fff';
+  }
+
+  /* ------------------------- timetable modal ------------------------- */
+  function timetableModal() {
+    openModal(
+      '<h2 class="text-lg font-bold">Summer 2027 papers</h2>' +
+      '<p class="mt-1 text-[11px] text-stone-500 dark:text-stone-400">' + esc(D.examSeries.note) + '</p>' +
+      '<div class="mt-3 space-y-1.5">' + ALL_EXAMS.map(function (x) {
+        var dd = daysBetween(TODAY, x.e.date);
+        return '<div class="flex items-center gap-2 rounded-lg border border-stone-200 p-2 dark:border-stone-800' + (dd < 0 ? ' opacity-50' : '') + '">' +
+          '<span class="inline-block h-2.5 w-2.5 shrink-0 rounded-full" style="background:' + ACCENT[x.s.accent] + '"></span>' +
+          '<div class="min-w-0 flex-1"><p class="truncate text-sm font-medium">' + esc(x.s.name.replace(' (Triple)', '')) + ' · ' + esc(x.e.code) + '</p>' +
+          '<p class="truncate text-[11px] text-stone-500 dark:text-stone-400">' + esc(x.e.name) + ' · ' + esc(x.e.duration) + '</p></div>' +
+          '<div class="shrink-0 text-right"><p class="text-xs font-semibold tabular">' + esc(shortDate(x.e.date)) + '</p>' +
+          '<p class="text-[11px] text-stone-500 dark:text-stone-400">' + (dd < 0 ? 'gone' : dd + ' days') + '</p></div>' +
+        '</div>';
+      }).join('') + '</div>' +
+      '<p class="mt-3 text-[11px] text-stone-500 dark:text-stone-400">Source: <a class="underline" target="_blank" rel="noopener noreferrer" href="' + esc(D.examSeries.source) + '">JCQ key dates for June 2027</a>, plus the AQA and Pearson Edexcel provisional timetables.</p>' +
+      '<button id="ttClose" class="mt-4 w-full rounded-lg bg-stone-900 px-4 py-2.5 text-sm font-semibold text-white dark:bg-stone-100 dark:text-stone-900">Close</button>'
+    );
+    $('ttClose').addEventListener('click', closeModal);
+  }
+
+  /* ------------------------- pick a topic to blurt ------------------------- */
+  function blurtPicker() {
+    var rows = [];
+    SUBJ.forEach(function (s) {
+      s.topics.forEach(function (t) {
+        var w = 0, n = 0;
+        t.subtopics.forEach(function (st, i) { var r = rOf(s.id + '|' + t.id + '|' + i); n++; w += (r === 3 ? 1 : r === 2 ? 2 / 3 : r === 1 ? 1 / 3 : 0); });
+        rows.push({ s:s, t:t, pct: n ? w / n : 0 });
+      });
+    });
+    rows.sort(function (a, b) { return a.pct - b.pct; });
+    openModal(
+      '<h2 class="text-lg font-bold">Blurt a topic</h2>' +
+      '<p class="mt-1 text-sm text-stone-600 dark:text-stone-300">Weakest first. Five minutes, blank page, notes shut.</p>' +
+      '<div class="mt-3 max-h-[50vh] space-y-1 overflow-y-auto">' + rows.slice(0, 25).map(function (x) {
+        return '<button class="blurtBtn flex w-full items-center gap-2 rounded-lg border border-stone-200 p-2 text-left hover:bg-stone-50 dark:border-stone-800 dark:hover:bg-stone-950" data-s="' + esc(x.s.id) + '" data-t="' + esc(x.t.id) + '">' +
+          '<span class="inline-block h-2.5 w-2.5 shrink-0 rounded-full" style="background:' + ACCENT[x.s.accent] + '"></span>' +
+          '<span class="min-w-0 flex-1"><span class="block truncate text-sm">' + esc(x.t.name) + '</span>' +
+          '<span class="block text-[11px] text-stone-500 dark:text-stone-400">' + esc(x.s.name) + '</span></span>' +
+          '<span class="tabular text-xs font-semibold">' + Math.round(x.pct * 100) + '%</span></button>';
+      }).join('') + '</div>'
+    );
+  }
+
+  /* ============================ export / import ============================ */
+  function exportData() {
     state.lastExport = new Date().toISOString();
     state.snoozeUntil = null;
     save();
-    var payload = {
-      app: 'kefw-gcse-dashboard',
-      version: 1,
-      exportedAt: state.lastExport,
-      dataChecksum: GCSE_DATA.dataChecksum || null,
-      totalSubtopics: TOTAL_ITEMS,
-      completedSubtopics: doneCount(),
-      progress: state
-    };
-    var blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
-    var url = URL.createObjectURL(blob);
+    var payload = JSON.stringify({ meta:{ exported:state.lastExport, dataChecksum:D.dataChecksum, schemaVersion:D.schemaVersion }, state:state }, null, 2);
+    var blob = new Blob([payload], { type:'application/json' });
     var a = document.createElement('a');
-    a.href = url;
-    a.download = 'gcse-progress-' + dayKey() + '.json';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
-    refreshStats();
-    toast('Backup downloaded. Keep it somewhere safe.');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'gcse-revision-backup-' + TODAY + '.json';
+    document.body.appendChild(a); a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+    toast('Backup downloaded');
+    refreshBanner();
+    if (activeTab === 'progress') renderProgress();
   }
 
-  function importProgress(file) {
-    var reader = new FileReader();
-    reader.onload = function () {
-      var parsed;
-      try {
-        parsed = JSON.parse(String(reader.result));
-      } catch (e) {
-        toast('That file is not valid JSON.');
-        return;
+  function importData(file) {
+    var fr = new FileReader();
+    fr.onload = function () {
+      var obj;
+      try { obj = JSON.parse(fr.result); } catch (e) { toast('That file is not valid JSON.'); return; }
+      var incoming = obj && obj.state ? obj.state : obj;
+      if (!incoming || (incoming.app !== 'kefw-gcse' && !incoming.done && !incoming.items)) { toast('That does not look like a backup from this site.'); return; }
+      if (!confirm('Replace everything currently saved in this browser with the contents of this file?')) return;
+      if (incoming.app !== 'kefw-gcse' || !incoming.items) {
+        // an old v1 backup
+        localStorage.setItem(LEGACY, JSON.stringify(incoming));
+        localStorage.removeItem(KEY);
+      } else {
+        localStorage.setItem(KEY, JSON.stringify(incoming));
       }
-      var incoming = parsed && parsed.progress ? parsed.progress : parsed;
-      if (!incoming || typeof incoming !== 'object' || !incoming.done) {
-        toast('No progress data found in that file.');
-        return;
-      }
-      var incomingCount = Object.keys(incoming.done).length;
-      var currentCount  = doneCount();
-      var msg = 'Import ' + incomingCount + ' completed sub-topic(s)?\n\n' +
-                'OK  = merge with the ' + currentCount + ' already ticked here (nothing is lost).\n' +
-                'Cancel = keep this device unchanged.';
-      if (!window.confirm(msg)) return;
-
-      var merged = normalise(incoming);
-      Object.keys(state.done).forEach(function (k) {
-        if (!merged.done[k]) merged.done[k] = state.done[k];
-      });
-      merged.bestStreak = Math.max(merged.bestStreak, state.bestStreak);
-      if (state.lastActiveDay && (!merged.lastActiveDay || state.lastActiveDay > merged.lastActiveDay)) {
-        merged.lastActiveDay = state.lastActiveDay;
-        merged.streak = Math.max(merged.streak, state.streak);
-      }
-      state = merged;
-      recomputeStreakOnLoad();
-      save();
-      buildSubjects();
-      refreshStats();
-      applyFilters();
-      toast('Imported. ' + doneCount() + ' sub-topics now ticked.');
+      load();
+      renderAll();
+      toast('Progress restored');
     };
-    reader.onerror = function () { toast('Could not read that file.'); };
-    reader.readAsText(file);
+    fr.readAsText(file);
   }
 
-  // ─────────────────────────── Toast ───────────────────────────
-  var toastTimer = null;
-  function toast(msg) {
-    var el = document.getElementById('toast');
-    el.textContent = msg;
-    el.style.opacity = '1';
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () { el.style.opacity = '0'; }, 3200);
+  function refreshBanner() {
+    var days = state.lastExport ? daysBetween(state.lastExport.slice(0, 10), TODAY) : 999;
+    var snoozed = state.snoozeUntil && state.snoozeUntil > TODAY;
+    var show = days >= 7 && !snoozed && Object.keys(state.items).length > 0;
+    $('backupBanner').classList.toggle('hidden', !show);
+    if (show) {
+      $('backupText').textContent = state.lastExport
+        ? 'It has been ' + days + ' days since your last backup. Clearing browsing data would wipe all of this.'
+        : 'You have never backed this up. One tap and it is a file in your downloads.';
+    }
   }
 
-  // ─────────────────────────── Events ───────────────────────────
-  elSubjects.addEventListener('change', function (ev) {
-    var cb = ev.target;
-    if (!cb || cb.type !== 'checkbox' || !cb.dataset.key) return;
-    var key = cb.dataset.key;
-    var parts = key.split('|');
+  /* ============================ events ============================ */
+  function gotoSubject(sid) {
+    showTab('subjects');
+    $('search').value = ''; $('filterSel').value = 'all';
+    renderSubjects();
+    var el = document.getElementById('s-' + sid);
+    if (el) el.scrollIntoView({ block:'start', behavior:'smooth' });
+  }
 
-    if (cb.checked) {
-      state.done[key] = new Date().toISOString();
-      registerActivity();
-    } else {
-      delete state.done[key];
+  document.addEventListener('click', function (e) {
+    var tab = e.target.closest('[data-tab]');
+    if (tab) { showTab(tab.dataset.tab); return; }
+
+    var rateBtn = e.target.closest('.rate');
+    if (rateBtn) {
+      rate(rateBtn.dataset.key, parseInt(rateBtn.dataset.r, 10));
+      renderSubjects();
+      renderToday();
+      if (activeTab === 'progress') renderProgress();
+      return;
     }
 
-    var li = cb.closest('li[data-item]');
-    li.setAttribute('data-done', String(cb.checked));
-    var span = li.querySelector('span');
-    span.className = 'text-[13px] leading-snug' + (cb.checked ? ' text-stone-400 line-through dark:text-stone-600' : '');
+    var bl = e.target.closest('.blurtBtn');
+    if (bl) { e.preventDefault(); startBlurt(bl.dataset.s, bl.dataset.t); return; }
 
-    save();
-    refreshCounts(parts[0], parts[1]);
-    refreshStats();
-    if (state.hideDone) applyFilters();
+    var go = e.target.closest('.goto');
+    if (go) { gotoSubject(go.dataset.goto); return; }
+
+    var sd = e.target.closest('.shufDay');
+    if (sd) { shuffleDay(parseInt(sd.dataset.day, 10)); renderToday(); toast('Day swapped'); return; }
+
+    var dp = e.target.closest('.delPaper');
+    if (dp) {
+      state.papers = state.papers.filter(function (p) { return p.id !== dp.dataset.id; });
+      save(); renderPapers(); renderToday(); return;
+    }
   });
 
-  document.getElementById('exportBtn').addEventListener('click', exportProgress);
-  document.getElementById('backupBanner').addEventListener('click', function (ev) {
-    if (ev.target.dataset && ev.target.dataset.act === 'export') exportProgress();
-  });
-  document.getElementById('snoozeBtn').addEventListener('click', function () {
-    state.snoozeUntil = new Date(Date.now() + 24 * 3600 * 1000).toISOString();
-    save();
-    refreshBackupBanner();
-    toast('Reminder snoozed until tomorrow.');
-  });
-  document.getElementById('importInput').addEventListener('change', function (ev) {
-    if (ev.target.files && ev.target.files[0]) importProgress(ev.target.files[0]);
-    ev.target.value = '';
-  });
-  document.getElementById('search').addEventListener('input', applyFilters);
-  document.getElementById('hideDoneBtn').addEventListener('click', function () {
-    state.hideDone = !state.hideDone;
-    save();
-    applyFilters();
-  });
-  document.getElementById('expandBtn').addEventListener('click', function () {
-    var details = elSubjects.querySelectorAll('details');
-    var anyClosed = Array.prototype.some.call(details, function (d) { return !d.open; });
-    Array.prototype.forEach.call(details, function (d) { d.open = anyClosed; });
-    this.textContent = anyClosed ? 'Collapse all' : 'Expand all';
-  });
-  document.getElementById('weeklyTarget').addEventListener('change', function () {
-    var v = Math.min(200, Math.max(1, parseInt(this.value, 10) || 20));
-    state.weeklyTarget = v;
-    save();
-    refreshStats();
-  });
-  document.getElementById('resetBtn').addEventListener('click', function () {
-    if (!window.confirm('Delete all ticks, streaks and settings on this device? Export a backup first if you are not sure. This cannot be undone.')) return;
-    state = blankState();
-    save();
-    buildSubjects();
-    refreshStats();
-    applyFilters();
-    toast('All progress cleared.');
-  });
-  document.getElementById('themeBtn').addEventListener('click', function () {
+  $('themeBtn').addEventListener('click', function () {
     var dark = document.documentElement.classList.toggle('dark');
-    try { localStorage.setItem(THEME_KEY, dark ? 'dark' : 'light'); } catch (e) {}
+    localStorage.setItem('kefw.theme', dark ? 'dark' : 'light');
+    $('themeIcon').textContent = dark ? '☀️' : '🌙';
+    renderAll();
+  });
+  $('exportBtn').addEventListener('click', exportData);
+  $('exportBtn2').addEventListener('click', exportData);
+  $('backupNow').addEventListener('click', exportData);
+  $('snoozeBtn').addEventListener('click', function () {
+    state.snoozeUntil = addDays(TODAY, 3); save(); refreshBanner();
+  });
+  $('importInput').addEventListener('change', function (e) { if (e.target.files[0]) importData(e.target.files[0]); e.target.value = ''; });
+  $('resetBtn').addEventListener('click', function () {
+    if (!confirm('Delete every rating, session and past paper stored in this browser? This cannot be undone.')) return;
+    localStorage.removeItem(KEY); localStorage.removeItem(LEGACY);
+    state = blank(); buildWeek(); save(); renderAll(); toast('Everything cleared');
+  });
+  $('replayOnboard').addEventListener('click', onboarding);
+  $('startFocus').addEventListener('click', startFocus);
+  $('quickStart').addEventListener('click', startFocus);
+  $('dueBlurt').addEventListener('click', blurtPicker);
+  $('shuffleDay').addEventListener('click', function () { shuffleDay(dayIndex()); renderToday(); toast('New subjects for today'); });
+  $('rebuildWeek').addEventListener('click', function () { buildWeek(); renderToday(); toast('Fresh rota'); });
+  $('printWeek').addEventListener('click', function () { window.print(); });
+  $('printSummary').addEventListener('click', function () { window.print(); });
+  $('showTimetable').addEventListener('click', timetableModal);
+  $('pSave').addEventListener('click', savePaper);
+
+  /* Tailwind's has-[:checked] variant is only used as a nicety; this makes the
+     selected state unmistakable even if the CDN build lacks it. */
+  document.addEventListener('change', function (e) {
+    var inp = e.target;
+    if (inp.type !== 'radio' && inp.type !== 'checkbox') return;
+    var group = inp.name ? document.querySelectorAll('input[name="' + inp.name + '"]') : [inp];
+    [].forEach.call(group, function (x) {
+      var lab = x.closest('label'); if (!lab) return;
+      if (x.checked) { lab.style.borderColor = '#059669'; lab.style.color = '#059669'; lab.style.fontWeight = '600'; }
+      else { lab.style.borderColor = ''; lab.style.color = ''; lab.style.fontWeight = ''; }
+    });
   });
 
-  // ─────────────────────────── Init ───────────────────────────
+  var searchTimer = null;
+  $('search').addEventListener('input', function () { clearTimeout(searchTimer); searchTimer = setTimeout(renderSubjects, 120); });
+  $('filterSel').addEventListener('change', renderSubjects);
+  $('expandBtn').addEventListener('click', function () {
+    var all = document.querySelectorAll('#subjects details');
+    var anyClosed = [].some.call(all, function (d) { return !d.open; });
+    [].forEach.call(all, function (d) { d.open = anyClosed; });
+    $('expandBtn').textContent = anyClosed ? 'Close all' : 'Open all';
+  });
+
+  /* ============================ boot ============================ */
+  function renderAll() {
+    renderToday();
+    renderSubjects();
+    renderPapers();
+    renderProgress();
+    refreshBanner();
+  }
+
   load();
-  recomputeStreakOnLoad();
-  save();
-  buildSubjects();
-  buildBoardNotes();
-  refreshStats();
-  applyFilters();
+  $('themeIcon').textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+  fillPaperForm();
+  showTab('today');
+  renderAll();
+  if (!state.onboarded) setTimeout(onboarding, 300);
+
+  // If the tab is left open across midnight, roll the date over.
+  setInterval(function () {
+    var now = todayISO();
+    if (now !== TODAY) { TODAY = now; load(); renderAll(); }
+  }, 60000);
+
+  window.__gcse = { get state() { return state; }, score:score, rate:rate, save:save, renderAll:renderAll, phase:phase, weekStats:weekStats };
 })();
 </script>
 </body>
