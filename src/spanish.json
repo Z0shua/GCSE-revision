@@ -1,0 +1,213 @@
+{
+  "id": "spanish",
+  "name": "Spanish",
+  "board": "Pearson Edexcel",
+  "boardVerified": true,
+  "boardNote": "VERIFIED from the KEFW Spanish Curriculum Intent PDFs, which reference a recommended topic by Pearson, the Edexcel GCSE Spanish Interactive Vocabulary Tool, and Edexcel past paper codes 1H and 3H. Included as an optional extra track because KEFW Spanish curriculum documents were supplied; the brief asked for one humanity, which is covered by Geography.",
+  "specCode": "1SP0",
+  "tier": "Higher tier",
+  "accent": "orange",
+  "papers": "Paper 1 Listening (25%), Paper 2 Speaking (25%), Paper 3 Reading (25%), Paper 4 Writing (25%). Higher tier papers are coded 1H, 2H, 3H and 4H.",
+  "pastPapers": {
+    "label": "Pearson Edexcel GCSE Spanish (1SP0) course materials and past papers",
+    "url": "https://qualifications.pearson.com/en/qualifications/edexcel-gcses/spanish-2016.coursematerials.html",
+    "verified": true
+  },
+  "resources": [
+    {
+      "label": "BBC Bitesize GCSE Spanish (Edexcel)",
+      "url": "https://www.bbc.co.uk/bitesize/examspecs/zwbhb7h",
+      "verified": true
+    },
+    {
+      "label": "Memrise free Spanish vocabulary courses",
+      "url": "https://www.memrise.com/",
+      "verified": true
+    },
+    {
+      "label": "MME Revise GCSE Spanish revision",
+      "url": "https://mmerevise.co.uk/",
+      "verified": true
+    },
+    {
+      "label": "Seneca Learning free GCSE Spanish course",
+      "url": "https://senecalearning.com/",
+      "verified": true
+    }
+  ],
+  "topics": [
+    {
+      "id": "sp-customs",
+      "name": "Theme 1 Identity and Culture: Customs and Traditions",
+      "subtopics": [
+        "Festivals and celebrations in Spain and Latin America",
+        "Food, meals and regional specialities",
+        "Family celebrations and religious traditions",
+        "Describing a past celebration using the preterite and imperfect together",
+        "Expressing opinions with justification using porque, ya que and dado que",
+        "Comparatives and superlatives",
+        "Higher-tier vocabulary for cultural comparison",
+        "Photo-card description for the speaking exam"
+      ],
+      "cards": [
+        {
+          "front": "When do you use the preterite rather than the imperfect in Spanish?",
+          "back": "The preterite describes completed single actions in the past; the imperfect describes ongoing, repeated or background situations."
+        },
+        {
+          "front": "Give the first person preterite of celebrar.",
+          "back": "Celebré - I celebrated. Note the written accent on the final e; without it, celebre is the subjunctive."
+        },
+        {
+          "front": "How do you say in my opinion in Spanish, at higher level?",
+          "back": "En mi opinión, or a mi parecer, or desde mi punto de vista."
+        },
+        {
+          "front": "How do you form the superlative in Spanish?",
+          "back": "Definite article plus más or menos plus adjective, e.g. la fiesta más importante."
+        },
+        {
+          "front": "Give three linking words that raise your writing grade.",
+          "back": "Sin embargo (however), aunque (although), por lo tanto (therefore), ya que (since)."
+        }
+      ],
+      "cloze": [
+        "The Spanish {{c1::preterite}} tense describes completed actions in the past.",
+        "The Spanish {{c1::imperfect}} tense describes what used to happen or was happening.",
+        "Sin embargo means {{c1::however}} in English."
+      ]
+    },
+    {
+      "id": "sp-work",
+      "name": "Theme 4 Future Aspirations, Study and Work",
+      "subtopics": [
+        "Jobs, professions and workplace vocabulary",
+        "Applying for work, CVs, interviews and work experience",
+        "Post-16 study choices, university and apprenticeships",
+        "Future plans using the near future and the simple future tense",
+        "The conditional tense to describe what you would like to do",
+        "Using the subjunctive after cuando and para que at higher level",
+        "Advantages and disadvantages of different careers",
+        "Role-play conventions for the speaking exam"
+      ],
+      "cards": [
+        {
+          "front": "How do you form the near future tense in Spanish?",
+          "back": "Ir conjugated plus a plus the infinitive, e.g. voy a estudiar - I am going to study."
+        },
+        {
+          "front": "How do you form the simple future of regular verbs?",
+          "back": "Add é, ás, á, emos, éis, án to the infinitive, e.g. estudiaré - I will study."
+        },
+        {
+          "front": "How do you form the conditional?",
+          "back": "Add ía, ías, ía, íamos, íais, ían to the infinitive, e.g. me gustaría - I would like."
+        },
+        {
+          "front": "Which mood follows cuando when talking about the future?",
+          "back": "The present subjunctive, e.g. cuando termine mis estudios - when I finish my studies."
+        },
+        {
+          "front": "Translate: I would like to work abroad because I want to improve my Spanish.",
+          "back": "Me gustaría trabajar en el extranjero porque quiero mejorar mi español."
+        }
+      ],
+      "cloze": [
+        "The near future is formed with {{c1::ir}} plus {{c2::a}} plus the infinitive.",
+        "Me gustaría means {{c1::I would like}} and uses the {{c2::conditional}} tense.",
+        "After cuando referring to the future, Spanish uses the {{c1::subjunctive}}."
+      ]
+    },
+    {
+      "id": "sp-global",
+      "name": "Theme 5 International and Global Dimension",
+      "subtopics": [
+        "Environmental problems and solutions",
+        "Global events, sport and campaigns",
+        "Social issues: poverty, homelessness, volunteering",
+        "Debería and hay que for obligation and recommendation",
+        "The passive and impersonal se constructions",
+        "Se debe, se puede and es necesario que structures",
+        "Extended written response of 130 to 150 words with two tenses and opinions",
+        "Translation into and out of Spanish"
+      ],
+      "cards": [
+        {
+          "front": "How do you say we should recycle more in Spanish?",
+          "back": "Deberíamos reciclar más."
+        },
+        {
+          "front": "What does hay que plus infinitive express?",
+          "back": "An impersonal obligation - one must, it is necessary to."
+        },
+        {
+          "front": "Give three environmental problems in Spanish.",
+          "back": "La contaminación (pollution), el calentamiento global (global warming), la deforestación (deforestation), la sequía (drought)."
+        },
+        {
+          "front": "What is the impersonal se used for?",
+          "back": "To say something is done in general without naming who does it, e.g. se recicla el plástico - plastic is recycled."
+        },
+        {
+          "front": "How many words should a higher-tier extended writing answer be?",
+          "back": "Around 130 to 150 words, using at least two tenses and developed opinions."
+        }
+      ],
+      "cloze": [
+        "{{c1::Hay que}} plus an infinitive expresses an impersonal obligation.",
+        "La {{c1::contaminación}} means pollution and el {{c2::calentamiento global}} means global warming.",
+        "The higher-tier extended writing task requires about {{c1::130 to 150}} words."
+      ]
+    },
+    {
+      "id": "sp-grammar-exam",
+      "name": "Grammar Core and Exam Technique",
+      "subtopics": [
+        "Present tense: regular, radical-changing and irregular verbs",
+        "Ser versus estar",
+        "Preterite, imperfect, perfect, pluperfect, future and conditional",
+        "Present and imperfect subjunctive triggers",
+        "Direct and indirect object pronouns and their position",
+        "Reflexive verbs and reflexive pronouns",
+        "Adjective agreement and position",
+        "Por versus para",
+        "Listening exam strategy: reading questions first, catching numbers and negatives",
+        "Reading exam strategy: cognates, false friends and question order",
+        "Speaking exam: role play, photo card, general conversation timings",
+        "Writing exam: structure, tense variety, checking agreement and accents"
+      ],
+      "cards": [
+        {
+          "front": "Explain the difference between ser and estar.",
+          "back": "Ser is for permanent or defining characteristics, origin, profession and time. Estar is for temporary states, moods and location."
+        },
+        {
+          "front": "When do you use por and when para?",
+          "back": "Por for cause, exchange, duration and movement through. Para for purpose, destination, deadline and recipient."
+        },
+        {
+          "front": "Where do object pronouns usually go in Spanish?",
+          "back": "Before the conjugated verb, or attached to the end of an infinitive, gerund or positive command."
+        },
+        {
+          "front": "Name three tenses that will lift a higher-tier written answer.",
+          "back": "The preterite, the conditional and the subjunctive, alongside the present and near future."
+        },
+        {
+          "front": "Give a fast listening exam strategy.",
+          "back": "Read the questions before the recording, predict likely vocabulary, and listen actively for numbers, negatives and time markers on the first play."
+        },
+        {
+          "front": "Which five words change meaning only because of a written accent?",
+          "back": "sí (yes) versus si (if), él (he) versus el (the), tú (you) versus tu (your), más (more) versus mas (but), sólo/solo and qué (what, in questions) versus que (that)."
+        }
+      ],
+      "cloze": [
+        "{{c1::Ser}} is used for permanent characteristics and {{c2::estar}} for temporary states and location.",
+        "{{c1::Por}} expresses cause or duration, while {{c2::para}} expresses purpose or destination.",
+        "Object pronouns go {{c1::before}} the conjugated verb in Spanish.",
+        "The word {{c1::sí}} with an accent means yes, while si without an accent means if."
+      ]
+    }
+  ]
+}

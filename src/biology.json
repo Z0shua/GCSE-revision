@@ -1,0 +1,233 @@
+{
+  "id": "biology",
+  "name": "Biology (Triple)",
+  "board": "AQA",
+  "boardVerified": true,
+  "boardNote": "VERIFIED from the KEFW Biology Curriculum Intent PDF, which states the Triple Biology GCSE examination is conducted by AQA. Spec code 8461. Year 11 units below (B5.6 Ecology and B5.7 Inheritance, variation and evolution) are taken directly from the KEFW Year 11 curriculum document.",
+  "specCode": "8461",
+  "tier": "Higher tier",
+  "accent": "emerald",
+  "papers": "Paper 1 (topics 1-4: cell biology, organisation, infection and response, bioenergetics) and Paper 2 (topics 5-7: homeostasis and response, inheritance variation and evolution, ecology). Each 1h45, 100 marks, 50 percent.",
+  "pastPapers": {
+    "label": "AQA GCSE Biology 8461 assessment resources and past papers",
+    "url": "https://www.aqa.org.uk/subjects/science/gcse/biology-8461/assessment-resources",
+    "verified": true
+  },
+  "resources": [
+    { "label": "BBC Bitesize GCSE Biology (AQA)", "url": "https://www.bbc.co.uk/bitesize/examspecs/zpgcbk7", "verified": true },
+    { "label": "Free Science Lessons video course", "url": "https://www.freesciencelessons.co.uk/", "verified": true },
+    { "label": "Cognito free GCSE science videos and quizzes", "url": "https://www.cognitoedu.org/", "verified": true },
+    { "label": "Physics and Maths Tutor AQA Biology topic questions", "url": "https://www.physicsandmathstutor.com/", "verified": true },
+    { "label": "Seneca Learning free AQA Biology course", "url": "https://senecalearning.com/", "verified": true }
+  ],
+  "topics": [
+    {
+      "id": "bi-ecology-adaptations",
+      "name": "B5.6a Ecology: Adaptations, Communities and Interdependence",
+      "subtopics": [
+        "Levels of organisation: individual, population, community, ecosystem",
+        "Abiotic factors: light intensity, temperature, moisture, soil pH and mineral content, wind intensity, carbon dioxide and oxygen levels",
+        "Biotic factors: availability of food, new predators, new pathogens, competition between species",
+        "Interdependence and the effect of removing one species from a community",
+        "Competition in plants for light, space, water and mineral ions",
+        "Competition in animals for food, mates and territory",
+        "Structural, behavioural and functional adaptations",
+        "Extremophiles and adaptations to high temperature, pressure or salt concentration",
+        "Predator-prey population cycles and why they lag behind each other"
+      ],
+      "cards": [
+        { "front": "Define a community in ecological terms.", "back": "All the populations of different species living and interacting in the same habitat." },
+        { "front": "Give three abiotic factors that affect a community.", "back": "Light intensity, temperature, moisture level, soil pH and mineral content, wind intensity, carbon dioxide or oxygen levels." },
+        { "front": "Give three biotic factors that affect a community.", "back": "Availability of food, new predators arriving, new pathogens, and interspecific competition." },
+        { "front": "What are extremophiles?", "back": "Organisms adapted to live in extreme conditions such as high temperature, high pressure or high salt concentration, e.g. bacteria in deep sea vents." },
+        { "front": "Why do predator and prey population cycles lag behind each other?", "back": "Predator numbers rise only after prey numbers rise, and prey numbers recover only after predator numbers fall - there is a time delay in each response." },
+        { "front": "What three things do plants compete for?", "back": "Light and space, water, and mineral ions from the soil." },
+        { "front": "What does interdependence mean?", "back": "Species within a community rely on each other for food, shelter, pollination and seed dispersal, so removing one species affects the whole community." }
+      ],
+      "cloze": [
+        "A {{c1::population}} is all the organisms of one species in a habitat, while a {{c2::community}} includes all the populations present.",
+        "Organisms adapted to extreme conditions are called {{c1::extremophiles}}.",
+        "Competition between individuals of {{c1::different}} species is called interspecific competition."
+      ]
+    },
+    {
+      "id": "bi-ecology-sampling-cycles",
+      "name": "B5.6b Ecology: Sampling, Cycling of Materials and Decomposition",
+      "subtopics": [
+        "Required practical: measuring population size using quadrats and random sampling",
+        "Using a transect to measure how distribution changes across a gradient",
+        "Calculating mean, median and mode from quadrat data, and estimating total population",
+        "Why random sampling avoids bias, and how to generate random coordinates",
+        "The carbon cycle: photosynthesis, respiration, combustion, decomposition",
+        "The water cycle: evaporation, condensation, precipitation, transpiration",
+        "The role of microorganisms in returning carbon and mineral ions to the environment",
+        "Required practical: investigating the effect of temperature on the rate of decay of milk or of pH change",
+        "Factors affecting rate of decomposition: temperature, water, oxygen availability",
+        "Biogas generators and compost as applications of decomposition"
+      ],
+      "cards": [
+        { "front": "Why must quadrat samples be placed randomly?", "back": "To avoid bias so the sample is representative of the whole area, allowing a valid estimate of the total population." },
+        { "front": "How do you estimate the total population of a plant from quadrat data?", "back": "Mean number per quadrat divided by quadrat area, multiplied by the total area of the habitat." },
+        { "front": "When would you use a transect rather than random quadrats?", "back": "When investigating how distribution changes along an environmental gradient, e.g. from the shore inland." },
+        { "front": "Name the three processes that return carbon dioxide to the atmosphere.", "back": "Respiration, combustion of fossil fuels and wood, and decomposition by microorganisms." },
+        { "front": "Which three factors increase the rate of decay?", "back": "Warmer temperature (up to enzyme denaturation), presence of water, and plenty of oxygen for aerobic respiration." },
+        { "front": "Why does anaerobic decay matter in a biogas generator?", "back": "Anaerobic decay by microorganisms produces methane, which can be burned as a fuel." },
+        { "front": "How is water made available to living organisms in the water cycle?", "back": "Energy from the Sun evaporates water, which condenses to form clouds and falls as precipitation, providing fresh water on land before draining back to the sea." }
+      ],
+      "cloze": [
+        "A {{c1::quadrat}} is used with {{c2::random}} sampling to estimate population size.",
+        "A {{c1::transect}} is a line along which samples are taken to show how distribution changes.",
+        "{{c1::Decomposition}} by microorganisms returns carbon dioxide and mineral ions to the environment.",
+        "Anaerobic decay in a biogas generator produces {{c1::methane}}."
+      ]
+    },
+    {
+      "id": "bi-ecology-biodiversity",
+      "name": "B5.6c Ecology: Biodiversity, Human Impact and Food Production",
+      "subtopics": [
+        "Definition of biodiversity and why high biodiversity gives stable ecosystems",
+        "Rapid human population growth and increased resource use",
+        "Pollution of water by sewage, fertiliser and toxic chemicals",
+        "Pollution of land by landfill and toxic chemicals; pollution of air by smoke and acidic gases",
+        "Deforestation causes: cattle and rice fields, and growing crops for biofuels",
+        "Destruction of peat bogs and the release of stored carbon dioxide",
+        "Global warming: consequences for species distribution, migration patterns and sea level",
+        "Maintaining biodiversity: breeding programmes, protecting habitats, field margins and hedgerows, recycling, government CO2 reduction targets",
+        "Trophic levels 1 to 4, producers, primary and secondary consumers, apex predators, decomposers",
+        "Pyramids of biomass and calculating percentage efficiency of biomass transfer",
+        "Food security and the factors that threaten it",
+        "Sustainable fishing: net size and fishing quotas",
+        "Factory farming and limiting energy transfer to increase efficiency",
+        "Mycoprotein from Fusarium in aerobic culture, and genetically modified crops"
+      ],
+      "cards": [
+        { "front": "Define biodiversity.", "back": "The variety of all the different species of organisms on Earth, or within an ecosystem." },
+        { "front": "Why is high biodiversity important?", "back": "It reduces the dependence of one species on another for food, shelter and the maintenance of the physical environment, giving a stable ecosystem." },
+        { "front": "Why does destroying peat bogs increase carbon dioxide levels?", "back": "Peat contains large amounts of stored carbon; when it is drained or burned, microorganisms respire it or it combusts, releasing carbon dioxide." },
+        { "front": "Give two reasons for large-scale deforestation in tropical areas.", "back": "To provide land for cattle and rice fields, and to grow crops for biofuel production." },
+        { "front": "How do you calculate the efficiency of biomass transfer between trophic levels?", "back": "Biomass transferred to the higher level divided by biomass available at the lower level, multiplied by 100." },
+        { "front": "Approximately what percentage of biomass is transferred between trophic levels?", "back": "About 10 percent - the rest is lost in faeces, urea, respiration and uneaten parts." },
+        { "front": "Name four programmes that help maintain biodiversity.", "back": "Breeding programmes for endangered species, protection and regeneration of rare habitats, field margins and hedgerows on farms, and recycling rather than landfill." },
+        { "front": "How is mycoprotein produced?", "back": "The fungus Fusarium is grown on glucose syrup in aerobic conditions in a fermenter; the biomass is harvested and purified as a protein-rich food." },
+        { "front": "Give two ways fish stocks are conserved.", "back": "Controlling net mesh size so young fish escape, and imposing fishing quotas that limit catch." }
+      ],
+      "cloze": [
+        "Approximately {{c1::10}} percent of biomass is transferred from one trophic level to the next.",
+        "Trophic level {{c1::1}} contains the {{c2::producers}}, usually plants and algae.",
+        "Draining and burning {{c1::peat bogs}} releases stored carbon dioxide.",
+        "Mycoprotein is produced from the fungus {{c1::Fusarium}} grown in {{c2::aerobic}} conditions."
+      ]
+    },
+    {
+      "id": "bi-inheritance-dna",
+      "name": "B5.7a Inheritance: Reproduction, DNA and Genetic Crosses",
+      "subtopics": [
+        "Sexual reproduction, gametes, fertilisation and variation in offspring",
+        "Asexual reproduction by mitosis producing genetically identical clones",
+        "Meiosis: one cell producing four genetically different haploid gametes",
+        "Organisms that use both strategies: malarial parasite, fungi, strawberry and daffodil plants",
+        "DNA structure: double helix, polymer, nucleotides, sugar-phosphate backbone, bases A, C, G and T",
+        "Gene, chromosome and genome; the value of the Human Genome Project",
+        "Complementary base pairing A-T and C-G",
+        "Protein synthesis: transcription to mRNA, translation on ribosomes, tRNA and amino acid order",
+        "How non-coding DNA and mutations can change protein shape and function",
+        "Alleles, dominant and recessive, homozygous and heterozygous, genotype and phenotype",
+        "Punnett squares and family tree diagrams, and calculating expected ratios",
+        "Polydactyly as a dominant disorder and cystic fibrosis as a recessive disorder",
+        "Embryo screening and gene therapy - economic, social and ethical issues",
+        "Sex determination by the X and Y chromosomes"
+      ],
+      "cards": [
+        { "front": "How many daughter cells does meiosis produce and how do they differ?", "back": "Four genetically different haploid gametes, each with half the number of chromosomes of the parent cell." },
+        { "front": "What is the complementary base pair rule in DNA?", "back": "Adenine pairs with thymine, and cytosine pairs with guanine." },
+        { "front": "Define the genome.", "back": "The entire genetic material of an organism." },
+        { "front": "What is the difference between transcription and translation?", "back": "Transcription copies a gene into mRNA in the nucleus; translation reads the mRNA on a ribosome, where tRNA brings amino acids in the coded order to build a protein." },
+        { "front": "Cystic fibrosis is caused by which type of allele?", "back": "A recessive allele - a person must inherit two copies to have the disorder." },
+        { "front": "Polydactyly is caused by which type of allele?", "back": "A dominant allele - only one copy is needed for the phenotype." },
+        { "front": "What is the expected ratio from crossing two heterozygous parents (Bb x Bb)?", "back": "3 showing the dominant phenotype to 1 showing the recessive phenotype (genotypes 1 BB : 2 Bb : 1 bb)." },
+        { "front": "Which chromosomes determine sex in humans?", "back": "XX is female and XY is male; the 23rd pair of chromosomes." },
+        { "front": "Why is asexual reproduction advantageous in stable conditions?", "back": "It is faster, needs only one parent, and produces many genetically identical offspring adapted to the existing environment." },
+        { "front": "Define homozygous and heterozygous.", "back": "Homozygous: two identical alleles for a gene. Heterozygous: two different alleles for a gene." }
+      ],
+      "cloze": [
+        "Meiosis produces {{c1::four}} genetically {{c2::different}} gametes.",
+        "In DNA, adenine pairs with {{c1::thymine}} and cytosine pairs with {{c2::guanine}}.",
+        "The order of {{c1::bases}} in a gene determines the order of {{c2::amino acids}} in a protein.",
+        "Cystic fibrosis is caused by a {{c1::recessive}} allele and polydactyly by a {{c2::dominant}} allele.",
+        "The sex chromosomes of a human male are {{c1::XY}}."
+      ]
+    },
+    {
+      "id": "bi-variation-evolution",
+      "name": "B5.7b Variation, Evolution, Extinction and Classification",
+      "subtopics": [
+        "Causes of variation: genes, environment, or both; mutation as the source of new alleles",
+        "The theory of evolution by natural selection over three billion years",
+        "Darwin, Wallace and the publication of On the Origin of Species",
+        "Why Darwins ideas were only gradually accepted",
+        "Lamarcks theory of inherited acquired characteristics and why it was rejected",
+        "Mendels work with pea plants and why its significance was recognised late",
+        "Speciation: isolation, different selection pressures, inability to interbreed successfully",
+        "Evidence for evolution: fossils, antibiotic-resistant bacteria",
+        "How fossils form and why the fossil record is incomplete",
+        "Causes of extinction: new predators, new diseases, catastrophic events, environmental change, competition",
+        "Antibiotic-resistant bacteria such as MRSA and how resistance spreads",
+        "Reducing resistance: no antibiotics for viruses or non-serious infections, completing the course, restricted agricultural use",
+        "The Linnaean system: kingdom, phylum, class, order, family, genus, species and binomial naming",
+        "Woeses three-domain system: archaea, bacteria, eukaryota",
+        "Evolutionary trees and how they are constructed"
+      ],
+      "cards": [
+        { "front": "Explain natural selection in four steps.", "back": "Variation exists within a species due to mutation; individuals with characteristics best suited to the environment are more likely to survive and breed; the beneficial alleles are passed to offspring; over many generations the species changes." },
+        { "front": "Who developed the theory of evolution alongside Darwin?", "back": "Alfred Russel Wallace, who published jointly with Darwin on natural selection in 1858." },
+        { "front": "Why was Darwins theory only gradually accepted?", "back": "It challenged the idea that God created all life; there was insufficient evidence at the time; and the mechanism of inheritance and variation was not known until 50 years later." },
+        { "front": "Define speciation.", "back": "The formation of a new species when two populations become so different in phenotype that they can no longer interbreed to produce fertile offspring." },
+        { "front": "Why is the fossil record incomplete?", "back": "Many early organisms were soft-bodied and left few traces, and many fossils that did form have been destroyed by geological activity." },
+        { "front": "How do bacteria become antibiotic resistant?", "back": "Random mutation produces a resistant strain; the antibiotic kills non-resistant bacteria; the resistant strain survives, reproduces rapidly and spreads because there is no effective treatment." },
+        { "front": "List the Linnaean classification groups in order.", "back": "Kingdom, phylum, class, order, family, genus, species." },
+        { "front": "What are the three domains proposed by Carl Woese?", "back": "Archaea, bacteria and eukaryota." },
+        { "front": "Give three ways to slow the development of antibiotic resistance.", "back": "Doctors avoid prescribing antibiotics inappropriately, patients complete the full course, and agricultural use of antibiotics is restricted." },
+        { "front": "How does the binomial system name a species?", "back": "By genus then species, e.g. Homo sapiens, with the genus capitalised." }
+      ],
+      "cloze": [
+        "Darwin published his theory in the book {{c1::On the Origin of Species}} in 1859.",
+        "{{c1::Mutations}} are the ultimate source of new alleles and therefore of variation.",
+        "Two populations become separate species when they can no longer {{c1::interbreed}} to produce {{c2::fertile}} offspring.",
+        "The three domains proposed by Woese are archaea, bacteria and {{c1::eukaryota}}.",
+        "The classification order is kingdom, {{c1::phylum}}, class, order, {{c2::family}}, genus, species."
+      ]
+    },
+    {
+      "id": "bi-biotech",
+      "name": "B5.7c Selective Breeding, Genetic Engineering and Cloning",
+      "subtopics": [
+        "Selective breeding process and the characteristics chosen: disease resistance, yield, temperament, appearance",
+        "Risks of inbreeding: reduced gene pool, inherited defects, vulnerability to disease",
+        "Genetic engineering steps: isolate the gene with enzymes, insert into a vector such as a plasmid or virus, transfer to the target cell at an early stage",
+        "GM crops: herbicide and insect resistance, increased yield, golden rice and added vitamins",
+        "Concerns about GM crops: effects on wild flowers and insects, uncertain long-term health effects",
+        "Genetically modified bacteria producing human insulin",
+        "Potential of gene therapy for inherited disorders",
+        "Tissue culture using small groups of cells to grow identical plants",
+        "Taking cuttings as a simple cloning method for gardeners",
+        "Embryo transplants in cattle: splitting an embryo before cells specialise",
+        "Adult cell cloning: enucleated egg cell, nucleus from an adult body cell, electric shock, implantation"
+      ],
+      "cards": [
+        { "front": "Describe the process of selective breeding.", "back": "Choose parents with the desired characteristic, breed them, select the best offspring, then breed those together, repeating over many generations." },
+        { "front": "What is the main risk of selective breeding?", "back": "Inbreeding reduces the gene pool, so inherited defects become more common and the whole population is vulnerable to a single new disease." },
+        { "front": "Outline the main steps of genetic engineering.", "back": "Cut out the required gene using enzymes, insert it into a vector such as a bacterial plasmid or a virus, then use the vector to insert the gene into the cells of the target organism at an early stage of development." },
+        { "front": "Give two arguments for GM crops and two against.", "back": "For: higher yields, added nutrients such as vitamin A in golden rice, and pest resistance reducing pesticide use. Against: possible effects on wild flowers and insect populations, and uncertain long-term effects on human health." },
+        { "front": "Describe adult cell cloning.", "back": "The nucleus is removed from an unfertilised egg cell; the nucleus from an adult body cell is inserted; the cell is stimulated by an electric shock to divide into an embryo, which is inserted into the womb of an adult female." },
+        { "front": "What is tissue culture used for?", "back": "Using small groups of cells from a plant to grow identical new plants, useful for preserving rare species or commercially producing large numbers of identical plants." },
+        { "front": "How are embryo transplants used in cattle farming?", "back": "Cells are split from a developing embryo before they become specialised, and the identical embryos are implanted into host mothers." }
+      ],
+      "cloze": [
+        "In genetic engineering, a gene is transferred using a {{c1::vector}}, such as a bacterial {{c2::plasmid}} or a virus.",
+        "Selective breeding over many generations reduces the {{c1::gene pool}} and increases the risk of {{c2::inbreeding}}.",
+        "In adult cell cloning, the egg cell is {{c1::enucleated}} and stimulated to divide by an {{c2::electric shock}}.",
+        "Human {{c1::insulin}} for diabetics is produced by genetically modified bacteria."
+      ]
+    }
+  ]
+}

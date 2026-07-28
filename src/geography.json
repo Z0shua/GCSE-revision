@@ -1,0 +1,272 @@
+{
+  "id": "geography",
+  "name": "Geography",
+  "board": "Pearson Edexcel B",
+  "boardVerified": true,
+  "boardNote": "VERIFIED by topic structure: the KEFW Geography Curriculum Intent PDFs use the exact numbered topic titles unique to Pearson Edexcel GCSE Geography B (1GB0) - Hazardous Earth, Development Dynamics, Challenges of an Urbanising World, UK Physical Landscapes 4A/4B, UK Evolving Human Landscape, Geographical Investigations, People and Biomes, Forests Under Threat, Consuming Energy Resources. The board name itself is not printed in the PDF, so treat the board as inferred-with-high-confidence rather than stated.",
+  "specCode": "1GB0",
+  "tier": "Single tier",
+  "accent": "teal",
+  "papers": "Paper 1 Global Geographical Issues (1h30, 37.5%). Paper 2 UK Geographical Issues incl. fieldwork (1h30, 37.5%). Paper 3 People and Environment Issues - Making Geographical Decisions (1h30, 25%).",
+  "pastPapers": {
+    "label": "Pearson Edexcel GCSE Geography B (1GB0) course materials and past papers",
+    "url": "https://qualifications.pearson.com/en/qualifications/edexcel-gcses/geography-b-2016.coursematerials.html",
+    "verified": true
+  },
+  "resources": [
+    { "label": "BBC Bitesize GCSE Geography (Edexcel)", "url": "https://www.bbc.co.uk/bitesize/examspecs/zsytxsg", "verified": true },
+    { "label": "MME Revise GCSE Geography revision", "url": "https://mmerevise.co.uk/", "verified": true },
+    { "label": "Physics and Maths Tutor GCSE Geography notes", "url": "https://www.physicsandmathstutor.com/", "verified": true },
+    { "label": "Seneca Learning free GCSE Geography course", "url": "https://senecalearning.com/", "verified": true }
+  ],
+  "topics": [
+    {
+      "id": "ge-hazardous-earth-climate",
+      "name": "Topic 1a Hazardous Earth: Climate and Tropical Cyclones",
+      "subtopics": [
+        "Global atmospheric circulation: Hadley, Ferrel and Polar cells",
+        "Low pressure at the equator, high pressure at 30 degrees, and the resulting climate zones",
+        "Ocean currents, the global conveyor belt and their role in redistributing heat",
+        "Natural climate change: orbital changes, volcanic activity, solar output, asteroid impacts",
+        "Evidence for climate change: ice cores, tree rings, historical records, sea level and glacial retreat",
+        "The enhanced greenhouse effect and human causes of climate change",
+        "Uneven global consequences of climate change for people and the environment",
+        "Distribution of tropical cyclones and the conditions needed to form them",
+        "Formation and structure of a tropical cyclone including the eye and eye wall",
+        "The Saffir-Simpson scale",
+        "Primary and secondary hazards: storm surge, high winds, intense rainfall, flooding, landslides",
+        "How physical and human factors affect vulnerability and resilience",
+        "Named case study of a tropical cyclone in a developed country",
+        "Named case study of a tropical cyclone in an emerging or developing country",
+        "Preparation, planning, prediction and protection responses"
+      ],
+      "cards": [
+        { "front": "Name the three cells of global atmospheric circulation.", "back": "The Hadley cell, the Ferrel cell and the Polar cell." },
+        { "front": "Why is there a belt of low pressure at the equator?", "back": "Intense solar heating causes air to rise, creating low pressure, cloud and high rainfall." },
+        { "front": "State four conditions needed for a tropical cyclone to form.", "back": "Sea surface temperature above about 27 degrees Celsius, ocean depth of at least 60 to 70 metres, latitude between 5 and 30 degrees for the Coriolis effect, and low wind shear." },
+        { "front": "What scale is used to classify tropical cyclones?", "back": "The Saffir-Simpson scale, from category 1 to category 5, based on sustained wind speed." },
+        { "front": "Describe conditions in the eye of a tropical cyclone.", "back": "Calm, clear, descending air with the lowest pressure and no rain, surrounded by the most violent conditions in the eye wall." },
+        { "front": "What is a storm surge and why is it so dangerous?", "back": "A rise in sea level caused by low pressure and strong onshore winds; it causes rapid coastal flooding and is often the biggest cause of death." },
+        { "front": "Give three types of evidence for past climate change.", "back": "Ice cores, tree rings (dendrochronology), historical records, sea level change and glacial retreat." },
+        { "front": "Name three natural causes of climate change.", "back": "Orbital or Milankovitch cycles, volcanic eruptions releasing ash and aerosols, variations in solar output, and asteroid impacts." },
+        { "front": "Why do developing countries often suffer greater cyclone impacts?", "back": "Weaker building standards, poorer warning and evacuation systems, less money for defences, and greater dependence on agriculture for income." }
+      ],
+      "cloze": [
+        "The three cells of global atmospheric circulation are the {{c1::Hadley}}, {{c2::Ferrel}} and Polar cells.",
+        "Tropical cyclones need sea surface temperatures above about {{c1::27}} degrees Celsius.",
+        "Tropical cyclones are classified on the {{c1::Saffir-Simpson}} scale.",
+        "A {{c1::storm surge}} is a rise in sea level caused by low pressure and onshore winds."
+      ]
+    },
+    {
+      "id": "ge-hazardous-earth-tectonics",
+      "name": "Topic 1b Hazardous Earth: Tectonic Hazards",
+      "subtopics": [
+        "Internal structure of the Earth: inner core, outer core, mantle, crust",
+        "Convection currents, ridge push and slab pull as drivers of plate movement",
+        "Plate boundary types: divergent, convergent, conservative and collision",
+        "Distribution of earthquakes and volcanoes and their link to plate boundaries",
+        "Hotspots and intra-plate volcanic activity",
+        "Types of volcano and characteristic eruption styles",
+        "Primary and secondary earthquake hazards: ground shaking, liquefaction, tsunami, fires, disease",
+        "Measuring earthquakes and volcanic eruptions",
+        "Named case study of a tectonic hazard in a developed country",
+        "Named case study of a tectonic hazard in an emerging or developing country",
+        "Why people continue to live in tectonically active areas",
+        "Management: prediction, building design, planning, education and emergency response"
+      ],
+      "cards": [
+        { "front": "Name three mechanisms that move tectonic plates.", "back": "Convection currents in the mantle, ridge push at constructive boundaries, and slab pull at destructive boundaries." },
+        { "front": "What happens at a convergent oceanic-continental boundary?", "back": "The denser oceanic plate subducts beneath the continental plate, causing deep earthquakes, explosive volcanoes and fold mountains." },
+        { "front": "What happens at a divergent boundary?", "back": "Plates move apart, magma rises to form new crust, producing shallow earthquakes and gentle volcanic activity, e.g. mid-ocean ridges." },
+        { "front": "What is liquefaction?", "back": "When violent ground shaking causes saturated loose soil to behave like a liquid, so buildings sink or tilt." },
+        { "front": "Why do people continue to live in tectonically hazardous areas?", "back": "Fertile volcanic soils, geothermal energy, tourism, mineral resources, family and cultural ties, and a belief that the risk is low or manageable." },
+        { "front": "Give two ways buildings can be designed to resist earthquakes.", "back": "Cross-bracing and shock absorbers or base isolators, deep foundations into bedrock, and lightweight roofing materials." },
+        { "front": "Why is a collision boundary different from a convergent oceanic boundary?", "back": "Two continental plates of similar density collide with no subduction, so crust buckles into fold mountains and there are earthquakes but no volcanoes." }
+      ],
+      "cloze": [
+        "At a {{c1::convergent}} boundary the denser oceanic plate {{c2::subducts}} beneath the continental plate.",
+        "{{c1::Slab pull}} and {{c2::ridge push}} act alongside mantle convection to move plates.",
+        "Violent shaking turning saturated soil into a fluid is called {{c1::liquefaction}}."
+      ]
+    },
+    {
+      "id": "ge-development-dynamics",
+      "name": "Topic 2 Development Dynamics (India case study)",
+      "subtopics": [
+        "Measuring development: GNI per capita, HDI, birth and death rates, literacy, life expectancy",
+        "Limitations of single indicators and the value of composite measures",
+        "The development gap and global patterns of inequality",
+        "Theories of development: Rostows modernisation model and Franks dependency theory",
+        "Demographic transition model stages and their link to development",
+        "Top-down versus bottom-up development strategies and their advantages",
+        "India: location, physical context, climate and population distribution",
+        "Indias changing economic sectors and the growth of manufacturing and services",
+        "The role of TNCs, globalisation and foreign direct investment in India",
+        "Advantages and disadvantages of TNC investment for India",
+        "Indias changing geopolitical role and regional relationships",
+        "Impacts of rapid growth on Indias environment and on inequality between states",
+        "Who benefits and who loses from rapid development"
+      ],
+      "cards": [
+        { "front": "What three measures combine to form the Human Development Index?", "back": "Life expectancy at birth, education (mean and expected years of schooling), and GNI per capita." },
+        { "front": "Why is GNI per capita alone a poor measure of development?", "back": "It is a mean, so it hides inequality, ignores the informal economy, and says nothing about health, education or quality of life." },
+        { "front": "Summarise Rostows modernisation model.", "back": "Countries move through five stages - traditional society, preconditions for take-off, take-off, drive to maturity, and age of mass consumption - as investment and industry grow." },
+        { "front": "Summarise Franks dependency theory.", "back": "Poorer countries remain poor because a core of wealthy nations extracts resources and value from a periphery, keeping it dependent." },
+        { "front": "Give two advantages and two disadvantages of TNC investment in India.", "back": "Advantages: employment and higher wages, transfer of skills and technology, multiplier effect. Disadvantages: profits leave the country, poor working conditions, environmental damage, and vulnerability if the TNC relocates." },
+        { "front": "What is the difference between top-down and bottom-up development?", "back": "Top-down is large scale, government or TNC-led and expensive, e.g. a dam; bottom-up is small scale, community-led and locally appropriate, e.g. a village water pump." },
+        { "front": "What is the multiplier effect?", "back": "Initial investment creates jobs and income, which is spent locally, creating further demand, jobs and tax revenue in a self-reinforcing cycle." }
+      ],
+      "cloze": [
+        "HDI combines life expectancy, {{c1::education}} and {{c2::GNI per capita}}.",
+        "{{c1::Rostow}} proposed a five-stage modernisation model of development.",
+        "{{c1::Bottom-up}} development is small scale and led by the local {{c2::community}}.",
+        "Initial investment generating further local income and jobs is the {{c1::multiplier}} effect."
+      ]
+    },
+    {
+      "id": "ge-urbanising-world",
+      "name": "Topic 3 Challenges of an Urbanising World (Mumbai case study)",
+      "subtopics": [
+        "Global urbanisation trends and contrasts between developed, emerging and developing countries",
+        "Causes of urbanisation: rural-urban migration and natural increase",
+        "Push and pull factors driving rural-urban migration",
+        "Megacities, world cities and their global distribution",
+        "Mumbai: site, situation, connectivity and reasons for growth",
+        "Mumbais land use pattern and functional zones",
+        "Quality of life contrasts within Mumbai",
+        "Dharavi as an informal settlement: housing, services, informal economy, recycling industry",
+        "Opportunities of living in Mumbai: employment, education, healthcare, services",
+        "Challenges: overcrowding, water and sanitation, traffic congestion, air pollution, informal work",
+        "Top-down redevelopment such as Vision Mumbai, and bottom-up self-help schemes",
+        "Making urban living more sustainable: transport, water, waste and energy"
+      ],
+      "cards": [
+        { "front": "Define urbanisation.", "back": "The increase in the proportion of a countrys population living in urban areas." },
+        { "front": "Define a megacity.", "back": "A city with a population of more than 10 million people." },
+        { "front": "Give three push and three pull factors for rural-urban migration.", "back": "Push: lack of jobs, poor services, mechanisation of farming, drought or conflict. Pull: better paid work, education, healthcare, and perceived higher quality of life." },
+        { "front": "Why did Mumbai grow so rapidly?", "back": "A deep natural harbour and colonial port trade, then textile industry, Bollywood and financial services, plus continuing rural-urban migration and natural increase." },
+        { "front": "Give two opportunities and two challenges of life in Dharavi.", "back": "Opportunities: a large informal economy with recycling and small manufacturing, strong community networks. Challenges: extreme population density, inadequate sanitation and clean water, and insecure tenure." },
+        { "front": "What was Vision Mumbai?", "back": "A top-down redevelopment plan to improve Mumbai by replacing slums with high-rise housing and upgrading transport, sanitation and the economy." },
+        { "front": "Why can top-down slum clearance be unpopular with residents?", "back": "It can break up communities and informal businesses, replacement housing may be unaffordable or badly located, and residents are rarely consulted." }
+      ],
+      "cloze": [
+        "A {{c1::megacity}} has a population greater than {{c2::10 million}}.",
+        "Mumbai grew initially because of its deep natural {{c1::harbour}} and colonial trade.",
+        "{{c1::Dharavi}} is a large informal settlement in Mumbai known for its {{c2::recycling}} industry.",
+        "{{c1::Urbanisation}} is an increase in the proportion of people living in urban areas."
+      ]
+    },
+    {
+      "id": "ge-fieldwork",
+      "name": "Topic 6 Geographical Investigations (Human and Physical Fieldwork)",
+      "subtopics": [
+        "Formulating a geographical question or hypothesis",
+        "Sampling strategies: random, systematic, stratified, and justifying the choice",
+        "Quantitative methods: counts, measurements, questionnaires with closed questions",
+        "Qualitative methods: field sketches, photographs, environmental quality surveys, interviews",
+        "Risk assessment and how risks are reduced",
+        "Human fieldwork enquiry: variations in quality of life within an urban area",
+        "Physical fieldwork enquiry: coastal or river landscape processes and management",
+        "Secondary data sources: census data, Environment Agency data, OS maps, GIS",
+        "Presenting data: located bars, choropleth, proportional symbols, scatter graphs, radar charts",
+        "Analysis using measures of central tendency, range and interquartile range",
+        "Drawing conclusions that answer the original question",
+        "Evaluating reliability, accuracy, limitations and how the enquiry could be improved",
+        "Map skills: four and six figure grid references, scale, distance, direction, relief and contours"
+      ],
+      "cards": [
+        { "front": "Define stratified sampling in fieldwork.", "back": "Dividing the study area or population into subgroups and sampling each in proportion to its size, so all groups are represented." },
+        { "front": "Why is systematic sampling used along a river or transect?", "back": "It gives evenly spaced measurements, which makes it easy to show change with distance and to replicate." },
+        { "front": "Give two limitations of using questionnaires in an urban quality of life enquiry.", "back": "Responses are subjective and may be biased, and the sample may not be representative if it is collected at one time of day or place." },
+        { "front": "What is a choropleth map best used for?", "back": "Showing how a quantity varies between defined areas using graded shading, e.g. population density by ward." },
+        { "front": "Why must a risk assessment be completed before fieldwork?", "back": "To identify hazards such as traffic, deep or fast-flowing water, and weather, and to plan measures that reduce the likelihood or severity of harm." },
+        { "front": "What is the difference between reliability and accuracy in fieldwork data?", "back": "Reliability is whether repeating the method gives consistent results; accuracy is how close the measurement is to the true value." },
+        { "front": "How do you give a six-figure grid reference?", "back": "Eastings first then northings; read the two-digit gridline then estimate tenths across the square, for both axes." }
+      ],
+      "cloze": [
+        "{{c1::Systematic}} sampling takes measurements at regular intervals, for example every 100 metres.",
+        "A {{c1::choropleth}} map uses graded shading to show how a value varies between areas.",
+        "Grid references are read {{c1::eastings}} before {{c2::northings}}.",
+        "Data collected by someone else, such as census figures, is {{c1::secondary}} data."
+      ]
+    },
+    {
+      "id": "ge-paper3",
+      "name": "Paper 3 People and Environment Issues (Topics 7, 8 and 9)",
+      "subtopics": [
+        "Topic 7: global distribution of major biomes and the factors that control it",
+        "Net primary productivity and how it varies between biomes",
+        "How humans use and modify biomes, including biotic resources and food, energy and water demand",
+        "Topic 8: structure and layers of the tropical rainforest and its nutrient cycle",
+        "Rainforest adaptations of plants and animals and high biodiversity",
+        "Causes of deforestation: logging, mineral extraction, commercial farming, energy, settlement",
+        "Impacts of deforestation on climate, soil, water cycle and indigenous people",
+        "Taiga forest characteristics, low biodiversity and slow nutrient cycling",
+        "Threats to the taiga: logging, mining, fossil fuel extraction, acid rain, pests and fire",
+        "Conservation and sustainable management: protected areas, selective logging, replanting, ecotourism, CITES and international agreements",
+        "Topic 9: global energy mix and how energy consumption varies with development",
+        "Energy security, energy insecurity and the geopolitics of energy supply",
+        "Conventional and unconventional fossil fuels including tar sands, shale gas and deepwater oil",
+        "Environmental and economic costs of unconventional fossil fuel extraction",
+        "Renewable and recyclable energy options and their advantages and limitations",
+        "Energy futures: business as usual versus a sustainable pathway",
+        "Answering the Paper 3 decision-making question: reading the resource booklet, weighing options against criteria, justifying a choice and acknowledging drawbacks"
+      ],
+      "cards": [
+        { "front": "What two climatic factors most strongly control global biome distribution?", "back": "Temperature and precipitation, which are largely determined by latitude and global atmospheric circulation." },
+        { "front": "Why are rainforest soils infertile despite dense vegetation?", "back": "Nutrients are stored in the biomass, not the soil; rapid decomposition and heavy leaching mean nutrients are taken up immediately or washed away." },
+        { "front": "Give four causes of tropical deforestation.", "back": "Commercial logging, cattle ranching and soy or palm oil plantations, mineral extraction, hydroelectric and road development, and subsistence farming or settlement." },
+        { "front": "Why does the taiga have low biodiversity?", "back": "Long cold winters, a short growing season, acidic nutrient-poor podsol soils and limited water availability when frozen restrict the range of species." },
+        { "front": "What is selective logging and why is it more sustainable?", "back": "Only mature or lower-value trees are felled, leaving the canopy and younger trees intact so the forest regenerates and habitat is retained." },
+        { "front": "Define energy security.", "back": "Uninterrupted access to sufficient, affordable and reliable energy supplies to meet a countrys needs." },
+        { "front": "Give two environmental costs of extracting oil from tar sands.", "back": "Large-scale removal of boreal forest and soil, high water use and toxic tailings ponds, and high carbon emissions per barrel produced." },
+        { "front": "What does the Paper 3 12-mark decision-making question require?", "back": "Use the resource booklet to weigh the given options against stated criteria such as cost, environment and people, choose one, justify it with evidence, and acknowledge its drawbacks and the rejected options." },
+        { "front": "What is net primary productivity?", "back": "The rate at which plants store energy as biomass after their own respiration, usually measured in grams per square metre per year." }
+      ],
+      "cloze": [
+        "Rainforest nutrients are stored mainly in the {{c1::biomass}} rather than the {{c2::soil}}.",
+        "The taiga has {{c1::low}} biodiversity because of its short growing season and acidic {{c2::podsol}} soils.",
+        "{{c1::Energy security}} means reliable, affordable and uninterrupted access to energy supplies.",
+        "{{c1::Selective}} logging removes only chosen trees so the forest can regenerate."
+      ]
+    },
+    {
+      "id": "ge-uk-landscapes",
+      "name": "Retrieval: UK Physical and Evolving Human Landscapes (Topics 4 and 5)",
+      "subtopics": [
+        "UK geology: igneous, sedimentary and metamorphic rock and the upland-lowland divide",
+        "Past processes shaping UK landscapes: glaciation, tectonics, weathering",
+        "Topic 4A coasts: erosional processes of hydraulic action, abrasion, attrition and solution",
+        "Coastal landforms: headlands and bays, caves arches stacks stumps, wave-cut platforms, spits and bars",
+        "Longshore drift, deposition and the role of wave type",
+        "Coastal management: groynes, sea walls, rip rap, beach nourishment, managed retreat and their costs",
+        "Topic 4B rivers: the long profile, upper, middle and lower course characteristics",
+        "River landforms: waterfalls and gorges, meanders and ox-bow lakes, floodplains and levees, deltas",
+        "Causes of river flooding and the use of hydrographs",
+        "Hard and soft engineering flood management and cost-benefit judgements",
+        "Topic 5: how the UK population, economy and settlement pattern have changed",
+        "Causes of change: deindustrialisation, globalisation, migration, government policy",
+        "Birmingham case study: growth, functional zones, decline and regeneration",
+        "Inequality within Birmingham and the impact of national and international migration",
+        "Changing rural areas: accessible rural growth, remote rural decline, and rebranding"
+      ],
+      "cards": [
+        { "front": "Name the four coastal erosion processes.", "back": "Hydraulic action, abrasion, attrition and solution." },
+        { "front": "Describe the sequence forming a stack.", "back": "A crack in a headland is widened by erosion into a cave, the cave erodes through to form an arch, the arch roof collapses leaving a stack, which is undercut to leave a stump." },
+        { "front": "What is longshore drift?", "back": "The zigzag movement of sediment along a coast caused by waves approaching at an angle, with swash moving material diagonally up the beach and backwash returning it straight down." },
+        { "front": "Compare hard and soft engineering.", "back": "Hard engineering uses built structures such as sea walls and groynes - effective but expensive and often visually intrusive. Soft engineering works with natural processes, e.g. beach nourishment or managed retreat - cheaper and more sustainable but less immediately protective." },
+        { "front": "How does an ox-bow lake form?", "back": "Erosion on the outside bends narrows the meander neck until a flood cuts through; deposition then seals off the old meander, leaving a curved lake." },
+        { "front": "What does lag time on a hydrograph mean, and what shortens it?", "back": "The time between peak rainfall and peak discharge. Impermeable rock, steep slopes, urbanisation, saturated or frozen ground and deforestation all shorten it, increasing flood risk." },
+        { "front": "What is deindustrialisation and how did it affect Birmingham?", "back": "The decline of manufacturing employment. In Birmingham it caused job losses in car and metal industries, unemployment and derelict land, later addressed by service-sector growth and city-centre regeneration." },
+        { "front": "What is rural rebranding?", "back": "Changing the image and function of a rural area, often through tourism, heritage or specialist food production, to attract visitors and investment." }
+      ],
+      "cloze": [
+        "The four coastal erosion processes are hydraulic action, {{c1::abrasion}}, {{c2::attrition}} and solution.",
+        "{{c1::Longshore drift}} moves sediment along the coast when waves approach at an {{c2::angle}}.",
+        "The time between peak rainfall and peak discharge is called {{c1::lag time}}.",
+        "The decline of manufacturing employment is called {{c1::deindustrialisation}}."
+      ]
+    }
+  ]
+}

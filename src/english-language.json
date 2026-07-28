@@ -1,0 +1,165 @@
+{
+  "id": "english-language",
+  "name": "English Language",
+  "board": "AQA",
+  "boardVerified": false,
+  "boardNote": "FLAGGED: KEFW publishes no exam-board list on its curriculum or subjects pages, and no English curriculum PDF was supplied. AQA 8700 is the most common England board for GCSE English Language but is UNCONFIRMED for KEFW. Confirm with the school before relying on these papers.",
+  "specCode": "8700",
+  "tier": "Single tier",
+  "accent": "amber",
+  "papers": "Paper 1: Explorations in Creative Reading and Writing (1h45, 50%). Paper 2: Writers Viewpoints and Perspectives (1h45, 50%). Non-exam: Spoken Language endorsement.",
+  "pastPapers": {
+    "label": "AQA GCSE English Language 8700 assessment resources",
+    "url": "https://www.aqa.org.uk/subjects/english/gcse/english-language-8700/assessment-resources",
+    "verified": true
+  },
+  "resources": [
+    { "label": "BBC Bitesize GCSE English Language (AQA)", "url": "https://www.bbc.co.uk/bitesize/examspecs/zcbchv4", "verified": true },
+    { "label": "Physics and Maths Tutor GCSE English revision", "url": "https://www.physicsandmathstutor.com/", "verified": true },
+    { "label": "MME Revise free GCSE revision", "url": "https://mmerevise.co.uk/", "verified": true },
+    { "label": "Seneca Learning free GCSE courses", "url": "https://senecalearning.com/", "verified": true }
+  ],
+  "topics": [
+    {
+      "id": "el-p1-reading",
+      "name": "Paper 1 Section A: Reading Fiction",
+      "subtopics": [
+        "Q1 (4 marks): list four things about a stated section only",
+        "Q2 (8 marks): language analysis - words, phrases, language features, sentence forms",
+        "Q3 (8 marks): structure analysis - openings, shifts of focus, endings, whole-text movement",
+        "Q4 (20 marks): evaluate to what extent you agree with a statement, using the second half of the source",
+        "Working with an unseen 20th or 21st century literary prose extract",
+        "Selecting short precise quotations rather than long copied chunks",
+        "Using subject terminology accurately (simile, semantic field, declarative, cyclical structure)",
+        "Timing: 15 min reading, then roughly 5 / 10 / 10 / 20 minutes per question"
+      ],
+      "cards": [
+        { "front": "AQA English Language Paper 1 Q1: what is the task and how many marks?", "back": "List four things about a specified part of the source. 4 marks. Stay strictly inside the given line numbers and do not analyse." },
+        { "front": "What does Paper 1 Q3 ask you to analyse?", "back": "Structure: how the writer has structured the text to interest the reader - the opening focus, changes of focus, and the ending. 8 marks." },
+        { "front": "Which part of the source must Paper 1 Q4 focus on?", "back": "The second part of the source only (the lines named in the question), evaluating how far you agree with a given statement. 20 marks." },
+        { "front": "Name three structural features you can write about in Q3.", "back": "Shifts in focus (wide to narrow), time shifts or flashback, cyclical structure, foreshadowing, paragraph length changes, a final revelation." },
+        { "front": "What is the difference between language and structure analysis?", "back": "Language = choices at word, phrase and sentence level. Structure = the order and shape of ideas across the whole extract." }
+      ],
+      "cloze": [
+        "AQA English Language Paper 1 Section A is worth {{c1::40}} marks across {{c2::four}} questions.",
+        "Paper 1 Q2 asks how the writer uses {{c1::language}} to describe something, and is worth {{c2::8}} marks.",
+        "A {{c1::cyclical}} structure is one where the text ends where it began."
+      ]
+    },
+    {
+      "id": "el-p1-writing",
+      "name": "Paper 1 Section B: Descriptive and Narrative Writing",
+      "subtopics": [
+        "Choice of a picture prompt or a written prompt - answer one only",
+        "24 marks for content and organisation, 16 marks for technical accuracy",
+        "Five-minute plan: five paragraphs, one image or idea each",
+        "Sensory imagery across sight, sound, touch, smell",
+        "Ambitious but controlled vocabulary - precision over showing off",
+        "Deliberate paragraph and sentence-length variation for effect",
+        "Strong openings (in medias res, single-sentence hook) and non-cliche endings",
+        "Proofreading for spelling, punctuation and tense consistency in the last three minutes"
+      ],
+      "cards": [
+        { "front": "How are the 40 marks split in Paper 1 Section B?", "back": "24 marks for content and organisation, 16 marks for technical accuracy (SPaG, sentence variety, vocabulary range)." },
+        { "front": "How long should you spend on Paper 1 Section B?", "back": "About 45 minutes: 5 minutes planning, 35 minutes writing, 5 minutes proofreading." },
+        { "front": "Give three techniques that lift a descriptive piece into the top band.", "back": "Extended metaphor sustained across paragraphs, deliberate one-sentence paragraph for impact, and shifting sensory focus rather than listing adjectives." },
+        { "front": "Why is a cyclical structure useful in the narrative task?", "back": "It shows deliberate crafting and gives a controlled ending, which the mark scheme rewards under organisation." }
+      ],
+      "cloze": [
+        "In Paper 1 Section B, {{c1::16}} of the {{c2::40}} marks are for technical accuracy.",
+        "Describing the environment to reflect a mood is called {{c1::pathetic fallacy}}."
+      ]
+    },
+    {
+      "id": "el-p2-reading",
+      "name": "Paper 2 Section A: Reading Non-Fiction",
+      "subtopics": [
+        "Two linked non-fiction sources, usually one 19th century and one modern",
+        "Q1 (4 marks): shade the four true statements about a stated section",
+        "Q2 (8 marks): summarise the differences or similarities between the two sources, using inference",
+        "Q3 (12 marks): analyse how the writer of one source uses language to achieve a purpose",
+        "Q4 (16 marks): compare how the two writers convey their different attitudes, including methods",
+        "Reading unfamiliar 19th-century vocabulary and syntax for gist",
+        "Making inferences rather than paraphrasing",
+        "Comparative discourse markers: whereas, by contrast, similarly"
+      ],
+      "cards": [
+        { "front": "Which Paper 2 question carries the most marks and what does it require?", "back": "Q4, 16 marks: compare how the two writers convey their different attitudes or perspectives, analysing methods and using evidence from both sources." },
+        { "front": "What is the key skill in Paper 2 Q2?", "back": "Synthesis and inference - combining information from both sources and drawing conclusions, not just quoting." },
+        { "front": "Paper 2 Q3 is worth how many marks and covers how many sources?", "back": "12 marks, one source only, focused on how language is used to achieve a stated purpose." },
+        { "front": "Give two useful comparison connectives for Q4.", "back": "Whereas, by contrast, in a similar way, conversely, on the other hand." }
+      ],
+      "cloze": [
+        "AQA English Language Paper 2 Q4 is worth {{c1::16}} marks and requires you to {{c2::compare}} the writers attitudes.",
+        "Paper 2 Q2 tests {{c1::synthesis}} and {{c2::inference}} across both sources."
+      ]
+    },
+    {
+      "id": "el-p2-writing",
+      "name": "Paper 2 Section B: Writing to Present a Viewpoint",
+      "subtopics": [
+        "Identifying form, audience and purpose from the question stem",
+        "Forms: letter, article, speech, essay, text for a leaflet or website",
+        "Conventions of each form (salutation and sign-off, headline and subheadings, direct address)",
+        "Rhetorical toolkit: DAFOREST - direct address, anecdote, facts, opinion, rhetorical question, emotive language, statistics, triples",
+        "Building a clear line of argument across paragraphs",
+        "Acknowledging and dismantling a counter-argument",
+        "Discourse markers for cohesion and a strong final call to action",
+        "24 marks content and organisation, 16 marks technical accuracy"
+      ],
+      "cards": [
+        { "front": "What does DAFOREST stand for?", "back": "Direct address, Anecdote, Facts, Opinion, Rhetorical question, Emotive language, Statistics, Triples (rule of three)." },
+        { "front": "Why include a counter-argument in Paper 2 Section B?", "back": "Acknowledging then refuting an opposing view shows a sophisticated, controlled argument, which is required for the top content band." },
+        { "front": "If the question asks for a letter, what two conventions must appear?", "back": "An appropriate salutation (Dear Sir or Madam / Dear Mr Smith) and a matching sign-off (Yours faithfully / Yours sincerely)." },
+        { "front": "What is the mark split for Paper 2 Section B?", "back": "24 marks content and organisation, 16 marks technical accuracy - the same as Paper 1 Section B." }
+      ],
+      "cloze": [
+        "Before writing in Paper 2 Section B you must identify the {{c1::form}}, {{c2::audience}} and {{c3::purpose}}.",
+        "A group of three used for persuasive effect is called a {{c1::triple}} or the rule of three."
+      ]
+    },
+    {
+      "id": "el-spoken",
+      "name": "Spoken Language Endorsement",
+      "subtopics": [
+        "Separately reported endorsement - does not count towards the 9-1 grade",
+        "Presenting on a chosen topic to an audience",
+        "Using Standard English appropriately",
+        "Listening and responding to questions and feedback",
+        "Graded Pass, Merit, Distinction or Not Classified",
+        "Independent candidates must arrange this through their exam centre"
+      ],
+      "cards": [
+        { "front": "Does the Spoken Language endorsement affect the GCSE English Language grade?", "back": "No. It is separately endorsed and reported as Pass, Merit, Distinction or Not Classified alongside the 9-1 grade." },
+        { "front": "What three things are assessed in the Spoken Language endorsement?", "back": "Presenting information and ideas, responding to questions and feedback, and using Standard English." }
+      ],
+      "cloze": [
+        "The Spoken Language endorsement is graded {{c1::Pass}}, {{c2::Merit}} or {{c3::Distinction}}."
+      ]
+    },
+    {
+      "id": "el-accuracy",
+      "name": "Technical Accuracy Toolkit",
+      "subtopics": [
+        "Sentence variety: simple, compound, complex, minor sentences",
+        "Full range of punctuation: semicolon, colon, dash, brackets, ellipsis",
+        "Apostrophes for omission and possession, including plural possession",
+        "Speech punctuation and paragraphing for new speaker",
+        "Homophone traps: their/there/theyre, its/its, affect/effect, to/too",
+        "Consistent tense and viewpoint across a whole piece",
+        "Paragraphing with TipTop - Time, place, topic, person",
+        "Proofreading routine for the final three minutes of each writing task"
+      ],
+      "cards": [
+        { "front": "When do you use a semicolon rather than a comma?", "back": "To join two closely related independent clauses that could each stand alone as a sentence." },
+        { "front": "What does the paragraphing rule TipTop stand for?", "back": "Start a new paragraph when there is a change of Time, Place, Topic or Person." },
+        { "front": "Explain the difference between affect and effect.", "back": "Affect is usually a verb (to influence); effect is usually a noun (the result)." },
+        { "front": "What is a minor sentence and why use one?", "back": "A grammatically incomplete sentence, e.g. Silence. Used sparingly for dramatic emphasis." }
+      ],
+      "cloze": [
+        "A {{c1::colon}} introduces a list, explanation or quotation after a complete clause.",
+        "Two independent clauses joined without a conjunction or correct punctuation creates a {{c1::comma splice}}."
+      ]
+    }
+  ]
+}

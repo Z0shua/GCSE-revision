@@ -1,0 +1,258 @@
+{
+  "id": "physics",
+  "name": "Physics (Triple)",
+  "board": "AQA",
+  "boardVerified": true,
+  "boardNote": "VERIFIED from the KEFW Physics Curriculum Intent PDFs, which cite AQA specification reference numbers (4.7.1, 4.4.2, 4.4.4, 4.3.1) matching AQA GCSE Physics 8463. The Year 11 units below (electromagnetism, nuclear and space, matter and pressure) are taken directly from the KEFW Year 11 curriculum document.",
+  "specCode": "8463",
+  "tier": "Higher tier",
+  "accent": "sky",
+  "papers": "Paper 1 (energy, electricity, particle model, atomic structure) and Paper 2 (forces, waves, magnetism and electromagnetism, space physics). Each 1h45, 100 marks, 50 percent.",
+  "pastPapers": {
+    "label": "AQA GCSE Physics 8463 assessment resources and past papers",
+    "url": "https://www.aqa.org.uk/subjects/science/gcse/physics-8463/assessment-resources",
+    "verified": true
+  },
+  "resources": [
+    { "label": "BBC Bitesize GCSE Physics (AQA)", "url": "https://www.bbc.co.uk/bitesize/examspecs/zsc9rdm", "verified": true },
+    { "label": "Free Science Lessons video course", "url": "https://www.freesciencelessons.co.uk/", "verified": true },
+    { "label": "Cognito free GCSE physics videos and quizzes", "url": "https://www.cognitoedu.org/", "verified": true },
+    { "label": "Physics and Maths Tutor AQA Physics topic questions", "url": "https://www.physicsandmathstutor.com/", "verified": true },
+    { "label": "Seneca Learning free AQA Physics course", "url": "https://senecalearning.com/", "verified": true }
+  ],
+  "topics": [
+    {
+      "id": "ph-magnetism",
+      "name": "P7.1 Magnetism and the Motor Effect",
+      "subtopics": [
+        "Poles of a magnet, attraction and repulsion, and magnetic field patterns",
+        "Permanent magnets versus induced magnetism, and why induced magnetism is always attractive",
+        "Magnetic materials: iron, steel, cobalt, nickel",
+        "Using a plotting compass to map a field, and the Earths magnetic field as evidence of a magnetic core",
+        "Field around a straight current-carrying wire and the right-hand grip rule",
+        "Field of a solenoid, and how a soft iron core makes an electromagnet",
+        "The motor effect and the equation F equals B times I times l",
+        "Flemings left-hand rule: thumb motion, first finger field, second finger current",
+        "How a direct current electric motor works, including the role of the split-ring commutator",
+        "How a moving-coil loudspeaker converts variations in current into pressure variations"
+      ],
+      "cards": [
+        { "front": "State the equation for the force on a current-carrying conductor in a magnetic field.", "back": "F equals B times I times l, where B is magnetic flux density in tesla, I is current in amps and l is length in metres." },
+        { "front": "What does each finger represent in Flemings left-hand rule?", "back": "Thumb is the direction of motion or force, first finger is the magnetic field from north to south, second finger is the conventional current." },
+        { "front": "Why is induced magnetism always a force of attraction?", "back": "The magnetic material develops poles aligned so that the nearest pole is opposite to the pole of the inducing magnet." },
+        { "front": "What is the purpose of the split-ring commutator in a DC motor?", "back": "It reverses the direction of the current in the coil every half turn so the coil keeps rotating in the same direction." },
+        { "front": "How can the strength of an electromagnet be increased?", "back": "Increase the current, increase the number of turns on the coil, or add or improve a soft iron core." },
+        { "front": "What does the Earth having a magnetic field suggest about its core?", "back": "That the core contains magnetic material and that the field is generated within the Earth." },
+        { "front": "When is the force on a current-carrying wire in a magnetic field zero?", "back": "When the wire is parallel to the magnetic field lines." }
+      ],
+      "cloze": [
+        "The force on a conductor in a magnetic field is given by F = {{c1::BIl}}.",
+        "Magnetic flux density is measured in {{c1::tesla}}.",
+        "In Flemings left-hand rule the {{c1::thumb}} shows motion and the {{c2::second finger}} shows current.",
+        "A DC motor uses a {{c1::split-ring commutator}} to reverse the current every half turn."
+      ]
+    },
+    {
+      "id": "ph-induction",
+      "name": "P7.3 Induced Potential, Generators and Transformers",
+      "subtopics": [
+        "The generator effect: moving a conductor in a magnetic field induces a potential difference",
+        "How reversing the direction of motion or the field reverses the induced potential difference",
+        "How the induced current creates a magnetic field that opposes the original change",
+        "The alternator producing alternating current using slip rings",
+        "The dynamo producing direct current using a split-ring commutator",
+        "How a microphone converts pressure variations into variations in current",
+        "Structure of a transformer: primary and secondary coils on an iron core",
+        "The transformer equation Vp over Vs equals np over ns",
+        "Power in an ideal transformer: Vp times Ip equals Vs times Is",
+        "Step-up transformers at the power station and step-down transformers near consumers",
+        "Why the National Grid transmits at high voltage and low current to reduce heating losses"
+      ],
+      "cards": [
+        { "front": "State the transformer turns equation.", "back": "Potential difference across the primary over potential difference across the secondary equals number of primary turns over number of secondary turns." },
+        { "front": "For a 100 percent efficient transformer, what is the power relationship?", "back": "Vp times Ip equals Vs times Is - power in equals power out." },
+        { "front": "Why does the National Grid use very high voltages?", "back": "For a given power, higher voltage means lower current, and energy lost as heat in the cables depends on current squared, so losses are greatly reduced." },
+        { "front": "What is the difference between an alternator and a dynamo?", "back": "An alternator uses slip rings and generates alternating current; a dynamo uses a split-ring commutator and generates direct current." },
+        { "front": "Give three ways to increase the induced potential difference in a generator.", "back": "Move the conductor or coil faster, use a stronger magnetic field, or increase the number of turns on the coil." },
+        { "front": "Why must a transformer be supplied with alternating current?", "back": "A changing magnetic field is needed in the iron core to induce a potential difference in the secondary coil; direct current gives a constant field and no induction." },
+        { "front": "How does a microphone work?", "back": "Pressure variations in sound waves move a diaphragm attached to a coil in a magnetic field, inducing a varying current that represents the sound." }
+      ],
+      "cloze": [
+        "In an ideal transformer, {{c1::Vp times Ip}} equals {{c2::Vs times Is}}.",
+        "A {{c1::step-up}} transformer increases potential difference and has more turns on the {{c2::secondary}} coil.",
+        "The generator effect induces a potential difference when a conductor {{c1::moves}} relative to a magnetic field.",
+        "Transformers only work with {{c1::alternating}} current because a {{c2::changing}} magnetic field is needed."
+      ]
+    },
+    {
+      "id": "ph-atomic",
+      "name": "P4 Atomic Structure and Radioactivity",
+      "subtopics": [
+        "Structure of the atom: radius 1 times 10 to the minus 10 metres, nucleus 1 times 10 to the minus 14 metres",
+        "Relative charges and masses of protons, neutrons and electrons",
+        "Atomic number, mass number, isotopes and ions",
+        "Electron energy levels, absorption and emission of electromagnetic radiation",
+        "Development of the model: plum pudding, Rutherford alpha scattering, Bohr, discovery of the neutron",
+        "Alpha, beta, gamma and neutron radiation: nature, penetration, ionising power",
+        "Writing nuclear decay equations and balancing mass and atomic numbers",
+        "Activity in becquerel, and the use of a Geiger-Muller tube",
+        "Half-life, and calculating net decline as a ratio",
+        "Contamination versus irradiation, and appropriate precautions",
+        "Hazards of radiation and the importance of peer review of findings",
+        "Background radiation sources and units of dose in sieverts",
+        "Uses of radiation: medical tracers, gamma therapy, sterilisation of instruments"
+      ],
+      "cards": [
+        { "front": "What is the approximate radius of an atom and of a nucleus?", "back": "Atom about 1 times 10 to the minus 10 metres; nucleus about 1 times 10 to the minus 14 metres, roughly one ten-thousandth of the atom." },
+        { "front": "What did the alpha particle scattering experiment show?", "back": "That the mass of an atom is concentrated in a tiny positively charged nucleus with mostly empty space around it, replacing the plum pudding model." },
+        { "front": "Compare the penetrating power of alpha, beta and gamma.", "back": "Alpha is stopped by paper or a few centimetres of air; beta is stopped by a few millimetres of aluminium; gamma is only partly absorbed by thick lead or concrete." },
+        { "front": "Which type of radiation is most strongly ionising?", "back": "Alpha, because of its large mass and 2 plus charge - but it has the shortest range." },
+        { "front": "Define half-life.", "back": "The time taken for the number of unstable nuclei in a sample to halve, or for the activity or count rate to halve." },
+        { "front": "What changes in the nucleus during beta decay?", "back": "A neutron becomes a proton and a high-speed electron is emitted, so the mass number stays the same and the atomic number increases by 1." },
+        { "front": "What changes in the nucleus during alpha decay?", "back": "The nucleus emits two protons and two neutrons, so the mass number decreases by 4 and the atomic number by 2." },
+        { "front": "Distinguish contamination from irradiation.", "back": "Contamination is unwanted radioactive atoms being present on or in an object; irradiation is exposing an object to radiation without it becoming radioactive." },
+        { "front": "What does gamma emission do to mass number and atomic number?", "back": "Neither changes - gamma emission only removes energy from the nucleus." },
+        { "front": "Why is peer review important for radiation research?", "back": "Independent checking of published findings ensures conclusions are valid before the public and policymakers rely on them." }
+      ],
+      "cloze": [
+        "Alpha decay decreases the mass number by {{c1::4}} and the atomic number by {{c2::2}}.",
+        "Beta decay increases the atomic number by {{c1::1}} and leaves the mass number {{c2::unchanged}}.",
+        "Activity is measured in {{c1::becquerel}} and radiation dose in {{c2::sieverts}}.",
+        "{{c1::Contamination}} means unwanted radioactive atoms are on an object, whereas {{c2::irradiation}} does not make the object radioactive."
+      ]
+    },
+    {
+      "id": "ph-nuclear",
+      "name": "P4.4 Nuclear Fission and Fusion",
+      "subtopics": [
+        "Fission as the splitting of a large unstable nucleus, usually after absorbing a neutron",
+        "Products of fission: two smaller nuclei, two or three neutrons, and gamma rays",
+        "Energy released in fission and the chain reaction",
+        "Control rods absorbing neutrons, and the role of the moderator and coolant",
+        "The difference between a controlled chain reaction in a reactor and an uncontrolled one",
+        "Fusion as joining two light nuclei to form a heavier nucleus",
+        "Why some mass is converted into energy during fusion",
+        "Conditions required for fusion: extremely high temperature and pressure",
+        "Why fusion is difficult to achieve on Earth",
+        "Comparing fission and fusion in terms of fuel, waste and conditions"
+      ],
+      "cards": [
+        { "front": "Define nuclear fission.", "back": "The splitting of a large, unstable nucleus into two smaller nuclei, usually after it absorbs a neutron, releasing energy plus two or three neutrons and gamma rays." },
+        { "front": "What is a chain reaction?", "back": "Neutrons released by one fission event go on to cause further fission events, so the reaction sustains itself." },
+        { "front": "What do control rods do in a nuclear reactor?", "back": "They absorb neutrons so the rate of fission can be controlled and kept steady." },
+        { "front": "Define nuclear fusion.", "back": "Two light nuclei joining to form a heavier nucleus, with some of the mass converted into energy released as radiation." },
+        { "front": "Why does fusion require extremely high temperatures and pressures?", "back": "Both nuclei are positively charged and repel each other, so enormous energy is needed to bring them close enough for fusion to occur." },
+        { "front": "Compare the waste products of fission and fusion.", "back": "Fission produces radioactive waste that needs long-term storage; fusion produces helium, with far less radioactive waste." }
+      ],
+      "cloze": [
+        "In a reactor, {{c1::control rods}} absorb neutrons to regulate the rate of fission.",
+        "Fusion joins two {{c1::light}} nuclei and converts some {{c2::mass}} into energy.",
+        "Fission usually starts when a large nucleus absorbs a {{c1::neutron}}."
+      ]
+    },
+    {
+      "id": "ph-space",
+      "name": "P8 Space Physics",
+      "subtopics": [
+        "The solar system: the Sun, eight planets, dwarf planets, moons and artificial satellites",
+        "How a star forms from a nebula pulled together by gravity, becoming a protostar",
+        "Main sequence stability: outward radiation pressure balancing inward gravity",
+        "Life cycle of a star the size of the Sun: red giant, white dwarf",
+        "Life cycle of a star much larger than the Sun: red supergiant, supernova, neutron star or black hole",
+        "Fusion of hydrogen into helium and the formation of heavier elements up to iron in the core",
+        "How elements heavier than iron are produced in a supernova and distributed",
+        "Orbital motion: gravity providing the centripetal force and changing direction not speed",
+        "Why a faster orbital speed is needed for a smaller radius orbit",
+        "Red-shift of light from distant galaxies and the evidence it provides",
+        "Why the observation that more distant galaxies recede faster supports the Big Bang",
+        "Dark mass and dark energy as current uncertainties"
+      ],
+      "cards": [
+        { "front": "What keeps a main sequence star stable?", "back": "The outward pressure from energy released by fusion balances the inward force of gravity." },
+        { "front": "Describe the life cycle of a star about the size of the Sun after the main sequence.", "back": "It expands to a red giant, then the core contracts, shedding its outer layers to leave a white dwarf that cools." },
+        { "front": "Describe the life cycle of a star much more massive than the Sun after the main sequence.", "back": "It becomes a red supergiant, then explodes as a supernova, leaving either a neutron star or, if massive enough, a black hole." },
+        { "front": "Where do elements heavier than iron come from?", "back": "They are produced in a supernova explosion, which also distributes the elements through the universe." },
+        { "front": "Why does an object in a circular orbit accelerate even at constant speed?", "back": "Its direction is constantly changing, so its velocity changes; gravity provides the centripetal force causing this acceleration." },
+        { "front": "What is red-shift and what does it tell us?", "back": "Light from receding galaxies has its wavelength increased towards the red end of the spectrum; the greater the red-shift, the faster the galaxy is moving away, which supports an expanding universe." },
+        { "front": "What happens to the orbital speed needed if the orbital radius decreases?", "back": "A greater orbital speed is required for a stable orbit at a smaller radius." },
+        { "front": "What is a protostar?", "back": "A cloud of dust and gas pulled together by gravity, heating up as it contracts until fusion begins." }
+      ],
+      "cloze": [
+        "A star forms from a {{c1::nebula}} of dust and gas pulled together by {{c2::gravity}}.",
+        "A star the size of the Sun ends as a {{c1::white dwarf}} after a red giant stage.",
+        "Elements heavier than {{c1::iron}} are formed in a {{c2::supernova}}.",
+        "{{c1::Red-shift}} of distant galaxies provides evidence for the {{c2::Big Bang}} theory."
+      ]
+    },
+    {
+      "id": "ph-matter-pressure",
+      "name": "P3 Particle Model: Density, Energy Transfer and Pressure",
+      "subtopics": [
+        "Density equals mass over volume, and required practical for regular and irregular solids and liquids",
+        "Particle model explanations of the differences between solids, liquids and gases",
+        "Internal energy as the total kinetic and potential energy of the particles",
+        "Specific heat capacity, E equals m c delta theta, and the required practical",
+        "Specific latent heat of fusion and of vaporisation, E equals m L",
+        "Heating and cooling graphs and why temperature is constant during a change of state",
+        "Conservation of mass during changes of state and why they are physical not chemical changes",
+        "Gas pressure from particle collisions with container walls",
+        "Effect of temperature on gas pressure at constant volume",
+        "Pressure and volume at constant temperature, p V equals constant",
+        "Doing work on a gas increasing its internal energy and temperature",
+        "Pressure in a column of liquid p equals h rho g",
+        "Upthrust, floating and sinking, and atmospheric pressure varying with altitude"
+      ],
+      "cards": [
+        { "front": "State the equation for specific heat capacity.", "back": "Change in thermal energy equals mass times specific heat capacity times change in temperature." },
+        { "front": "Define specific latent heat.", "back": "The energy required to change the state of one kilogram of a substance with no change in temperature." },
+        { "front": "Why is temperature constant during a change of state?", "back": "The energy supplied is used to break the bonds between particles rather than to increase their kinetic energy." },
+        { "front": "State the equation for density.", "back": "Density equals mass divided by volume." },
+        { "front": "State the equation for pressure in a column of liquid.", "back": "Pressure equals height of the column times density of the liquid times gravitational field strength." },
+        { "front": "Explain how a gas exerts pressure on its container.", "back": "Particles move randomly and collide with the container walls, each collision exerting a force; pressure is the total force per unit area." },
+        { "front": "What happens to the pressure of a fixed mass of gas if its temperature rises at constant volume?", "back": "Pressure increases, because the particles move faster and collide with the walls more often and more forcefully." },
+        { "front": "Why does atmospheric pressure decrease with altitude?", "back": "There are fewer air molecules above, so the weight of air acting on a given area is lower, and the atmosphere is also less dense at higher altitude." },
+        { "front": "What is upthrust and when does an object float?", "back": "Upthrust is the upward force from a fluid due to the pressure difference between the bottom and top of an object; it floats when upthrust equals its weight." },
+        { "front": "How does doing work on a gas by compression affect its temperature?", "back": "Work done transfers energy to the internal energy store of the gas, so its temperature increases." }
+      ],
+      "cloze": [
+        "Change in thermal energy equals mass times {{c1::specific heat capacity}} times change in {{c2::temperature}}.",
+        "Pressure in a column of liquid equals {{c1::h}} times {{c2::rho}} times g.",
+        "During a change of state, energy is used to break {{c1::bonds}} rather than raise {{c2::temperature}}.",
+        "Density equals {{c1::mass}} divided by {{c2::volume}}."
+      ]
+    },
+    {
+      "id": "ph-equations-skills",
+      "name": "Retrieval: Required Equations and Practical Skills",
+      "subtopics": [
+        "The 23 equations that must be recalled from memory for AQA Physics",
+        "Equations provided in the exam and how to select the right one",
+        "SI units and unit conversions: kilo, centi, milli, micro, nano",
+        "Significant figures, standard form and giving answers to a sensible precision",
+        "Rearranging equations before substituting values",
+        "Drawing tables and graphs, choosing scales, plotting and lines of best fit",
+        "Calculating gradients and areas under graphs and interpreting their meaning",
+        "Independent, dependent and control variables",
+        "Repeat readings, anomalies, accuracy, precision, resolution and uncertainty",
+        "The ten required practicals and a typical method and risk for each",
+        "Command words: state, describe, explain, calculate, evaluate, compare"
+      ],
+      "cards": [
+        { "front": "Give the equation linking work done, force and distance.", "back": "Work done equals force times distance moved along the line of action of the force." },
+        { "front": "State the equation for kinetic energy.", "back": "Kinetic energy equals one half times mass times speed squared." },
+        { "front": "State the equation for gravitational potential energy.", "back": "Gravitational potential energy equals mass times gravitational field strength times change in height." },
+        { "front": "State the equation linking power, energy and time.", "back": "Power equals energy transferred divided by time." },
+        { "front": "State the equation for electrical power in terms of current and resistance.", "back": "Power equals current squared times resistance." },
+        { "front": "What is the difference between accuracy and precision?", "back": "Accuracy is how close a measurement is to the true value; precision is how closely repeated measurements agree with each other." },
+        { "front": "What does the area under a velocity-time graph represent?", "back": "The distance travelled." },
+        { "front": "What does the gradient of a distance-time graph represent?", "back": "Speed." },
+        { "front": "Difference between the command words describe and explain?", "back": "Describe asks what happens; explain asks why it happens, requiring reasoning or a causal mechanism." }
+      ],
+      "cloze": [
+        "Kinetic energy equals {{c1::one half}} times mass times {{c2::speed squared}}.",
+        "The area under a {{c1::velocity-time}} graph gives the {{c2::distance}} travelled.",
+        "{{c1::Accuracy}} is closeness to the true value; {{c2::precision}} is agreement between repeats."
+      ]
+    }
+  ]
+}

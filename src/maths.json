@@ -1,0 +1,231 @@
+{
+  "id": "maths",
+  "name": "Mathematics",
+  "board": "Pearson Edexcel",
+  "boardVerified": false,
+  "boardNote": "FLAGGED: the KEFW Mathematics Curriculum Intent PDFs for Year 10 and Year 11 name no exam board, and the KEFW website publishes no board list. The KEFW maths page states only that all students are entered for GCSE Higher Tier. Pearson Edexcel 1MA1 is used provisionally because it is the most widely used Higher-tier specification in England. CONFIRM WITH THE SCHOOL. If the board is AQA the spec is 8300; the Year 11 topic list below (circle theorems, algebra and functions, vectors and geometric proof) is identical content on either board, so only the past-paper links need swapping.",
+  "specCode": "1MA1 (provisional)",
+  "tier": "Higher tier - confirmed by KEFW",
+  "accent": "blue",
+  "papers": "Three papers, each 1h30 and 80 marks: Paper 1 non-calculator, Papers 2 and 3 calculator. Higher tier grades 4-9.",
+  "pastPapers": {
+    "label": "Pearson Edexcel GCSE Maths (1MA1) past papers and mark schemes",
+    "url": "https://qualifications.pearson.com/en/support/support-topics/exams/past-papers/find-past-papers-and-mark-schemes.html?subject=Mathematics&level=GCSE",
+    "verified": true
+  },
+  "altPastPapers": {
+    "label": "AQA GCSE Mathematics 8300 assessment resources (use if the board is AQA)",
+    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
+    "verified": true
+  },
+  "resources": [
+    { "label": "BBC Bitesize GCSE Maths (Edexcel)", "url": "https://www.bbc.co.uk/bitesize/examspecs/z9p3mnb", "verified": true },
+    { "label": "MME Revise GCSE Maths revision and topic questions", "url": "https://mmerevise.co.uk/", "verified": true },
+    { "label": "Physics and Maths Tutor GCSE Maths papers by topic", "url": "https://www.physicsandmathstutor.com/", "verified": true },
+    { "label": "Seneca Learning free GCSE Maths course", "url": "https://senecalearning.com/", "verified": true }
+  ],
+  "topics": [
+    {
+      "id": "ma-circle-theorems",
+      "name": "Circle Theorems (KEFW Year 11 Unit 1)",
+      "subtopics": [
+        "Angle in a semicircle is 90 degrees",
+        "Angle at the centre is twice the angle at the circumference",
+        "Angles in the same segment are equal",
+        "Opposite angles of a cyclic quadrilateral sum to 180 degrees",
+        "A tangent meets a radius at 90 degrees",
+        "Two tangents from an external point are equal in length",
+        "The alternate segment theorem",
+        "A perpendicular from the centre bisects a chord",
+        "Chaining theorems and naming each one in a written proof",
+        "Combining circle theorems with algebraic angle expressions"
+      ],
+      "cards": [
+        { "front": "State the angle at the centre theorem.", "back": "The angle subtended by an arc at the centre of a circle is twice the angle subtended by the same arc at the circumference." },
+        { "front": "What is the alternate segment theorem?", "back": "The angle between a tangent and a chord equals the angle in the alternate segment subtended by that chord." },
+        { "front": "Opposite angles in a cyclic quadrilateral add to what?", "back": "180 degrees." },
+        { "front": "What angle does a tangent make with the radius at the point of contact?", "back": "90 degrees." },
+        { "front": "What is special about the angle in a semicircle?", "back": "It is always 90 degrees (the angle subtended by a diameter at the circumference)." },
+        { "front": "In an exam proof, what must you write alongside each step?", "back": "The name of the theorem or reason used, e.g. angles in the same segment are equal - marks are awarded for reasons, not just values." }
+      ],
+      "cloze": [
+        "The angle at the {{c1::centre}} is {{c2::twice}} the angle at the circumference subtended by the same arc.",
+        "A perpendicular line from the centre of a circle {{c1::bisects}} a chord.",
+        "Two {{c1::tangents}} drawn from the same external point are equal in {{c2::length}}."
+      ]
+    },
+    {
+      "id": "ma-algebra-functions",
+      "name": "Algebra and Functions (KEFW Year 11 Unit 2)",
+      "subtopics": [
+        "Rearranging formulae where the subject appears more than once",
+        "Simplifying algebraic fractions by factorising numerator and denominator",
+        "Adding, subtracting, multiplying and dividing algebraic fractions",
+        "Solving equations containing algebraic fractions",
+        "Function notation f(x) and evaluating f(a)",
+        "Composite functions fg(x) and order of operations",
+        "Inverse functions f inverse of x by rearranging y = f(x)",
+        "Algebraic proof with 2n, 2n+1, consecutive integers and multiples",
+        "Proving expressions are always odd, even or a multiple of k",
+        "Iteration to find approximate solutions to a given number of decimal places"
+      ],
+      "cards": [
+        { "front": "How do you find fg(x)?", "back": "Apply g first, then substitute the result into f. Work from the inside out." },
+        { "front": "How do you find the inverse of a function f(x)?", "back": "Write y = f(x), swap x and y, then rearrange to make y the subject. That is f inverse of x." },
+        { "front": "How do you represent two consecutive even numbers algebraically?", "back": "2n and 2n + 2, where n is an integer." },
+        { "front": "How do you show an expression is always a multiple of 4?", "back": "Simplify it into the form 4 times (an integer expression), then state that since the bracket is an integer the whole expression is a multiple of 4." },
+        { "front": "First step when simplifying an algebraic fraction like (x squared minus 9)/(x squared + 4x + 3)?", "back": "Factorise fully top and bottom: (x-3)(x+3) over (x+3)(x+1), then cancel the common factor to get (x-3)/(x+1)." },
+        { "front": "In iteration, what does the subscript notation x sub n+1 mean?", "back": "The next term in the sequence, generated by substituting the current value x sub n into the iterative formula." }
+      ],
+      "cloze": [
+        "For the composite function fg(x) you apply {{c1::g}} first and then {{c2::f}}.",
+        "To find an inverse function, swap {{c1::x}} and {{c2::y}} then rearrange.",
+        "An odd number can be written algebraically as {{c1::2n + 1}}."
+      ]
+    },
+    {
+      "id": "ma-vectors",
+      "name": "Vectors and Geometric Proof (KEFW Year 11 Unit 3)",
+      "subtopics": [
+        "Column vector notation and vector diagrams",
+        "Adding and subtracting vectors, and the triangle law",
+        "Scalar multiples and what they mean geometrically",
+        "Magnitude of a vector using Pythagoras",
+        "Position vectors from the origin",
+        "Finding a point that divides a line in a given ratio",
+        "Proving two vectors are parallel",
+        "Proving three points are collinear",
+        "Writing a full geometric proof with vector reasoning",
+        "Recognising midpoint and ratio results in triangles and parallelograms"
+      ],
+      "cards": [
+        { "front": "How do you know two vectors are parallel?", "back": "One is a scalar multiple of the other, e.g. vector b = k times vector a." },
+        { "front": "How do you prove three points A, B and C are collinear using vectors?", "back": "Show that vector AB and vector BC are scalar multiples of each other and share a common point, so they lie on the same straight line." },
+        { "front": "How do you find the magnitude of the column vector (3, 4)?", "back": "Use Pythagoras: square root of (3 squared + 4 squared) = 5." },
+        { "front": "What does the vector AB equal in terms of position vectors a and b?", "back": "Vector AB = b minus a (destination minus start)." },
+        { "front": "If P divides AB in the ratio 2:3, what is vector AP?", "back": "Vector AP = two fifths of vector AB." }
+      ],
+      "cloze": [
+        "Vector AB equals {{c1::b minus a}} when a and b are the position vectors of A and B.",
+        "If two vectors are {{c1::scalar multiples}} of each other, they are {{c2::parallel}}.",
+        "Three points lying on the same straight line are described as {{c1::collinear}}."
+      ]
+    },
+    {
+      "id": "ma-number-ratio",
+      "name": "Higher Retrieval: Number, Ratio and Proportion",
+      "subtopics": [
+        "Laws of indices including negative and fractional indices",
+        "Surds: simplifying, rationalising the denominator, expanding brackets",
+        "Standard form calculations without a calculator",
+        "Upper and lower bounds, and error intervals",
+        "Truncation versus rounding",
+        "Reverse percentages and repeated percentage change",
+        "Compound interest and depreciation",
+        "Direct and inverse proportion, including forming y = kx and y = k/x",
+        "Ratio problems with changing totals and shares",
+        "Recurring decimals to fractions using algebra"
+      ],
+      "cards": [
+        { "front": "What does x to the power of negative n equal?", "back": "1 divided by x to the power of n." },
+        { "front": "What does x to the power of one third mean?", "back": "The cube root of x." },
+        { "front": "How do you rationalise the denominator of 1 over root 3?", "back": "Multiply top and bottom by root 3 to get root 3 over 3." },
+        { "front": "If a value is 15 percent more than the original and equals 92, how do you find the original?", "back": "Reverse percentage: divide by 1.15, giving 80." },
+        { "front": "What is the upper bound of a length measured as 8.4 cm to 1 decimal place?", "back": "8.45 cm." },
+        { "front": "How do you set up an inverse proportion problem?", "back": "Write y = k over x, substitute the known pair to find k, then use the formula." }
+      ],
+      "cloze": [
+        "In inverse proportion, y equals {{c1::k over x}} where k is the constant of proportionality.",
+        "Multiplying a fraction by its denominator in surd form to remove the surd is called {{c1::rationalising}} the denominator.",
+        "A compound interest multiplier for 3 percent growth over n years is {{c1::1.03}} to the power of n."
+      ]
+    },
+    {
+      "id": "ma-algebra-core",
+      "name": "Higher Retrieval: Core Algebra and Graphs",
+      "subtopics": [
+        "Solving quadratics by factorising, the formula and completing the square",
+        "Completing the square to find the turning point of a parabola",
+        "Simultaneous equations where one is quadratic",
+        "Linear and quadratic inequalities, and representing solutions on a number line",
+        "nth term of linear and quadratic sequences, and geometric sequences",
+        "Graph transformations f(x)+a, f(x+a), -f(x), f(-x), af(x)",
+        "Recognising quadratic, cubic, reciprocal, exponential and trigonometric graphs",
+        "Equation of a circle x squared + y squared = r squared and the tangent to it",
+        "Gradients of parallel and perpendicular lines",
+        "Estimating area under a curve and gradient of a tangent in real contexts"
+      ],
+      "cards": [
+        { "front": "State the quadratic formula.", "back": "x = (negative b plus or minus the square root of (b squared minus 4ac)) all over 2a." },
+        { "front": "What does the discriminant b squared minus 4ac tell you?", "back": "Positive: two real roots. Zero: one repeated root. Negative: no real roots." },
+        { "front": "Completed square form (x + p) squared + q gives which turning point?", "back": "The turning point is at (negative p, q)." },
+        { "front": "What is the gradient of a line perpendicular to a line of gradient 2/3?", "back": "Negative 3/2 - the negative reciprocal." },
+        { "front": "What transformation does f(x + a) apply to a graph?", "back": "A translation of a units in the negative x direction (left if a is positive)." },
+        { "front": "What is the equation of a circle centred on the origin with radius 5?", "back": "x squared plus y squared equals 25." }
+      ],
+      "cloze": [
+        "The discriminant is {{c1::b squared minus 4ac}} and a {{c2::negative}} value means no real roots.",
+        "The transformation {{c1::-f(x)}} reflects a graph in the {{c2::x-axis}}.",
+        "For a quadratic sequence, the second difference equals {{c1::2a}} where a is the coefficient of n squared."
+      ]
+    },
+    {
+      "id": "ma-geometry",
+      "name": "Higher Retrieval: Geometry, Trigonometry and Measure",
+      "subtopics": [
+        "Pythagoras and trigonometry in two and three dimensions",
+        "Exact trigonometric values for 0, 30, 45, 60 and 90 degrees",
+        "Sine rule, cosine rule and the ambiguous case",
+        "Area of a triangle using one half ab sin C",
+        "Similar shapes: length, area and volume scale factors",
+        "Congruence conditions SSS, SAS, ASA, RHS",
+        "Arc length, sector area and segment area",
+        "Surface area and volume of prisms, cylinders, cones, spheres and frustums",
+        "Transformations: rotation, reflection, translation, enlargement including negative scale factors",
+        "Constructions, loci and bearings"
+      ],
+      "cards": [
+        { "front": "State the cosine rule.", "back": "a squared = b squared + c squared minus 2bc cos A." },
+        { "front": "State the sine rule.", "back": "a over sin A = b over sin B = c over sin C." },
+        { "front": "What is the exact value of sin 30 degrees?", "back": "One half." },
+        { "front": "What is the exact value of tan 45 degrees?", "back": "1." },
+        { "front": "If two similar solids have length scale factor 3, what are the area and volume scale factors?", "back": "Area scale factor 9, volume scale factor 27." },
+        { "front": "Give the formula for the area of a triangle when two sides and the included angle are known.", "back": "One half times a times b times sin C." },
+        { "front": "Formula for the volume of a sphere?", "back": "Four thirds times pi times r cubed." }
+      ],
+      "cloze": [
+        "The cosine rule is a squared = b squared + c squared {{c1::minus}} 2bc cos A.",
+        "For similar shapes with length scale factor k, the volume scale factor is {{c1::k cubed}}.",
+        "Arc length equals the angle over {{c1::360}} multiplied by {{c2::2 pi r}}."
+      ]
+    },
+    {
+      "id": "ma-stats-probability",
+      "name": "Higher Retrieval: Statistics and Probability",
+      "subtopics": [
+        "Cumulative frequency graphs, median, quartiles and interquartile range",
+        "Box plots and comparing distributions",
+        "Histograms with unequal class widths and frequency density",
+        "Estimating the mean from a grouped frequency table",
+        "Sampling: random, stratified, bias and capture-recapture",
+        "Tree diagrams for dependent and independent events",
+        "Venn diagrams and set notation including intersection, union and complement",
+        "Conditional probability without replacement",
+        "Scatter graphs, correlation, line of best fit, interpolation and extrapolation",
+        "Time series and comparing two data sets in context"
+      ],
+      "cards": [
+        { "front": "What is frequency density and when is it needed?", "back": "Frequency divided by class width. Needed for histograms with unequal class widths, where area represents frequency." },
+        { "front": "How do you find the interquartile range from a cumulative frequency graph?", "back": "Read off the upper quartile at 0.75n and the lower quartile at 0.25n, then subtract." },
+        { "front": "In a tree diagram without replacement, what changes?", "back": "The denominator of the second set of branches decreases by one, because the total has reduced." },
+        { "front": "What does a stratified sample mean?", "back": "The sample is split into groups in the same proportion as the population, then sampled randomly within each group." },
+        { "front": "Why is extrapolation unreliable?", "back": "It predicts beyond the range of the data, where the observed trend may not continue." }
+      ],
+      "cloze": [
+        "In a histogram, {{c1::area}} represents frequency and the vertical axis shows {{c2::frequency density}}.",
+        "The interquartile range equals the {{c1::upper quartile}} minus the {{c2::lower quartile}}.",
+        "For independent events, P(A and B) equals P(A) {{c1::times}} P(B)."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "id": "chemistry",
+  "name": "Chemistry (Triple)",
+  "board": "AQA",
+  "boardVerified": true,
+  "boardNote": "VERIFIED from the KEFW Chemistry Curriculum Intent PDF, which names AQA specification 8462 explicitly. The four Year 11 units below (chemical changes part 2, organic chemistry, chemical analysis, using resources) are taken directly from the KEFW Year 11 curriculum document.",
+  "specCode": "8462",
+  "tier": "Higher tier",
+  "accent": "violet",
+  "papers": "Paper 1 (topics 1-5: atomic structure, bonding, quantitative chemistry, chemical changes, energy changes) and Paper 2 (topics 6-10: rate and extent of change, organic chemistry, chemical analysis, chemistry of the atmosphere, using resources). Each 1h45, 100 marks, 50 percent.",
+  "pastPapers": {
+    "label": "AQA GCSE Chemistry 8462 assessment resources and past papers",
+    "url": "https://www.aqa.org.uk/subjects/science/gcse/chemistry-8462/assessment-resources",
+    "verified": true
+  },
+  "resources": [
+    { "label": "BBC Bitesize GCSE Chemistry (AQA)", "url": "https://www.bbc.co.uk/bitesize/examspecs/z8xtmnb", "verified": true },
+    { "label": "Free Science Lessons video course", "url": "https://www.freesciencelessons.co.uk/", "verified": true },
+    { "label": "Cognito free GCSE chemistry videos and quizzes", "url": "https://www.cognitoedu.org/", "verified": true },
+    { "label": "Physics and Maths Tutor AQA Chemistry topic questions", "url": "https://www.physicsandmathstutor.com/", "verified": true },
+    { "label": "Seneca Learning free AQA Chemistry course", "url": "https://senecalearning.com/", "verified": true }
+  ],
+  "topics": [
+    {
+      "id": "ch-electrolysis",
+      "name": "C4 Chemical Changes Part 2: Electrolysis",
+      "subtopics": [
+        "Electrolytes, electrodes, anode and cathode, and why ions must be free to move",
+        "Electrolysis of molten ionic compounds: metal at the cathode, non-metal at the anode",
+        "Electrolysis of aqueous solutions and the rules for which product forms",
+        "Cathode rule: hydrogen forms unless the metal is less reactive than hydrogen",
+        "Anode rule: oxygen forms unless a halide ion is present, in which case the halogen forms",
+        "Writing half equations at each electrode and balancing electrons",
+        "Extraction of aluminium from bauxite, and why cryolite is added",
+        "Why electrolysis is used for metals more reactive than carbon",
+        "Required practical: electrolysis of aqueous solutions using inert electrodes",
+        "Oxidation is loss, reduction is gain of electrons (OILRIG)",
+        "The reactivity series, displacement reactions and reduction of metal oxides by carbon"
+      ],
+      "cards": [
+        { "front": "What forms at the cathode during electrolysis of molten lead bromide?", "back": "Lead metal, because positive metal ions are attracted to the negative cathode and are reduced." },
+        { "front": "State the cathode rule for electrolysis of aqueous solutions.", "back": "Hydrogen is produced unless the metal present is less reactive than hydrogen, in which case the metal is deposited." },
+        { "front": "State the anode rule for electrolysis of aqueous solutions.", "back": "Oxygen is produced unless a halide ion is present, in which case the halogen is produced." },
+        { "front": "Write the half equation for hydrogen forming at the cathode.", "back": "2H+ plus 2e- gives H2." },
+        { "front": "Write the half equation for oxygen forming at the anode from hydroxide ions.", "back": "4OH- gives O2 plus 2H2O plus 4e-." },
+        { "front": "Why is cryolite added during aluminium extraction?", "back": "It lowers the melting point of aluminium oxide, reducing the energy and cost required to keep it molten." },
+        { "front": "Why can aluminium not be extracted by reduction with carbon?", "back": "Aluminium is more reactive than carbon, so carbon cannot displace it from its oxide - electrolysis is required." },
+        { "front": "What does OILRIG stand for?", "back": "Oxidation Is Loss, Reduction Is Gain - of electrons." },
+        { "front": "Why must an ionic compound be molten or dissolved for electrolysis?", "back": "The ions must be free to move to the electrodes to carry the charge." }
+      ],
+      "cloze": [
+        "During electrolysis, positive ions move to the {{c1::cathode}} and are {{c2::reduced}}.",
+        "{{c1::Cryolite}} is added to aluminium oxide to lower its {{c2::melting point}}.",
+        "Metals more reactive than {{c1::carbon}} must be extracted by electrolysis.",
+        "The half equation at the cathode for hydrogen is 2H+ + 2e- gives {{c1::H2}}."
+      ]
+    },
+    {
+      "id": "ch-organic",
+      "name": "C7 Organic Chemistry",
+      "subtopics": [
+        "Crude oil as a finite resource formed from ancient biomass, and as a mixture of hydrocarbons",
+        "Fractional distillation and the temperature gradient in the column",
+        "Fractions: LPG, petrol, kerosene, diesel, heavy fuel oil, bitumen",
+        "Alkanes as a homologous series, general formula CnH2n+2, first four members",
+        "How boiling point, viscosity and flammability change with chain length",
+        "Complete combustion products and the meaning of oxidation of carbon and hydrogen",
+        "Cracking by thermal and catalytic methods, and why it is economically important",
+        "Alkenes, general formula CnH2n, functional group C double bond C",
+        "Bromine water test: orange to colourless with alkenes",
+        "Addition reactions of alkenes with hydrogen, water and halogens",
+        "Addition polymerisation of alkenes and drawing repeating units",
+        "Alcohols: methanol, ethanol, propanol, butanol; the OH functional group",
+        "Reactions of alcohols with sodium, in combustion, and with oxidising agents",
+        "Fermentation of sugar with yeast and the conditions required",
+        "Carboxylic acids: methanoic to butanoic, the COOH group, weak acid behaviour",
+        "Esters from an alcohol and a carboxylic acid with an acid catalyst",
+        "Condensation polymerisation and the loss of a small molecule",
+        "Natural polymers: starch, cellulose, proteins from amino acids, DNA from nucleotides"
+      ],
+      "cards": [
+        { "front": "What is the general formula of the alkanes?", "back": "CnH2n+2." },
+        { "front": "What is the general formula of the alkenes?", "back": "CnH2n." },
+        { "front": "Name the first four alkanes.", "back": "Methane, ethane, propane, butane." },
+        { "front": "How does fractional distillation separate crude oil?", "back": "Oil is heated and vaporised, then fed into a column that is hot at the bottom and cool at the top; each fraction condenses where the temperature matches its boiling point range." },
+        { "front": "How does bromine water distinguish an alkane from an alkene?", "back": "Alkenes decolourise orange bromine water to colourless by addition across the double bond; alkanes leave it orange." },
+        { "front": "Why is cracking carried out?", "back": "Long-chain fractions are in low demand, so they are broken into shorter, more useful alkanes and into alkenes needed to make polymers." },
+        { "front": "Give the conditions for catalytic cracking.", "back": "Heat the long-chain hydrocarbon to vaporise it and pass the vapour over a hot catalyst." },
+        { "front": "What is the functional group of a carboxylic acid?", "back": "COOH." },
+        { "front": "What are the products when an alcohol reacts with a carboxylic acid?", "back": "An ester and water, using an acid catalyst." },
+        { "front": "Give the conditions needed for fermentation.", "back": "Aqueous sugar solution, yeast, warm temperature around 25 to 35 degrees Celsius, and anaerobic conditions." },
+        { "front": "How does addition polymerisation differ from condensation polymerisation?", "back": "Addition polymerisation joins alkene monomers with no other product; condensation polymerisation joins monomers with two functional groups and loses a small molecule, usually water, each time." },
+        { "front": "What are proteins made from?", "back": "Amino acid monomers joined by condensation polymerisation into polypeptides." },
+        { "front": "How do boiling point and viscosity change as hydrocarbon chains get longer?", "back": "Both increase, while flammability decreases." }
+      ],
+      "cloze": [
+        "The functional group of an alkene is the {{c1::carbon-carbon double bond}}.",
+        "Alkenes turn bromine water from {{c1::orange}} to {{c2::colourless}}.",
+        "The general formula of the alkanes is {{c1::CnH2n+2}}.",
+        "Fermentation requires sugar, {{c1::yeast}}, warmth and {{c2::anaerobic}} conditions.",
+        "An {{c1::ester}} is made from an alcohol and a carboxylic acid with an acid catalyst."
+      ]
+    },
+    {
+      "id": "ch-analysis",
+      "name": "C8 Chemical Analysis",
+      "subtopics": [
+        "Pure substances versus mixtures, and using melting and boiling point to judge purity",
+        "Formulations as mixtures designed in measured quantities: fuels, alloys, paints, medicines",
+        "Paper chromatography: mobile and stationary phase, solvent front, baseline in pencil",
+        "Required practical: separating a mixture of dyes using chromatography and calculating Rf",
+        "Rf equals distance moved by substance divided by distance moved by solvent",
+        "Test for hydrogen: lit splint gives a squeaky pop",
+        "Test for oxygen: glowing splint relights",
+        "Test for carbon dioxide: limewater turns milky",
+        "Test for chlorine: damp litmus paper is bleached white",
+        "Flame tests: lithium crimson, sodium yellow, potassium lilac, calcium orange-red, copper green",
+        "Sodium hydroxide precipitates: aluminium white then dissolving, calcium white, magnesium white, copper blue, iron(II) green, iron(III) brown",
+        "Carbonate test with dilute acid, halide test with silver nitrate, sulfate test with barium chloride",
+        "Required practical: identifying ions by chemical and spectroscopic means",
+        "Flame emission spectroscopy and instrumental methods",
+        "Advantages of instrumental methods: accurate, sensitive, rapid, work on tiny samples"
+      ],
+      "cards": [
+        { "front": "How is Rf value calculated?", "back": "Distance moved by the substance divided by the distance moved by the solvent front." },
+        { "front": "What is a formulation?", "back": "A mixture that has been designed as a useful product, with each component present in a measured quantity, e.g. paint, alloy or medicine." },
+        { "front": "How do you test for carbon dioxide?", "back": "Bubble the gas through limewater; it turns milky or cloudy." },
+        { "front": "How do you test for chlorine gas?", "back": "Damp litmus paper is bleached white." },
+        { "front": "State the flame test colours for lithium, sodium, potassium, calcium and copper.", "back": "Lithium crimson, sodium yellow, potassium lilac, calcium orange-red, copper green." },
+        { "front": "What colour precipitate does iron(III) form with sodium hydroxide?", "back": "Brown." },
+        { "front": "What colour precipitate does iron(II) form with sodium hydroxide?", "back": "Green." },
+        { "front": "How do you test for a sulfate ion?", "back": "Add dilute hydrochloric acid then barium chloride solution; a white precipitate forms." },
+        { "front": "How do you test for a halide ion?", "back": "Add dilute nitric acid then silver nitrate solution: chloride gives white, bromide cream, iodide yellow precipitate." },
+        { "front": "Give three advantages of instrumental methods of analysis.", "back": "They are more accurate, more sensitive and faster than chemical tests, and can work on very small samples." },
+        { "front": "Why must the chromatography baseline be drawn in pencil?", "back": "Pencil graphite is insoluble in the solvent, so it will not travel up the paper and interfere with the results." },
+        { "front": "How does melting point indicate purity?", "back": "A pure substance melts at one specific temperature; a mixture melts over a range of temperatures." }
+      ],
+      "cloze": [
+        "Rf equals distance moved by the {{c1::substance}} divided by distance moved by the {{c2::solvent}}.",
+        "Carbon dioxide turns {{c1::limewater}} milky.",
+        "A {{c1::glowing}} splint relights in oxygen and a {{c2::lit}} splint gives a squeaky pop in hydrogen.",
+        "Copper ions produce a {{c1::green}} flame test colour and a {{c2::blue}} precipitate with sodium hydroxide.",
+        "Sulfate ions give a {{c1::white}} precipitate with {{c2::barium chloride}}."
+      ]
+    },
+    {
+      "id": "ch-using-resources",
+      "name": "C10 Using Resources",
+      "subtopics": [
+        "Finite versus renewable resources, and the role of chemistry in sustainable development",
+        "Life cycle assessment stages: raw material extraction, manufacture and packaging, use and operation, disposal at end of life",
+        "Why some parts of an LCA involve subjective judgement",
+        "Reduce, reuse and recycle, and the energy savings of recycling metals and glass",
+        "Potable water: not the same as pure water; UK sources and treatment",
+        "Water treatment steps: filtration through wire mesh and sand, sterilisation by chlorine, ozone or UV",
+        "Desalination by distillation or reverse osmosis, and its high energy cost",
+        "Required practical: analysis and purification of a water sample including distillation",
+        "Waste water treatment: screening, sedimentation into sludge and effluent, anaerobic digestion of sludge, aerobic biological treatment of effluent",
+        "Corrosion and rusting: iron needs both water and oxygen; barrier methods and sacrificial protection",
+        "Alloys: bronze, brass, gold carats, steels including high carbon, low carbon and stainless",
+        "Aluminium alloys for aircraft; comparison of low-density and corrosion resistance",
+        "Ceramics: soda-lime glass, borosilicate glass, clay ceramics",
+        "Polymers: thermosoftening versus thermosetting, and the effect of cross-links",
+        "Composites and how the matrix and reinforcement work together",
+        "Phytomining and bioleaching for extracting copper from low-grade ores"
+      ],
+      "cards": [
+        { "front": "What are the four stages of a life cycle assessment?", "back": "Extracting and processing raw materials, manufacturing and packaging, use and operation during lifetime, and disposal at end of life including transport at every stage." },
+        { "front": "What is potable water?", "back": "Water that is safe to drink - it has low levels of dissolved salts and microbes, but is not chemically pure." },
+        { "front": "Describe UK treatment of fresh water to make it potable.", "back": "Pass through filter beds of wire mesh and sand to remove solids, then sterilise with chlorine, ozone or ultraviolet light." },
+        { "front": "Why is desalination expensive?", "back": "Distillation or reverse osmosis both require large amounts of energy." },
+        { "front": "How is sewage sludge treated and what useful products result?", "back": "By anaerobic digestion, which produces methane biogas as a fuel and digested waste that can be used as fertiliser." },
+        { "front": "What two substances are needed for iron to rust?", "back": "Water and oxygen." },
+        { "front": "How does sacrificial protection work?", "back": "A more reactive metal such as zinc or magnesium is attached to the iron; it corrodes in preference, protecting the iron." },
+        { "front": "Describe phytomining.", "back": "Plants absorb metal compounds from low-grade ore; the plants are burned and the ash, which contains a high concentration of the metal compound, is processed to extract the metal." },
+        { "front": "Describe bioleaching.", "back": "Bacteria are used to produce leachate solutions containing metal compounds, from which the metal can be extracted by displacement or electrolysis." },
+        { "front": "Why do thermosetting polymers not melt?", "back": "Strong covalent cross-links between the polymer chains hold them rigidly in place." },
+        { "front": "What is a composite material?", "back": "A material made of two components: a reinforcement of fibres or fragments held in place by a matrix or binder." },
+        { "front": "How is borosilicate glass different from soda-lime glass?", "back": "It is made from sand and boron trioxide and melts at a higher temperature, so it is more resistant to thermal shock." }
+      ],
+      "cloze": [
+        "{{c1::Potable}} water is safe to drink but is not chemically {{c2::pure}}.",
+        "Rusting requires both {{c1::water}} and {{c2::oxygen}}.",
+        "In {{c1::sacrificial}} protection, a more reactive metal corrodes instead of the iron.",
+        "{{c1::Thermosetting}} polymers contain covalent {{c2::cross-links}} and do not melt.",
+        "{{c1::Phytomining}} uses plants to absorb metal compounds from low-grade ores."
+      ]
+    },
+    {
+      "id": "ch-haber",
+      "name": "C6/C10 The Haber Process and NPK Fertilisers",
+      "subtopics": [
+        "Raw materials: nitrogen from air, hydrogen from natural gas",
+        "Conditions: 450 degrees Celsius, 200 atmospheres, iron catalyst",
+        "The reversible reaction N2 + 3H2 in equilibrium with 2NH3 and the forward reaction being exothermic",
+        "Le Chateliers principle applied to temperature and pressure changes",
+        "Why 450 degrees Celsius is a compromise between yield and rate",
+        "Why very high pressure is limited by cost and safety",
+        "Recycling unreacted nitrogen and hydrogen",
+        "NPK fertilisers and the three essential elements",
+        "Making ammonium nitrate, ammonium sulfate and phosphate fertilisers",
+        "Comparing industrial and laboratory preparation of ammonium sulfate"
+      ],
+      "cards": [
+        { "front": "State the conditions used in the Haber process.", "back": "450 degrees Celsius, 200 atmospheres pressure, and an iron catalyst." },
+        { "front": "Where do the raw materials for the Haber process come from?", "back": "Nitrogen from the air and hydrogen from natural gas." },
+        { "front": "Why is 450 degrees Celsius used rather than a lower temperature?", "back": "The forward reaction is exothermic so a lower temperature would give a higher equilibrium yield, but the rate would be too slow - 450 degrees is a compromise." },
+        { "front": "Why does high pressure increase the yield of ammonia?", "back": "There are 4 moles of gas on the left and 2 on the right, so increasing pressure shifts the equilibrium to the side with fewer molecules, favouring ammonia." },
+        { "front": "What do the letters NPK stand for in fertilisers?", "back": "Nitrogen, phosphorus and potassium." },
+        { "front": "How is ammonium sulfate made industrially versus in the lab?", "back": "Industrially in several integrated stages on a large continuous scale; in the lab by a single-batch titration of ammonia solution with dilute sulfuric acid followed by crystallisation." },
+        { "front": "State Le Chateliers principle.", "back": "If a system at equilibrium is subjected to a change, the position of equilibrium shifts to counteract that change." }
+      ],
+      "cloze": [
+        "The Haber process uses an {{c1::iron}} catalyst at {{c2::450}} degrees Celsius and 200 atmospheres.",
+        "NPK stands for nitrogen, {{c1::phosphorus}} and {{c2::potassium}}.",
+        "Increasing pressure shifts an equilibrium towards the side with {{c1::fewer}} gas molecules."
+      ]
+    },
+    {
+      "id": "ch-quantitative-rates",
+      "name": "Retrieval: Quantitative Chemistry, Rates and Equilibrium",
+      "subtopics": [
+        "Relative formula mass and conservation of mass in balanced equations",
+        "Moles: mass divided by relative formula mass, and Avogadros constant",
+        "Using mole ratios to find reacting masses",
+        "Limiting reactants and reactants in excess",
+        "Concentration in grams per cubic decimetre and moles per cubic decimetre",
+        "Titration calculations and the required practical technique",
+        "Percentage yield and reasons why yield is less than 100 percent",
+        "Atom economy and why high atom economy matters industrially",
+        "Volumes of gases at room temperature and pressure, 24 dm3 per mole",
+        "Collision theory and factors affecting rate: concentration, pressure, surface area, temperature, catalysts",
+        "Required practical: investigating the rate of reaction by measuring gas volume or turbidity",
+        "Calculating mean rate of reaction and drawing tangents to find rate at a given time",
+        "Reversible reactions, dynamic equilibrium and closed systems"
+      ],
+      "cards": [
+        { "front": "How do you calculate the number of moles from a mass?", "back": "Moles equals mass in grams divided by relative formula mass." },
+        { "front": "What is Avogadros constant?", "back": "6.02 times 10 to the power of 23 - the number of particles in one mole of a substance." },
+        { "front": "How do you calculate percentage yield?", "back": "Mass of product actually made divided by the maximum theoretical mass, multiplied by 100." },
+        { "front": "How do you calculate atom economy?", "back": "Relative formula mass of the desired product divided by the total relative formula mass of all reactants, multiplied by 100." },
+        { "front": "What volume does one mole of any gas occupy at room temperature and pressure?", "back": "24 cubic decimetres." },
+        { "front": "Explain why increasing temperature increases the rate of reaction.", "back": "Particles have more kinetic energy so they collide more frequently, and a greater proportion of collisions have energy above the activation energy." },
+        { "front": "How does a catalyst increase the rate of reaction?", "back": "It provides an alternative reaction pathway with a lower activation energy, without being used up." },
+        { "front": "What is a limiting reactant?", "back": "The reactant that is completely used up first and therefore limits the amount of product formed." },
+        { "front": "How do you find the rate of reaction at a specific time from a graph?", "back": "Draw a tangent to the curve at that time and calculate its gradient." },
+        { "front": "Give three reasons why percentage yield is less than 100 percent.", "back": "The reaction may be reversible, some product may be lost in handling or separation, and side reactions may produce other products." }
+      ],
+      "cloze": [
+        "Moles equals {{c1::mass}} divided by {{c2::relative formula mass}}.",
+        "Avogadros constant is {{c1::6.02 times 10 to the 23}} particles per mole.",
+        "One mole of any gas occupies {{c1::24}} dm3 at room temperature and pressure.",
+        "A catalyst lowers the {{c1::activation energy}} without being {{c2::used up}}."
+      ]
+    }
+  ]
+}

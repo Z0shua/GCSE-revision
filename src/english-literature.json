@@ -1,0 +1,170 @@
+{
+  "id": "english-literature",
+  "name": "English Literature",
+  "board": "AQA",
+  "boardVerified": false,
+  "boardNote": "FLAGGED: board and set texts are UNCONFIRMED for KEFW - no English curriculum PDF was supplied and KEFW publishes no exam-board list. AQA 8702 with the Power and Conflict poetry cluster is the most common England combination. Confirm the board AND the four set texts with the school, because Paper 1 and Paper 2 questions are text-specific.",
+  "specCode": "8702",
+  "tier": "Single tier",
+  "accent": "rose",
+  "papers": "Paper 1: Shakespeare and the 19th-century novel (1h45, 40%). Paper 2: Modern texts and poetry (2h15, 60%). Closed book - all texts must be memorised.",
+  "pastPapers": {
+    "label": "AQA GCSE English Literature 8702 assessment resources",
+    "url": "https://www.aqa.org.uk/subjects/english/gcse/english-literature-8702/assessment-resources",
+    "verified": true
+  },
+  "resources": [
+    { "label": "BBC Bitesize GCSE English Literature (AQA)", "url": "https://www.bbc.co.uk/bitesize/examspecs/zxqncwx", "verified": true },
+    { "label": "BBC Bitesize AQA poetry anthology guides", "url": "https://www.bbc.co.uk/bitesize/topics/zprysg8", "verified": true },
+    { "label": "MME Revise free GCSE revision", "url": "https://mmerevise.co.uk/", "verified": true },
+    { "label": "Physics and Maths Tutor revision notes", "url": "https://www.physicsandmathstutor.com/", "verified": true }
+  ],
+  "topics": [
+    {
+      "id": "lit-shakespeare",
+      "name": "Paper 1 Section A: Shakespeare",
+      "subtopics": [
+        "One question with a printed extract, then the play as a whole",
+        "30 marks plus 4 marks for spelling, punctuation and grammar",
+        "AO1 response and evidence, AO2 language form and structure, AO3 context",
+        "Closed book - quotations must be memorised",
+        "Tracking a character or theme across the whole play",
+        "Dramatic devices: soliloquy, aside, dramatic irony, stagecraft",
+        "Contextual frames: kingship, the divine right, gender, honour, the supernatural",
+        "Structure of an answer: thesis, extract analysis, whole-play development, conceptual conclusion"
+      ],
+      "cards": [
+        { "front": "How is the Shakespeare question on AQA Paper 1 structured?", "back": "A printed extract is given; you must analyse it and then widen your answer to the play as a whole. 30 marks plus 4 SPaG marks." },
+        { "front": "What are the four assessment objectives in GCSE English Literature?", "back": "AO1 informed personal response with evidence, AO2 analysis of language form and structure, AO3 relationship between text and context, AO4 accurate written expression." },
+        { "front": "What is a soliloquy and why does it matter in the exam?", "back": "A speech delivered alone on stage revealing inner thoughts. It gives the audience privileged access to a character, so it is high-value evidence for character analysis." },
+        { "front": "How much of the Shakespeare answer should be about the extract?", "back": "Roughly half, then move deliberately outward to the rest of the play - answers that stay only in the extract cap in the middle bands." }
+      ],
+      "cloze": [
+        "The Shakespeare question is worth {{c1::30}} marks plus {{c2::4}} marks for SPaG.",
+        "AQA English Literature is a {{c1::closed book}} exam, so all quotations must be {{c2::memorised}}."
+      ]
+    },
+    {
+      "id": "lit-19c-novel",
+      "name": "Paper 1 Section B: The 19th-Century Novel",
+      "subtopics": [
+        "Extract-based question then the whole novel (30 marks, no SPaG marks here)",
+        "Common set texts: A Christmas Carol, Jekyll and Hyde, Great Expectations, Frankenstein, Jane Eyre, Sign of Four, Pride and Prejudice (FLAG: KEFW text unconfirmed)",
+        "Victorian context: class, poverty, Malthus and the Poor Laws, industrialisation",
+        "Duality, Gothic conventions, science versus religion, reputation and respectability",
+        "Narrative structure: staves, chapters, framed narrative, unreliable narration",
+        "Character arcs and moments of transformation",
+        "Symbolism and motif tracking (light, doors, weather, animals)",
+        "Building a thesis that answers the question in the first sentence"
+      ],
+      "cards": [
+        { "front": "How many marks is the 19th-century novel question worth?", "back": "30 marks. SPaG marks are only awarded on the Shakespeare question in Paper 1." },
+        { "front": "Name three Gothic conventions examiners expect you to recognise.", "back": "Uncanny or supernatural events, oppressive or labyrinthine settings, doubling and duality, physical decay, transgression of natural limits." },
+        { "front": "Why is context (AO3) not just historical background information?", "back": "Marks are awarded for showing how context shapes meaning in the text, not for standalone facts about the period." },
+        { "front": "What is a framed narrative?", "back": "A story told inside another story, e.g. a letter or testimony that encloses the main narrative, which distances the reader and raises questions of reliability." }
+      ],
+      "cloze": [
+        "In the Victorian period, the {{c1::Poor Law}} of 1834 sent the destitute into workhouses.",
+        "A narrator whose account the reader cannot fully trust is called an {{c1::unreliable}} narrator."
+      ]
+    },
+    {
+      "id": "lit-modern-text",
+      "name": "Paper 2 Section A: Modern Text",
+      "subtopics": [
+        "Choice of two essay questions - no extract given, 30 marks plus 4 SPaG marks",
+        "Common set texts: An Inspector Calls, Blood Brothers, Lord of the Flies, Animal Farm, DNA, Anita and Me (FLAG: KEFW text unconfirmed)",
+        "Whole-text knowledge with a bank of short memorised quotations",
+        "Themes: responsibility, class, gender, generational conflict, power",
+        "Dramatic or novelistic form: acts, stage directions, dramatic irony, allegory",
+        "Writer intention and audience effect",
+        "Choosing between the two questions quickly and committing",
+        "Essay plan in three to four minutes before writing"
+      ],
+      "cards": [
+        { "front": "Is an extract provided for the Modern Text question?", "back": "No. It is a whole-text essay with a choice of two questions, so quotations must be memorised." },
+        { "front": "How many marks is the Modern Text question worth?", "back": "30 marks plus 4 marks for spelling, punctuation and grammar." },
+        { "front": "What is dramatic irony?", "back": "When the audience knows something a character does not, creating tension or moral judgement." },
+        { "front": "What is an allegory?", "back": "A narrative in which characters and events stand for wider political, moral or historical ideas." }
+      ],
+      "cloze": [
+        "In Paper 2 Section A you answer {{c1::one}} of {{c2::two}} questions on the modern text.",
+        "Paper 2 is worth {{c1::60}} percent of the GCSE English Literature grade."
+      ]
+    },
+    {
+      "id": "lit-anthology-poetry",
+      "name": "Paper 2 Section B: Poetry Anthology",
+      "subtopics": [
+        "One named poem is printed; you compare it with one poem of your choice from the same cluster",
+        "30 marks, no SPaG marks",
+        "Common cluster: Power and Conflict (FLAG: KEFW cluster unconfirmed)",
+        "Power and Conflict poems include Ozymandias, London, Extract from The Prelude, My Last Duchess, Charge of the Light Brigade, Exposure, Storm on the Island, Bayonet Charge, Remains, Poppies, War Photographer, Tissue, The Emigree, Checking Out Me History, Kamikaze",
+        "Comparing ideas, methods and contexts - not just listing features",
+        "Form and structure: sonnet, dramatic monologue, free verse, enjambment, caesura, volta",
+        "Thematic clusters within the anthology: power of humans, power of nature, effects of conflict, memory and loss",
+        "Making an integrated comparison in every paragraph rather than one poem then the other"
+      ],
+      "cards": [
+        { "front": "How is the Poetry Anthology question structured?", "back": "One poem from your cluster is printed and named; you compare how it and one other poem you choose from the same cluster present a given theme. 30 marks." },
+        { "front": "What is a dramatic monologue?", "back": "A poem spoken in the voice of a single created character, revealing their personality unintentionally, e.g. My Last Duchess." },
+        { "front": "Define enjambment and caesura.", "back": "Enjambment: a sentence running over the line break without punctuation. Caesura: a deliberate pause inside a line, usually from punctuation." },
+        { "front": "What is a volta?", "back": "A turn or shift in argument or mood within a poem, classically at line 9 of a Petrarchan sonnet." },
+        { "front": "Why is integrated comparison better than a poem-by-poem structure?", "back": "The mark scheme rewards sustained comparison of ideas and methods; separate blocks tend to become description and lose comparative marks." }
+      ],
+      "cloze": [
+        "In the Poetry Anthology question, {{c1::one}} poem is printed and you choose {{c2::one}} other from the same cluster.",
+        "A sudden turn in a poems argument or mood is called a {{c1::volta}}.",
+        "{{c1::Ozymandias}} by Shelley uses a ruined statue to show the impermanence of human power."
+      ]
+    },
+    {
+      "id": "lit-unseen-poetry",
+      "name": "Paper 2 Section C: Unseen Poetry",
+      "subtopics": [
+        "Q1: analyse one unseen poem (24 marks)",
+        "Q2: compare the methods of that poem with a second unseen poem (8 marks)",
+        "No context marks are awarded - focus on ideas and methods",
+        "Fast reading strategy: read twice, annotate voice, tone shift, images, form",
+        "Identifying the central idea before analysing detail",
+        "Timing: about 30 minutes for Q1 and 15 minutes for Q2",
+        "Q2 must be about methods, not just content",
+        "Tentative language: perhaps, suggests, could imply"
+      ],
+      "cards": [
+        { "front": "How are the marks split in the Unseen Poetry section?", "back": "24 marks for analysing the first unseen poem, then 8 marks for comparing the methods of both poems. 32 marks total." },
+        { "front": "Does context earn marks in the Unseen Poetry section?", "back": "No. AO3 is not assessed here, so time spent guessing historical context is wasted." },
+        { "front": "What must the 8-mark unseen comparison focus on?", "back": "The poets methods - language, form and structure - and their differing effects, not a content summary." },
+        { "front": "Give a reliable four-step approach to an unseen poem.", "back": "Identify the speaker and situation, find the tone shift, pick three method-rich images, then link each back to the central idea." }
+      ],
+      "cloze": [
+        "Unseen Poetry Q1 is worth {{c1::24}} marks and Q2 is worth {{c2::8}} marks.",
+        "In the unseen poetry section, assessment objective {{c1::AO3}} (context) is not assessed."
+      ]
+    },
+    {
+      "id": "lit-exam-skills",
+      "name": "Literature Exam Skills and Quotation Banks",
+      "subtopics": [
+        "Writing a conceptual thesis in the first two sentences",
+        "What-How-Why paragraph structure",
+        "Embedding short quotations inside your own sentences",
+        "Zooming in on a single word and offering multiple interpretations",
+        "Writing about form and structure, not only language",
+        "Weaving context into analysis rather than bolting it on",
+        "Building a quotation bank of 10-15 short quotations per text",
+        "Timed practice: full 45-minute answers under exam conditions"
+      ],
+      "cards": [
+        { "front": "What is a conceptual thesis in a literature essay?", "back": "A single overarching argument about what the writer is doing and why, stated up front and sustained through every paragraph." },
+        { "front": "What does the What-How-Why paragraph structure mean?", "back": "What the writer presents, How they do it (method plus quotation), Why it matters to the readers response and the writers purpose." },
+        { "front": "How many quotations per text is a realistic revision target?", "back": "Ten to fifteen short, flexible quotations that can be redeployed across multiple themes - depth beats volume." },
+        { "front": "Why is embedding quotations better than dropping them in?", "back": "Embedded quotations keep the sentence fluent and let you analyse individual words precisely, which AO2 rewards." }
+      ],
+      "cloze": [
+        "The paragraph structure What-{{c1::How}}-{{c2::Why}} keeps analysis focused on writer method and effect.",
+        "Assessment objective {{c1::AO2}} rewards analysis of language, form and structure."
+      ]
+    }
+  ]
+}

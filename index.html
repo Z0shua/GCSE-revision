@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GCSE Year 11 Revision Dashboard</title>
+<meta name="description" content="Self-study GCSE Year 11 revision tracker mapped to the King Edward VI Five Ways School curriculum.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: { extend: { fontFamily: { sans: ['ui-sans-serif','system-ui','-apple-system','Segoe UI','Roboto','Helvetica Neue','Arial','sans-serif'] } } }
+  };
+  // Apply the saved theme before first paint to avoid a flash.
+  (function () {
+    try {
+      var t = localStorage.getItem('kefw.theme');
+      if (t === 'dark' || (t === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    } catch (e) {}
+  })();
+</script>
+<style>
+  html { -webkit-text-size-adjust: 100%; }
+  body { text-wrap: pretty; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .chev { transform: rotate(90deg); }
+  .chev { transition: transform .18s ease; }
+  @media print { .no-print { display: none !important; } }
+</style>
+</head>
+<body class="bg-stone-50 text-stone-800 dark:bg-stone-950 dark:text-stone-200 antialiased">
+
+<!-- ══ Header ══ -->
+<header class="sticky top-0 z-30 border-b border-stone-200 bg-stone-50/90 backdrop-blur dark:border-stone-800 dark:bg-stone-950/90">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3 sm:px-6">
+    <div class="w-full min-w-0 sm:flex-1">
+      <h1 class="text-base font-semibold leading-tight tracking-tight sm:truncate sm:text-lg">Year 11 Revision Dashboard</h1>
+      <p class="text-xs leading-snug text-stone-500 dark:text-stone-400 sm:truncate">King Edward VI Five Ways curriculum &middot; 2026&ndash;27</p>
+    </div>
+    <nav class="flex w-full items-center justify-end gap-2 sm:w-auto">
+      <a href="study.html"
+         class="rounded-lg bg-stone-800 px-3 py-2 text-xs font-medium text-white transition hover:bg-stone-700 dark:bg-stone-200 dark:text-stone-900 dark:hover:bg-white">
+        Study companion
+      </a>
+      <button id="exportBtn" type="button"
+        class="rounded-lg bg-emerald-600 px-3 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 dark:focus:ring-offset-stone-950">
+        Export progress
+      </button>
+      <button id="themeBtn" type="button" aria-label="Toggle dark mode"
+        class="rounded-lg border border-stone-300 px-2.5 py-2 text-xs transition hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">
+        <span class="dark:hidden">Dark</span><span class="hidden dark:inline">Light</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="mx-auto max-w-6xl px-4 pb-24 pt-6 sm:px-6">
+
+  <!-- ══ Backup reminder ══ -->
+  <div id="backupBanner" class="mb-5 hidden rounded-xl border border-amber-300 bg-amber-50 p-4 dark:border-amber-800/60 dark:bg-amber-950/40">
+    <div class="flex flex-wrap items-start justify-between gap-3">
+      <div class="min-w-0">
+        <p class="text-sm font-semibold text-amber-900 dark:text-amber-200">Time to back up your progress</p>
+        <p id="backupText" class="mt-0.5 text-xs leading-relaxed text-amber-800 dark:text-amber-300/90"></p>
+      </div>
+      <div class="flex shrink-0 gap-2">
+        <button type="button" data-act="export"
+          class="rounded-lg bg-amber-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-amber-700">Export now</button>
+        <button type="button" id="snoozeBtn"
+          class="rounded-lg border border-amber-400 px-3 py-1.5 text-xs font-medium text-amber-900 hover:bg-amber-100 dark:border-amber-700 dark:text-amber-200 dark:hover:bg-amber-900/40">Remind me tomorrow</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ Stats ══ -->
+  <section class="mb-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <p class="text-[11px] font-medium uppercase tracking-wide text-stone-500 dark:text-stone-400">Overall progress</p>
+      <p class="mt-1 text-2xl font-semibold tabular-nums" id="overallPct">0%</p>
+      <div class="mt-2 h-2 w-full overflow-hidden rounded-full bg-stone-200 dark:bg-stone-800">
+        <div id="overallBar" class="h-full w-0 rounded-full bg-emerald-500 transition-all duration-500"></div>
+      </div>
+      <p class="mt-1.5 text-xs text-stone-500 dark:text-stone-400" id="overallCount">0 of 0 sub-topics</p>
+    </div>
+
+    <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <p class="text-[11px] font-medium uppercase tracking-wide text-stone-500 dark:text-stone-400">Current streak</p>
+      <p class="mt-1 text-2xl font-semibold tabular-nums" id="streakDays">0 days</p>
+      <p class="mt-2 text-xs leading-relaxed text-stone-500 dark:text-stone-400" id="streakHint">Tick anything today to start your streak.</p>
+    </div>
+
+    <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <p class="text-[11px] font-medium uppercase tracking-wide text-stone-500 dark:text-stone-400">This week</p>
+      <p class="mt-1 text-2xl font-semibold tabular-nums" id="weekCount">0 / 20</p>
+      <div class="mt-2 h-2 w-full overflow-hidden rounded-full bg-stone-200 dark:bg-stone-800">
+        <div id="weekBar" class="h-full w-0 rounded-full bg-sky-500 transition-all duration-500"></div>
+      </div>
+      <div class="mt-1.5 flex items-center gap-2">
+        <label for="weeklyTarget" class="text-xs text-stone-500 dark:text-stone-400">Weekly target</label>
+        <input id="weeklyTarget" type="number" min="1" max="200" step="1"
+          class="w-16 rounded-md border border-stone-300 bg-white px-1.5 py-0.5 text-xs tabular-nums dark:border-stone-700 dark:bg-stone-800">
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900">
+      <p class="text-[11px] font-medium uppercase tracking-wide text-stone-500 dark:text-stone-400">Longest streak</p>
+      <p class="mt-1 text-2xl font-semibold tabular-nums" id="bestStreak">0 days</p>
+      <p class="mt-2 text-xs text-stone-500 dark:text-stone-400" id="lastExportInfo">No backup taken yet.</p>
+    </div>
+  </section>
+
+  <!-- ══ Motivation ══ -->
+  <section class="mb-6 rounded-xl border border-stone-200 bg-gradient-to-br from-white to-stone-100 p-5 dark:border-stone-800 dark:from-stone-900 dark:to-stone-900/40">
+    <p class="text-sm font-medium leading-relaxed" id="motivation">Pick one sub-topic and start. That is the whole plan for the next twenty minutes.</p>
+    <p class="mt-1 text-xs text-stone-500 dark:text-stone-400" id="nextUp"></p>
+  </section>
+
+  <!-- ══ Controls ══ -->
+  <section class="mb-5 flex flex-wrap items-center gap-2">
+    <input id="search" type="search" placeholder="Search sub-topics&hellip;"
+      class="min-w-0 flex-1 rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm placeholder:text-stone-400 focus:border-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-300 dark:border-stone-700 dark:bg-stone-900 dark:focus:ring-stone-700 sm:max-w-xs">
+    <button type="button" id="hideDoneBtn"
+      class="rounded-lg border border-stone-300 px-3 py-2 text-xs font-medium hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">Hide completed</button>
+    <button type="button" id="expandBtn"
+      class="rounded-lg border border-stone-300 px-3 py-2 text-xs font-medium hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">Expand all</button>
+    <label class="cursor-pointer rounded-lg border border-stone-300 px-3 py-2 text-xs font-medium hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">
+      Import progress
+      <input id="importInput" type="file" accept="application/json,.json" class="hidden">
+    </label>
+    <button type="button" id="resetBtn"
+      class="rounded-lg border border-rose-300 px-3 py-2 text-xs font-medium text-rose-700 hover:bg-rose-50 dark:border-rose-900 dark:text-rose-400 dark:hover:bg-rose-950/40">Reset all</button>
+  </section>
+
+  <!-- ══ Subjects ══ -->
+  <section id="subjects" class="grid gap-4 lg:grid-cols-2"></section>
+
+  <!-- ══ Board verification notice ══ -->
+  <section class="mt-8 rounded-xl border border-stone-200 bg-white p-5 text-sm dark:border-stone-800 dark:bg-stone-900">
+    <h2 class="text-sm font-semibold">Exam board verification</h2>
+    <p class="mt-2 text-xs leading-relaxed text-stone-600 dark:text-stone-400" id="boardNoteGlobal"></p>
+    <ul class="mt-3 space-y-2" id="boardList"></ul>
+  </section>
+
+  <footer class="mt-8 text-xs leading-relaxed text-stone-500 dark:text-stone-500">
+    <p>All progress is stored only in this browser (localStorage). Export a JSON backup weekly so nothing is lost if the cache is cleared or you change device.</p>
+    <p class="mt-1">Data checksum <span id="checksum" class="font-mono"></span> &middot; shared identically by this page, the study companion and the Anki generator.</p>
+  </footer>
+</main>
+
+<!-- ══ Toast ══ -->
+<div id="toast" class="pointer-events-none fixed bottom-4 left-1/2 z-50 -translate-x-1/2 rounded-lg bg-stone-900 px-4 py-2 text-sm text-white opacity-0 shadow-lg transition-opacity duration-300 dark:bg-stone-100 dark:text-stone-900"></div>
+
+<script src="data.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  // ─────────────────────────── Constants ───────────────────────────
+  var STORE_KEY   = 'kefw.gcse.progress.v1';
+  var THEME_KEY   = 'kefw.theme';
+  var GRACE_HOURS = 24;   // "next-midnight grace period": a day is kept alive
+                          // until the end of the FOLLOWING calendar day.
+  var EXPORT_REMINDER_DAYS = 7;
+
+  var ACCENTS = {
+    amber:   { bar: 'bg-amber-500',   dot: 'bg-amber-500',   ring: 'focus:ring-amber-500',   text: 'text-amber-700 dark:text-amber-400' },
+    rose:    { bar: 'bg-rose-500',    dot: 'bg-rose-500',    ring: 'focus:ring-rose-500',    text: 'text-rose-700 dark:text-rose-400' },
+    blue:    { bar: 'bg-blue-500',    dot: 'bg-blue-500',    ring: 'focus:ring-blue-500',    text: 'text-blue-700 dark:text-blue-400' },
+    emerald: { bar: 'bg-emerald-500', dot: 'bg-emerald-500', ring: 'focus:ring-emerald-500', text: 'text-emerald-700 dark:text-emerald-400' },
+    violet:  { bar: 'bg-violet-500',  dot: 'bg-violet-500',  ring: 'focus:ring-violet-500',  text: 'text-violet-700 dark:text-violet-400' },
+    sky:     { bar: 'bg-sky-500',     dot: 'bg-sky-500',     ring: 'focus:ring-sky-500',     text: 'text-sky-700 dark:text-sky-400' },
+    teal:    { bar: 'bg-teal-500',    dot: 'bg-teal-500',    ring: 'focus:ring-teal-500',    text: 'text-teal-700 dark:text-teal-400' },
+    orange:  { bar: 'bg-orange-500',  dot: 'bg-orange-500',  ring: 'focus:ring-orange-500',  text: 'text-orange-700 dark:text-orange-400' }
+  };
+
+  // ─────────────────────────── Date helpers ───────────────────────────
+  function dayKey(d) {
+    d = d || new Date();
+    var m = String(d.getMonth() + 1).padStart(2, '0');
+    var day = String(d.getDate()).padStart(2, '0');
+    return d.getFullYear() + '-' + m + '-' + day;
+  }
+  function parseDayKey(k) {
+    var p = String(k || '').split('-');
+    if (p.length !== 3) return null;
+    var d = new Date(Number(p[0]), Number(p[1]) - 1, Number(p[2]));
+    return isNaN(d.getTime()) ? null : d;
+  }
+  function daysBetween(aKey, bKey) {
+    var a = parseDayKey(aKey), b = parseDayKey(bKey);
+    if (!a || !b) return null;
+    return Math.round((b - a) / 86400000);
+  }
+  /* ISO week start (Monday) for the given date, as a day key. */
+  function weekStartKey(d) {
+    d = d || new Date();
+    var x = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    var dow = (x.getDay() + 6) % 7; // Mon = 0
+    x.setDate(x.getDate() - dow);
+    return dayKey(x);
+  }
+  function hoursSince(iso) {
+    if (!iso) return Infinity;
+    var t = Date.parse(iso);
+    if (isNaN(t)) return Infinity;
+    return (Date.now() - t) / 3600000;
+  }
+  function fmtDate(iso) {
+    var t = Date.parse(iso);
+    if (isNaN(t)) return 'never';
+    return new Date(t).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+
+  // ─────────────────────────── State ───────────────────────────
+  function blankState() {
+    return {
+      version: 1,
+      done: {},              // itemKey -> ISO timestamp completed
+      streak: 0,
+      bestStreak: 0,
+      lastActiveDay: null,   // day key of the most recent tick
+      lastExport: null,      // ISO
+      snoozeUntil: null,     // ISO - backup reminder snooze
+      weeklyTarget: 20,
+      hideDone: false,
+      createdAt: new Date().toISOString()
+    };
+  }
+
+  var state = blankState();
+
+  function load() {
+    try {
+      var raw = localStorage.getItem(STORE_KEY);
+      if (!raw) return;
+      var parsed = JSON.parse(raw);
+      if (parsed && typeof parsed === 'object') state = normalise(parsed);
+    } catch (e) {
+      console.warn('Could not read saved progress:', e);
+    }
+  }
+
+  function normalise(obj) {
+    var s = blankState();
+    if (obj.done && typeof obj.done === 'object') {
+      Object.keys(obj.done).forEach(function (k) {
+        var v = obj.done[k];
+        if (v === true) s.done[k] = new Date().toISOString();
+        else if (typeof v === 'string') s.done[k] = v;
+      });
+    }
+    s.streak        = Number(obj.streak) || 0;
+    s.bestStreak    = Number(obj.bestStreak) || 0;
+    s.lastActiveDay = typeof obj.lastActiveDay === 'string' ? obj.lastActiveDay : null;
+    s.lastExport    = typeof obj.lastExport === 'string' ? obj.lastExport : null;
+    s.snoozeUntil   = typeof obj.snoozeUntil === 'string' ? obj.snoozeUntil : null;
+    s.weeklyTarget  = Math.min(200, Math.max(1, Number(obj.weeklyTarget) || 20));
+    s.hideDone      = !!obj.hideDone;
+    s.createdAt     = typeof obj.createdAt === 'string' ? obj.createdAt : s.createdAt;
+    return s;
+  }
+
+  function save() {
+    try {
+      localStorage.setItem(STORE_KEY, JSON.stringify(state));
+    } catch (e) {
+      toast('Could not save - browser storage is full or blocked.');
+    }
+  }
+
+  // ─────────────────────────── Streak ───────────────────────────
+  /*
+   * Grace period rule: a streak day stays alive until the end of the NEXT
+   * calendar day. So working on Monday and again on Tuesday continues the
+   * streak; working Monday then Wednesday resets it to 1. Re-evaluated on
+   * load so an idle day is reflected without needing a tick.
+   */
+  function recomputeStreakOnLoad() {
+    if (!state.lastActiveDay) { state.streak = 0; return; }
+    var gap = daysBetween(state.lastActiveDay, dayKey());
+    if (gap === null || gap < 0) { state.streak = 0; state.lastActiveDay = null; return; }
+    if (gap > 1) state.streak = 0;   // grace period expired
+  }
+
+  function registerActivity() {
+    var today = dayKey();
+    if (state.lastActiveDay === today) return;      // already counted today
+    var gap = state.lastActiveDay ? daysBetween(state.lastActiveDay, today) : null;
+    if (gap === 1) state.streak += 1;               // inside the grace period
+    else state.streak = 1;                          // first day, or streak broken
+    state.lastActiveDay = today;
+    if (state.streak > state.bestStreak) state.bestStreak = state.streak;
+  }
+
+  // ─────────────────────────── Data indexing ───────────────────────────
+  var SUBJECTS = GCSE_DATA.subjects;
+
+  function itemKey(sid, tid, i) { return sid + '|' + tid + '|' + i; }
+
+  var ALL_ITEMS = [];
+  SUBJECTS.forEach(function (s) {
+    s.topics.forEach(function (t) {
+      t.subtopics.forEach(function (label, i) {
+        ALL_ITEMS.push({ key: itemKey(s.id, t.id, i), subject: s, topic: t, label: label });
+      });
+    });
+  });
+  var TOTAL_ITEMS = ALL_ITEMS.length;
+
+  function isDone(key) { return Object.prototype.hasOwnProperty.call(state.done, key); }
+  function doneCount() { return Object.keys(state.done).length; }
+
+  function doneCountFor(sid, tid) {
+    var n = 0, prefix = tid ? sid + '|' + tid + '|' : sid + '|';
+    Object.keys(state.done).forEach(function (k) { if (k.indexOf(prefix) === 0) n++; });
+    return n;
+  }
+
+  function weekDoneCount() {
+    var start = weekStartKey();
+    var n = 0;
+    Object.keys(state.done).forEach(function (k) {
+      var d = state.done[k];
+      var t = Date.parse(d);
+      if (isNaN(t)) return;
+      if (weekStartKey(new Date(t)) === start) n++;
+    });
+    return n;
+  }
+
+  // ─────────────────────────── Motivation ───────────────────────────
+  function motivationFor(streak, pct) {
+    if (streak === 0) {
+      return pct > 0
+        ? 'Streak reset, progress kept. One tick today restarts it - pick the easiest sub-topic on the list.'
+        : 'Pick one sub-topic and start. That is the whole plan for the next twenty minutes.';
+    }
+    if (streak === 1) return 'Day one done. The only day that matters is the next one - come back tomorrow and it becomes a habit.';
+    if (streak === 2) return 'Two days running. Do not break the chain today; short and consistent beats long and occasional.';
+    if (streak < 5)   return streak + ' days in a row. This is the stage where it stops feeling like willpower and starts feeling normal.';
+    if (streak < 8)   return streak + ' straight days - almost a full week. Add one past-paper question today to make the revision active.';
+    if (streak < 15)  return streak + ' days without a gap. You are now revising more consistently than most of your year group.';
+    if (streak < 30)  return streak + ' days. Serious momentum. Shift some time to timed exam questions rather than re-reading notes.';
+    if (streak < 60)  return streak + ' days unbroken. Protect it: on a bad day, tick one small sub-topic rather than skipping entirely.';
+    return streak + ' days. This is what a grade 8 or 9 work pattern actually looks like. Keep the weekly export up to date.';
+  }
+
+  function nextUpText() {
+    var pending = ALL_ITEMS.filter(function (it) { return !isDone(it.key); });
+    if (!pending.length) return 'Every sub-topic on the tracker is ticked. Move fully to timed past papers.';
+    var it = pending[0];
+    return 'Next unticked: ' + it.subject.name + ' \u2192 ' + it.topic.name + ' \u2192 ' + it.label;
+  }
+
+  // ─────────────────────────── Rendering ───────────────────────────
+  var elSubjects = document.getElementById('subjects');
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function boardBadge(s) {
+    return s.boardVerified
+      ? '<span class="inline-flex items-center gap-1 rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">Board verified</span>'
+      : '<span class="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-900 dark:bg-amber-950 dark:text-amber-300">Board unverified</span>';
+  }
+
+  function buildSubjects() {
+    var html = SUBJECTS.map(function (s) {
+      var a = ACCENTS[s.accent] || ACCENTS.blue;
+      var resources = s.resources.map(function (r) {
+        return '<a href="' + esc(r.url) + '" target="_blank" rel="noopener noreferrer" ' +
+               'class="rounded-md border border-stone-300 px-2 py-1 text-[11px] transition hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">' +
+               esc(r.label) + '</a>';
+      }).join('');
+
+      var alt = s.altPastPapers
+        ? '<a href="' + esc(s.altPastPapers.url) + '" target="_blank" rel="noopener noreferrer" ' +
+          'class="rounded-md border border-stone-300 px-2 py-1 text-[11px] transition hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800">' +
+          esc(s.altPastPapers.label) + '</a>'
+        : '';
+
+      var topics = s.topics.map(function (t) {
+        var items = t.subtopics.map(function (label, i) {
+          var key = itemKey(s.id, t.id, i);
+          var done = isDone(key);
+          return '<li data-item="' + esc(key) + '" data-done="' + done + '" ' +
+                 'data-search="' + esc((label + ' ' + t.name + ' ' + s.name).toLowerCase()) + '">' +
+                 '<label class="flex cursor-pointer items-start gap-2.5 rounded-lg px-2 py-1.5 transition hover:bg-stone-100 dark:hover:bg-stone-800/70">' +
+                 '<input type="checkbox" data-key="' + esc(key) + '"' + (done ? ' checked' : '') +
+                 ' class="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-stone-400 text-emerald-600 focus:ring-2 ' + a.ring + ' dark:border-stone-600 dark:bg-stone-800">' +
+                 '<span class="text-[13px] leading-snug ' + (done ? 'text-stone-400 line-through dark:text-stone-600' : '') + '">' + esc(label) + '</span>' +
+                 '</label></li>';
+        }).join('');
+
+        var td = doneCountFor(s.id, t.id), tt = t.subtopics.length;
+        return '<details class="group rounded-lg border border-stone-200 dark:border-stone-800" data-topic="' + esc(t.id) + '">' +
+          '<summary class="flex items-center gap-2 px-3 py-2.5">' +
+            '<span class="chev shrink-0 text-stone-400">&#9656;</span>' +
+            '<span class="min-w-0 flex-1 text-[13px] font-medium leading-snug">' + esc(t.name) + '</span>' +
+            '<span class="shrink-0 rounded-full bg-stone-100 px-2 py-0.5 text-[11px] tabular-nums text-stone-600 dark:bg-stone-800 dark:text-stone-400" data-topic-count>' + td + '/' + tt + '</span>' +
+          '</summary>' +
+          '<ul class="space-y-0.5 border-t border-stone-200 px-2 py-2 dark:border-stone-800">' + items + '</ul>' +
+        '</details>';
+      }).join('');
+
+      var sd = doneCountFor(s.id), st = s.topics.reduce(function (n, t) { return n + t.subtopics.length; }, 0);
+      var pct = st ? Math.round(sd / st * 100) : 0;
+
+      return '<article class="flex flex-col rounded-xl border border-stone-200 bg-white p-4 dark:border-stone-800 dark:bg-stone-900" data-subject="' + esc(s.id) + '">' +
+        '<header class="mb-3">' +
+          '<div class="flex flex-wrap items-center gap-2">' +
+            '<span class="h-2.5 w-2.5 shrink-0 rounded-full ' + a.dot + '"></span>' +
+            '<h2 class="text-sm font-semibold">' + esc(s.name) + '</h2>' +
+            boardBadge(s) +
+          '</div>' +
+          '<p class="mt-1 text-[11px] text-stone-500 dark:text-stone-400">' + esc(s.board) + ' &middot; spec ' + esc(s.specCode) + ' &middot; ' + esc(s.tier) + '</p>' +
+          '<p class="mt-1 text-[11px] leading-relaxed text-stone-500 dark:text-stone-400">' + esc(s.papers) + '</p>' +
+          '<div class="mt-2.5 flex items-center gap-2">' +
+            '<div class="h-1.5 flex-1 overflow-hidden rounded-full bg-stone-200 dark:bg-stone-800">' +
+              '<div class="h-full rounded-full ' + a.bar + ' transition-all duration-500" style="width:' + pct + '%" data-subject-bar></div>' +
+            '</div>' +
+            '<span class="shrink-0 text-[11px] tabular-nums text-stone-500 dark:text-stone-400" data-subject-count>' + sd + '/' + st + '</span>' +
+          '</div>' +
+        '</header>' +
+        '<div class="mb-3 flex flex-wrap gap-1.5">' +
+          '<a href="' + esc(s.pastPapers.url) + '" target="_blank" rel="noopener noreferrer" ' +
+            'class="rounded-md bg-stone-800 px-2 py-1 text-[11px] font-medium text-white transition hover:bg-stone-700 dark:bg-stone-200 dark:text-stone-900 dark:hover:bg-white">Past papers &amp; mark schemes</a>' +
+          alt + resources +
+        '</div>' +
+        (s.boardVerified ? '' :
+          '<p class="mb-3 rounded-lg border border-amber-300 bg-amber-50 p-2.5 text-[11px] leading-relaxed text-amber-900 dark:border-amber-800/60 dark:bg-amber-950/40 dark:text-amber-300">' + esc(s.boardNote) + '</p>') +
+        '<div class="space-y-1.5">' + topics + '</div>' +
+      '</article>';
+    }).join('');
+
+    elSubjects.innerHTML = html;
+  }
+
+  function buildBoardNotes() {
+    document.getElementById('boardNoteGlobal').textContent = GCSE_DATA.boardVerificationNote;
+    document.getElementById('boardList').innerHTML = SUBJECTS.map(function (s) {
+      return '<li class="rounded-lg border border-stone-200 p-3 dark:border-stone-800">' +
+        '<div class="flex flex-wrap items-center gap-2">' +
+          '<span class="text-xs font-semibold">' + esc(s.name) + '</span>' + boardBadge(s) +
+          '<span class="text-[11px] text-stone-500 dark:text-stone-400">' + esc(s.board) + ' ' + esc(s.specCode) + '</span>' +
+        '</div>' +
+        '<p class="mt-1.5 text-[11px] leading-relaxed text-stone-600 dark:text-stone-400">' + esc(s.boardNote) + '</p>' +
+      '</li>';
+    }).join('');
+    document.getElementById('checksum').textContent = GCSE_DATA.dataChecksum || 'n/a';
+  }
+
+  // ─────────────────────────── Stats refresh ───────────────────────────
+  function refreshStats() {
+    var dc = doneCount();
+    var pct = TOTAL_ITEMS ? Math.round(dc / TOTAL_ITEMS * 100) : 0;
+    document.getElementById('overallPct').textContent = pct + '%';
+    document.getElementById('overallBar').style.width = pct + '%';
+    document.getElementById('overallCount').textContent = dc + ' of ' + TOTAL_ITEMS + ' sub-topics';
+
+    document.getElementById('streakDays').textContent = state.streak + (state.streak === 1 ? ' day' : ' days');
+    document.getElementById('bestStreak').textContent = state.bestStreak + (state.bestStreak === 1 ? ' day' : ' days');
+
+    var hint;
+    if (!state.lastActiveDay) hint = 'Tick anything today to start your streak.';
+    else if (state.lastActiveDay === dayKey()) hint = 'Counted for today. Next tick must be by the end of tomorrow.';
+    else if (daysBetween(state.lastActiveDay, dayKey()) === 1) hint = 'Grace period active - tick one sub-topic today to keep the streak.';
+    else hint = 'Streak lapsed. Ticking anything today starts a new one at day 1.';
+    document.getElementById('streakHint').textContent = hint;
+
+    var wc = weekDoneCount(), wt = state.weeklyTarget;
+    document.getElementById('weekCount').textContent = wc + ' / ' + wt;
+    document.getElementById('weekBar').style.width = Math.min(100, Math.round(wc / wt * 100)) + '%';
+    document.getElementById('weeklyTarget').value = wt;
+
+    document.getElementById('motivation').textContent = motivationFor(state.streak, pct);
+    document.getElementById('nextUp').textContent = nextUpText();
+
+    document.getElementById('lastExportInfo').textContent = state.lastExport
+      ? 'Last backup ' + fmtDate(state.lastExport) + '.'
+      : 'No backup taken yet.';
+
+    refreshBackupBanner();
+  }
+
+  function refreshBackupBanner() {
+    var banner = document.getElementById('backupBanner');
+    var snoozed = state.snoozeUntil && Date.parse(state.snoozeUntil) > Date.now();
+    var days = state.lastExport ? Math.floor(hoursSince(state.lastExport) / 24) : null;
+    var overdue = state.lastExport === null
+      ? doneCount() > 0
+      : hoursSince(state.lastExport) > EXPORT_REMINDER_DAYS * 24;
+
+    if (overdue && !snoozed) {
+      document.getElementById('backupText').textContent = state.lastExport === null
+        ? 'You have ticked ' + doneCount() + ' sub-topic(s) but never exported a backup. Clearing your browser data would erase all of it. Export the JSON file now and keep it somewhere safe.'
+        : 'Your last backup was ' + days + ' days ago. Export a fresh JSON file so your progress survives a cache clear or a change of device.';
+      banner.classList.remove('hidden');
+    } else {
+      banner.classList.add('hidden');
+    }
+  }
+
+  function refreshCounts(sid, tid) {
+    var article = elSubjects.querySelector('[data-subject="' + sid + '"]');
+    if (!article) return;
+    var subject = SUBJECTS.filter(function (s) { return s.id === sid; })[0];
+    var st = subject.topics.reduce(function (n, t) { return n + t.subtopics.length; }, 0);
+    var sd = doneCountFor(sid);
+    article.querySelector('[data-subject-count]').textContent = sd + '/' + st;
+    article.querySelector('[data-subject-bar]').style.width = (st ? Math.round(sd / st * 100) : 0) + '%';
+
+    var det = article.querySelector('[data-topic="' + tid + '"]');
+    if (det) {
+      var topic = subject.topics.filter(function (t) { return t.id === tid; })[0];
+      det.querySelector('[data-topic-count]').textContent = doneCountFor(sid, tid) + '/' + topic.subtopics.length;
+    }
+  }
+
+  // ─────────────────────────── Filtering ───────────────────────────
+  function applyFilters() {
+    var q = document.getElementById('search').value.trim().toLowerCase();
+    var hide = state.hideDone;
+    document.getElementById('hideDoneBtn').textContent = hide ? 'Show completed' : 'Hide completed';
+
+    SUBJECTS.forEach(function (s) {
+      var article = elSubjects.querySelector('[data-subject="' + s.id + '"]');
+      var subjectVisible = 0;
+      s.topics.forEach(function (t) {
+        var det = article.querySelector('[data-topic="' + t.id + '"]');
+        var visible = 0;
+        Array.prototype.forEach.call(det.querySelectorAll('li[data-item]'), function (li) {
+          var matchQ = !q || li.getAttribute('data-search').indexOf(q) !== -1;
+          var matchDone = !(hide && li.getAttribute('data-done') === 'true');
+          var show = matchQ && matchDone;
+          li.classList.toggle('hidden', !show);
+          if (show) visible++;
+        });
+        det.classList.toggle('hidden', visible === 0);
+        if (visible > 0 && q) det.setAttribute('open', '');
+        subjectVisible += visible;
+      });
+      article.classList.toggle('hidden', subjectVisible === 0);
+    });
+  }
+
+  // ─────────────────────────── Import / export ───────────────────────────
+  function exportProgress() {
+    state.lastExport = new Date().toISOString();
+    state.snoozeUntil = null;
+    save();
+    var payload = {
+      app: 'kefw-gcse-dashboard',
+      version: 1,
+      exportedAt: state.lastExport,
+      dataChecksum: GCSE_DATA.dataChecksum || null,
+      totalSubtopics: TOTAL_ITEMS,
+      completedSubtopics: doneCount(),
+      progress: state
+    };
+    var blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'gcse-progress-' + dayKey() + '.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+    refreshStats();
+    toast('Backup downloaded. Keep it somewhere safe.');
+  }
+
+  function importProgress(file) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var parsed;
+      try {
+        parsed = JSON.parse(String(reader.result));
+      } catch (e) {
+        toast('That file is not valid JSON.');
+        return;
+      }
+      var incoming = parsed && parsed.progress ? parsed.progress : parsed;
+      if (!incoming || typeof incoming !== 'object' || !incoming.done) {
+        toast('No progress data found in that file.');
+        return;
+      }
+      var incomingCount = Object.keys(incoming.done).length;
+      var currentCount  = doneCount();
+      var msg = 'Import ' + incomingCount + ' completed sub-topic(s)?\n\n' +
+                'OK  = merge with the ' + currentCount + ' already ticked here (nothing is lost).\n' +
+                'Cancel = keep this device unchanged.';
+      if (!window.confirm(msg)) return;
+
+      var merged = normalise(incoming);
+      Object.keys(state.done).forEach(function (k) {
+        if (!merged.done[k]) merged.done[k] = state.done[k];
+      });
+      merged.bestStreak = Math.max(merged.bestStreak, state.bestStreak);
+      if (state.lastActiveDay && (!merged.lastActiveDay || state.lastActiveDay > merged.lastActiveDay)) {
+        merged.lastActiveDay = state.lastActiveDay;
+        merged.streak = Math.max(merged.streak, state.streak);
+      }
+      state = merged;
+      recomputeStreakOnLoad();
+      save();
+      buildSubjects();
+      refreshStats();
+      applyFilters();
+      toast('Imported. ' + doneCount() + ' sub-topics now ticked.');
+    };
+    reader.onerror = function () { toast('Could not read that file.'); };
+    reader.readAsText(file);
+  }
+
+  // ─────────────────────────── Toast ───────────────────────────
+  var toastTimer = null;
+  function toast(msg) {
+    var el = document.getElementById('toast');
+    el.textContent = msg;
+    el.style.opacity = '1';
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { el.style.opacity = '0'; }, 3200);
+  }
+
+  // ─────────────────────────── Events ───────────────────────────
+  elSubjects.addEventListener('change', function (ev) {
+    var cb = ev.target;
+    if (!cb || cb.type !== 'checkbox' || !cb.dataset.key) return;
+    var key = cb.dataset.key;
+    var parts = key.split('|');
+
+    if (cb.checked) {
+      state.done[key] = new Date().toISOString();
+      registerActivity();
+    } else {
+      delete state.done[key];
+    }
+
+    var li = cb.closest('li[data-item]');
+    li.setAttribute('data-done', String(cb.checked));
+    var span = li.querySelector('span');
+    span.className = 'text-[13px] leading-snug' + (cb.checked ? ' text-stone-400 line-through dark:text-stone-600' : '');
+
+    save();
+    refreshCounts(parts[0], parts[1]);
+    refreshStats();
+    if (state.hideDone) applyFilters();
+  });
+
+  document.getElementById('exportBtn').addEventListener('click', exportProgress);
+  document.getElementById('backupBanner').addEventListener('click', function (ev) {
+    if (ev.target.dataset && ev.target.dataset.act === 'export') exportProgress();
+  });
+  document.getElementById('snoozeBtn').addEventListener('click', function () {
+    state.snoozeUntil = new Date(Date.now() + 24 * 3600 * 1000).toISOString();
+    save();
+    refreshBackupBanner();
+    toast('Reminder snoozed until tomorrow.');
+  });
+  document.getElementById('importInput').addEventListener('change', function (ev) {
+    if (ev.target.files && ev.target.files[0]) importProgress(ev.target.files[0]);
+    ev.target.value = '';
+  });
+  document.getElementById('search').addEventListener('input', applyFilters);
+  document.getElementById('hideDoneBtn').addEventListener('click', function () {
+    state.hideDone = !state.hideDone;
+    save();
+    applyFilters();
+  });
+  document.getElementById('expandBtn').addEventListener('click', function () {
+    var details = elSubjects.querySelectorAll('details');
+    var anyClosed = Array.prototype.some.call(details, function (d) { return !d.open; });
+    Array.prototype.forEach.call(details, function (d) { d.open = anyClosed; });
+    this.textContent = anyClosed ? 'Collapse all' : 'Expand all';
+  });
+  document.getElementById('weeklyTarget').addEventListener('change', function () {
+    var v = Math.min(200, Math.max(1, parseInt(this.value, 10) || 20));
+    state.weeklyTarget = v;
+    save();
+    refreshStats();
+  });
+  document.getElementById('resetBtn').addEventListener('click', function () {
+    if (!window.confirm('Delete all ticks, streaks and settings on this device? Export a backup first if you are not sure. This cannot be undone.')) return;
+    state = blankState();
+    save();
+    buildSubjects();
+    refreshStats();
+    applyFilters();
+    toast('All progress cleared.');
+  });
+  document.getElementById('themeBtn').addEventListener('click', function () {
+    var dark = document.documentElement.classList.toggle('dark');
+    try { localStorage.setItem(THEME_KEY, dark ? 'dark' : 'light'); } catch (e) {}
+  });
+
+  // ─────────────────────────── Init ───────────────────────────
+  load();
+  recomputeStreakOnLoad();
+  save();
+  buildSubjects();
+  buildBoardNotes();
+  refreshStats();
+  applyFilters();
+})();
+</script>
+</body>
+</html>
